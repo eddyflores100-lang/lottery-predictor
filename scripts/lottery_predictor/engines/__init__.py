@@ -1,6 +1,7 @@
 """Engines subpackage."""
 from . import (frequency, hot_cold, gap_analysis, markov_chain,
                bayesian, pattern_detection, entropy, monte_carlo, ensemble)
+from . import lstm_engine
 
 ENGINE_REGISTRY = {
     'frequency': frequency,
@@ -12,6 +13,7 @@ ENGINE_REGISTRY = {
     'entropy': entropy,
     'monte_carlo': monte_carlo,
     'ensemble': ensemble,
+    'lstm': lstm_engine,
 }
 
 __all__ = ['ENGINE_REGISTRY'] + list(ENGINE_REGISTRY.keys())

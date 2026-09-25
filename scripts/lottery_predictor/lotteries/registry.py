@@ -8,6 +8,7 @@ from typing import Optional
 import json
 from .base import Lottery, DrawResult
 from .pozo_millonario import PozoMillonario
+from .lotto_austrian import LottoAustrian
 
 
 class LaPrimitiva(Lottery):
@@ -160,6 +161,7 @@ LOTTERY_REGISTRY = {
     'euromillions': EuroMillions,
     'eurojackpot': EuroJackpot,
     'el_gordo': ElGordo,
+    'lotto_austrian': LottoAustrian,
 }
 
 

@@ -22,10 +22,11 @@ from backtest import backtest_engine, backtest_all_engines, compare_engines, bas
 # Default data paths per lottery
 DEFAULT_DATA_PATHS = {
     'pozo_millonario': '/home/z/my-project/data/pozo_data.json',
-    'la_primitiva': '/home/z/my-project/data/la_primitiva.json',
+    'la_primitiva': '/home/z/my-project/data/la_primitiva.json',  # Using German Lotto 6aus49 as proxy
     'euromillions': '/home/z/my-project/data/euromillions.json',
     'eurojackpot': '/home/z/my-project/data/eurojackpot.json',
     'el_gordo': '/home/z/my-project/data/el_gordo.json',
+    'lotto_austrian': '/home/z/my-project/data/lotto_austrian.json',
 }
 
 

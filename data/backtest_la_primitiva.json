@@ -1,0 +1,232 @@
+{
+  "frequency": {
+    "engine": "frequency",
+    "lottery": "La Primitiva",
+    "total_tested": 50,
+    "avg_hits": 0.72,
+    "max_hits": 2,
+    "min_hits": 0,
+    "hits_distribution": {
+      "2": 7,
+      "0": 21,
+      "1": 22
+    },
+    "avg_time_per_pred_ms": 0.15
+  },
+  "hot_cold": {
+    "engine": "hot_cold",
+    "lottery": "La Primitiva",
+    "total_tested": 50,
+    "avg_hits": 0.6,
+    "max_hits": 2,
+    "min_hits": 0,
+    "hits_distribution": {
+      "0": 24,
+      "2": 4,
+      "1": 22
+    },
+    "avg_time_per_pred_ms": 0.25
+  },
+  "gap_analysis": {
+    "engine": "gap_analysis",
+    "lottery": "La Primitiva",
+    "total_tested": 50,
+    "avg_hits": 0.78,
+    "max_hits": 3,
+    "min_hits": 0,
+    "hits_distribution": {
+      "0": 22,
+      "2": 7,
+      "1": 19,
+      "3": 2
+    },
+    "avg_time_per_pred_ms": 0.15
+  },
+  "markov_chain": {
+    "engine": "markov_chain",
+    "lottery": "La Primitiva",
+    "total_tested": 50,
+    "avg_hits": 0.7,
+    "max_hits": 3,
+    "min_hits": 0,
+    "hits_distribution": {
+      "3": 2,
+      "2": 6,
+      "1": 17,
+      "0": 25
+    },
+    "avg_time_per_pred_ms": 1.04
+  },
+  "bayesian": {
+    "engine": "bayesian",
+    "lottery": "La Primitiva",
+    "total_tested": 50,
+    "avg_hits": 0.72,
+    "max_hits": 2,
+    "min_hits": 0,
+    "hits_distribution": {
+      "2": 7,
+      "0": 21,
+      "1": 22
+    },
+    "avg_time_per_pred_ms": 0.23
+  },
+  "pattern_detection": {
+    "engine": "pattern_detection",
+    "lottery": "La Primitiva",
+    "total_tested": 50,
+    "avg_hits": 0.78,
+    "max_hits": 3,
+    "min_hits": 0,
+    "hits_distribution": {
+      "3": 1,
+      "0": 17,
+      "1": 28,
+      "2": 4
+    },
+    "avg_time_per_pred_ms": 1.35
+  },
+  "entropy": {
+    "engine": "entropy",
+    "lottery": "La Primitiva",
+    "total_tested": 50,
+    "avg_hits": 0.74,
+    "max_hits": 2,
+    "min_hits": 0,
+    "hits_distribution": {
+      "1": 23,
+      "0": 20,
+      "2": 7
+    },
+    "avg_time_per_pred_ms": 2.71
+  },
+  "monte_carlo": {
+    "engine": "monte_carlo",
+    "lottery": "La Primitiva",
+    "total_tested": 50,
+    "avg_hits": 0.62,
+    "max_hits": 3,
+    "min_hits": 0,
+    "hits_distribution": {
+      "1": 20,
+      "0": 25,
+      "2": 4,
+      "3": 1
+    },
+    "avg_time_per_pred_ms": 580.94
+  },
+  "ensemble": {
+    "engine": "ensemble",
+    "lottery": "La Primitiva",
+    "total_tested": 50,
+    "avg_hits": 0.74,
+    "max_hits": 3,
+    "min_hits": 0,
+    "hits_distribution": {
+      "2": 6,
+      "0": 21,
+      "1": 22,
+      "3": 1
+    },
+    "avg_time_per_pred_ms": 695.35
+  },
+  "lstm": {
+    "engine": "lstm",
+    "lottery": "La Primitiva",
+    "total_tested": 50,
+    "avg_hits": 0.62,
+    "max_hits": 3,
+    "min_hits": 0,
+    "hits_distribution": {
+      "1": 18,
+      "0": 26,
+      "2": 5,
+      "3": 1
+    },
+    "avg_time_per_pred_ms": 5639.33
+  },
+  "random_baseline": {
+    "engine": "random_baseline",
+    "total_tested": 50,
+    "avg_hits": 0.6,
+    "max_hits": 3,
+    "hits_distribution": {
+      "0": 27,
+      "1": 18,
+      "3": 2,
+      "2": 3
+    }
+  },
+  "comparison": [
+    {
+      "engine": "gap_analysis",
+      "avg_hits": 0.78,
+      "max_hits": 3,
+      "avg_time_ms": 0.15,
+      "tested": 50
+    },
+    {
+      "engine": "pattern_detection",
+      "avg_hits": 0.78,
+      "max_hits": 3,
+      "avg_time_ms": 1.35,
+      "tested": 50
+    },
+    {
+      "engine": "entropy",
+      "avg_hits": 0.74,
+      "max_hits": 2,
+      "avg_time_ms": 2.71,
+      "tested": 50
+    },
+    {
+      "engine": "ensemble",
+      "avg_hits": 0.74,
+      "max_hits": 3,
+      "avg_time_ms": 695.35,
+      "tested": 50
+    },
+    {
+      "engine": "frequency",
+      "avg_hits": 0.72,
+      "max_hits": 2,
+      "avg_time_ms": 0.15,
+      "tested": 50
+    },
+    {
+      "engine": "bayesian",
+      "avg_hits": 0.72,
+      "max_hits": 2,
+      "avg_time_ms": 0.23,
+      "tested": 50
+    },
+    {
+      "engine": "markov_chain",
+      "avg_hits": 0.7,
+      "max_hits": 3,
+      "avg_time_ms": 1.04,
+      "tested": 50
+    },
+    {
+      "engine": "monte_carlo",
+      "avg_hits": 0.62,
+      "max_hits": 3,
+      "avg_time_ms": 580.94,
+      "tested": 50
+    },
+    {
+      "engine": "lstm",
+      "avg_hits": 0.62,
+      "max_hits": 3,
+      "avg_time_ms": 5639.33,
+      "tested": 50
+    },
+    {
+      "engine": "hot_cold",
+      "avg_hits": 0.6,
+      "max_hits": 2,
+      "avg_time_ms": 0.25,
+      "tested": 50
+    }
+  ]
+}
