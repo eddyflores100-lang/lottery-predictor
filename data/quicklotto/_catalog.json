@@ -1,0 +1,392 @@
+[
+  {
+    "name": "+Milionária",
+    "code": "mais-milionaria",
+    "main_picks": 6,
+    "main_pool_size": 50,
+    "bonus_picks": 2,
+    "bonus_pool_size": 6,
+    "is_inhouse": false,
+    "description": "pick 6 from 50, plus 2 bonus from 6"
+  },
+  {
+    "name": "Cash4Life",
+    "code": "cash4life",
+    "main_picks": 5,
+    "main_pool_size": 60,
+    "bonus_picks": 1,
+    "bonus_pool_size": 4,
+    "is_inhouse": true,
+    "description": "pick 5 from 60, plus 1 bonus from 4. IN-HOUSE DRAW — run by this site with a random number generator, not an official lottery"
+  },
+  {
+    "name": "Dia de Sorte",
+    "code": "dia-de-sorte",
+    "main_picks": 7,
+    "main_pool_size": 31,
+    "bonus_picks": 1,
+    "bonus_pool_size": 12,
+    "is_inhouse": false,
+    "description": "pick 7 from 31, plus 1 bonus from 12"
+  },
+  {
+    "name": "Dupla Sena",
+    "code": "dupla-sena",
+    "main_picks": 6,
+    "main_pool_size": 50,
+    "bonus_picks": 6,
+    "bonus_pool_size": 50,
+    "is_inhouse": false,
+    "description": "pick 6 from 50, plus 6 bonus from 50"
+  },
+  {
+    "name": "Ekstra Pensja",
+    "code": "ekstra-pensja",
+    "main_picks": 5,
+    "main_pool_size": 35,
+    "bonus_picks": 1,
+    "bonus_pool_size": 5,
+    "is_inhouse": true,
+    "description": "pick 5 from 35, plus 1 bonus from 5. IN-HOUSE DRAW — run by this site with a random number generator, not an official lottery"
+  },
+  {
+    "name": "Ekstra Premia",
+    "code": "ekstra-premia",
+    "main_picks": 5,
+    "main_pool_size": 35,
+    "bonus_picks": 1,
+    "bonus_pool_size": 5,
+    "is_inhouse": true,
+    "description": "pick 5 from 35, plus 1 bonus from 5. IN-HOUSE DRAW — run by this site with a random number generator, not an official lottery"
+  },
+  {
+    "name": "El Gordo",
+    "code": "el-gordo",
+    "main_picks": 5,
+    "main_pool_size": 54,
+    "bonus_picks": 1,
+    "bonus_pool_size": 9,
+    "is_inhouse": false,
+    "description": "pick 5 from 54, plus 1 bonus from 9"
+  },
+  {
+    "name": "EuroDreams",
+    "code": "eurodreams",
+    "main_picks": 6,
+    "main_pool_size": 40,
+    "bonus_picks": 1,
+    "bonus_pool_size": 5,
+    "is_inhouse": false,
+    "description": "pick 6 from 40, plus 1 bonus from 5"
+  },
+  {
+    "name": "EuroJackpot",
+    "code": "eurojackpot",
+    "main_picks": 5,
+    "main_pool_size": 50,
+    "bonus_picks": 2,
+    "bonus_pool_size": 12,
+    "is_inhouse": false,
+    "description": "pick 5 from 50, plus 2 bonus from 12"
+  },
+  {
+    "name": "EuroMillions",
+    "code": "euromillions",
+    "main_picks": 5,
+    "main_pool_size": 50,
+    "bonus_picks": 2,
+    "bonus_pool_size": 12,
+    "is_inhouse": false,
+    "description": "pick 5 from 50, plus 2 bonus from 12"
+  },
+  {
+    "name": "French Lotto",
+    "code": "french-lotto",
+    "main_picks": 5,
+    "main_pool_size": 49,
+    "bonus_picks": 1,
+    "bonus_pool_size": 10,
+    "is_inhouse": false,
+    "description": "pick 5 from 49, plus 1 bonus from 10"
+  },
+  {
+    "name": "German Keno",
+    "code": "keno-10",
+    "main_picks": 10,
+    "main_pool_size": 70,
+    "bonus_picks": 0,
+    "bonus_pool_size": 0,
+    "is_inhouse": false,
+    "description": "pick 10 from 70"
+  },
+  {
+    "name": "Gullak Gold",
+    "code": "gullak-gold",
+    "main_picks": 15,
+    "main_pool_size": 25,
+    "bonus_picks": 0,
+    "bonus_pool_size": 0,
+    "is_inhouse": true,
+    "description": "pick 15 from 25. IN-HOUSE DRAW — run by this site with a random number generator, not an official lottery"
+  },
+  {
+    "name": "Irish Daily Million",
+    "code": "irish-daily-million",
+    "main_picks": 6,
+    "main_pool_size": 39,
+    "bonus_picks": 1,
+    "bonus_pool_size": 39,
+    "is_inhouse": false,
+    "description": "pick 6 from 39, plus 1 bonus from 39"
+  },
+  {
+    "name": "Irish Lotto",
+    "code": "irish-lotto",
+    "main_picks": 6,
+    "main_pool_size": 47,
+    "bonus_picks": 1,
+    "bonus_pool_size": 47,
+    "is_inhouse": false,
+    "description": "pick 6 from 47, plus 1 bonus from 47"
+  },
+  {
+    "name": "Kaskada",
+    "code": "kaskada",
+    "main_picks": 6,
+    "main_pool_size": 24,
+    "bonus_picks": 0,
+    "bonus_pool_size": 0,
+    "is_inhouse": true,
+    "description": "pick 6 from 24. IN-HOUSE DRAW — run by this site with a random number generator, not an official lottery"
+  },
+  {
+    "name": "La Primitiva",
+    "code": "la-primitiva",
+    "main_picks": 6,
+    "main_pool_size": 49,
+    "bonus_picks": 1,
+    "bonus_pool_size": 9,
+    "is_inhouse": false,
+    "description": "pick 6 from 49, plus 1 bonus from 9"
+  },
+  {
+    "name": "Lotofácil",
+    "code": "lotofacil",
+    "main_picks": 15,
+    "main_pool_size": 25,
+    "bonus_picks": 0,
+    "bonus_pool_size": 0,
+    "is_inhouse": false,
+    "description": "pick 15 from 25"
+  },
+  {
+    "name": "Lotto 6/49",
+    "code": "canada-lotto-649",
+    "main_picks": 6,
+    "main_pool_size": 49,
+    "bonus_picks": 1,
+    "bonus_pool_size": 49,
+    "is_inhouse": false,
+    "description": "pick 6 from 49, plus 1 bonus from 49"
+  },
+  {
+    "name": "Lotto 6aus49",
+    "code": "german-lotto",
+    "main_picks": 6,
+    "main_pool_size": 49,
+    "bonus_picks": 1,
+    "bonus_pool_size": 9,
+    "is_inhouse": false,
+    "description": "pick 6 from 49, plus 1 bonus from 9"
+  },
+  {
+    "name": "Lotto America",
+    "code": "lotto-america",
+    "main_picks": 5,
+    "main_pool_size": 52,
+    "bonus_picks": 1,
+    "bonus_pool_size": 10,
+    "is_inhouse": false,
+    "description": "pick 5 from 52, plus 1 bonus from 10"
+  },
+  {
+    "name": "Lotto Plus",
+    "code": "lotto-plus",
+    "main_picks": 6,
+    "main_pool_size": 49,
+    "bonus_picks": 0,
+    "bonus_pool_size": 0,
+    "is_inhouse": true,
+    "description": "pick 6 from 49. IN-HOUSE DRAW — run by this site with a random number generator, not an official lottery"
+  },
+  {
+    "name": "Mega-Sena",
+    "code": "mega-sena",
+    "main_picks": 6,
+    "main_pool_size": 60,
+    "bonus_picks": 0,
+    "bonus_pool_size": 0,
+    "is_inhouse": false,
+    "description": "pick 6 from 60"
+  },
+  {
+    "name": "MegaMillions",
+    "code": "mega-millions",
+    "main_picks": 5,
+    "main_pool_size": 70,
+    "bonus_picks": 1,
+    "bonus_pool_size": 24,
+    "is_inhouse": false,
+    "description": "pick 5 from 70, plus 1 bonus from 24"
+  },
+  {
+    "name": "Mini Lotto",
+    "code": "mini-lotto",
+    "main_picks": 5,
+    "main_pool_size": 42,
+    "bonus_picks": 0,
+    "bonus_pool_size": 0,
+    "is_inhouse": true,
+    "description": "pick 5 from 42. IN-HOUSE DRAW — run by this site with a random number generator, not an official lottery"
+  },
+  {
+    "name": "Polish Lotto",
+    "code": "polish-lotto",
+    "main_picks": 6,
+    "main_pool_size": 49,
+    "bonus_picks": 0,
+    "bonus_pool_size": 0,
+    "is_inhouse": true,
+    "description": "pick 6 from 49. IN-HOUSE DRAW — run by this site with a random number generator, not an official lottery"
+  },
+  {
+    "name": "Powerball",
+    "code": "powerball",
+    "main_picks": 5,
+    "main_pool_size": 69,
+    "bonus_picks": 1,
+    "bonus_pool_size": 26,
+    "is_inhouse": false,
+    "description": "pick 5 from 69, plus 1 bonus from 26"
+  },
+  {
+    "name": "Quina",
+    "code": "brazil-quina",
+    "main_picks": 5,
+    "main_pool_size": 80,
+    "bonus_picks": 0,
+    "bonus_pool_size": 0,
+    "is_inhouse": false,
+    "description": "pick 5 from 80"
+  },
+  {
+    "name": "Rapid Riches",
+    "code": "rapid-riches",
+    "main_picks": 5,
+    "main_pool_size": 36,
+    "bonus_picks": 0,
+    "bonus_pool_size": 0,
+    "is_inhouse": true,
+    "description": "pick 5 from 36. IN-HOUSE DRAW — run by this site with a random number generator, not an official lottery"
+  },
+  {
+    "name": "Set For Life",
+    "code": "set-for-life",
+    "main_picks": 5,
+    "main_pool_size": 47,
+    "bonus_picks": 1,
+    "bonus_pool_size": 10,
+    "is_inhouse": false,
+    "description": "pick 5 from 47, plus 1 bonus from 10"
+  },
+  {
+    "name": "Shubh Lotto",
+    "code": "shubh-lotto",
+    "main_picks": 5,
+    "main_pool_size": 10,
+    "bonus_picks": 0,
+    "bonus_pool_size": 0,
+    "is_inhouse": true,
+    "description": "pick 5 from 10. IN-HOUSE DRAW — run by this site with a random number generator, not an official lottery"
+  },
+  {
+    "name": "South Africa Lotto",
+    "code": "south-africa-lotto",
+    "main_picks": 6,
+    "main_pool_size": 52,
+    "bonus_picks": 0,
+    "bonus_pool_size": 0,
+    "is_inhouse": false,
+    "description": "pick 6 from 52"
+  },
+  {
+    "name": "SuperEnalotto",
+    "code": "superenalotto",
+    "main_picks": 6,
+    "main_pool_size": 90,
+    "bonus_picks": 1,
+    "bonus_pool_size": 90,
+    "is_inhouse": false,
+    "description": "pick 6 from 90, plus 1 bonus from 90"
+  },
+  {
+    "name": "Szybkie 600",
+    "code": "szybkie-600",
+    "main_picks": 6,
+    "main_pool_size": 32,
+    "bonus_picks": 0,
+    "bonus_pool_size": 0,
+    "is_inhouse": true,
+    "description": "pick 6 from 32. IN-HOUSE DRAW — run by this site with a random number generator, not an official lottery"
+  },
+  {
+    "name": "Thunderball",
+    "code": "thunderball",
+    "main_picks": 5,
+    "main_pool_size": 39,
+    "bonus_picks": 1,
+    "bonus_pool_size": 14,
+    "is_inhouse": false,
+    "description": "pick 5 from 39, plus 1 bonus from 14"
+  },
+  {
+    "name": "UK Lotto",
+    "code": "uk-lotto",
+    "main_picks": 6,
+    "main_pool_size": 59,
+    "bonus_picks": 1,
+    "bonus_pool_size": 59,
+    "is_inhouse": false,
+    "description": "pick 6 from 59, plus 1 bonus from 59"
+  },
+  {
+    "name": "UK Lotto Round 2",
+    "code": "uk-lotto-round-2",
+    "main_picks": 6,
+    "main_pool_size": 59,
+    "bonus_picks": 1,
+    "bonus_pool_size": 59,
+    "is_inhouse": false,
+    "description": "pick 6 from 59, plus 1 bonus from 59"
+  },
+  {
+    "name": "Thai Government Lottery",
+    "code": "thai",
+    "main_picks": 0,
+    "main_pool_size": 0,
+    "bonus_picks": 0,
+    "bonus_pool_size": 0,
+    "is_inhouse": false,
+    "description": "an official draw by the Government Lottery Office of Thailand, on the 1st and 16th of each month — not drawn by this site. A ticket is a six-digit number"
+  },
+  {
+    "name": "Kerala State Lottery",
+    "code": "kerala",
+    "main_picks": 0,
+    "main_pool_size": 0,
+    "bonus_picks": 0,
+    "bonus_pool_size": 0,
+    "is_inhouse": false,
+    "description": "an official draw by the Directorate of Kerala State Lotteries, every afternoon at 3:00 PM India time — not drawn by this site. A ticket is a two-letter series and a six-digit number"
+  }
+]

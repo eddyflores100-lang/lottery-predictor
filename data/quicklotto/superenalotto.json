@@ -1,0 +1,354 @@
+{
+  "lottery": {
+    "name": "SuperEnalotto",
+    "code": "superenalotto",
+    "main_picks": 6,
+    "main_pool_size": 90,
+    "bonus_picks": 1,
+    "bonus_pool_size": 90,
+    "is_inhouse": false,
+    "description": "pick 6 from 90, plus 1 bonus from 90"
+  },
+  "draws": [
+    {
+      "date": "2026-08-21",
+      "main_numbers": [
+        12,
+        25,
+        27,
+        28,
+        39,
+        57
+      ],
+      "bonus_numbers": [
+        42
+      ],
+      "source": "quicklotto.io",
+      "code": "superenalotto",
+      "draw_number": 1
+    },
+    {
+      "date": "2026-08-22",
+      "main_numbers": [
+        2,
+        16,
+        23,
+        31,
+        72,
+        85
+      ],
+      "bonus_numbers": [
+        82
+      ],
+      "source": "quicklotto.io",
+      "code": "superenalotto",
+      "draw_number": 2
+    },
+    {
+      "date": "2026-08-25",
+      "main_numbers": [
+        15,
+        36,
+        62,
+        67,
+        69,
+        70
+      ],
+      "bonus_numbers": [
+        32
+      ],
+      "source": "quicklotto.io",
+      "code": "superenalotto",
+      "draw_number": 3
+    },
+    {
+      "date": "2026-08-27",
+      "main_numbers": [
+        2,
+        27,
+        28,
+        50,
+        75,
+        84
+      ],
+      "bonus_numbers": [
+        32
+      ],
+      "source": "quicklotto.io",
+      "code": "superenalotto",
+      "draw_number": 4
+    },
+    {
+      "date": "2026-08-28",
+      "main_numbers": [
+        4,
+        8,
+        27,
+        62,
+        70,
+        79
+      ],
+      "bonus_numbers": [
+        60
+      ],
+      "source": "quicklotto.io",
+      "code": "superenalotto",
+      "draw_number": 5
+    },
+    {
+      "date": "2026-08-29",
+      "main_numbers": [
+        12,
+        17,
+        45,
+        59,
+        74,
+        77
+      ],
+      "bonus_numbers": [
+        62
+      ],
+      "source": "quicklotto.io",
+      "code": "superenalotto",
+      "draw_number": 6
+    },
+    {
+      "date": "2026-09-01",
+      "main_numbers": [
+        42,
+        47,
+        59,
+        64,
+        67,
+        71
+      ],
+      "bonus_numbers": [
+        88
+      ],
+      "source": "quicklotto.io",
+      "code": "superenalotto",
+      "draw_number": 7
+    },
+    {
+      "date": "2026-09-03",
+      "main_numbers": [
+        8,
+        11,
+        15,
+        60,
+        68,
+        76
+      ],
+      "bonus_numbers": [
+        9
+      ],
+      "source": "quicklotto.io",
+      "code": "superenalotto",
+      "draw_number": 8
+    },
+    {
+      "date": "2026-09-04",
+      "main_numbers": [
+        8,
+        44,
+        60,
+        73,
+        86,
+        89
+      ],
+      "bonus_numbers": [
+        57
+      ],
+      "source": "quicklotto.io",
+      "code": "superenalotto",
+      "draw_number": 9
+    },
+    {
+      "date": "2026-09-05",
+      "main_numbers": [
+        12,
+        24,
+        28,
+        32,
+        37,
+        78
+      ],
+      "bonus_numbers": [
+        40
+      ],
+      "source": "quicklotto.io",
+      "code": "superenalotto",
+      "draw_number": 10
+    },
+    {
+      "date": "2026-09-08",
+      "main_numbers": [
+        23,
+        26,
+        41,
+        52,
+        59,
+        85
+      ],
+      "bonus_numbers": [
+        49
+      ],
+      "source": "quicklotto.io",
+      "code": "superenalotto",
+      "draw_number": 11
+    },
+    {
+      "date": "2026-09-10",
+      "main_numbers": [
+        2,
+        17,
+        39,
+        59,
+        63,
+        89
+      ],
+      "bonus_numbers": [
+        62
+      ],
+      "source": "quicklotto.io",
+      "code": "superenalotto",
+      "draw_number": 12
+    },
+    {
+      "date": "2026-09-11",
+      "main_numbers": [
+        8,
+        13,
+        16,
+        52,
+        64,
+        70
+      ],
+      "bonus_numbers": [
+        17
+      ],
+      "source": "quicklotto.io",
+      "code": "superenalotto",
+      "draw_number": 13
+    },
+    {
+      "date": "2026-09-12",
+      "main_numbers": [
+        3,
+        7,
+        14,
+        40,
+        78,
+        81
+      ],
+      "bonus_numbers": [
+        1
+      ],
+      "source": "quicklotto.io",
+      "code": "superenalotto",
+      "draw_number": 14
+    },
+    {
+      "date": "2026-09-15",
+      "main_numbers": [
+        3,
+        12,
+        18,
+        32,
+        47,
+        54
+      ],
+      "bonus_numbers": [
+        69
+      ],
+      "source": "quicklotto.io",
+      "code": "superenalotto",
+      "draw_number": 15
+    },
+    {
+      "date": "2026-09-17",
+      "main_numbers": [
+        6,
+        7,
+        16,
+        35,
+        46,
+        54
+      ],
+      "bonus_numbers": [
+        21
+      ],
+      "source": "quicklotto.io",
+      "code": "superenalotto",
+      "draw_number": 16
+    },
+    {
+      "date": "2026-09-18",
+      "main_numbers": [
+        29,
+        37,
+        41,
+        43,
+        74,
+        86
+      ],
+      "bonus_numbers": [
+        25
+      ],
+      "source": "quicklotto.io",
+      "code": "superenalotto",
+      "draw_number": 17
+    },
+    {
+      "date": "2026-09-19",
+      "main_numbers": [
+        20,
+        42,
+        45,
+        48,
+        68,
+        85
+      ],
+      "bonus_numbers": [
+        49
+      ],
+      "source": "quicklotto.io",
+      "code": "superenalotto",
+      "draw_number": 18
+    },
+    {
+      "date": "2026-09-22",
+      "main_numbers": [
+        12,
+        42,
+        57,
+        65,
+        76,
+        77
+      ],
+      "bonus_numbers": [
+        21
+      ],
+      "source": "quicklotto.io",
+      "code": "superenalotto",
+      "draw_number": 19
+    },
+    {
+      "date": "2026-09-24",
+      "main_numbers": [
+        1,
+        28,
+        31,
+        50,
+        63,
+        85
+      ],
+      "bonus_numbers": [
+        86
+      ],
+      "source": "quicklotto.io",
+      "code": "superenalotto",
+      "draw_number": 20
+    }
+  ]
+}

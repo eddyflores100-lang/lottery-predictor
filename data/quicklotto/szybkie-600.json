@@ -1,0 +1,314 @@
+{
+  "lottery": {
+    "name": "Szybkie 600",
+    "code": "szybkie-600",
+    "main_picks": 6,
+    "main_pool_size": 32,
+    "bonus_picks": 0,
+    "bonus_pool_size": 0,
+    "is_inhouse": true,
+    "description": "pick 6 from 32. IN-HOUSE DRAW — run by this site with a random number generator, not an official lottery"
+  },
+  "draws": [
+    {
+      "date": "2026-09-15",
+      "main_numbers": [
+        8,
+        10,
+        15,
+        19,
+        24,
+        25
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "szybkie-600",
+      "draw_number": 1
+    },
+    {
+      "date": "2026-09-15",
+      "main_numbers": [
+        1,
+        5,
+        6,
+        9,
+        16,
+        19
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "szybkie-600",
+      "draw_number": 2
+    },
+    {
+      "date": "2026-09-16",
+      "main_numbers": [
+        7,
+        8,
+        10,
+        20,
+        23,
+        32
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "szybkie-600",
+      "draw_number": 3
+    },
+    {
+      "date": "2026-09-16",
+      "main_numbers": [
+        3,
+        11,
+        15,
+        17,
+        19,
+        28
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "szybkie-600",
+      "draw_number": 4
+    },
+    {
+      "date": "2026-09-17",
+      "main_numbers": [
+        9,
+        10,
+        13,
+        18,
+        20,
+        30
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "szybkie-600",
+      "draw_number": 5
+    },
+    {
+      "date": "2026-09-17",
+      "main_numbers": [
+        1,
+        5,
+        7,
+        12,
+        16,
+        18
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "szybkie-600",
+      "draw_number": 6
+    },
+    {
+      "date": "2026-09-18",
+      "main_numbers": [
+        10,
+        12,
+        15,
+        17,
+        18,
+        27
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "szybkie-600",
+      "draw_number": 7
+    },
+    {
+      "date": "2026-09-18",
+      "main_numbers": [
+        2,
+        3,
+        5,
+        12,
+        16,
+        28
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "szybkie-600",
+      "draw_number": 8
+    },
+    {
+      "date": "2026-09-19",
+      "main_numbers": [
+        4,
+        5,
+        9,
+        13,
+        27,
+        30
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "szybkie-600",
+      "draw_number": 9
+    },
+    {
+      "date": "2026-09-19",
+      "main_numbers": [
+        2,
+        7,
+        10,
+        12,
+        31,
+        32
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "szybkie-600",
+      "draw_number": 10
+    },
+    {
+      "date": "2026-09-20",
+      "main_numbers": [
+        3,
+        6,
+        11,
+        16,
+        18,
+        19
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "szybkie-600",
+      "draw_number": 11
+    },
+    {
+      "date": "2026-09-20",
+      "main_numbers": [
+        1,
+        4,
+        9,
+        10,
+        24,
+        32
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "szybkie-600",
+      "draw_number": 12
+    },
+    {
+      "date": "2026-09-21",
+      "main_numbers": [
+        1,
+        5,
+        6,
+        11,
+        12,
+        13
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "szybkie-600",
+      "draw_number": 13
+    },
+    {
+      "date": "2026-09-21",
+      "main_numbers": [
+        5,
+        6,
+        7,
+        13,
+        28,
+        30
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "szybkie-600",
+      "draw_number": 14
+    },
+    {
+      "date": "2026-09-22",
+      "main_numbers": [
+        7,
+        10,
+        14,
+        20,
+        22,
+        27
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "szybkie-600",
+      "draw_number": 15
+    },
+    {
+      "date": "2026-09-22",
+      "main_numbers": [
+        4,
+        8,
+        19,
+        24,
+        26,
+        28
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "szybkie-600",
+      "draw_number": 16
+    },
+    {
+      "date": "2026-09-23",
+      "main_numbers": [
+        2,
+        8,
+        21,
+        22,
+        28,
+        29
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "szybkie-600",
+      "draw_number": 17
+    },
+    {
+      "date": "2026-09-23",
+      "main_numbers": [
+        15,
+        19,
+        20,
+        25,
+        26,
+        28
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "szybkie-600",
+      "draw_number": 18
+    },
+    {
+      "date": "2026-09-24",
+      "main_numbers": [
+        6,
+        10,
+        11,
+        19,
+        25,
+        30
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "szybkie-600",
+      "draw_number": 19
+    },
+    {
+      "date": "2026-09-24",
+      "main_numbers": [
+        1,
+        4,
+        8,
+        12,
+        20,
+        28
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "szybkie-600",
+      "draw_number": 20
+    }
+  ]
+}

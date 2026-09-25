@@ -1,0 +1,294 @@
+{
+  "lottery": {
+    "name": "Shubh Lotto",
+    "code": "shubh-lotto",
+    "main_picks": 5,
+    "main_pool_size": 10,
+    "bonus_picks": 0,
+    "bonus_pool_size": 0,
+    "is_inhouse": true,
+    "description": "pick 5 from 10. IN-HOUSE DRAW — run by this site with a random number generator, not an official lottery"
+  },
+  "draws": [
+    {
+      "date": "2026-09-15",
+      "main_numbers": [
+        3,
+        5,
+        8,
+        9,
+        10
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "shubh-lotto",
+      "draw_number": 1
+    },
+    {
+      "date": "2026-09-15",
+      "main_numbers": [
+        2,
+        3,
+        6,
+        8,
+        10
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "shubh-lotto",
+      "draw_number": 2
+    },
+    {
+      "date": "2026-09-16",
+      "main_numbers": [
+        2,
+        4,
+        8,
+        9,
+        10
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "shubh-lotto",
+      "draw_number": 3
+    },
+    {
+      "date": "2026-09-16",
+      "main_numbers": [
+        1,
+        3,
+        4,
+        6,
+        7
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "shubh-lotto",
+      "draw_number": 4
+    },
+    {
+      "date": "2026-09-17",
+      "main_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "shubh-lotto",
+      "draw_number": 5
+    },
+    {
+      "date": "2026-09-17",
+      "main_numbers": [
+        1,
+        4,
+        5,
+        7,
+        8
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "shubh-lotto",
+      "draw_number": 6
+    },
+    {
+      "date": "2026-09-18",
+      "main_numbers": [
+        2,
+        5,
+        6,
+        9,
+        10
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "shubh-lotto",
+      "draw_number": 7
+    },
+    {
+      "date": "2026-09-18",
+      "main_numbers": [
+        1,
+        2,
+        5,
+        6,
+        10
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "shubh-lotto",
+      "draw_number": 8
+    },
+    {
+      "date": "2026-09-19",
+      "main_numbers": [
+        2,
+        3,
+        4,
+        5,
+        8
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "shubh-lotto",
+      "draw_number": 9
+    },
+    {
+      "date": "2026-09-19",
+      "main_numbers": [
+        2,
+        4,
+        6,
+        8,
+        9
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "shubh-lotto",
+      "draw_number": 10
+    },
+    {
+      "date": "2026-09-20",
+      "main_numbers": [
+        2,
+        3,
+        6,
+        9,
+        10
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "shubh-lotto",
+      "draw_number": 11
+    },
+    {
+      "date": "2026-09-20",
+      "main_numbers": [
+        1,
+        2,
+        3,
+        8,
+        10
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "shubh-lotto",
+      "draw_number": 12
+    },
+    {
+      "date": "2026-09-21",
+      "main_numbers": [
+        1,
+        2,
+        3,
+        7,
+        10
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "shubh-lotto",
+      "draw_number": 13
+    },
+    {
+      "date": "2026-09-21",
+      "main_numbers": [
+        2,
+        3,
+        7,
+        9,
+        10
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "shubh-lotto",
+      "draw_number": 14
+    },
+    {
+      "date": "2026-09-22",
+      "main_numbers": [
+        3,
+        4,
+        8,
+        9,
+        10
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "shubh-lotto",
+      "draw_number": 15
+    },
+    {
+      "date": "2026-09-22",
+      "main_numbers": [
+        1,
+        2,
+        6,
+        8,
+        10
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "shubh-lotto",
+      "draw_number": 16
+    },
+    {
+      "date": "2026-09-23",
+      "main_numbers": [
+        1,
+        3,
+        7,
+        9,
+        10
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "shubh-lotto",
+      "draw_number": 17
+    },
+    {
+      "date": "2026-09-23",
+      "main_numbers": [
+        1,
+        2,
+        3,
+        8,
+        9
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "shubh-lotto",
+      "draw_number": 18
+    },
+    {
+      "date": "2026-09-24",
+      "main_numbers": [
+        3,
+        6,
+        8,
+        9,
+        10
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "shubh-lotto",
+      "draw_number": 19
+    },
+    {
+      "date": "2026-09-24",
+      "main_numbers": [
+        1,
+        3,
+        4,
+        8,
+        9
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "shubh-lotto",
+      "draw_number": 20
+    }
+  ]
+}

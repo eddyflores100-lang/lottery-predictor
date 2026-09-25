@@ -1,0 +1,334 @@
+{
+  "lottery": {
+    "name": "MegaMillions",
+    "code": "mega-millions",
+    "main_picks": 5,
+    "main_pool_size": 70,
+    "bonus_picks": 1,
+    "bonus_pool_size": 24,
+    "is_inhouse": false,
+    "description": "pick 5 from 70, plus 1 bonus from 24"
+  },
+  "draws": [
+    {
+      "date": "2026-07-18",
+      "main_numbers": [
+        22,
+        34,
+        45,
+        48,
+        55
+      ],
+      "bonus_numbers": [
+        14
+      ],
+      "source": "quicklotto.io",
+      "code": "mega-millions",
+      "draw_number": 1
+    },
+    {
+      "date": "2026-07-22",
+      "main_numbers": [
+        25,
+        37,
+        59,
+        68,
+        70
+      ],
+      "bonus_numbers": [
+        10
+      ],
+      "source": "quicklotto.io",
+      "code": "mega-millions",
+      "draw_number": 2
+    },
+    {
+      "date": "2026-07-25",
+      "main_numbers": [
+        2,
+        5,
+        42,
+        44,
+        60
+      ],
+      "bonus_numbers": [
+        1
+      ],
+      "source": "quicklotto.io",
+      "code": "mega-millions",
+      "draw_number": 3
+    },
+    {
+      "date": "2026-07-29",
+      "main_numbers": [
+        34,
+        48,
+        49,
+        59,
+        70
+      ],
+      "bonus_numbers": [
+        12
+      ],
+      "source": "quicklotto.io",
+      "code": "mega-millions",
+      "draw_number": 4
+    },
+    {
+      "date": "2026-08-01",
+      "main_numbers": [
+        4,
+        18,
+        26,
+        43,
+        51
+      ],
+      "bonus_numbers": [
+        4
+      ],
+      "source": "quicklotto.io",
+      "code": "mega-millions",
+      "draw_number": 5
+    },
+    {
+      "date": "2026-08-05",
+      "main_numbers": [
+        14,
+        21,
+        51,
+        55,
+        65
+      ],
+      "bonus_numbers": [
+        21
+      ],
+      "source": "quicklotto.io",
+      "code": "mega-millions",
+      "draw_number": 6
+    },
+    {
+      "date": "2026-08-08",
+      "main_numbers": [
+        17,
+        20,
+        32,
+        54,
+        57
+      ],
+      "bonus_numbers": [
+        23
+      ],
+      "source": "quicklotto.io",
+      "code": "mega-millions",
+      "draw_number": 7
+    },
+    {
+      "date": "2026-08-12",
+      "main_numbers": [
+        1,
+        20,
+        30,
+        46,
+        68
+      ],
+      "bonus_numbers": [
+        17
+      ],
+      "source": "quicklotto.io",
+      "code": "mega-millions",
+      "draw_number": 8
+    },
+    {
+      "date": "2026-08-15",
+      "main_numbers": [
+        3,
+        23,
+        27,
+        46,
+        60
+      ],
+      "bonus_numbers": [
+        11
+      ],
+      "source": "quicklotto.io",
+      "code": "mega-millions",
+      "draw_number": 9
+    },
+    {
+      "date": "2026-08-19",
+      "main_numbers": [
+        5,
+        19,
+        30,
+        38,
+        59
+      ],
+      "bonus_numbers": [
+        12
+      ],
+      "source": "quicklotto.io",
+      "code": "mega-millions",
+      "draw_number": 10
+    },
+    {
+      "date": "2026-08-22",
+      "main_numbers": [
+        1,
+        25,
+        34,
+        48,
+        57
+      ],
+      "bonus_numbers": [
+        24
+      ],
+      "source": "quicklotto.io",
+      "code": "mega-millions",
+      "draw_number": 11
+    },
+    {
+      "date": "2026-08-26",
+      "main_numbers": [
+        7,
+        10,
+        47,
+        48,
+        50
+      ],
+      "bonus_numbers": [
+        14
+      ],
+      "source": "quicklotto.io",
+      "code": "mega-millions",
+      "draw_number": 12
+    },
+    {
+      "date": "2026-08-29",
+      "main_numbers": [
+        8,
+        17,
+        29,
+        42,
+        55
+      ],
+      "bonus_numbers": [
+        2
+      ],
+      "source": "quicklotto.io",
+      "code": "mega-millions",
+      "draw_number": 13
+    },
+    {
+      "date": "2026-09-02",
+      "main_numbers": [
+        1,
+        22,
+        51,
+        61,
+        63
+      ],
+      "bonus_numbers": [
+        17
+      ],
+      "source": "quicklotto.io",
+      "code": "mega-millions",
+      "draw_number": 14
+    },
+    {
+      "date": "2026-09-05",
+      "main_numbers": [
+        6,
+        26,
+        34,
+        59,
+        61
+      ],
+      "bonus_numbers": [
+        24
+      ],
+      "source": "quicklotto.io",
+      "code": "mega-millions",
+      "draw_number": 15
+    },
+    {
+      "date": "2026-09-09",
+      "main_numbers": [
+        17,
+        30,
+        43,
+        58,
+        66
+      ],
+      "bonus_numbers": [
+        20
+      ],
+      "source": "quicklotto.io",
+      "code": "mega-millions",
+      "draw_number": 16
+    },
+    {
+      "date": "2026-09-12",
+      "main_numbers": [
+        3,
+        30,
+        33,
+        53,
+        62
+      ],
+      "bonus_numbers": [
+        22
+      ],
+      "source": "quicklotto.io",
+      "code": "mega-millions",
+      "draw_number": 17
+    },
+    {
+      "date": "2026-09-16",
+      "main_numbers": [
+        27,
+        36,
+        43,
+        57,
+        58
+      ],
+      "bonus_numbers": [
+        16
+      ],
+      "source": "quicklotto.io",
+      "code": "mega-millions",
+      "draw_number": 18
+    },
+    {
+      "date": "2026-09-19",
+      "main_numbers": [
+        4,
+        9,
+        24,
+        56,
+        68
+      ],
+      "bonus_numbers": [
+        1
+      ],
+      "source": "quicklotto.io",
+      "code": "mega-millions",
+      "draw_number": 19
+    },
+    {
+      "date": "2026-09-23",
+      "main_numbers": [
+        7,
+        13,
+        26,
+        37,
+        68
+      ],
+      "bonus_numbers": [
+        8
+      ],
+      "source": "quicklotto.io",
+      "code": "mega-millions",
+      "draw_number": 20
+    }
+  ]
+}

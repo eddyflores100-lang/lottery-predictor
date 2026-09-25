@@ -1,0 +1,314 @@
+{
+  "lottery": {
+    "name": "Polish Lotto",
+    "code": "polish-lotto",
+    "main_picks": 6,
+    "main_pool_size": 49,
+    "bonus_picks": 0,
+    "bonus_pool_size": 0,
+    "is_inhouse": true,
+    "description": "pick 6 from 49. IN-HOUSE DRAW — run by this site with a random number generator, not an official lottery"
+  },
+  "draws": [
+    {
+      "date": "2026-08-11",
+      "main_numbers": [
+        1,
+        29,
+        30,
+        36,
+        41,
+        43
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "polish-lotto",
+      "draw_number": 1
+    },
+    {
+      "date": "2026-08-13",
+      "main_numbers": [
+        3,
+        13,
+        35,
+        36,
+        44,
+        48
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "polish-lotto",
+      "draw_number": 2
+    },
+    {
+      "date": "2026-08-15",
+      "main_numbers": [
+        6,
+        16,
+        20,
+        23,
+        43,
+        48
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "polish-lotto",
+      "draw_number": 3
+    },
+    {
+      "date": "2026-08-18",
+      "main_numbers": [
+        15,
+        19,
+        33,
+        34,
+        36,
+        49
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "polish-lotto",
+      "draw_number": 4
+    },
+    {
+      "date": "2026-08-20",
+      "main_numbers": [
+        1,
+        11,
+        19,
+        28,
+        33,
+        42
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "polish-lotto",
+      "draw_number": 5
+    },
+    {
+      "date": "2026-08-22",
+      "main_numbers": [
+        6,
+        9,
+        12,
+        14,
+        22,
+        27
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "polish-lotto",
+      "draw_number": 6
+    },
+    {
+      "date": "2026-08-25",
+      "main_numbers": [
+        2,
+        15,
+        28,
+        39,
+        42,
+        43
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "polish-lotto",
+      "draw_number": 7
+    },
+    {
+      "date": "2026-08-27",
+      "main_numbers": [
+        1,
+        2,
+        6,
+        10,
+        39,
+        42
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "polish-lotto",
+      "draw_number": 8
+    },
+    {
+      "date": "2026-08-29",
+      "main_numbers": [
+        6,
+        18,
+        26,
+        33,
+        43,
+        47
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "polish-lotto",
+      "draw_number": 9
+    },
+    {
+      "date": "2026-09-01",
+      "main_numbers": [
+        15,
+        16,
+        17,
+        28,
+        35,
+        49
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "polish-lotto",
+      "draw_number": 10
+    },
+    {
+      "date": "2026-09-03",
+      "main_numbers": [
+        1,
+        6,
+        27,
+        32,
+        33,
+        39
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "polish-lotto",
+      "draw_number": 11
+    },
+    {
+      "date": "2026-09-05",
+      "main_numbers": [
+        1,
+        9,
+        15,
+        18,
+        28,
+        37
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "polish-lotto",
+      "draw_number": 12
+    },
+    {
+      "date": "2026-09-08",
+      "main_numbers": [
+        7,
+        10,
+        17,
+        24,
+        25,
+        29
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "polish-lotto",
+      "draw_number": 13
+    },
+    {
+      "date": "2026-09-10",
+      "main_numbers": [
+        8,
+        9,
+        30,
+        34,
+        36,
+        38
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "polish-lotto",
+      "draw_number": 14
+    },
+    {
+      "date": "2026-09-12",
+      "main_numbers": [
+        2,
+        5,
+        16,
+        22,
+        38,
+        46
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "polish-lotto",
+      "draw_number": 15
+    },
+    {
+      "date": "2026-09-15",
+      "main_numbers": [
+        7,
+        10,
+        22,
+        28,
+        42,
+        44
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "polish-lotto",
+      "draw_number": 16
+    },
+    {
+      "date": "2026-09-17",
+      "main_numbers": [
+        2,
+        9,
+        22,
+        25,
+        29,
+        44
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "polish-lotto",
+      "draw_number": 17
+    },
+    {
+      "date": "2026-09-19",
+      "main_numbers": [
+        9,
+        10,
+        21,
+        24,
+        31,
+        39
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "polish-lotto",
+      "draw_number": 18
+    },
+    {
+      "date": "2026-09-22",
+      "main_numbers": [
+        1,
+        18,
+        27,
+        31,
+        34,
+        35
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "polish-lotto",
+      "draw_number": 19
+    },
+    {
+      "date": "2026-09-24",
+      "main_numbers": [
+        4,
+        20,
+        23,
+        25,
+        34,
+        41
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "polish-lotto",
+      "draw_number": 20
+    }
+  ]
+}

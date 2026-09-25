@@ -1,0 +1,334 @@
+{
+  "lottery": {
+    "name": "Cash4Life",
+    "code": "cash4life",
+    "main_picks": 5,
+    "main_pool_size": 60,
+    "bonus_picks": 1,
+    "bonus_pool_size": 4,
+    "is_inhouse": true,
+    "description": "pick 5 from 60, plus 1 bonus from 4. IN-HOUSE DRAW — run by this site with a random number generator, not an official lottery"
+  },
+  "draws": [
+    {
+      "date": "2026-09-06",
+      "main_numbers": [
+        12,
+        28,
+        31,
+        42,
+        44
+      ],
+      "bonus_numbers": [
+        2
+      ],
+      "source": "quicklotto.io",
+      "code": "cash4life",
+      "draw_number": 1
+    },
+    {
+      "date": "2026-09-07",
+      "main_numbers": [
+        1,
+        11,
+        20,
+        51,
+        52
+      ],
+      "bonus_numbers": [
+        3
+      ],
+      "source": "quicklotto.io",
+      "code": "cash4life",
+      "draw_number": 2
+    },
+    {
+      "date": "2026-09-08",
+      "main_numbers": [
+        9,
+        17,
+        21,
+        38,
+        51
+      ],
+      "bonus_numbers": [
+        2
+      ],
+      "source": "quicklotto.io",
+      "code": "cash4life",
+      "draw_number": 3
+    },
+    {
+      "date": "2026-09-09",
+      "main_numbers": [
+        2,
+        39,
+        40,
+        52,
+        56
+      ],
+      "bonus_numbers": [
+        2
+      ],
+      "source": "quicklotto.io",
+      "code": "cash4life",
+      "draw_number": 4
+    },
+    {
+      "date": "2026-09-10",
+      "main_numbers": [
+        1,
+        5,
+        11,
+        31,
+        38
+      ],
+      "bonus_numbers": [
+        1
+      ],
+      "source": "quicklotto.io",
+      "code": "cash4life",
+      "draw_number": 5
+    },
+    {
+      "date": "2026-09-11",
+      "main_numbers": [
+        1,
+        9,
+        13,
+        24,
+        27
+      ],
+      "bonus_numbers": [
+        1
+      ],
+      "source": "quicklotto.io",
+      "code": "cash4life",
+      "draw_number": 6
+    },
+    {
+      "date": "2026-09-12",
+      "main_numbers": [
+        2,
+        16,
+        30,
+        35,
+        55
+      ],
+      "bonus_numbers": [
+        1
+      ],
+      "source": "quicklotto.io",
+      "code": "cash4life",
+      "draw_number": 7
+    },
+    {
+      "date": "2026-09-13",
+      "main_numbers": [
+        10,
+        11,
+        30,
+        42,
+        47
+      ],
+      "bonus_numbers": [
+        1
+      ],
+      "source": "quicklotto.io",
+      "code": "cash4life",
+      "draw_number": 8
+    },
+    {
+      "date": "2026-09-14",
+      "main_numbers": [
+        6,
+        21,
+        37,
+        49,
+        59
+      ],
+      "bonus_numbers": [
+        3
+      ],
+      "source": "quicklotto.io",
+      "code": "cash4life",
+      "draw_number": 9
+    },
+    {
+      "date": "2026-09-15",
+      "main_numbers": [
+        2,
+        3,
+        33,
+        46,
+        54
+      ],
+      "bonus_numbers": [
+        4
+      ],
+      "source": "quicklotto.io",
+      "code": "cash4life",
+      "draw_number": 10
+    },
+    {
+      "date": "2026-09-16",
+      "main_numbers": [
+        1,
+        13,
+        25,
+        35,
+        56
+      ],
+      "bonus_numbers": [
+        2
+      ],
+      "source": "quicklotto.io",
+      "code": "cash4life",
+      "draw_number": 11
+    },
+    {
+      "date": "2026-09-17",
+      "main_numbers": [
+        17,
+        33,
+        43,
+        52,
+        55
+      ],
+      "bonus_numbers": [
+        1
+      ],
+      "source": "quicklotto.io",
+      "code": "cash4life",
+      "draw_number": 12
+    },
+    {
+      "date": "2026-09-18",
+      "main_numbers": [
+        14,
+        17,
+        25,
+        37,
+        44
+      ],
+      "bonus_numbers": [
+        2
+      ],
+      "source": "quicklotto.io",
+      "code": "cash4life",
+      "draw_number": 13
+    },
+    {
+      "date": "2026-09-19",
+      "main_numbers": [
+        7,
+        42,
+        53,
+        54,
+        60
+      ],
+      "bonus_numbers": [
+        4
+      ],
+      "source": "quicklotto.io",
+      "code": "cash4life",
+      "draw_number": 14
+    },
+    {
+      "date": "2026-09-20",
+      "main_numbers": [
+        3,
+        19,
+        22,
+        39,
+        53
+      ],
+      "bonus_numbers": [
+        4
+      ],
+      "source": "quicklotto.io",
+      "code": "cash4life",
+      "draw_number": 15
+    },
+    {
+      "date": "2026-09-21",
+      "main_numbers": [
+        10,
+        21,
+        39,
+        40,
+        47
+      ],
+      "bonus_numbers": [
+        2
+      ],
+      "source": "quicklotto.io",
+      "code": "cash4life",
+      "draw_number": 16
+    },
+    {
+      "date": "2026-09-22",
+      "main_numbers": [
+        8,
+        11,
+        28,
+        30,
+        54
+      ],
+      "bonus_numbers": [
+        4
+      ],
+      "source": "quicklotto.io",
+      "code": "cash4life",
+      "draw_number": 17
+    },
+    {
+      "date": "2026-09-23",
+      "main_numbers": [
+        6,
+        15,
+        19,
+        47,
+        60
+      ],
+      "bonus_numbers": [
+        1
+      ],
+      "source": "quicklotto.io",
+      "code": "cash4life",
+      "draw_number": 18
+    },
+    {
+      "date": "2026-09-24",
+      "main_numbers": [
+        10,
+        12,
+        32,
+        33,
+        48
+      ],
+      "bonus_numbers": [
+        3
+      ],
+      "source": "quicklotto.io",
+      "code": "cash4life",
+      "draw_number": 19
+    },
+    {
+      "date": "2026-09-25",
+      "main_numbers": [
+        31,
+        42,
+        44,
+        49,
+        55
+      ],
+      "bonus_numbers": [
+        2
+      ],
+      "source": "quicklotto.io",
+      "code": "cash4life",
+      "draw_number": 20
+    }
+  ]
+}

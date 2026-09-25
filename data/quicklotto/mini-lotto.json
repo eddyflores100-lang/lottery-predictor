@@ -1,0 +1,294 @@
+{
+  "lottery": {
+    "name": "Mini Lotto",
+    "code": "mini-lotto",
+    "main_picks": 5,
+    "main_pool_size": 42,
+    "bonus_picks": 0,
+    "bonus_pool_size": 0,
+    "is_inhouse": true,
+    "description": "pick 5 from 42. IN-HOUSE DRAW — run by this site with a random number generator, not an official lottery"
+  },
+  "draws": [
+    {
+      "date": "2026-09-05",
+      "main_numbers": [
+        31,
+        34,
+        35,
+        36,
+        41
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "mini-lotto",
+      "draw_number": 1
+    },
+    {
+      "date": "2026-09-06",
+      "main_numbers": [
+        3,
+        20,
+        23,
+        39,
+        41
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "mini-lotto",
+      "draw_number": 2
+    },
+    {
+      "date": "2026-09-07",
+      "main_numbers": [
+        4,
+        7,
+        9,
+        11,
+        14
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "mini-lotto",
+      "draw_number": 3
+    },
+    {
+      "date": "2026-09-08",
+      "main_numbers": [
+        3,
+        23,
+        24,
+        32,
+        39
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "mini-lotto",
+      "draw_number": 4
+    },
+    {
+      "date": "2026-09-09",
+      "main_numbers": [
+        12,
+        22,
+        28,
+        34,
+        41
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "mini-lotto",
+      "draw_number": 5
+    },
+    {
+      "date": "2026-09-10",
+      "main_numbers": [
+        7,
+        9,
+        24,
+        34,
+        35
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "mini-lotto",
+      "draw_number": 6
+    },
+    {
+      "date": "2026-09-11",
+      "main_numbers": [
+        3,
+        16,
+        31,
+        36,
+        42
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "mini-lotto",
+      "draw_number": 7
+    },
+    {
+      "date": "2026-09-12",
+      "main_numbers": [
+        8,
+        16,
+        27,
+        30,
+        33
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "mini-lotto",
+      "draw_number": 8
+    },
+    {
+      "date": "2026-09-13",
+      "main_numbers": [
+        2,
+        7,
+        15,
+        32,
+        42
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "mini-lotto",
+      "draw_number": 9
+    },
+    {
+      "date": "2026-09-14",
+      "main_numbers": [
+        15,
+        19,
+        24,
+        25,
+        35
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "mini-lotto",
+      "draw_number": 10
+    },
+    {
+      "date": "2026-09-15",
+      "main_numbers": [
+        1,
+        9,
+        17,
+        27,
+        35
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "mini-lotto",
+      "draw_number": 11
+    },
+    {
+      "date": "2026-09-16",
+      "main_numbers": [
+        10,
+        21,
+        26,
+        35,
+        42
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "mini-lotto",
+      "draw_number": 12
+    },
+    {
+      "date": "2026-09-17",
+      "main_numbers": [
+        3,
+        12,
+        13,
+        22,
+        34
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "mini-lotto",
+      "draw_number": 13
+    },
+    {
+      "date": "2026-09-18",
+      "main_numbers": [
+        2,
+        25,
+        26,
+        40,
+        41
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "mini-lotto",
+      "draw_number": 14
+    },
+    {
+      "date": "2026-09-19",
+      "main_numbers": [
+        9,
+        10,
+        11,
+        14,
+        37
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "mini-lotto",
+      "draw_number": 15
+    },
+    {
+      "date": "2026-09-20",
+      "main_numbers": [
+        2,
+        4,
+        12,
+        13,
+        26
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "mini-lotto",
+      "draw_number": 16
+    },
+    {
+      "date": "2026-09-21",
+      "main_numbers": [
+        4,
+        8,
+        20,
+        34,
+        38
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "mini-lotto",
+      "draw_number": 17
+    },
+    {
+      "date": "2026-09-22",
+      "main_numbers": [
+        4,
+        12,
+        19,
+        26,
+        35
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "mini-lotto",
+      "draw_number": 18
+    },
+    {
+      "date": "2026-09-23",
+      "main_numbers": [
+        13,
+        16,
+        22,
+        33,
+        36
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "mini-lotto",
+      "draw_number": 19
+    },
+    {
+      "date": "2026-09-24",
+      "main_numbers": [
+        10,
+        14,
+        17,
+        30,
+        36
+      ],
+      "bonus_numbers": [],
+      "source": "quicklotto.io",
+      "code": "mini-lotto",
+      "draw_number": 20
+    }
+  ]
+}

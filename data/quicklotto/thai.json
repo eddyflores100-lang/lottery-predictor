@@ -1,0 +1,13 @@
+{
+  "lottery": {
+    "name": "Thai Government Lottery",
+    "code": "thai",
+    "main_picks": 0,
+    "main_pool_size": 0,
+    "bonus_picks": 0,
+    "bonus_pool_size": 0,
+    "is_inhouse": false,
+    "description": "an official draw by the Government Lottery Office of Thailand, on the 1st and 16th of each month — not drawn by this site. A ticket is a six-digit number"
+  },
+  "draws": []
+}

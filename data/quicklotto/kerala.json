@@ -1,0 +1,13 @@
+{
+  "lottery": {
+    "name": "Kerala State Lottery",
+    "code": "kerala",
+    "main_picks": 0,
+    "main_pool_size": 0,
+    "bonus_picks": 0,
+    "bonus_pool_size": 0,
+    "is_inhouse": false,
+    "description": "an official draw by the Directorate of Kerala State Lotteries, every afternoon at 3:00 PM India time — not drawn by this site. A ticket is a two-letter series and a six-digit number"
+  },
+  "draws": []
+}
