@@ -4,9 +4,9 @@
   "docs": "https://bettip.co.za/api/",
   "attribution": "Data by BetTip, https://bettip.co.za/",
   "licence": "Free for any use with attribution to bettip.co.za. Results are the operators' published draws; no guarantee is given and nothing here is betting advice. 18+.",
-  "builtAt": "2026-09-24T21:37:19.301Z",
+  "builtAt": "2026-09-25T17:03:05.589Z",
   "resource": "uk49s/draws",
-  "count": 5863,
+  "count": 5867,
   "order": "oldest first",
   "data": [
     {
@@ -82089,6 +82089,62 @@
         34
       ],
       "booster": 40,
+      "official": true
+    },
+    {
+      "date": "2026-09-25",
+      "draw": "brunchtime",
+      "numbers": [
+        9,
+        10,
+        14,
+        18,
+        19,
+        42
+      ],
+      "booster": 13,
+      "official": false
+    },
+    {
+      "date": "2026-09-25",
+      "draw": "lunchtime",
+      "numbers": [
+        16,
+        19,
+        20,
+        25,
+        28,
+        30
+      ],
+      "booster": 29,
+      "official": true
+    },
+    {
+      "date": "2026-09-25",
+      "draw": "drivetime",
+      "numbers": [
+        2,
+        4,
+        9,
+        34,
+        42,
+        44
+      ],
+      "booster": 20,
+      "official": false
+    },
+    {
+      "date": "2026-09-25",
+      "draw": "teatime",
+      "numbers": [
+        14,
+        17,
+        26,
+        29,
+        43,
+        45
+      ],
+      "booster": 1,
       "official": true
     }
   ]

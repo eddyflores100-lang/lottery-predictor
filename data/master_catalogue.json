@@ -75,7 +75,7 @@
     "min_jackpot": 125000,
     "data_file": "/home/z/my-project/data/uk49s.json",
     "source": "local",
-    "total_draws": 5863,
+    "total_draws": 5867,
     "is_inhouse": false,
     "odds_jackpot": 685206984
   },

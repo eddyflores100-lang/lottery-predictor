@@ -128984,5 +128984,93 @@
       "game": "uk49s",
       "draw_time": "teatime"
     }
+  },
+  {
+    "draw_number": 5864,
+    "date": "2026-09-25",
+    "main_numbers": [
+      9,
+      10,
+      14,
+      18,
+      19,
+      42
+    ],
+    "bonus_numbers": [
+      13
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "uk49s",
+      "draw_time": "brunchtime"
+    }
+  },
+  {
+    "draw_number": 5865,
+    "date": "2026-09-25",
+    "main_numbers": [
+      16,
+      19,
+      20,
+      25,
+      28,
+      30
+    ],
+    "bonus_numbers": [
+      29
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "uk49s",
+      "draw_time": "lunchtime"
+    }
+  },
+  {
+    "draw_number": 5866,
+    "date": "2026-09-25",
+    "main_numbers": [
+      2,
+      4,
+      9,
+      34,
+      42,
+      44
+    ],
+    "bonus_numbers": [
+      20
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "uk49s",
+      "draw_time": "drivetime"
+    }
+  },
+  {
+    "draw_number": 5867,
+    "date": "2026-09-25",
+    "main_numbers": [
+      14,
+      17,
+      26,
+      29,
+      43,
+      45
+    ],
+    "bonus_numbers": [
+      1
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "uk49s",
+      "draw_time": "teatime"
+    }
   }
 ]

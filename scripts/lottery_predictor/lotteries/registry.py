@@ -9,7 +9,7 @@ import json
 from .base import Lottery, DrawResult
 from .pozo_millonario import PozoMillonario
 from .lotto_austrian import LottoAustrian
-from .generic import make_lottery, NEW_LOTTERIES
+from .generic import make_lottery, NEW_LOTTERIES, get_all_lottery_keys
 
 
 class LaPrimitiva(Lottery):
@@ -171,9 +171,35 @@ GENERIC_KEYS = list(NEW_LOTTERIES.keys())
 
 def get_lottery(name: str) -> Lottery:
     """Get a lottery instance by name."""
-    name = name.lower().replace(' ', '_').replace('-', '_')
+    name_original = name
+    name = name.lower().replace(' ', '_')
+    # Try exact match first (for quicklotto keys with hyphens like 'ql_la-primitiva')
     if name in LOTTERY_REGISTRY:
         return LOTTERY_REGISTRY[name]()
+    # Try existing NEW_LOTTERIES first (with exact name)
     if name in NEW_LOTTERIES:
         return make_lottery(name)
-    raise ValueError(f"Unknown lottery: {name}. Available: {list(LOTTERY_REGISTRY.keys()) + GENERIC_KEYS}")
+    # Try quicklotto registry (extended, with exact name preserving hyphens)
+    try:
+        from .quicklotto_registry import merge_with_existing
+        all_configs = merge_with_existing()
+        if name in all_configs:
+            return make_lottery(name)
+    except Exception:
+        pass
+    # Try with hyphens replaced by underscores (legacy compatibility)
+    name_underscore = name.replace('-', '_')
+    if name_underscore != name:
+        if name_underscore in LOTTERY_REGISTRY:
+            return LOTTERY_REGISTRY[name_underscore]()
+        if name_underscore in NEW_LOTTERIES:
+            return make_lottery(name_underscore)
+        try:
+            from .quicklotto_registry import merge_with_existing
+            all_configs = merge_with_existing()
+            if name_underscore in all_configs:
+                return make_lottery(name_underscore)
+        except Exception:
+            pass
+    available = list(LOTTERY_REGISTRY.keys()) + get_all_lottery_keys()
+    raise ValueError(f"Unknown lottery: {name_original}. Available: {available}")

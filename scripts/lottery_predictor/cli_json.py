@@ -16,6 +16,13 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 def cmd_lotteries():
     from lotteries import LOTTERY_REGISTRY, NEW_LOTTERIES, make_lottery
+    from lotteries.generic import get_all_lottery_keys
+    try:
+        from lotteries.quicklotto_registry import merge_with_existing
+        all_configs = merge_with_existing()
+    except Exception:
+        all_configs = dict(NEW_LOTTERIES)
+    
     DEFAULT_DATA_PATHS = {
         'pozo_millonario': '/home/z/my-project/data/pozo_data.json',
         'la_primitiva': '/home/z/my-project/data/la_primitiva.json',
@@ -24,12 +31,14 @@ def cmd_lotteries():
         'el_gordo': '/home/z/my-project/data/el_gordo.json',
         'lotto_austrian': '/home/z/my-project/data/lotto_austrian.json',
     }
-    # Add generic lotteries
-    for k, v in NEW_LOTTERIES.items():
+    # Add all generic + quicklotto lotteries
+    for k, v in all_configs.items():
         DEFAULT_DATA_PATHS[k] = v['data_file']
     
     result = []
-    # Existing lotteries
+    seen_keys = set()
+    
+    # Existing lotteries from registry
     for name, cls in LOTTERY_REGISTRY.items():
         path = DEFAULT_DATA_PATHS.get(name, '')
         has_data = os.path.exists(path)
@@ -49,8 +58,12 @@ def cmd_lotteries():
             'has_data': has_data,
             'data_path': path,
         })
-    # Generic lotteries
-    for name in NEW_LOTTERIES.keys():
+        seen_keys.add(name)
+    
+    # All generic + quicklotto lotteries
+    for name in all_configs.keys():
+        if name in seen_keys:
+            continue
         instance = make_lottery(name)
         if instance is None:
             continue
@@ -71,6 +84,7 @@ def cmd_lotteries():
             'has_data': has_data,
             'data_path': path,
         })
+        seen_keys.add(name)
     return result
 
 
@@ -89,6 +103,11 @@ def cmd_engines():
 
 def cmd_describe(lottery_name):
     from lotteries import get_lottery, NEW_LOTTERIES
+    try:
+        from lotteries.quicklotto_registry import merge_with_existing
+        all_configs = merge_with_existing()
+    except Exception:
+        all_configs = dict(NEW_LOTTERIES)
     DEFAULT_DATA_PATHS = {
         'pozo_millonario': '/home/z/my-project/data/pozo_data.json',
         'la_primitiva': '/home/z/my-project/data/la_primitiva.json',
@@ -97,7 +116,7 @@ def cmd_describe(lottery_name):
         'el_gordo': '/home/z/my-project/data/el_gordo.json',
         'lotto_austrian': '/home/z/my-project/data/lotto_austrian.json',
     }
-    for k, v in NEW_LOTTERIES.items():
+    for k, v in all_configs.items():
         DEFAULT_DATA_PATHS[k] = v['data_file']
     
     lottery = get_lottery(lottery_name)
@@ -128,6 +147,11 @@ def cmd_describe(lottery_name):
 def cmd_predict(lottery_name, engine_name):
     from lotteries import get_lottery, NEW_LOTTERIES
     from engines import ENGINE_REGISTRY
+    try:
+        from lotteries.quicklotto_registry import merge_with_existing
+        all_configs = merge_with_existing()
+    except Exception:
+        all_configs = dict(NEW_LOTTERIES)
     DEFAULT_DATA_PATHS = {
         'pozo_millonario': '/home/z/my-project/data/pozo_data.json',
         'la_primitiva': '/home/z/my-project/data/la_primitiva.json',
@@ -136,7 +160,7 @@ def cmd_predict(lottery_name, engine_name):
         'el_gordo': '/home/z/my-project/data/el_gordo.json',
         'lotto_austrian': '/home/z/my-project/data/lotto_austrian.json',
     }
-    for k, v in NEW_LOTTERIES.items():
+    for k, v in all_configs.items():
         DEFAULT_DATA_PATHS[k] = v['data_file']
     
     lottery = get_lottery(lottery_name)

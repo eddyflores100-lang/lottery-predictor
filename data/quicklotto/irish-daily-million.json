@@ -28,23 +28,6 @@
       "draw_number": 1
     },
     {
-      "date": "2026-09-15",
-      "main_numbers": [
-        4,
-        16,
-        20,
-        32,
-        33,
-        37
-      ],
-      "bonus_numbers": [
-        27
-      ],
-      "source": "quicklotto.io",
-      "code": "irish-daily-million",
-      "draw_number": 2
-    },
-    {
       "date": "2026-09-16",
       "main_numbers": [
         1,
@@ -59,7 +42,7 @@
       ],
       "source": "quicklotto.io",
       "code": "irish-daily-million",
-      "draw_number": 3
+      "draw_number": 2
     },
     {
       "date": "2026-09-16",
@@ -76,7 +59,7 @@
       ],
       "source": "quicklotto.io",
       "code": "irish-daily-million",
-      "draw_number": 4
+      "draw_number": 3
     },
     {
       "date": "2026-09-17",
@@ -93,7 +76,7 @@
       ],
       "source": "quicklotto.io",
       "code": "irish-daily-million",
-      "draw_number": 5
+      "draw_number": 4
     },
     {
       "date": "2026-09-17",
@@ -110,7 +93,7 @@
       ],
       "source": "quicklotto.io",
       "code": "irish-daily-million",
-      "draw_number": 6
+      "draw_number": 5
     },
     {
       "date": "2026-09-18",
@@ -127,7 +110,7 @@
       ],
       "source": "quicklotto.io",
       "code": "irish-daily-million",
-      "draw_number": 7
+      "draw_number": 6
     },
     {
       "date": "2026-09-18",
@@ -144,7 +127,7 @@
       ],
       "source": "quicklotto.io",
       "code": "irish-daily-million",
-      "draw_number": 8
+      "draw_number": 7
     },
     {
       "date": "2026-09-19",
@@ -161,7 +144,7 @@
       ],
       "source": "quicklotto.io",
       "code": "irish-daily-million",
-      "draw_number": 9
+      "draw_number": 8
     },
     {
       "date": "2026-09-19",
@@ -178,7 +161,7 @@
       ],
       "source": "quicklotto.io",
       "code": "irish-daily-million",
-      "draw_number": 10
+      "draw_number": 9
     },
     {
       "date": "2026-09-20",
@@ -195,7 +178,7 @@
       ],
       "source": "quicklotto.io",
       "code": "irish-daily-million",
-      "draw_number": 11
+      "draw_number": 10
     },
     {
       "date": "2026-09-20",
@@ -212,7 +195,7 @@
       ],
       "source": "quicklotto.io",
       "code": "irish-daily-million",
-      "draw_number": 12
+      "draw_number": 11
     },
     {
       "date": "2026-09-21",
@@ -229,7 +212,7 @@
       ],
       "source": "quicklotto.io",
       "code": "irish-daily-million",
-      "draw_number": 13
+      "draw_number": 12
     },
     {
       "date": "2026-09-21",
@@ -246,7 +229,7 @@
       ],
       "source": "quicklotto.io",
       "code": "irish-daily-million",
-      "draw_number": 14
+      "draw_number": 13
     },
     {
       "date": "2026-09-22",
@@ -263,7 +246,7 @@
       ],
       "source": "quicklotto.io",
       "code": "irish-daily-million",
-      "draw_number": 15
+      "draw_number": 14
     },
     {
       "date": "2026-09-22",
@@ -280,7 +263,7 @@
       ],
       "source": "quicklotto.io",
       "code": "irish-daily-million",
-      "draw_number": 16
+      "draw_number": 15
     },
     {
       "date": "2026-09-23",
@@ -297,7 +280,7 @@
       ],
       "source": "quicklotto.io",
       "code": "irish-daily-million",
-      "draw_number": 17
+      "draw_number": 16
     },
     {
       "date": "2026-09-23",
@@ -314,7 +297,7 @@
       ],
       "source": "quicklotto.io",
       "code": "irish-daily-million",
-      "draw_number": 18
+      "draw_number": 17
     },
     {
       "date": "2026-09-24",
@@ -331,7 +314,7 @@
       ],
       "source": "quicklotto.io",
       "code": "irish-daily-million",
-      "draw_number": 19
+      "draw_number": 18
     },
     {
       "date": "2026-09-24",
@@ -345,6 +328,23 @@
       ],
       "bonus_numbers": [
         28
+      ],
+      "source": "quicklotto.io",
+      "code": "irish-daily-million",
+      "draw_number": 19
+    },
+    {
+      "date": "2026-09-25",
+      "main_numbers": [
+        3,
+        5,
+        25,
+        29,
+        33,
+        37
+      ],
+      "bonus_numbers": [
+        4
       ],
       "source": "quicklotto.io",
       "code": "irish-daily-million",

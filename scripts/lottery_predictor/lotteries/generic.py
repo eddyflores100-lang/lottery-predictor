@@ -35,8 +35,18 @@ class GenericLottery(Lottery):
             raise FileNotFoundError(f"Data file not found: {source}")
         with open(path, encoding='utf-8') as f:
             data = json.load(f)
+        # Handle both formats:
+        # 1. List of draws directly: [{draw_number, date, main_numbers, ...}, ...]
+        # 2. Quicklotto format: {lottery: {...}, draws: [...]}
+        if isinstance(data, dict) and 'draws' in data:
+            draws_data = data['draws']
+        elif isinstance(data, list):
+            draws_data = data
+        else:
+            draws_data = []
+        
         self.draws = []
-        for r in data:
+        for r in draws_data:
             draw = DrawResult(
                 draw_number=r['draw_number'],
                 date=r['date'],
@@ -215,7 +225,14 @@ NEW_LOTTERIES = {
 
 def make_lottery(key):
     """Create a generic lottery instance by key."""
-    config = NEW_LOTTERIES.get(key)
+    # Check quicklotto registry first (extended catalog)
+    try:
+        from .quicklotto_registry import merge_with_existing
+        all_configs = merge_with_existing()
+    except Exception:
+        all_configs = NEW_LOTTERIES
+    
+    config = all_configs.get(key) or NEW_LOTTERIES.get(key)
     if not config:
         return None
     # Compute odds
@@ -238,3 +255,13 @@ def make_lottery(key):
         odds_jackpot=odds_jackpot,
         data_file=config['data_file'],
     )
+
+
+def get_all_lottery_keys():
+    """Get all available lottery keys (existing + quicklotto)."""
+    try:
+        from .quicklotto_registry import merge_with_existing
+        all_configs = merge_with_existing()
+        return list(all_configs.keys())
+    except Exception:
+        return list(NEW_LOTTERIES.keys())
