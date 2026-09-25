@@ -1,0 +1,160 @@
+{
+  "results": {
+    "frequency": {
+      "engine": "frequency",
+      "observed_avg_hits": 0.51,
+      "baseline_avg_hits": 0.43,
+      "improvement": 0.08000000000000002,
+      "improvement_pct": 18.6046511627907,
+      "p_value": 0.54,
+      "is_significant": false,
+      "cohens_d": -0.009471804249422275,
+      "effect_size": "negligible",
+      "ci_95": [
+        0.3773585295618297,
+        0.6426414704381703
+      ],
+      "n_permutations": 200,
+      "perm_mean": 0.5106,
+      "perm_std": 0.06334590371593052,
+      "perm_extreme_count": 108,
+      "verdict": "NOT significant (p=0.5400). Improvement is within noise.",
+      "bonferroni_significant": false
+    },
+    "hot_cold": {
+      "engine": "hot_cold",
+      "observed_avg_hits": 0.37,
+      "baseline_avg_hits": 0.43,
+      "improvement": -0.06,
+      "improvement_pct": -13.953488372093023,
+      "p_value": 0.99,
+      "is_significant": false,
+      "cohens_d": -2.219559462447788,
+      "effect_size": "large",
+      "ci_95": [
+        0.25527384814263143,
+        0.48472615185736856
+      ],
+      "n_permutations": 200,
+      "perm_mean": 0.5106,
+      "perm_std": 0.06334590371593052,
+      "perm_extreme_count": 198,
+      "verdict": "NOT significant (p=0.9900). Improvement is within noise.",
+      "bonferroni_significant": false
+    },
+    "gap_analysis": {
+      "engine": "gap_analysis",
+      "observed_avg_hits": 0.61,
+      "baseline_avg_hits": 0.43,
+      "improvement": 0.18,
+      "improvement_pct": 41.860465116279066,
+      "p_value": 0.075,
+      "is_significant": false,
+      "cohens_d": 1.5691622373208383,
+      "effect_size": "large",
+      "ci_95": [
+        0.4665606703863965,
+        0.7534393296136035
+      ],
+      "n_permutations": 200,
+      "perm_mean": 0.5106,
+      "perm_std": 0.06334590371593052,
+      "perm_extreme_count": 15,
+      "verdict": "* Marginal (p=0.0750). Suggestive but not conclusive.",
+      "bonferroni_significant": false
+    },
+    "markov_chain": {
+      "engine": "markov_chain",
+      "observed_avg_hits": 0.71,
+      "baseline_avg_hits": 0.43,
+      "improvement": 0.27999999999999997,
+      "improvement_pct": 65.11627906976743,
+      "p_value": 0.0,
+      "is_significant": true,
+      "cohens_d": 3.1477962788910987,
+      "effect_size": "large",
+      "ci_95": [
+        0.5570220313901377,
+        0.8629779686098622
+      ],
+      "n_permutations": 200,
+      "perm_mean": 0.5106,
+      "perm_std": 0.06334590371593052,
+      "perm_extreme_count": 0,
+      "verdict": "*** HIGHLY SIGNIFICANT (p=0.0000). The improvement is real, not noise.",
+      "bonferroni_significant": true
+    },
+    "bayesian": {
+      "engine": "bayesian",
+      "observed_avg_hits": 0.51,
+      "baseline_avg_hits": 0.43,
+      "improvement": 0.08000000000000002,
+      "improvement_pct": 18.6046511627907,
+      "p_value": 0.54,
+      "is_significant": false,
+      "cohens_d": -0.009471804249422275,
+      "effect_size": "negligible",
+      "ci_95": [
+        0.3773585295618297,
+        0.6426414704381703
+      ],
+      "n_permutations": 200,
+      "perm_mean": 0.5106,
+      "perm_std": 0.06334590371593052,
+      "perm_extreme_count": 108,
+      "verdict": "NOT significant (p=0.5400). Improvement is within noise.",
+      "bonferroni_significant": false
+    },
+    "pattern_detection": {
+      "engine": "pattern_detection",
+      "observed_avg_hits": 0.39,
+      "baseline_avg_hits": 0.43,
+      "improvement": -0.03999999999999998,
+      "improvement_pct": -9.302325581395344,
+      "p_value": 0.975,
+      "is_significant": false,
+      "cohens_d": -1.9038326541337351,
+      "effect_size": "large",
+      "ci_95": [
+        0.2724686200200134,
+        0.5075313799799867
+      ],
+      "n_permutations": 200,
+      "perm_mean": 0.5106,
+      "perm_std": 0.06334590371593052,
+      "perm_extreme_count": 195,
+      "verdict": "NOT significant (p=0.9750). Improvement is within noise.",
+      "bonferroni_significant": false
+    },
+    "entropy": {
+      "engine": "entropy",
+      "observed_avg_hits": 0.54,
+      "baseline_avg_hits": 0.43,
+      "improvement": 0.11000000000000004,
+      "improvement_pct": 25.581395348837223,
+      "p_value": 0.32,
+      "is_significant": false,
+      "cohens_d": 0.4641184082216564,
+      "effect_size": "small",
+      "ci_95": [
+        0.40396978688541285,
+        0.6760302131145872
+      ],
+      "n_permutations": 200,
+      "perm_mean": 0.5106,
+      "perm_std": 0.06334590371593052,
+      "perm_extreme_count": 64,
+      "verdict": "NOT significant (p=0.3200). Improvement is within noise.",
+      "bonferroni_significant": false
+    }
+  },
+  "summary": {
+    "lottery": "EuroMillions",
+    "total_draws": 1977,
+    "n_engines_tested": 7,
+    "n_permutations_per_engine": 200,
+    "bonferroni_alpha": 0.0071428571428571435,
+    "significant_engines_count": 1,
+    "verdict": "\u26a0\ufe0f Solo 1 motor es estad\u00edsticamente significativo tras correcci\u00f3n Bonferroni. Pero el effect size puede ser peque\u00f1o."
+  }
+}
