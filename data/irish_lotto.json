@@ -1,0 +1,750 @@
+[
+  {
+    "draw_number": 1,
+    "date": "2026-06-10",
+    "main_numbers": [
+      2,
+      11,
+      14,
+      22,
+      42,
+      47
+    ],
+    "bonus_numbers": [
+      29
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  },
+  {
+    "draw_number": 2,
+    "date": "2026-06-13",
+    "main_numbers": [
+      1,
+      16,
+      17,
+      26,
+      27,
+      35
+    ],
+    "bonus_numbers": [
+      24
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  },
+  {
+    "draw_number": 3,
+    "date": "2026-06-17",
+    "main_numbers": [
+      20,
+      21,
+      24,
+      29,
+      44,
+      45
+    ],
+    "bonus_numbers": [
+      28
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  },
+  {
+    "draw_number": 4,
+    "date": "2026-06-20",
+    "main_numbers": [
+      16,
+      19,
+      21,
+      25,
+      35,
+      47
+    ],
+    "bonus_numbers": [
+      46
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  },
+  {
+    "draw_number": 5,
+    "date": "2026-06-24",
+    "main_numbers": [
+      12,
+      19,
+      25,
+      36,
+      38,
+      39
+    ],
+    "bonus_numbers": [
+      43
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  },
+  {
+    "draw_number": 6,
+    "date": "2026-06-27",
+    "main_numbers": [
+      12,
+      27,
+      29,
+      38,
+      43,
+      46
+    ],
+    "bonus_numbers": [
+      25
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  },
+  {
+    "draw_number": 7,
+    "date": "2026-07-01",
+    "main_numbers": [
+      22,
+      27,
+      31,
+      33,
+      36,
+      38
+    ],
+    "bonus_numbers": [
+      12
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  },
+  {
+    "draw_number": 8,
+    "date": "2026-07-04",
+    "main_numbers": [
+      6,
+      17,
+      18,
+      27,
+      38,
+      42
+    ],
+    "bonus_numbers": [
+      39
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  },
+  {
+    "draw_number": 9,
+    "date": "2026-07-08",
+    "main_numbers": [
+      12,
+      24,
+      27,
+      31,
+      38,
+      46
+    ],
+    "bonus_numbers": [
+      22
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  },
+  {
+    "draw_number": 10,
+    "date": "2026-07-11",
+    "main_numbers": [
+      10,
+      24,
+      27,
+      32,
+      37,
+      43
+    ],
+    "bonus_numbers": [
+      28
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  },
+  {
+    "draw_number": 11,
+    "date": "2026-07-15",
+    "main_numbers": [
+      11,
+      22,
+      23,
+      33,
+      40,
+      46
+    ],
+    "bonus_numbers": [
+      12
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  },
+  {
+    "draw_number": 12,
+    "date": "2026-07-18",
+    "main_numbers": [
+      26,
+      30,
+      31,
+      37,
+      45,
+      47
+    ],
+    "bonus_numbers": [
+      7
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  },
+  {
+    "draw_number": 13,
+    "date": "2026-07-22",
+    "main_numbers": [
+      10,
+      15,
+      25,
+      31,
+      37,
+      45
+    ],
+    "bonus_numbers": [
+      13
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  },
+  {
+    "draw_number": 14,
+    "date": "2026-07-25",
+    "main_numbers": [
+      23,
+      24,
+      25,
+      42,
+      43,
+      46
+    ],
+    "bonus_numbers": [
+      37
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  },
+  {
+    "draw_number": 15,
+    "date": "2026-07-29",
+    "main_numbers": [
+      1,
+      3,
+      17,
+      30,
+      37,
+      44
+    ],
+    "bonus_numbers": [
+      47
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  },
+  {
+    "draw_number": 16,
+    "date": "2026-08-01",
+    "main_numbers": [
+      10,
+      11,
+      15,
+      35,
+      42,
+      47
+    ],
+    "bonus_numbers": [
+      26
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  },
+  {
+    "draw_number": 17,
+    "date": "2026-08-05",
+    "main_numbers": [
+      3,
+      18,
+      23,
+      29,
+      35,
+      41
+    ],
+    "bonus_numbers": [
+      36
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  },
+  {
+    "draw_number": 18,
+    "date": "2026-08-08",
+    "main_numbers": [
+      21,
+      22,
+      32,
+      41,
+      46,
+      47
+    ],
+    "bonus_numbers": [
+      11
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  },
+  {
+    "draw_number": 19,
+    "date": "2026-08-12",
+    "main_numbers": [
+      2,
+      7,
+      11,
+      13,
+      17,
+      33
+    ],
+    "bonus_numbers": [
+      1
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  },
+  {
+    "draw_number": 20,
+    "date": "2026-08-15",
+    "main_numbers": [
+      6,
+      14,
+      36,
+      43,
+      44,
+      46
+    ],
+    "bonus_numbers": [
+      20
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  },
+  {
+    "draw_number": 21,
+    "date": "2026-08-19",
+    "main_numbers": [
+      11,
+      17,
+      26,
+      28,
+      33,
+      46
+    ],
+    "bonus_numbers": [
+      43
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  },
+  {
+    "draw_number": 22,
+    "date": "2026-08-22",
+    "main_numbers": [
+      8,
+      10,
+      23,
+      27,
+      42,
+      43
+    ],
+    "bonus_numbers": [
+      15
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  },
+  {
+    "draw_number": 23,
+    "date": "2026-08-26",
+    "main_numbers": [
+      7,
+      9,
+      14,
+      15,
+      24,
+      42
+    ],
+    "bonus_numbers": [
+      34
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  },
+  {
+    "draw_number": 24,
+    "date": "2026-08-29",
+    "main_numbers": [
+      17,
+      21,
+      33,
+      35,
+      38,
+      47
+    ],
+    "bonus_numbers": [
+      13
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  },
+  {
+    "draw_number": 25,
+    "date": "2026-09-02",
+    "main_numbers": [
+      2,
+      13,
+      37,
+      38,
+      41,
+      46
+    ],
+    "bonus_numbers": [
+      18
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  },
+  {
+    "draw_number": 26,
+    "date": "2026-09-05",
+    "main_numbers": [
+      8,
+      11,
+      15,
+      21,
+      33,
+      44
+    ],
+    "bonus_numbers": [
+      14
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  },
+  {
+    "draw_number": 27,
+    "date": "2026-09-07",
+    "main_numbers": [
+      15,
+      20,
+      21,
+      24,
+      28,
+      34
+    ],
+    "bonus_numbers": [
+      43
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  },
+  {
+    "draw_number": 28,
+    "date": "2026-09-09",
+    "main_numbers": [
+      13,
+      16,
+      18,
+      31,
+      34,
+      38
+    ],
+    "bonus_numbers": [
+      29
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  },
+  {
+    "draw_number": 29,
+    "date": "2026-09-12",
+    "main_numbers": [
+      1,
+      3,
+      9,
+      14,
+      16,
+      19
+    ],
+    "bonus_numbers": [
+      27
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  },
+  {
+    "draw_number": 30,
+    "date": "2026-09-14",
+    "main_numbers": [
+      9,
+      14,
+      20,
+      22,
+      26,
+      29
+    ],
+    "bonus_numbers": [
+      4
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  },
+  {
+    "draw_number": 31,
+    "date": "2026-09-16",
+    "main_numbers": [
+      4,
+      7,
+      19,
+      20,
+      35,
+      42
+    ],
+    "bonus_numbers": [
+      31
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  },
+  {
+    "draw_number": 32,
+    "date": "2026-09-19",
+    "main_numbers": [
+      10,
+      11,
+      20,
+      28,
+      41,
+      44
+    ],
+    "bonus_numbers": [
+      2
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  },
+  {
+    "draw_number": 33,
+    "date": "2026-09-21",
+    "main_numbers": [
+      15,
+      24,
+      29,
+      30,
+      31,
+      38
+    ],
+    "bonus_numbers": [
+      11
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  },
+  {
+    "draw_number": 34,
+    "date": "2026-09-23",
+    "main_numbers": [
+      2,
+      12,
+      17,
+      26,
+      30,
+      37
+    ],
+    "bonus_numbers": [
+      10
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "irish-lotto",
+      "country": "Ireland"
+    }
+  }
+]

@@ -14,7 +14,7 @@ from datetime import datetime
 # Add parent to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from lotteries import get_lottery, LOTTERY_REGISTRY
+from lotteries import get_lottery, LOTTERY_REGISTRY, NEW_LOTTERIES
 from engines import ENGINE_REGISTRY
 from backtest import backtest_engine, backtest_all_engines, compare_engines, baseline_random
 
@@ -28,6 +28,13 @@ DEFAULT_DATA_PATHS = {
     'el_gordo': '/home/z/my-project/data/el_gordo.json',
     'lotto_austrian': '/home/z/my-project/data/lotto_austrian.json',
 }
+# Add new generic lotteries
+for k, v in NEW_LOTTERIES.items():
+    DEFAULT_DATA_PATHS[k] = v['data_file']
+
+
+# All available lotteries (existing + new)
+ALL_LOTTERY_KEYS = list(LOTTERY_REGISTRY.keys()) + list(NEW_LOTTERIES.keys())
 
 
 def load_lottery(name: str, data_path: str = None):
@@ -89,7 +96,17 @@ def cmd_predict(lottery, engine_name):
 
 def cmd_backtest(lottery_name, data_path, engine_name, max_test):
     """Run backtesting."""
-    lottery_class = LOTTERY_REGISTRY[lottery_name]
+    # Get lottery class — either from registry or build a generic one
+    if lottery_name in LOTTERY_REGISTRY:
+        lottery_class = LOTTERY_REGISTRY[lottery_name]
+    elif lottery_name in NEW_LOTTERIES:
+        from lotteries import make_lottery
+        # Use a factory that creates a fresh instance each time
+        def lottery_class():
+            return make_lottery(lottery_name)
+    else:
+        print(f"❌ Unknown lottery: {lottery_name}")
+        return
     
     if engine_name == 'all':
         print(f"\n📊 Backtesting ALL engines on {lottery_name}...\n")
@@ -150,12 +167,22 @@ def cmd_backtest(lottery_name, data_path, engine_name, max_test):
 def cmd_list():
     """List available lotteries and engines."""
     print("\n🎰 AVAILABLE LOTTERIES:")
+    # Existing lotteries from registry
     for name, cls in LOTTERY_REGISTRY.items():
         path = DEFAULT_DATA_PATHS.get(name, '')
         has_data = '✓' if os.path.exists(path) else '✗'
         instance = cls()
         print(f"  {has_data} {name:<20} - {instance.name} ({instance.country}) "
               f"- {instance.main_picks}/{instance.main_pool_size} - Odds 1:{instance.odds_jackpot:,}")
+    # New generic lotteries
+    from lotteries import make_lottery
+    for name in NEW_LOTTERIES.keys():
+        path = DEFAULT_DATA_PATHS.get(name, '')
+        has_data = '✓' if os.path.exists(path) else '✗'
+        instance = make_lottery(name)
+        if instance:
+            print(f"  {has_data} {name:<20} - {instance.name} ({instance.country}) "
+                  f"- {instance.main_picks}/{instance.main_pool_size} - Odds 1:{instance.odds_jackpot:,}")
     
     print(f"\n⚙️  AVAILABLE ENGINES:")
     for name, eng in ENGINE_REGISTRY.items():
@@ -212,9 +239,9 @@ Examples:
         parser.print_help()
         return
     
-    if args.lottery not in LOTTERY_REGISTRY:
+    if args.lottery not in ALL_LOTTERY_KEYS:
         print(f"❌ Unknown lottery: {args.lottery}")
-        print(f"   Available: {list(LOTTERY_REGISTRY.keys())}")
+        print(f"   Available: {ALL_LOTTERY_KEYS}")
         sys.exit(1)
     
     if args.describe:

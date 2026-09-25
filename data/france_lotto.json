@@ -1,0 +1,275 @@
+[
+  {
+    "draw_number": 1,
+    "date": "2026-08-26",
+    "main_numbers": [
+      6,
+      13,
+      30,
+      32,
+      37
+    ],
+    "bonus_numbers": [
+      9
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "france-lotto",
+      "country": "France"
+    }
+  },
+  {
+    "draw_number": 2,
+    "date": "2026-08-29",
+    "main_numbers": [
+      5,
+      7,
+      18,
+      40,
+      45
+    ],
+    "bonus_numbers": [
+      2
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "france-lotto",
+      "country": "France"
+    }
+  },
+  {
+    "draw_number": 3,
+    "date": "2026-08-31",
+    "main_numbers": [
+      26,
+      32,
+      36,
+      39,
+      44
+    ],
+    "bonus_numbers": [
+      2
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "france-lotto",
+      "country": "France"
+    }
+  },
+  {
+    "draw_number": 4,
+    "date": "2026-09-02",
+    "main_numbers": [
+      1,
+      10,
+      15,
+      32,
+      49
+    ],
+    "bonus_numbers": [
+      5
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "france-lotto",
+      "country": "France"
+    }
+  },
+  {
+    "draw_number": 5,
+    "date": "2026-09-05",
+    "main_numbers": [
+      1,
+      32,
+      39,
+      45,
+      48
+    ],
+    "bonus_numbers": [
+      3
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "france-lotto",
+      "country": "France"
+    }
+  },
+  {
+    "draw_number": 6,
+    "date": "2026-09-07",
+    "main_numbers": [
+      2,
+      13,
+      18,
+      21,
+      36
+    ],
+    "bonus_numbers": [
+      3
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "france-lotto",
+      "country": "France"
+    }
+  },
+  {
+    "draw_number": 7,
+    "date": "2026-09-09",
+    "main_numbers": [
+      3,
+      20,
+      23,
+      32,
+      38
+    ],
+    "bonus_numbers": [
+      9
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "france-lotto",
+      "country": "France"
+    }
+  },
+  {
+    "draw_number": 8,
+    "date": "2026-09-12",
+    "main_numbers": [
+      9,
+      26,
+      38,
+      45,
+      48
+    ],
+    "bonus_numbers": [
+      1
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "france-lotto",
+      "country": "France"
+    }
+  },
+  {
+    "draw_number": 9,
+    "date": "2026-09-14",
+    "main_numbers": [
+      8,
+      10,
+      13,
+      21,
+      38
+    ],
+    "bonus_numbers": [
+      5
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "france-lotto",
+      "country": "France"
+    }
+  },
+  {
+    "draw_number": 10,
+    "date": "2026-09-16",
+    "main_numbers": [
+      1,
+      5,
+      13,
+      31,
+      49
+    ],
+    "bonus_numbers": [
+      10
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "france-lotto",
+      "country": "France"
+    }
+  },
+  {
+    "draw_number": 11,
+    "date": "2026-09-19",
+    "main_numbers": [
+      11,
+      12,
+      39,
+      46,
+      48
+    ],
+    "bonus_numbers": [
+      7
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "france-lotto",
+      "country": "France"
+    }
+  },
+  {
+    "draw_number": 12,
+    "date": "2026-09-21",
+    "main_numbers": [
+      3,
+      6,
+      15,
+      29,
+      43
+    ],
+    "bonus_numbers": [
+      4
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "france-lotto",
+      "country": "France"
+    }
+  },
+  {
+    "draw_number": 13,
+    "date": "2026-09-23",
+    "main_numbers": [
+      8,
+      15,
+      21,
+      26,
+      38
+    ],
+    "bonus_numbers": [
+      6
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "france-lotto",
+      "country": "France"
+    }
+  }
+]

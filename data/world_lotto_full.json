@@ -1,0 +1,4467 @@
+{
+  "api": "BetTip Draws API",
+  "version": "v1",
+  "docs": "https://bettip.co.za/api/",
+  "attribution": "Data by BetTip, https://bettip.co.za/",
+  "licence": "Free for any use with attribution to bettip.co.za. Results are the operators' published draws; no guarantee is given and nothing here is betting advice. 18+.",
+  "builtAt": "2026-09-24T21:37:19.342Z",
+  "resource": "world/draws",
+  "count": 183,
+  "order": "oldest first",
+  "data": [
+    {
+      "roundTwo": null,
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-03-14",
+      "drawTimeUtc": null,
+      "drawTimeBasis": "feed",
+      "numbers": [
+        10,
+        30,
+        36,
+        44,
+        45,
+        58
+      ],
+      "special": 59,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-03-18",
+      "drawTimeUtc": null,
+      "drawTimeBasis": "feed",
+      "numbers": [
+        14,
+        16,
+        18,
+        22,
+        47,
+        56
+      ],
+      "special": 54,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-03-21",
+      "drawTimeUtc": null,
+      "drawTimeBasis": "feed",
+      "numbers": [
+        5,
+        10,
+        18,
+        28,
+        34,
+        53
+      ],
+      "special": 46,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-03-25",
+      "drawTimeUtc": null,
+      "drawTimeBasis": "feed",
+      "numbers": [
+        19,
+        22,
+        31,
+        32,
+        34,
+        40
+      ],
+      "special": 43,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-03-28",
+      "drawTimeUtc": null,
+      "drawTimeBasis": "feed",
+      "numbers": [
+        9,
+        24,
+        35,
+        40,
+        47,
+        52
+      ],
+      "special": 18,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-04-01",
+      "drawTimeUtc": null,
+      "drawTimeBasis": "feed",
+      "numbers": [
+        7,
+        16,
+        23,
+        27,
+        35,
+        40
+      ],
+      "special": 48,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-04-04",
+      "drawTimeUtc": null,
+      "drawTimeBasis": "feed",
+      "numbers": [
+        15,
+        16,
+        23,
+        32,
+        42,
+        46
+      ],
+      "special": 52,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-04-08",
+      "drawTimeUtc": null,
+      "drawTimeBasis": "feed",
+      "numbers": [
+        27,
+        29,
+        34,
+        36,
+        43,
+        59
+      ],
+      "special": 37,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-04-11",
+      "drawTimeUtc": null,
+      "drawTimeBasis": "feed",
+      "numbers": [
+        7,
+        10,
+        14,
+        15,
+        17,
+        35
+      ],
+      "special": 31,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-04-15",
+      "drawTimeUtc": null,
+      "drawTimeBasis": "feed",
+      "numbers": [
+        22,
+        45,
+        49,
+        53,
+        54,
+        56
+      ],
+      "special": 25,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-04-18",
+      "drawTimeUtc": null,
+      "drawTimeBasis": "feed",
+      "numbers": [
+        1,
+        4,
+        12,
+        15,
+        39,
+        47
+      ],
+      "special": 48,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-04-22",
+      "drawTimeUtc": null,
+      "drawTimeBasis": "feed",
+      "numbers": [
+        6,
+        12,
+        18,
+        29,
+        49,
+        56
+      ],
+      "special": 7,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-04-25",
+      "drawTimeUtc": null,
+      "drawTimeBasis": "feed",
+      "numbers": [
+        3,
+        10,
+        14,
+        19,
+        32,
+        53
+      ],
+      "special": 23,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-04-29",
+      "drawTimeUtc": null,
+      "drawTimeBasis": "feed",
+      "numbers": [
+        4,
+        14,
+        22,
+        32,
+        38,
+        52
+      ],
+      "special": 27,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-05-02",
+      "drawTimeUtc": null,
+      "drawTimeBasis": "feed",
+      "numbers": [
+        3,
+        4,
+        6,
+        12,
+        29,
+        40
+      ],
+      "special": 19,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-05-06",
+      "drawTimeUtc": null,
+      "drawTimeBasis": "feed",
+      "numbers": [
+        7,
+        31,
+        33,
+        37,
+        39,
+        56
+      ],
+      "special": 20,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-05-09",
+      "drawTimeUtc": null,
+      "drawTimeBasis": "feed",
+      "numbers": [
+        3,
+        11,
+        13,
+        14,
+        43,
+        49
+      ],
+      "special": 5,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-05-13",
+      "drawTimeUtc": null,
+      "drawTimeBasis": "feed",
+      "numbers": [
+        9,
+        12,
+        15,
+        16,
+        37,
+        39
+      ],
+      "special": 14,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-05-16",
+      "drawTimeUtc": null,
+      "drawTimeBasis": "feed",
+      "numbers": [
+        4,
+        21,
+        23,
+        27,
+        36,
+        57
+      ],
+      "special": 20,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-05-20",
+      "drawTimeUtc": null,
+      "drawTimeBasis": "feed",
+      "numbers": [
+        9,
+        20,
+        24,
+        51,
+        52,
+        59
+      ],
+      "special": 31,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-05-23",
+      "drawTimeUtc": null,
+      "drawTimeBasis": "feed",
+      "numbers": [
+        4,
+        5,
+        6,
+        7,
+        11,
+        33
+      ],
+      "special": 35,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-05-27",
+      "drawTimeUtc": null,
+      "drawTimeBasis": "feed",
+      "numbers": [
+        33,
+        36,
+        38,
+        46,
+        47,
+        50
+      ],
+      "special": 35,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-05-30",
+      "drawTimeUtc": null,
+      "drawTimeBasis": "feed",
+      "numbers": [
+        4,
+        17,
+        18,
+        20,
+        23,
+        56
+      ],
+      "special": 33,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-06-03",
+      "drawTimeUtc": null,
+      "drawTimeBasis": "feed",
+      "numbers": [
+        7,
+        10,
+        20,
+        55,
+        57,
+        59
+      ],
+      "special": 44,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-06-06",
+      "drawTimeUtc": null,
+      "drawTimeBasis": "feed",
+      "numbers": [
+        8,
+        10,
+        26,
+        30,
+        35,
+        42
+      ],
+      "special": 50,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-06-10",
+      "drawTimeUtc": "2026-06-10T18:55:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        2,
+        11,
+        14,
+        22,
+        42,
+        47
+      ],
+      "special": 29,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": {
+        "numbers": [
+          2,
+          5,
+          12,
+          42,
+          47,
+          54
+        ],
+        "special": 51,
+        "official": true,
+        "verified": false,
+        "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history",
+        "sourcesSeen": [
+          "official-results"
+        ]
+      },
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-06-10",
+      "drawTimeUtc": "2026-06-10T19:00:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        1,
+        12,
+        25,
+        29,
+        40,
+        41
+      ],
+      "special": 16,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-06-13",
+      "drawTimeUtc": "2026-06-13T18:55:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        1,
+        16,
+        17,
+        26,
+        27,
+        35
+      ],
+      "special": 24,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": {
+        "numbers": [
+          15,
+          17,
+          37,
+          54,
+          55,
+          56
+        ],
+        "special": 6,
+        "official": true,
+        "verified": false,
+        "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history",
+        "sourcesSeen": [
+          "official-results"
+        ]
+      },
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-06-13",
+      "drawTimeUtc": "2026-06-13T19:00:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        12,
+        15,
+        31,
+        32,
+        48,
+        58
+      ],
+      "special": 44,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-06-17",
+      "drawTimeUtc": "2026-06-17T18:55:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        20,
+        21,
+        24,
+        29,
+        44,
+        45
+      ],
+      "special": 28,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": {
+        "numbers": [
+          2,
+          14,
+          18,
+          40,
+          48,
+          55
+        ],
+        "special": 56,
+        "official": true,
+        "verified": false,
+        "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history",
+        "sourcesSeen": [
+          "official-results"
+        ]
+      },
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-06-17",
+      "drawTimeUtc": "2026-06-17T19:00:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        26,
+        31,
+        36,
+        41,
+        45,
+        51
+      ],
+      "special": 16,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-06-20",
+      "drawTimeUtc": "2026-06-20T18:55:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        16,
+        19,
+        21,
+        25,
+        35,
+        47
+      ],
+      "special": 46,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": {
+        "numbers": [
+          17,
+          21,
+          52,
+          53,
+          54,
+          57
+        ],
+        "special": 6,
+        "official": true,
+        "verified": false,
+        "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history",
+        "sourcesSeen": [
+          "official-results"
+        ]
+      },
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-06-20",
+      "drawTimeUtc": "2026-06-20T19:00:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        15,
+        28,
+        30,
+        33,
+        39,
+        58
+      ],
+      "special": 44,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-06-24",
+      "drawTimeUtc": "2026-06-24T18:55:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        12,
+        19,
+        25,
+        36,
+        38,
+        39
+      ],
+      "special": 43,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": {
+        "numbers": [
+          3,
+          32,
+          34,
+          38,
+          48,
+          53
+        ],
+        "special": 16,
+        "official": true,
+        "verified": false,
+        "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history",
+        "sourcesSeen": [
+          "official-results"
+        ]
+      },
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-06-24",
+      "drawTimeUtc": "2026-06-24T19:00:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        7,
+        8,
+        12,
+        23,
+        28,
+        43
+      ],
+      "special": 10,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-06-27",
+      "drawTimeUtc": "2026-06-27T18:55:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        12,
+        27,
+        29,
+        38,
+        43,
+        46
+      ],
+      "special": 25,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": {
+        "numbers": [
+          12,
+          18,
+          40,
+          43,
+          44,
+          45
+        ],
+        "special": 29,
+        "official": true,
+        "verified": false,
+        "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history",
+        "sourcesSeen": [
+          "official-results"
+        ]
+      },
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-06-27",
+      "drawTimeUtc": "2026-06-27T19:00:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        22,
+        34,
+        41,
+        43,
+        54,
+        56
+      ],
+      "special": 24,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-07-01",
+      "drawTimeUtc": "2026-07-01T18:55:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        22,
+        27,
+        31,
+        33,
+        36,
+        38
+      ],
+      "special": 12,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": {
+        "numbers": [
+          5,
+          8,
+          26,
+          33,
+          39,
+          42
+        ],
+        "special": 54,
+        "official": true,
+        "verified": false,
+        "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history",
+        "sourcesSeen": [
+          "official-results"
+        ]
+      },
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-07-01",
+      "drawTimeUtc": "2026-07-01T19:00:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        13,
+        33,
+        35,
+        40,
+        43,
+        54
+      ],
+      "special": 56,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-07-04",
+      "drawTimeUtc": "2026-07-04T18:55:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        6,
+        17,
+        18,
+        27,
+        38,
+        42
+      ],
+      "special": 39,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": {
+        "numbers": [
+          14,
+          20,
+          22,
+          38,
+          39,
+          41
+        ],
+        "special": 49,
+        "official": true,
+        "verified": false,
+        "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history",
+        "sourcesSeen": [
+          "official-results"
+        ]
+      },
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-07-04",
+      "drawTimeUtc": "2026-07-04T19:00:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        7,
+        20,
+        33,
+        48,
+        57,
+        59
+      ],
+      "special": 47,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-07-08",
+      "drawTimeUtc": "2026-07-08T18:55:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        12,
+        24,
+        27,
+        31,
+        38,
+        46
+      ],
+      "special": 22,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": {
+        "numbers": [
+          23,
+          25,
+          31,
+          32,
+          34,
+          54
+        ],
+        "special": 45,
+        "official": true,
+        "verified": false,
+        "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history",
+        "sourcesSeen": [
+          "official-results"
+        ]
+      },
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-07-08",
+      "drawTimeUtc": "2026-07-08T19:00:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        30,
+        35,
+        39,
+        45,
+        46,
+        53
+      ],
+      "special": 37,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-07-11",
+      "drawTimeUtc": "2026-07-11T18:55:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        10,
+        24,
+        27,
+        32,
+        37,
+        43
+      ],
+      "special": 28,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": {
+        "numbers": [
+          2,
+          13,
+          22,
+          40,
+          42,
+          58
+        ],
+        "special": 54,
+        "official": true,
+        "verified": false,
+        "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history",
+        "sourcesSeen": [
+          "official-results"
+        ]
+      },
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-07-11",
+      "drawTimeUtc": "2026-07-11T19:00:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        9,
+        13,
+        22,
+        36,
+        40,
+        45
+      ],
+      "special": 41,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-07-15",
+      "drawTimeUtc": "2026-07-15T18:55:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        11,
+        22,
+        23,
+        33,
+        40,
+        46
+      ],
+      "special": 12,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": {
+        "numbers": [
+          4,
+          40,
+          43,
+          51,
+          55,
+          57
+        ],
+        "special": 34,
+        "official": true,
+        "verified": false,
+        "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history",
+        "sourcesSeen": [
+          "official-results"
+        ]
+      },
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-07-15",
+      "drawTimeUtc": "2026-07-15T19:00:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        4,
+        13,
+        14,
+        17,
+        23,
+        31
+      ],
+      "special": 56,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-07-18",
+      "drawTimeUtc": "2026-07-18T18:55:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        26,
+        30,
+        31,
+        37,
+        45,
+        47
+      ],
+      "special": 7,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": {
+        "numbers": [
+          20,
+          29,
+          30,
+          42,
+          46,
+          55
+        ],
+        "special": 38,
+        "official": true,
+        "verified": false,
+        "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history",
+        "sourcesSeen": [
+          "official-results"
+        ]
+      },
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-07-18",
+      "drawTimeUtc": "2026-07-18T19:00:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        22,
+        32,
+        34,
+        47,
+        52,
+        55
+      ],
+      "special": 10,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-07-22",
+      "drawTimeUtc": "2026-07-22T18:55:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        10,
+        15,
+        25,
+        31,
+        37,
+        45
+      ],
+      "special": 13,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": {
+        "numbers": [
+          5,
+          17,
+          25,
+          43,
+          56,
+          58
+        ],
+        "special": 11,
+        "official": true,
+        "verified": false,
+        "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history",
+        "sourcesSeen": [
+          "official-results"
+        ]
+      },
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-07-22",
+      "drawTimeUtc": "2026-07-22T19:00:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        3,
+        9,
+        12,
+        23,
+        32,
+        53
+      ],
+      "special": 46,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-07-25",
+      "drawTimeUtc": "2026-07-25T18:55:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        23,
+        24,
+        25,
+        42,
+        43,
+        46
+      ],
+      "special": 37,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": {
+        "numbers": [
+          9,
+          22,
+          26,
+          49,
+          53,
+          56
+        ],
+        "special": 34,
+        "official": true,
+        "verified": false,
+        "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history",
+        "sourcesSeen": [
+          "official-results"
+        ]
+      },
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-07-25",
+      "drawTimeUtc": "2026-07-25T19:00:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        2,
+        6,
+        29,
+        36,
+        55,
+        59
+      ],
+      "special": 50,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-07-29",
+      "drawTimeUtc": "2026-07-29T18:55:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        1,
+        3,
+        17,
+        30,
+        37,
+        44
+      ],
+      "special": 47,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": {
+        "numbers": [
+          20,
+          22,
+          31,
+          32,
+          40,
+          55
+        ],
+        "special": 1,
+        "official": true,
+        "verified": false,
+        "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history",
+        "sourcesSeen": [
+          "official-results"
+        ]
+      },
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-07-29",
+      "drawTimeUtc": "2026-07-29T19:00:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        5,
+        10,
+        22,
+        38,
+        56,
+        58
+      ],
+      "special": 54,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-08-01",
+      "drawTimeUtc": "2026-08-01T18:55:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        10,
+        11,
+        15,
+        35,
+        42,
+        47
+      ],
+      "special": 26,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": {
+        "numbers": [
+          2,
+          22,
+          35,
+          43,
+          45,
+          48
+        ],
+        "special": 27,
+        "official": true,
+        "verified": false,
+        "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history",
+        "sourcesSeen": [
+          "official-results"
+        ]
+      },
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-08-01",
+      "drawTimeUtc": "2026-08-01T19:00:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        16,
+        19,
+        32,
+        33,
+        34,
+        44
+      ],
+      "special": 29,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-08-05",
+      "drawTimeUtc": "2026-08-05T18:55:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        3,
+        18,
+        23,
+        29,
+        35,
+        41
+      ],
+      "special": 36,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": {
+        "numbers": [
+          12,
+          14,
+          16,
+          22,
+          29,
+          59
+        ],
+        "special": 58,
+        "official": true,
+        "verified": false,
+        "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history",
+        "sourcesSeen": [
+          "official-results"
+        ]
+      },
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-08-05",
+      "drawTimeUtc": "2026-08-05T19:00:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        24,
+        26,
+        27,
+        39,
+        47,
+        50
+      ],
+      "special": 8,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-08-08",
+      "drawTimeUtc": "2026-08-08T18:55:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        21,
+        22,
+        32,
+        41,
+        46,
+        47
+      ],
+      "special": 11,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": {
+        "numbers": [
+          5,
+          10,
+          26,
+          28,
+          45,
+          47
+        ],
+        "special": 14,
+        "official": true,
+        "verified": false,
+        "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history",
+        "sourcesSeen": [
+          "official-results"
+        ]
+      },
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-08-08",
+      "drawTimeUtc": "2026-08-08T19:00:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        14,
+        18,
+        26,
+        45,
+        50,
+        53
+      ],
+      "special": 43,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-08-12",
+      "drawTimeUtc": "2026-08-12T18:55:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        2,
+        7,
+        11,
+        13,
+        17,
+        33
+      ],
+      "special": 1,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": {
+        "numbers": [
+          14,
+          25,
+          35,
+          39,
+          51,
+          59
+        ],
+        "special": 44,
+        "official": true,
+        "verified": false,
+        "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history",
+        "sourcesSeen": [
+          "official-results"
+        ]
+      },
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-08-12",
+      "drawTimeUtc": "2026-08-12T19:00:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        3,
+        14,
+        22,
+        24,
+        34,
+        54
+      ],
+      "special": 52,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-08-15",
+      "drawTimeUtc": "2026-08-15T18:55:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        6,
+        14,
+        36,
+        43,
+        44,
+        46
+      ],
+      "special": 20,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": {
+        "numbers": [
+          4,
+          18,
+          22,
+          30,
+          32,
+          45
+        ],
+        "special": 55,
+        "official": true,
+        "verified": false,
+        "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history",
+        "sourcesSeen": [
+          "official-results"
+        ]
+      },
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-08-15",
+      "drawTimeUtc": "2026-08-15T19:00:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        17,
+        27,
+        28,
+        42,
+        47,
+        59
+      ],
+      "special": 7,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-08-19",
+      "drawTimeUtc": "2026-08-19T18:55:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        11,
+        17,
+        26,
+        28,
+        33,
+        46
+      ],
+      "special": 43,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": {
+        "numbers": [
+          4,
+          8,
+          10,
+          17,
+          23,
+          28
+        ],
+        "special": 16,
+        "official": true,
+        "verified": false,
+        "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history",
+        "sourcesSeen": [
+          "official-results"
+        ]
+      },
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-08-19",
+      "drawTimeUtc": "2026-08-19T19:00:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        1,
+        6,
+        24,
+        32,
+        48,
+        54
+      ],
+      "special": 9,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-08-22",
+      "drawTimeUtc": "2026-08-22T18:55:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        8,
+        10,
+        23,
+        27,
+        42,
+        43
+      ],
+      "special": 15,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": {
+        "numbers": [
+          7,
+          8,
+          20,
+          21,
+          22,
+          52
+        ],
+        "special": 40,
+        "official": true,
+        "verified": false,
+        "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history",
+        "sourcesSeen": [
+          "official-results"
+        ]
+      },
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-08-22",
+      "drawTimeUtc": "2026-08-22T19:00:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        11,
+        28,
+        41,
+        48,
+        57,
+        59
+      ],
+      "special": 3,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "france-lotto",
+      "gameName": "France Lotto",
+      "country": "France",
+      "date": "2026-08-26",
+      "drawTimeUtc": "2026-08-26T18:20:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        6,
+        13,
+        30,
+        32,
+        37
+      ],
+      "special": 9,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=France"
+    },
+    {
+      "roundTwo": null,
+      "game": "france-lotto-plus",
+      "gameName": "France Lotto Plus",
+      "country": "France",
+      "date": "2026-08-26",
+      "drawTimeUtc": "2026-08-26T18:20:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        4,
+        20,
+        21,
+        45,
+        46
+      ],
+      "special": null,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=France"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-08-26",
+      "drawTimeUtc": "2026-08-26T18:55:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        7,
+        9,
+        14,
+        15,
+        24,
+        42
+      ],
+      "special": 34,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": null,
+      "game": "greek-lotto",
+      "gameName": "Greek Lotto",
+      "country": "Greece",
+      "date": "2026-08-26",
+      "drawTimeUtc": "2026-08-26T19:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        3,
+        17,
+        25,
+        29,
+        30,
+        31
+      ],
+      "special": null,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=Greece"
+    },
+    {
+      "roundTwo": {
+        "numbers": [
+          5,
+          10,
+          11,
+          24,
+          39,
+          53
+        ],
+        "special": 9,
+        "official": true,
+        "verified": false,
+        "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history",
+        "sourcesSeen": [
+          "official-results"
+        ]
+      },
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-08-26",
+      "drawTimeUtc": "2026-08-26T19:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        11,
+        13,
+        14,
+        21,
+        47,
+        54
+      ],
+      "special": 52,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "us-powerball",
+      "gameName": "US PowerBall",
+      "country": "United States",
+      "date": "2026-08-27",
+      "drawTimeUtc": "2026-08-27T02:59:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        12,
+        32,
+        45,
+        50,
+        58
+      ],
+      "special": 2,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=United States"
+    },
+    {
+      "roundTwo": null,
+      "game": "greece-powerball",
+      "gameName": "Greece Powerball",
+      "country": "Greece",
+      "date": "2026-08-27",
+      "drawTimeUtc": "2026-08-27T19:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        3,
+        4,
+        21,
+        25,
+        40
+      ],
+      "special": 9,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=Greece"
+    },
+    {
+      "roundTwo": null,
+      "game": "euromillions",
+      "gameName": "EuroMillions",
+      "country": "Europe",
+      "date": "2026-08-28",
+      "drawTimeUtc": "2026-08-28T16:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        7,
+        14,
+        28,
+        42,
+        45
+      ],
+      "special": 6,
+      "extraSpecials": [
+        9
+      ],
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=Europe"
+    },
+    {
+      "roundTwo": null,
+      "game": "thunderball",
+      "gameName": "UK Thunderball",
+      "country": "United Kingdom",
+      "date": "2026-08-28",
+      "drawTimeUtc": "2026-08-28T18:30:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        6,
+        9,
+        10,
+        28,
+        34
+      ],
+      "special": 14,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=United Kingdom"
+    },
+    {
+      "roundTwo": null,
+      "game": "mega-millions",
+      "gameName": "Mega Millions",
+      "country": "United States",
+      "date": "2026-08-29",
+      "drawTimeUtc": "2026-08-29T03:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        8,
+        17,
+        29,
+        42,
+        55
+      ],
+      "special": 2,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=United States"
+    },
+    {
+      "roundTwo": null,
+      "game": "france-lotto",
+      "gameName": "France Lotto",
+      "country": "France",
+      "date": "2026-08-29",
+      "drawTimeUtc": "2026-08-29T18:20:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        5,
+        7,
+        18,
+        40,
+        45
+      ],
+      "special": 2,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=France"
+    },
+    {
+      "roundTwo": null,
+      "game": "france-lotto-plus",
+      "gameName": "France Lotto Plus",
+      "country": "France",
+      "date": "2026-08-29",
+      "drawTimeUtc": "2026-08-29T18:20:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        11,
+        13,
+        21,
+        41,
+        42
+      ],
+      "special": null,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=France"
+    },
+    {
+      "roundTwo": null,
+      "game": "thunderball",
+      "gameName": "UK Thunderball",
+      "country": "United Kingdom",
+      "date": "2026-08-29",
+      "drawTimeUtc": "2026-08-29T18:30:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        7,
+        12,
+        18,
+        19,
+        20
+      ],
+      "special": 11,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=United Kingdom"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-08-29",
+      "drawTimeUtc": "2026-08-29T18:55:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        17,
+        21,
+        33,
+        35,
+        38,
+        47
+      ],
+      "special": 13,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": null,
+      "game": "greek-lotto",
+      "gameName": "Greek Lotto",
+      "country": "Greece",
+      "date": "2026-08-29",
+      "drawTimeUtc": "2026-08-29T19:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        5,
+        27,
+        36,
+        39,
+        41,
+        43
+      ],
+      "special": null,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=Greece"
+    },
+    {
+      "roundTwo": {
+        "numbers": [
+          2,
+          24,
+          41,
+          43,
+          45,
+          59
+        ],
+        "special": 54,
+        "official": true,
+        "verified": false,
+        "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history",
+        "sourcesSeen": [
+          "official-results"
+        ]
+      },
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-08-29",
+      "drawTimeUtc": "2026-08-29T19:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        2,
+        6,
+        28,
+        33,
+        43,
+        54
+      ],
+      "special": 55,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "us-powerball",
+      "gameName": "US PowerBall",
+      "country": "United States",
+      "date": "2026-08-30",
+      "drawTimeUtc": "2026-08-30T02:59:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        18,
+        56,
+        62,
+        65,
+        67
+      ],
+      "special": 18,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=United States"
+    },
+    {
+      "roundTwo": null,
+      "game": "greece-powerball",
+      "gameName": "Greece Powerball",
+      "country": "Greece",
+      "date": "2026-08-30",
+      "drawTimeUtc": "2026-08-30T19:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        2,
+        10,
+        21,
+        26,
+        32
+      ],
+      "special": 1,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=Greece"
+    },
+    {
+      "roundTwo": null,
+      "game": "france-lotto",
+      "gameName": "France Lotto",
+      "country": "France",
+      "date": "2026-08-31",
+      "drawTimeUtc": "2026-08-31T18:20:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        26,
+        32,
+        36,
+        39,
+        44
+      ],
+      "special": 2,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=France"
+    },
+    {
+      "roundTwo": null,
+      "game": "france-lotto-plus",
+      "gameName": "France Lotto Plus",
+      "country": "France",
+      "date": "2026-08-31",
+      "drawTimeUtc": "2026-08-31T18:20:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        13,
+        17,
+        29,
+        31,
+        48
+      ],
+      "special": null,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=France"
+    },
+    {
+      "roundTwo": null,
+      "game": "us-powerball",
+      "gameName": "US PowerBall",
+      "country": "United States",
+      "date": "2026-09-01",
+      "drawTimeUtc": "2026-09-01T02:59:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        11,
+        17,
+        25,
+        37,
+        49
+      ],
+      "special": 10,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=United States"
+    },
+    {
+      "roundTwo": null,
+      "game": "euromillions",
+      "gameName": "EuroMillions",
+      "country": "Europe",
+      "date": "2026-09-01",
+      "drawTimeUtc": "2026-09-01T16:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        2,
+        10,
+        23,
+        37,
+        47
+      ],
+      "special": 3,
+      "extraSpecials": [
+        5
+      ],
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=Europe"
+    },
+    {
+      "roundTwo": null,
+      "game": "thunderball",
+      "gameName": "UK Thunderball",
+      "country": "United Kingdom",
+      "date": "2026-09-01",
+      "drawTimeUtc": "2026-09-01T18:30:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        3,
+        21,
+        23,
+        37,
+        39
+      ],
+      "special": 7,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=United Kingdom"
+    },
+    {
+      "roundTwo": null,
+      "game": "greece-powerball",
+      "gameName": "Greece Powerball",
+      "country": "Greece",
+      "date": "2026-09-01",
+      "drawTimeUtc": "2026-09-01T19:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        10,
+        20,
+        28,
+        30,
+        44
+      ],
+      "special": 17,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=Greece"
+    },
+    {
+      "roundTwo": null,
+      "game": "mega-millions",
+      "gameName": "Mega Millions",
+      "country": "United States",
+      "date": "2026-09-02",
+      "drawTimeUtc": "2026-09-02T03:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        1,
+        22,
+        51,
+        61,
+        63
+      ],
+      "special": 17,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=United States"
+    },
+    {
+      "roundTwo": null,
+      "game": "france-lotto",
+      "gameName": "France Lotto",
+      "country": "France",
+      "date": "2026-09-02",
+      "drawTimeUtc": "2026-09-02T18:20:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        1,
+        10,
+        15,
+        32,
+        49
+      ],
+      "special": 5,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=France"
+    },
+    {
+      "roundTwo": null,
+      "game": "france-lotto-plus",
+      "gameName": "France Lotto Plus",
+      "country": "France",
+      "date": "2026-09-02",
+      "drawTimeUtc": "2026-09-02T18:20:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        3,
+        4,
+        18,
+        37,
+        41
+      ],
+      "special": null,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=France"
+    },
+    {
+      "roundTwo": null,
+      "game": "thunderball",
+      "gameName": "UK Thunderball",
+      "country": "United Kingdom",
+      "date": "2026-09-02",
+      "drawTimeUtc": "2026-09-02T18:30:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        8,
+        15,
+        27,
+        30,
+        36
+      ],
+      "special": 4,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=United Kingdom"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-09-02",
+      "drawTimeUtc": "2026-09-02T18:55:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        2,
+        13,
+        37,
+        38,
+        41,
+        46
+      ],
+      "special": 18,
+      "extraSpecials": null,
+      "verified": true,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": null,
+      "game": "greek-lotto",
+      "gameName": "Greek Lotto",
+      "country": "Greece",
+      "date": "2026-09-02",
+      "drawTimeUtc": "2026-09-02T19:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        4,
+        30,
+        33,
+        41,
+        42,
+        47
+      ],
+      "special": null,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=Greece"
+    },
+    {
+      "roundTwo": {
+        "numbers": [
+          3,
+          4,
+          20,
+          38,
+          46,
+          47
+        ],
+        "special": 33,
+        "official": true,
+        "verified": false,
+        "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history",
+        "sourcesSeen": [
+          "official-results"
+        ]
+      },
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-09-02",
+      "drawTimeUtc": "2026-09-02T19:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        1,
+        15,
+        21,
+        24,
+        32,
+        51
+      ],
+      "special": 9,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "us-powerball",
+      "gameName": "US PowerBall",
+      "country": "United States",
+      "date": "2026-09-03",
+      "drawTimeUtc": "2026-09-03T02:59:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        3,
+        10,
+        29,
+        58,
+        64
+      ],
+      "special": 14,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=United States"
+    },
+    {
+      "roundTwo": null,
+      "game": "greece-powerball",
+      "gameName": "Greece Powerball",
+      "country": "Greece",
+      "date": "2026-09-03",
+      "drawTimeUtc": "2026-09-03T19:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        15,
+        16,
+        17,
+        33,
+        37
+      ],
+      "special": 14,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=Greece"
+    },
+    {
+      "roundTwo": null,
+      "game": "euromillions",
+      "gameName": "EuroMillions",
+      "country": "Europe",
+      "date": "2026-09-04",
+      "drawTimeUtc": "2026-09-04T16:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        11,
+        12,
+        19,
+        27,
+        46
+      ],
+      "special": 4,
+      "extraSpecials": [
+        12
+      ],
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=Europe"
+    },
+    {
+      "roundTwo": null,
+      "game": "thunderball",
+      "gameName": "UK Thunderball",
+      "country": "United Kingdom",
+      "date": "2026-09-04",
+      "drawTimeUtc": "2026-09-04T18:30:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        13,
+        16,
+        17,
+        21,
+        26
+      ],
+      "special": 6,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=United Kingdom"
+    },
+    {
+      "roundTwo": null,
+      "game": "mega-millions",
+      "gameName": "Mega Millions",
+      "country": "United States",
+      "date": "2026-09-05",
+      "drawTimeUtc": "2026-09-05T03:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        6,
+        26,
+        34,
+        59,
+        61
+      ],
+      "special": 24,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.megamillions.com/cmspages/utilservice.asmx/GetLatestDrawData"
+    },
+    {
+      "roundTwo": null,
+      "game": "france-lotto",
+      "gameName": "France Lotto",
+      "country": "France",
+      "date": "2026-09-05",
+      "drawTimeUtc": "2026-09-05T18:20:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        1,
+        32,
+        39,
+        45,
+        48
+      ],
+      "special": 3,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=France"
+    },
+    {
+      "roundTwo": null,
+      "game": "france-lotto-plus",
+      "gameName": "France Lotto Plus",
+      "country": "France",
+      "date": "2026-09-05",
+      "drawTimeUtc": "2026-09-05T18:20:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        8,
+        9,
+        11,
+        35,
+        43
+      ],
+      "special": null,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=France"
+    },
+    {
+      "roundTwo": null,
+      "game": "thunderball",
+      "gameName": "UK Thunderball",
+      "country": "United Kingdom",
+      "date": "2026-09-05",
+      "drawTimeUtc": "2026-09-05T18:30:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        8,
+        10,
+        22,
+        34,
+        38
+      ],
+      "special": 4,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=United Kingdom"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-09-05",
+      "drawTimeUtc": "2026-09-05T18:55:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        8,
+        11,
+        15,
+        21,
+        33,
+        44
+      ],
+      "special": 14,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": null,
+      "game": "greek-lotto",
+      "gameName": "Greek Lotto",
+      "country": "Greece",
+      "date": "2026-09-05",
+      "drawTimeUtc": "2026-09-05T19:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        1,
+        29,
+        31,
+        34,
+        40,
+        42
+      ],
+      "special": null,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=Greece"
+    },
+    {
+      "roundTwo": {
+        "numbers": [
+          8,
+          21,
+          26,
+          28,
+          35,
+          36
+        ],
+        "special": 52,
+        "official": true,
+        "verified": false,
+        "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history",
+        "sourcesSeen": [
+          "official-results"
+        ]
+      },
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-09-05",
+      "drawTimeUtc": "2026-09-05T19:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        3,
+        4,
+        10,
+        20,
+        49,
+        51
+      ],
+      "special": 36,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "us-powerball",
+      "gameName": "US PowerBall",
+      "country": "United States",
+      "date": "2026-09-06",
+      "drawTimeUtc": "2026-09-06T02:59:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        15,
+        40,
+        47,
+        53,
+        59
+      ],
+      "special": 9,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=United States"
+    },
+    {
+      "roundTwo": null,
+      "game": "greece-powerball",
+      "gameName": "Greece Powerball",
+      "country": "Greece",
+      "date": "2026-09-06",
+      "drawTimeUtc": "2026-09-06T19:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        4,
+        11,
+        23,
+        28,
+        40
+      ],
+      "special": 14,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=Greece"
+    },
+    {
+      "roundTwo": null,
+      "game": "france-lotto",
+      "gameName": "France Lotto",
+      "country": "France",
+      "date": "2026-09-07",
+      "drawTimeUtc": "2026-09-07T18:20:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        2,
+        13,
+        18,
+        21,
+        36
+      ],
+      "special": 3,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=France"
+    },
+    {
+      "roundTwo": null,
+      "game": "france-lotto-plus",
+      "gameName": "France Lotto Plus",
+      "country": "France",
+      "date": "2026-09-07",
+      "drawTimeUtc": "2026-09-07T18:20:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        13,
+        15,
+        22,
+        23,
+        49
+      ],
+      "special": null,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=France"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-09-07",
+      "drawTimeUtc": "2026-09-07T18:55:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        15,
+        20,
+        21,
+        24,
+        28,
+        34
+      ],
+      "special": 43,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": null,
+      "game": "us-powerball",
+      "gameName": "US PowerBall",
+      "country": "United States",
+      "date": "2026-09-08",
+      "drawTimeUtc": "2026-09-08T02:59:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        15,
+        19,
+        28,
+        39,
+        56
+      ],
+      "special": 3,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=United States"
+    },
+    {
+      "roundTwo": null,
+      "game": "euromillions",
+      "gameName": "EuroMillions",
+      "country": "Europe",
+      "date": "2026-09-08",
+      "drawTimeUtc": "2026-09-08T16:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        13,
+        17,
+        33,
+        35,
+        39
+      ],
+      "special": 7,
+      "extraSpecials": [
+        12
+      ],
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=EU"
+    },
+    {
+      "roundTwo": null,
+      "game": "thunderball",
+      "gameName": "UK Thunderball",
+      "country": "United Kingdom",
+      "date": "2026-09-08",
+      "drawTimeUtc": "2026-09-08T18:30:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        14,
+        22,
+        23,
+        32,
+        35
+      ],
+      "special": 3,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=GB"
+    },
+    {
+      "roundTwo": null,
+      "game": "greece-powerball",
+      "gameName": "Greece Powerball",
+      "country": "Greece",
+      "date": "2026-09-08",
+      "drawTimeUtc": "2026-09-08T19:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        4,
+        7,
+        9,
+        19,
+        40
+      ],
+      "special": 16,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=GR"
+    },
+    {
+      "roundTwo": null,
+      "game": "mega-millions",
+      "gameName": "Mega Millions",
+      "country": "United States",
+      "date": "2026-09-09",
+      "drawTimeUtc": "2026-09-09T03:00:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        17,
+        30,
+        43,
+        58,
+        66
+      ],
+      "special": 20,
+      "extraSpecials": null,
+      "verified": true,
+      "official": true,
+      "sourceUrl": "https://www.megamillions.com/cmspages/utilservice.asmx/GetLatestDrawData"
+    },
+    {
+      "roundTwo": null,
+      "game": "france-lotto",
+      "gameName": "France Lotto",
+      "country": "France",
+      "date": "2026-09-09",
+      "drawTimeUtc": "2026-09-09T18:20:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        3,
+        20,
+        23,
+        32,
+        38
+      ],
+      "special": 9,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=FR"
+    },
+    {
+      "roundTwo": null,
+      "game": "france-lotto-plus",
+      "gameName": "France Lotto Plus",
+      "country": "France",
+      "date": "2026-09-09",
+      "drawTimeUtc": "2026-09-09T18:20:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        11,
+        12,
+        16,
+        47,
+        48
+      ],
+      "special": null,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=FR"
+    },
+    {
+      "roundTwo": null,
+      "game": "thunderball",
+      "gameName": "UK Thunderball",
+      "country": "United Kingdom",
+      "date": "2026-09-09",
+      "drawTimeUtc": "2026-09-09T18:30:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        1,
+        19,
+        21,
+        22,
+        37
+      ],
+      "special": 14,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=GB"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-09-09",
+      "drawTimeUtc": "2026-09-09T18:55:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        13,
+        16,
+        18,
+        31,
+        34,
+        38
+      ],
+      "special": 29,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": null,
+      "game": "greek-lotto",
+      "gameName": "Greek Lotto",
+      "country": "Greece",
+      "date": "2026-09-09",
+      "drawTimeUtc": "2026-09-09T19:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        2,
+        7,
+        21,
+        24,
+        26,
+        30
+      ],
+      "special": null,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=GR"
+    },
+    {
+      "roundTwo": {
+        "numbers": [
+          6,
+          17,
+          27,
+          39,
+          40,
+          42
+        ],
+        "special": 46,
+        "official": true,
+        "verified": false,
+        "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history",
+        "sourcesSeen": [
+          "official-results"
+        ]
+      },
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-09-09",
+      "drawTimeUtc": "2026-09-09T19:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        2,
+        6,
+        28,
+        30,
+        42,
+        49
+      ],
+      "special": 24,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "us-powerball",
+      "gameName": "US PowerBall",
+      "country": "United States",
+      "date": "2026-09-10",
+      "drawTimeUtc": "2026-09-10T02:59:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        9,
+        40,
+        42,
+        55,
+        65
+      ],
+      "special": 23,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=US"
+    },
+    {
+      "roundTwo": null,
+      "game": "greece-powerball",
+      "gameName": "Greece Powerball",
+      "country": "Greece",
+      "date": "2026-09-10",
+      "drawTimeUtc": "2026-09-10T19:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        3,
+        11,
+        16,
+        34,
+        37
+      ],
+      "special": 11,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=GR"
+    },
+    {
+      "roundTwo": null,
+      "game": "euromillions",
+      "gameName": "EuroMillions",
+      "country": "Europe",
+      "date": "2026-09-11",
+      "drawTimeUtc": "2026-09-11T16:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        1,
+        7,
+        15,
+        39,
+        50
+      ],
+      "special": 1,
+      "extraSpecials": [
+        11
+      ],
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=EU"
+    },
+    {
+      "roundTwo": null,
+      "game": "thunderball",
+      "gameName": "UK Thunderball",
+      "country": "United Kingdom",
+      "date": "2026-09-11",
+      "drawTimeUtc": "2026-09-11T18:30:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        3,
+        7,
+        17,
+        25,
+        28
+      ],
+      "special": 14,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=GB"
+    },
+    {
+      "roundTwo": null,
+      "game": "mega-millions",
+      "gameName": "Mega Millions",
+      "country": "United States",
+      "date": "2026-09-12",
+      "drawTimeUtc": "2026-09-12T03:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        3,
+        30,
+        33,
+        53,
+        62
+      ],
+      "special": 22,
+      "extraSpecials": null,
+      "verified": true,
+      "official": true,
+      "sourceUrl": "https://www.megamillions.com/cmspages/utilservice.asmx/GetLatestDrawData"
+    },
+    {
+      "roundTwo": null,
+      "game": "france-lotto",
+      "gameName": "France Lotto",
+      "country": "France",
+      "date": "2026-09-12",
+      "drawTimeUtc": "2026-09-12T18:20:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        9,
+        26,
+        38,
+        45,
+        48
+      ],
+      "special": 1,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=FR"
+    },
+    {
+      "roundTwo": null,
+      "game": "france-lotto-plus",
+      "gameName": "France Lotto Plus",
+      "country": "France",
+      "date": "2026-09-12",
+      "drawTimeUtc": "2026-09-12T18:20:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        3,
+        7,
+        20,
+        34,
+        42
+      ],
+      "special": null,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=FR"
+    },
+    {
+      "roundTwo": null,
+      "game": "thunderball",
+      "gameName": "UK Thunderball",
+      "country": "United Kingdom",
+      "date": "2026-09-12",
+      "drawTimeUtc": "2026-09-12T18:30:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        5,
+        11,
+        16,
+        20,
+        38
+      ],
+      "special": 2,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=GB"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-09-12",
+      "drawTimeUtc": "2026-09-12T18:55:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        1,
+        3,
+        9,
+        14,
+        16,
+        19
+      ],
+      "special": 27,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": null,
+      "game": "greek-lotto",
+      "gameName": "Greek Lotto",
+      "country": "Greece",
+      "date": "2026-09-12",
+      "drawTimeUtc": "2026-09-12T19:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        6,
+        9,
+        13,
+        17,
+        23,
+        41
+      ],
+      "special": null,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=GR"
+    },
+    {
+      "roundTwo": {
+        "numbers": [
+          10,
+          12,
+          29,
+          31,
+          36,
+          54
+        ],
+        "special": 22,
+        "official": true,
+        "verified": false,
+        "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history",
+        "sourcesSeen": [
+          "official-results"
+        ]
+      },
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-09-12",
+      "drawTimeUtc": "2026-09-12T19:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        2,
+        32,
+        35,
+        44,
+        48,
+        56
+      ],
+      "special": 26,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "us-powerball",
+      "gameName": "US PowerBall",
+      "country": "United States",
+      "date": "2026-09-13",
+      "drawTimeUtc": "2026-09-13T02:59:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        14,
+        16,
+        23,
+        58,
+        69
+      ],
+      "special": 3,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=US"
+    },
+    {
+      "roundTwo": null,
+      "game": "greece-powerball",
+      "gameName": "Greece Powerball",
+      "country": "Greece",
+      "date": "2026-09-13",
+      "drawTimeUtc": "2026-09-13T19:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        10,
+        22,
+        24,
+        30,
+        35
+      ],
+      "special": 13,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=GR"
+    },
+    {
+      "roundTwo": null,
+      "game": "france-lotto",
+      "gameName": "France Lotto",
+      "country": "France",
+      "date": "2026-09-14",
+      "drawTimeUtc": "2026-09-14T18:20:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        8,
+        10,
+        13,
+        21,
+        38
+      ],
+      "special": 5,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=FR"
+    },
+    {
+      "roundTwo": null,
+      "game": "france-lotto-plus",
+      "gameName": "France Lotto Plus",
+      "country": "France",
+      "date": "2026-09-14",
+      "drawTimeUtc": "2026-09-14T18:20:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        4,
+        28,
+        32,
+        48,
+        49
+      ],
+      "special": null,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=FR"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-09-14",
+      "drawTimeUtc": "2026-09-14T18:55:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        9,
+        14,
+        20,
+        22,
+        26,
+        29
+      ],
+      "special": 4,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": null,
+      "game": "us-powerball",
+      "gameName": "US PowerBall",
+      "country": "United States",
+      "date": "2026-09-15",
+      "drawTimeUtc": "2026-09-15T02:59:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        19,
+        20,
+        57,
+        61,
+        67
+      ],
+      "special": 22,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=US"
+    },
+    {
+      "roundTwo": null,
+      "game": "euromillions",
+      "gameName": "EuroMillions",
+      "country": "Europe",
+      "date": "2026-09-15",
+      "drawTimeUtc": "2026-09-15T16:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        10,
+        16,
+        18,
+        22,
+        28
+      ],
+      "special": 6,
+      "extraSpecials": [
+        10
+      ],
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=EU"
+    },
+    {
+      "roundTwo": null,
+      "game": "thunderball",
+      "gameName": "UK Thunderball",
+      "country": "United Kingdom",
+      "date": "2026-09-15",
+      "drawTimeUtc": "2026-09-15T18:30:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        5,
+        12,
+        25,
+        29,
+        39
+      ],
+      "special": 4,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=GB"
+    },
+    {
+      "roundTwo": null,
+      "game": "greece-powerball",
+      "gameName": "Greece Powerball",
+      "country": "Greece",
+      "date": "2026-09-15",
+      "drawTimeUtc": "2026-09-15T19:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        9,
+        16,
+        30,
+        31,
+        34
+      ],
+      "special": 12,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=GR"
+    },
+    {
+      "roundTwo": null,
+      "game": "mega-millions",
+      "gameName": "Mega Millions",
+      "country": "United States",
+      "date": "2026-09-16",
+      "drawTimeUtc": "2026-09-16T03:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        27,
+        36,
+        43,
+        57,
+        58
+      ],
+      "special": 16,
+      "extraSpecials": null,
+      "verified": true,
+      "official": true,
+      "sourceUrl": "https://www.megamillions.com/cmspages/utilservice.asmx/GetLatestDrawData"
+    },
+    {
+      "roundTwo": null,
+      "game": "france-lotto",
+      "gameName": "France Lotto",
+      "country": "France",
+      "date": "2026-09-16",
+      "drawTimeUtc": "2026-09-16T18:20:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        1,
+        5,
+        13,
+        31,
+        49
+      ],
+      "special": 10,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=FR"
+    },
+    {
+      "roundTwo": null,
+      "game": "france-lotto-plus",
+      "gameName": "France Lotto Plus",
+      "country": "France",
+      "date": "2026-09-16",
+      "drawTimeUtc": "2026-09-16T18:20:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        4,
+        9,
+        13,
+        20,
+        36
+      ],
+      "special": null,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=FR"
+    },
+    {
+      "roundTwo": null,
+      "game": "thunderball",
+      "gameName": "UK Thunderball",
+      "country": "United Kingdom",
+      "date": "2026-09-16",
+      "drawTimeUtc": "2026-09-16T18:30:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        6,
+        9,
+        16,
+        20,
+        36
+      ],
+      "special": 6,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=GB"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-09-16",
+      "drawTimeUtc": "2026-09-16T18:55:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        4,
+        7,
+        19,
+        20,
+        35,
+        42
+      ],
+      "special": 31,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": null,
+      "game": "greek-lotto",
+      "gameName": "Greek Lotto",
+      "country": "Greece",
+      "date": "2026-09-16",
+      "drawTimeUtc": "2026-09-16T19:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        8,
+        17,
+        28,
+        31,
+        41,
+        48
+      ],
+      "special": null,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=GR"
+    },
+    {
+      "roundTwo": {
+        "numbers": [
+          22,
+          35,
+          36,
+          45,
+          51,
+          57
+        ],
+        "special": 50,
+        "official": true,
+        "verified": false,
+        "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history",
+        "sourcesSeen": [
+          "official-results"
+        ]
+      },
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-09-16",
+      "drawTimeUtc": "2026-09-16T19:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        11,
+        25,
+        27,
+        31,
+        32,
+        57
+      ],
+      "special": 30,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "us-powerball",
+      "gameName": "US PowerBall",
+      "country": "United States",
+      "date": "2026-09-17",
+      "drawTimeUtc": "2026-09-17T02:59:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        2,
+        21,
+        24,
+        25,
+        64
+      ],
+      "special": 7,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=US"
+    },
+    {
+      "roundTwo": null,
+      "game": "greece-powerball",
+      "gameName": "Greece Powerball",
+      "country": "Greece",
+      "date": "2026-09-17",
+      "drawTimeUtc": "2026-09-17T19:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        22,
+        23,
+        30,
+        33,
+        37
+      ],
+      "special": 7,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=GR"
+    },
+    {
+      "roundTwo": null,
+      "game": "euromillions",
+      "gameName": "EuroMillions",
+      "country": "Europe",
+      "date": "2026-09-18",
+      "drawTimeUtc": "2026-09-18T16:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        8,
+        17,
+        25,
+        30,
+        44
+      ],
+      "special": 2,
+      "extraSpecials": [
+        3
+      ],
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=EU"
+    },
+    {
+      "roundTwo": null,
+      "game": "thunderball",
+      "gameName": "UK Thunderball",
+      "country": "United Kingdom",
+      "date": "2026-09-18",
+      "drawTimeUtc": "2026-09-18T18:30:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        2,
+        4,
+        6,
+        8,
+        17
+      ],
+      "special": 11,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=GB"
+    },
+    {
+      "roundTwo": null,
+      "game": "mega-millions",
+      "gameName": "Mega Millions",
+      "country": "United States",
+      "date": "2026-09-19",
+      "drawTimeUtc": "2026-09-19T03:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        4,
+        9,
+        24,
+        56,
+        68
+      ],
+      "special": 1,
+      "extraSpecials": null,
+      "verified": true,
+      "official": true,
+      "sourceUrl": "https://www.megamillions.com/cmspages/utilservice.asmx/GetLatestDrawData"
+    },
+    {
+      "roundTwo": null,
+      "game": "france-lotto",
+      "gameName": "France Lotto",
+      "country": "France",
+      "date": "2026-09-19",
+      "drawTimeUtc": "2026-09-19T18:20:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        11,
+        12,
+        39,
+        46,
+        48
+      ],
+      "special": 7,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=FR"
+    },
+    {
+      "roundTwo": null,
+      "game": "france-lotto-plus",
+      "gameName": "France Lotto Plus",
+      "country": "France",
+      "date": "2026-09-19",
+      "drawTimeUtc": "2026-09-19T18:20:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        1,
+        23,
+        37,
+        46,
+        47
+      ],
+      "special": null,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=FR"
+    },
+    {
+      "roundTwo": null,
+      "game": "thunderball",
+      "gameName": "UK Thunderball",
+      "country": "United Kingdom",
+      "date": "2026-09-19",
+      "drawTimeUtc": "2026-09-19T18:30:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        2,
+        15,
+        16,
+        29,
+        30
+      ],
+      "special": 9,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=GB"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-09-19",
+      "drawTimeUtc": "2026-09-19T18:55:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        10,
+        11,
+        20,
+        28,
+        41,
+        44
+      ],
+      "special": 2,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": null,
+      "game": "greek-lotto",
+      "gameName": "Greek Lotto",
+      "country": "Greece",
+      "date": "2026-09-19",
+      "drawTimeUtc": "2026-09-19T19:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        3,
+        20,
+        27,
+        30,
+        35,
+        43
+      ],
+      "special": null,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=GR"
+    },
+    {
+      "roundTwo": {
+        "numbers": [
+          5,
+          9,
+          12,
+          47,
+          49,
+          54
+        ],
+        "special": 1,
+        "official": true,
+        "verified": false,
+        "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history",
+        "sourcesSeen": [
+          "official-results"
+        ]
+      },
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-09-19",
+      "drawTimeUtc": "2026-09-19T19:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        14,
+        20,
+        30,
+        37,
+        40,
+        52
+      ],
+      "special": 45,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "us-powerball",
+      "gameName": "US PowerBall",
+      "country": "United States",
+      "date": "2026-09-20",
+      "drawTimeUtc": "2026-09-20T02:59:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        18,
+        30,
+        41,
+        45,
+        68
+      ],
+      "special": 10,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=US"
+    },
+    {
+      "roundTwo": null,
+      "game": "greece-powerball",
+      "gameName": "Greece Powerball",
+      "country": "Greece",
+      "date": "2026-09-20",
+      "drawTimeUtc": "2026-09-20T19:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        2,
+        17,
+        31,
+        33,
+        37
+      ],
+      "special": 3,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=GR"
+    },
+    {
+      "roundTwo": null,
+      "game": "france-lotto",
+      "gameName": "France Lotto",
+      "country": "France",
+      "date": "2026-09-21",
+      "drawTimeUtc": "2026-09-21T18:20:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        3,
+        6,
+        15,
+        29,
+        43
+      ],
+      "special": 4,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=FR"
+    },
+    {
+      "roundTwo": null,
+      "game": "france-lotto-plus",
+      "gameName": "France Lotto Plus",
+      "country": "France",
+      "date": "2026-09-21",
+      "drawTimeUtc": "2026-09-21T18:20:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        5,
+        15,
+        16,
+        34,
+        37
+      ],
+      "special": null,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=FR"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-09-21",
+      "drawTimeUtc": "2026-09-21T18:55:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        15,
+        24,
+        29,
+        30,
+        31,
+        38
+      ],
+      "special": 11,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": null,
+      "game": "us-powerball",
+      "gameName": "US PowerBall",
+      "country": "United States",
+      "date": "2026-09-22",
+      "drawTimeUtc": "2026-09-22T02:59:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        2,
+        7,
+        9,
+        17,
+        58
+      ],
+      "special": 20,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=US"
+    },
+    {
+      "roundTwo": null,
+      "game": "euromillions",
+      "gameName": "EuroMillions",
+      "country": "Europe",
+      "date": "2026-09-22",
+      "drawTimeUtc": "2026-09-22T16:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        13,
+        14,
+        16,
+        44,
+        50
+      ],
+      "special": 10,
+      "extraSpecials": [
+        12
+      ],
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=EU"
+    },
+    {
+      "roundTwo": null,
+      "game": "thunderball",
+      "gameName": "UK Thunderball",
+      "country": "United Kingdom",
+      "date": "2026-09-22",
+      "drawTimeUtc": "2026-09-22T18:30:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        1,
+        10,
+        18,
+        32,
+        34
+      ],
+      "special": 2,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=GB"
+    },
+    {
+      "roundTwo": null,
+      "game": "greece-powerball",
+      "gameName": "Greece Powerball",
+      "country": "Greece",
+      "date": "2026-09-22",
+      "drawTimeUtc": "2026-09-22T19:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        9,
+        14,
+        19,
+        21,
+        35
+      ],
+      "special": 13,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=GR"
+    },
+    {
+      "roundTwo": null,
+      "game": "mega-millions",
+      "gameName": "Mega Millions",
+      "country": "United States",
+      "date": "2026-09-23",
+      "drawTimeUtc": "2026-09-23T03:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        7,
+        13,
+        26,
+        37,
+        68
+      ],
+      "special": 8,
+      "extraSpecials": null,
+      "verified": true,
+      "official": true,
+      "sourceUrl": "https://www.megamillions.com/cmspages/utilservice.asmx/GetLatestDrawData"
+    },
+    {
+      "roundTwo": null,
+      "game": "france-lotto",
+      "gameName": "France Lotto",
+      "country": "France",
+      "date": "2026-09-23",
+      "drawTimeUtc": "2026-09-23T18:20:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        8,
+        15,
+        21,
+        26,
+        38
+      ],
+      "special": 6,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=FR"
+    },
+    {
+      "roundTwo": null,
+      "game": "france-lotto-plus",
+      "gameName": "France Lotto Plus",
+      "country": "France",
+      "date": "2026-09-23",
+      "drawTimeUtc": "2026-09-23T18:20:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        3,
+        8,
+        11,
+        28,
+        35
+      ],
+      "special": null,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=FR"
+    },
+    {
+      "roundTwo": null,
+      "game": "thunderball",
+      "gameName": "UK Thunderball",
+      "country": "United Kingdom",
+      "date": "2026-09-23",
+      "drawTimeUtc": "2026-09-23T18:30:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        8,
+        18,
+        21,
+        24,
+        34
+      ],
+      "special": 1,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=GB"
+    },
+    {
+      "roundTwo": null,
+      "game": "irish-lotto",
+      "gameName": "Irish Lotto",
+      "country": "Ireland",
+      "date": "2026-09-23",
+      "drawTimeUtc": "2026-09-23T18:55:00Z",
+      "drawTimeBasis": "scheduled",
+      "numbers": [
+        2,
+        12,
+        17,
+        26,
+        30,
+        37
+      ],
+      "special": 10,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.lottery.ie/draw-games/results/view.html?game=lotto"
+    },
+    {
+      "roundTwo": null,
+      "game": "greek-lotto",
+      "gameName": "Greek Lotto",
+      "country": "Greece",
+      "date": "2026-09-23",
+      "drawTimeUtc": "2026-09-23T19:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        3,
+        20,
+        29,
+        33,
+        43,
+        44
+      ],
+      "special": null,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=GR"
+    },
+    {
+      "roundTwo": {
+        "numbers": [
+          4,
+          14,
+          21,
+          26,
+          43,
+          53
+        ],
+        "special": 16,
+        "official": true,
+        "verified": false,
+        "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history",
+        "sourcesSeen": [
+          "official-results"
+        ]
+      },
+      "game": "uk-lotto",
+      "gameName": "UK Lotto",
+      "country": "United Kingdom",
+      "date": "2026-09-23",
+      "drawTimeUtc": "2026-09-23T19:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        7,
+        8,
+        16,
+        33,
+        37,
+        42
+      ],
+      "special": 29,
+      "extraSpecials": null,
+      "verified": false,
+      "official": true,
+      "sourceUrl": "https://www.national-lottery.co.uk/results/lotto/draw-history"
+    },
+    {
+      "roundTwo": null,
+      "game": "us-powerball",
+      "gameName": "US PowerBall",
+      "country": "United States",
+      "date": "2026-09-24",
+      "drawTimeUtc": "2026-09-24T02:59:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        5,
+        15,
+        26,
+        29,
+        30
+      ],
+      "special": 14,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=US"
+    },
+    {
+      "roundTwo": null,
+      "game": "greece-powerball",
+      "gameName": "Greece Powerball",
+      "country": "Greece",
+      "date": "2026-09-24",
+      "drawTimeUtc": "2026-09-24T19:00:00Z",
+      "drawTimeBasis": "feed",
+      "numbers": [
+        1,
+        14,
+        15,
+        32,
+        45
+      ],
+      "special": 9,
+      "extraSpecials": null,
+      "verified": false,
+      "official": false,
+      "sourceUrl": "https://lotto-product-sa-backend.advbet.com/distributor/api/organizations/0191fb10-7058-7104-aac5-02b11bbebf23/lotteries/draws/last-results?cursor.limit=100&filter.countryCodes=GR"
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+[
+  {
+    "draw_number": 1,
+    "date": "2026-08-29",
+    "main_numbers": [
+      8,
+      17,
+      29,
+      42,
+      55
+    ],
+    "bonus_numbers": [
+      2
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "mega-millions",
+      "country": "United States"
+    }
+  },
+  {
+    "draw_number": 2,
+    "date": "2026-09-02",
+    "main_numbers": [
+      1,
+      22,
+      51,
+      61,
+      63
+    ],
+    "bonus_numbers": [
+      17
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "mega-millions",
+      "country": "United States"
+    }
+  },
+  {
+    "draw_number": 3,
+    "date": "2026-09-05",
+    "main_numbers": [
+      6,
+      26,
+      34,
+      59,
+      61
+    ],
+    "bonus_numbers": [
+      24
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "mega-millions",
+      "country": "United States"
+    }
+  },
+  {
+    "draw_number": 4,
+    "date": "2026-09-09",
+    "main_numbers": [
+      17,
+      30,
+      43,
+      58,
+      66
+    ],
+    "bonus_numbers": [
+      20
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "mega-millions",
+      "country": "United States"
+    }
+  },
+  {
+    "draw_number": 5,
+    "date": "2026-09-12",
+    "main_numbers": [
+      3,
+      30,
+      33,
+      53,
+      62
+    ],
+    "bonus_numbers": [
+      22
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "mega-millions",
+      "country": "United States"
+    }
+  },
+  {
+    "draw_number": 6,
+    "date": "2026-09-16",
+    "main_numbers": [
+      27,
+      36,
+      43,
+      57,
+      58
+    ],
+    "bonus_numbers": [
+      16
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "mega-millions",
+      "country": "United States"
+    }
+  },
+  {
+    "draw_number": 7,
+    "date": "2026-09-19",
+    "main_numbers": [
+      4,
+      9,
+      24,
+      56,
+      68
+    ],
+    "bonus_numbers": [
+      1
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "mega-millions",
+      "country": "United States"
+    }
+  },
+  {
+    "draw_number": 8,
+    "date": "2026-09-23",
+    "main_numbers": [
+      7,
+      13,
+      26,
+      37,
+      68
+    ],
+    "bonus_numbers": [
+      8
+    ],
+    "jackpot_won": false,
+    "jackpot_amount": null,
+    "raw_data": {
+      "source": "bettip.co.za",
+      "game": "mega-millions",
+      "country": "United States"
+    }
+  }
+]

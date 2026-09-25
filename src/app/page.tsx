@@ -172,7 +172,7 @@ export default function Home() {
             </div>
             <div>
               <h1 className="text-xl font-bold tracking-tight">LotteryPredictor</h1>
-              <p className="text-xs text-muted-foreground">v1.0 · 10 motores · 6 loterías globales</p>
+              <p className="text-xs text-muted-foreground">v2.0 · 10 motores · 18 loterías globales · 22K+ sorteos</p>
             </div>
           </div>
           <div className="flex items-center gap-2">

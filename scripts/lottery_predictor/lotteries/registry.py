@@ -9,6 +9,7 @@ import json
 from .base import Lottery, DrawResult
 from .pozo_millonario import PozoMillonario
 from .lotto_austrian import LottoAustrian
+from .generic import make_lottery, NEW_LOTTERIES
 
 
 class LaPrimitiva(Lottery):
@@ -164,10 +165,15 @@ LOTTERY_REGISTRY = {
     'lotto_austrian': LottoAustrian,
 }
 
+# Add new generic lotteries
+GENERIC_KEYS = list(NEW_LOTTERIES.keys())
+
 
 def get_lottery(name: str) -> Lottery:
     """Get a lottery instance by name."""
     name = name.lower().replace(' ', '_').replace('-', '_')
-    if name not in LOTTERY_REGISTRY:
-        raise ValueError(f"Unknown lottery: {name}. Available: {list(LOTTERY_REGISTRY.keys())}")
-    return LOTTERY_REGISTRY[name]()
+    if name in LOTTERY_REGISTRY:
+        return LOTTERY_REGISTRY[name]()
+    if name in NEW_LOTTERIES:
+        return make_lottery(name)
+    raise ValueError(f"Unknown lottery: {name}. Available: {list(LOTTERY_REGISTRY.keys()) + GENERIC_KEYS}")

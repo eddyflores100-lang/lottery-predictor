@@ -22,7 +22,7 @@ def backtest_engine(lottery_class, data_source: str, engine_name: str,
     Backtest a single engine on a lottery.
     
     Args:
-        lottery_class: Class to instantiate (e.g., PozoMillonario)
+        lottery_class: Class to instantiate (e.g., PozoMillonario) OR a factory function
         data_source: Path to data file
         engine_name: Name of engine to test
         min_history: Minimum draws needed before making predictions
@@ -42,7 +42,14 @@ def backtest_engine(lottery_class, data_source: str, engine_name: str,
         }
     """
     # Load full data
-    lottery = lottery_class()
+    try:
+        lottery = lottery_class()
+    except TypeError:
+        # If lottery_class is a factory function (e.g., for generic lotteries), call it directly
+        lottery = lottery_class
+        if hasattr(lottery, '__class__') and lottery.__class__.__name__ == 'function':
+            lottery = lottery_class()
+    
     lottery.load_data(data_source)
     
     if lottery.total_draws() < min_history + 1:
@@ -62,22 +69,26 @@ def backtest_engine(lottery_class, data_source: str, engine_name: str,
     
     for i, test_idx in enumerate(test_indices):
         # Build a "past" lottery with only draws up to test_idx - 1
-        past_lottery = lottery_class()
-        past_lottery.draws = lottery.draws[:test_idx]
+        # Use the same instance but with truncated draws (more efficient)
+        original_draws = lottery.draws
+        lottery.draws = original_draws[:test_idx]
         
-        actual_draw = lottery.draws[test_idx]
+        actual_draw = original_draws[test_idx]
         actual_numbers = set(actual_draw.main_numbers)
         
         # Predict
         start_time = time.time()
         try:
-            predicted = engine.predict(past_lottery)
+            predicted = engine.predict(lottery)
         except Exception as e:
             if verbose:
                 print(f"  Error at draw {actual_draw.draw_number}: {e}")
             predicted = []
         elapsed = time.time() - start_time
         total_time += elapsed
+        
+        # Restore draws
+        lottery.draws = original_draws
         
         # Count hits
         hits = len(set(predicted) & actual_numbers) if predicted else 0
@@ -112,10 +123,14 @@ def backtest_engine(lottery_class, data_source: str, engine_name: str,
 
 def backtest_all_engines(lottery_class, data_source: str,
                          min_history: int = 50, max_test_draws: int = None,
-                         verbose: bool = False) -> Dict:
+                         verbose: bool = False, skip_engines=None) -> Dict:
     """Backtest all engines on a lottery."""
+    if skip_engines is None:
+        skip_engines = []
     results = {}
     for engine_name in ENGINE_REGISTRY.keys():
+        if engine_name in skip_engines:
+            continue
         if verbose:
             print(f"\n=== Backtesting engine: {engine_name} ===")
         result = backtest_engine(
@@ -143,7 +158,7 @@ def compare_engines(backtest_results: Dict) -> List[Dict]:
             'avg_time_ms': result['avg_time_per_pred_ms'],
             'tested': result['total_tested'],
         })
-    # Sort by avg_hits descending
+        # Sort by avg_hits descending
     comparison.sort(key=lambda x: -x['avg_hits'])
     return comparison
 
@@ -154,7 +169,13 @@ def baseline_random(lottery_class, data_source: str, min_history: int = 50,
     import random
     random.seed(seed)
     
-    lottery = lottery_class()
+    try:
+        lottery = lottery_class()
+    except TypeError:
+        lottery = lottery_class
+        if hasattr(lottery, '__class__') and lottery.__class__.__name__ == 'function':
+            lottery = lottery_class()
+    
     lottery.load_data(data_source)
     
     test_indices = list(range(min_history, lottery.total_draws()))

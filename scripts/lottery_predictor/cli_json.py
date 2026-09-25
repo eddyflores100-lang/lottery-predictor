@@ -15,7 +15,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 
 def cmd_lotteries():
-    from lotteries import LOTTERY_REGISTRY
+    from lotteries import LOTTERY_REGISTRY, NEW_LOTTERIES, make_lottery
     DEFAULT_DATA_PATHS = {
         'pozo_millonario': '/home/z/my-project/data/pozo_data.json',
         'la_primitiva': '/home/z/my-project/data/la_primitiva.json',
@@ -24,11 +24,38 @@ def cmd_lotteries():
         'el_gordo': '/home/z/my-project/data/el_gordo.json',
         'lotto_austrian': '/home/z/my-project/data/lotto_austrian.json',
     }
+    # Add generic lotteries
+    for k, v in NEW_LOTTERIES.items():
+        DEFAULT_DATA_PATHS[k] = v['data_file']
+    
     result = []
+    # Existing lotteries
     for name, cls in LOTTERY_REGISTRY.items():
         path = DEFAULT_DATA_PATHS.get(name, '')
         has_data = os.path.exists(path)
         instance = cls()
+        result.append({
+            'key': name,
+            'name': instance.name,
+            'country': instance.country,
+            'main_pool_size': instance.main_pool_size,
+            'main_picks': instance.main_picks,
+            'bonus_pool_size': instance.bonus_pool_size,
+            'bonus_picks': instance.bonus_picks,
+            'draws_per_week': instance.draws_per_week,
+            'currency': instance.currency,
+            'min_jackpot': instance.min_jackpot,
+            'odds_jackpot': instance.odds_jackpot,
+            'has_data': has_data,
+            'data_path': path,
+        })
+    # Generic lotteries
+    for name in NEW_LOTTERIES.keys():
+        instance = make_lottery(name)
+        if instance is None:
+            continue
+        path = DEFAULT_DATA_PATHS.get(name, '')
+        has_data = os.path.exists(path)
         result.append({
             'key': name,
             'name': instance.name,
@@ -61,7 +88,7 @@ def cmd_engines():
 
 
 def cmd_describe(lottery_name):
-    from lotteries import get_lottery
+    from lotteries import get_lottery, NEW_LOTTERIES
     DEFAULT_DATA_PATHS = {
         'pozo_millonario': '/home/z/my-project/data/pozo_data.json',
         'la_primitiva': '/home/z/my-project/data/la_primitiva.json',
@@ -70,6 +97,9 @@ def cmd_describe(lottery_name):
         'el_gordo': '/home/z/my-project/data/el_gordo.json',
         'lotto_austrian': '/home/z/my-project/data/lotto_austrian.json',
     }
+    for k, v in NEW_LOTTERIES.items():
+        DEFAULT_DATA_PATHS[k] = v['data_file']
+    
     lottery = get_lottery(lottery_name)
     path = DEFAULT_DATA_PATHS.get(lottery_name)
     if path and os.path.exists(path):
@@ -96,7 +126,7 @@ def cmd_describe(lottery_name):
 
 
 def cmd_predict(lottery_name, engine_name):
-    from lotteries import get_lottery
+    from lotteries import get_lottery, NEW_LOTTERIES
     from engines import ENGINE_REGISTRY
     DEFAULT_DATA_PATHS = {
         'pozo_millonario': '/home/z/my-project/data/pozo_data.json',
@@ -106,6 +136,9 @@ def cmd_predict(lottery_name, engine_name):
         'el_gordo': '/home/z/my-project/data/el_gordo.json',
         'lotto_austrian': '/home/z/my-project/data/lotto_austrian.json',
     }
+    for k, v in NEW_LOTTERIES.items():
+        DEFAULT_DATA_PATHS[k] = v['data_file']
+    
     lottery = get_lottery(lottery_name)
     path = DEFAULT_DATA_PATHS.get(lottery_name)
     lottery.load_data(path)
