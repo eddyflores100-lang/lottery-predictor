@@ -1,0 +1,244 @@
+{
+  "frequency": {
+    "engine": "frequency",
+    "lottery": "Pozo Millonario",
+    "total_tested": 100,
+    "avg_hits": 5.1,
+    "max_hits": 8,
+    "min_hits": 2,
+    "hits_distribution": {
+      "5": 32,
+      "4": 21,
+      "3": 8,
+      "6": 19,
+      "7": 14,
+      "8": 3,
+      "2": 3
+    },
+    "avg_time_per_pred_ms": 0.19
+  },
+  "hot_cold": {
+    "engine": "hot_cold",
+    "lottery": "Pozo Millonario",
+    "total_tested": 100,
+    "avg_hits": 4.95,
+    "max_hits": 8,
+    "min_hits": 2,
+    "hits_distribution": {
+      "5": 32,
+      "3": 6,
+      "6": 19,
+      "4": 30,
+      "7": 9,
+      "8": 2,
+      "2": 2
+    },
+    "avg_time_per_pred_ms": 0.25
+  },
+  "gap_analysis": {
+    "engine": "gap_analysis",
+    "lottery": "Pozo Millonario",
+    "total_tested": 100,
+    "avg_hits": 4.84,
+    "max_hits": 8,
+    "min_hits": 1,
+    "hits_distribution": {
+      "5": 23,
+      "6": 21,
+      "1": 1,
+      "7": 8,
+      "3": 14,
+      "8": 4,
+      "4": 27,
+      "2": 2
+    },
+    "avg_time_per_pred_ms": 0.21
+  },
+  "markov_chain": {
+    "engine": "markov_chain",
+    "lottery": "Pozo Millonario",
+    "total_tested": 100,
+    "avg_hits": 5.07,
+    "max_hits": 8,
+    "min_hits": 2,
+    "hits_distribution": {
+      "5": 34,
+      "3": 10,
+      "7": 15,
+      "6": 17,
+      "4": 20,
+      "8": 2,
+      "2": 2
+    },
+    "avg_time_per_pred_ms": 2.09
+  },
+  "bayesian": {
+    "engine": "bayesian",
+    "lottery": "Pozo Millonario",
+    "total_tested": 100,
+    "avg_hits": 5.1,
+    "max_hits": 8,
+    "min_hits": 2,
+    "hits_distribution": {
+      "5": 32,
+      "4": 21,
+      "3": 8,
+      "6": 19,
+      "7": 14,
+      "8": 3,
+      "2": 3
+    },
+    "avg_time_per_pred_ms": 0.22
+  },
+  "pattern_detection": {
+    "engine": "pattern_detection",
+    "lottery": "Pozo Millonario",
+    "total_tested": 100,
+    "avg_hits": 5.01,
+    "max_hits": 8,
+    "min_hits": 2,
+    "hits_distribution": {
+      "5": 29,
+      "4": 21,
+      "3": 12,
+      "6": 23,
+      "7": 10,
+      "8": 3,
+      "2": 2
+    },
+    "avg_time_per_pred_ms": 2.81
+  },
+  "entropy": {
+    "engine": "entropy",
+    "lottery": "Pozo Millonario",
+    "total_tested": 100,
+    "avg_hits": 5.14,
+    "max_hits": 8,
+    "min_hits": 2,
+    "hits_distribution": {
+      "5": 33,
+      "6": 20,
+      "3": 7,
+      "4": 20,
+      "7": 14,
+      "8": 3,
+      "2": 3
+    },
+    "avg_time_per_pred_ms": 5.2
+  },
+  "monte_carlo": {
+    "engine": "monte_carlo",
+    "lottery": "Pozo Millonario",
+    "total_tested": 100,
+    "avg_hits": 5.04,
+    "max_hits": 8,
+    "min_hits": 2,
+    "hits_distribution": {
+      "5": 33,
+      "4": 23,
+      "6": 20,
+      "2": 4,
+      "3": 6,
+      "7": 11,
+      "8": 3
+    },
+    "avg_time_per_pred_ms": 617.67
+  },
+  "ensemble": {
+    "engine": "ensemble",
+    "lottery": "Pozo Millonario",
+    "total_tested": 100,
+    "avg_hits": 5.13,
+    "max_hits": 8,
+    "min_hits": 2,
+    "hits_distribution": {
+      "5": 31,
+      "3": 10,
+      "6": 21,
+      "4": 20,
+      "7": 10,
+      "8": 6,
+      "2": 2
+    },
+    "avg_time_per_pred_ms": 771.02
+  },
+  "random_baseline": {
+    "engine": "random_baseline",
+    "total_tested": 100,
+    "avg_hits": 4.94,
+    "max_hits": 7,
+    "hits_distribution": {
+      "5": 30,
+      "6": 25,
+      "4": 26,
+      "7": 9,
+      "2": 3,
+      "3": 7
+    }
+  },
+  "comparison": [
+    {
+      "engine": "entropy",
+      "avg_hits": 5.14,
+      "max_hits": 8,
+      "avg_time_ms": 5.2,
+      "tested": 100
+    },
+    {
+      "engine": "ensemble",
+      "avg_hits": 5.13,
+      "max_hits": 8,
+      "avg_time_ms": 771.02,
+      "tested": 100
+    },
+    {
+      "engine": "frequency",
+      "avg_hits": 5.1,
+      "max_hits": 8,
+      "avg_time_ms": 0.19,
+      "tested": 100
+    },
+    {
+      "engine": "bayesian",
+      "avg_hits": 5.1,
+      "max_hits": 8,
+      "avg_time_ms": 0.22,
+      "tested": 100
+    },
+    {
+      "engine": "markov_chain",
+      "avg_hits": 5.07,
+      "max_hits": 8,
+      "avg_time_ms": 2.09,
+      "tested": 100
+    },
+    {
+      "engine": "monte_carlo",
+      "avg_hits": 5.04,
+      "max_hits": 8,
+      "avg_time_ms": 617.67,
+      "tested": 100
+    },
+    {
+      "engine": "pattern_detection",
+      "avg_hits": 5.01,
+      "max_hits": 8,
+      "avg_time_ms": 2.81,
+      "tested": 100
+    },
+    {
+      "engine": "hot_cold",
+      "avg_hits": 4.95,
+      "max_hits": 8,
+      "avg_time_ms": 0.25,
+      "tested": 100
+    },
+    {
+      "engine": "gap_analysis",
+      "avg_hits": 4.84,
+      "max_hits": 8,
+      "avg_time_ms": 0.21,
+      "tested": 100
+    }
+  ]
+}
