@@ -12,25 +12,32 @@
    ============================================================ */
 
 :root{
-  --bg:#f5f1ea;
+  --bg:#f0ebe2;
   --bg-card:#ffffff;
-  --bg-soft:#ebe5db;
-  --bg-tint:#f9f6f0;
+  --bg-soft:#e0d9cc;
+  --bg-tint:#f7f3ec;
+  --bg-dark:#1c1916;
+  --bg-dark-soft:#2a2520;
   --ink:#1a1714;
   --ink-soft:#4a443c;
-  --ink-mute:#8a8275;
-  --ink-faint:#b8b0a2;
-  --brass:#b8923a;
+  --ink-mute:#7a7268;
+  --ink-faint:#a8a094;
+  --ink-light:#f0ebe2;
+  --ink-light-soft:#c4bcac;
+  --brass:#a67e1e;
   --brass-lt:#d4ad55;
-  --brass-dk:#8a6e28;
-  --clay:#c4664a;
-  --sage:#6b8e6b;
-  --sage-dk:#4a6a4a;
-  --line:#d8d0c4;
-  --line-soft:#e8e2d6;
-  --shadow:0 2px 8px rgba(26,23,20,0.06),0 1px 3px rgba(26,23,20,0.04);
-  --shadow-md:0 8px 24px rgba(26,23,20,0.08),0 2px 8px rgba(26,23,20,0.04);
-  --shadow-lift:0 20px 50px rgba(26,23,20,0.12),0 6px 16px rgba(26,23,20,0.06);
+  --brass-dk:#7a5e16;
+  --clay:#b04830;
+  --clay-lt:#d4664a;
+  --sage:#4a7a4a;
+  --sage-dk:#2e5e2e;
+  --line:#c8c0b0;
+  --line-soft:#ddd6c8;
+  --line-dark:rgba(255,255,255,0.08);
+  --shadow:0 2px 8px rgba(26,23,20,0.1),0 1px 3px rgba(26,23,20,0.06);
+  --shadow-md:0 8px 28px rgba(26,23,20,0.12),0 2px 8px rgba(26,23,20,0.06);
+  --shadow-lift:0 24px 60px rgba(26,23,20,0.18),0 8px 20px rgba(26,23,20,0.08);
+  --shadow-dark:0 8px 28px rgba(0,0,0,0.4);
   --serif:Georgia,'Times New Roman',serif;
   --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
   --mono:'SF Mono','Courier New',monospace;
@@ -141,7 +148,7 @@ body::before{
 }
 .btn-primary{background:var(--ink);color:var(--bg);box-shadow:var(--shadow-md)}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:var(--shadow-lift);background:var(--brass-dk)}
-.btn-outline{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn-outline{background:var(--bg-card);color:var(--ink);border:1px solid var(--line);box-shadow:var(--shadow)}
 .btn-outline:hover{background:var(--bg-card);border-color:var(--brass);color:var(--brass-dk);transform:translateY(-2px)}
 .btn .arrow{transition:transform 0.3s}
 .btn:hover .arrow{transform:translateX(4px)}
@@ -164,11 +171,11 @@ body::before{
 .section-desc{color:var(--ink-soft);font-size:1.02rem;letter-spacing:0.1px}
 
 /* ============== STATS ============== */
-.stats-bar{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line);max-width:100%;margin:0}
-.stat{background:var(--bg);padding:40px 20px;text-align:center;transition:background 0.3s}
-.stat:hover{background:var(--bg-card)}
-.stat .num{font-family:var(--serif);font-size:2.4rem;font-weight:700;color:var(--brass-dk);line-height:1;letter-spacing:-0.5px}
-.stat .label{font-family:var(--mono);font-size:0.68rem;color:var(--ink-mute);text-transform:uppercase;letter-spacing:1.5px;margin-top:8px}
+.stats-bar{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--bg-dark);border-top:1px solid var(--bg-dark);border-bottom:1px solid var(--bg-dark);max-width:100%;margin:0}
+.stat{background:var(--bg-dark);padding:44px 20px;text-align:center;transition:background 0.3s;position:relative}
+.stat:hover{background:var(--bg-dark-soft)}
+.stat .num{font-family:var(--serif);font-size:2.6rem;font-weight:700;color:var(--brass-lt);line-height:1;letter-spacing:-0.5px}
+.stat .label{font-family:var(--mono);font-size:0.68rem;color:var(--ink-light-soft);text-transform:uppercase;letter-spacing:1.5px;margin-top:10px}
 @media(max-width:768px){.stats-bar{grid-template-columns:repeat(2,1fr)}}
 
 /* ============== ENGINE CARDS ============== */
@@ -176,7 +183,7 @@ body::before{
 .engine-card{
   background:var(--bg-card);border:1px solid var(--line);padding:28px 24px;
   position:relative;transition:all 0.35s var(--ease);
-  border-radius:12px;will-change:transform;
+  border-radius:12px;will-change:transform;box-shadow:var(--shadow-md);
 }
 .engine-card:hover{box-shadow:var(--shadow-lift);border-color:var(--brass);transform:translateY(-3px)}
 .engine-card.featured{border-color:var(--brass);border-width:1px;background:linear-gradient(180deg,#fffcf5,var(--bg-card))}
@@ -194,14 +201,14 @@ body::before{
 
 /* ============== RESULTS ============== */
 .results-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
-.result-card{background:var(--bg-card);border:1px solid var(--line);padding:30px;border-radius:12px;position:relative;transition:all 0.35s var(--ease);will-change:transform}
+.result-card{background:var(--bg-card);border:1px solid var(--line);padding:30px;border-radius:12px;position:relative;transition:all 0.35s var(--ease);will-change:transform;box-shadow:var(--shadow-md)}
 .result-card:hover{box-shadow:var(--shadow-lift);transform:translateY(-3px)}
-.result-card::before{content:"";position:absolute;top:0;left:0;bottom:0;width:3px;background:var(--brass);border-radius:12px 0 0 12px}
+.result-card::before{content:"";position:absolute;top:0;left:0;bottom:0;width:4px;background:var(--brass);border-radius:12px 0 0 12px}
 .result-card.pos::before{background:var(--sage)}
 .result-card.neg::before{background:var(--clay)}
 .result-card.warn::before{background:var(--brass)}
 .result-card h3{font-size:0.95rem;font-weight:700;margin-bottom:12px;color:var(--ink);display:flex;align-items:center;gap:8px}
-.result-card .big{font-family:var(--serif);font-size:2.6rem;font-weight:700;line-height:1;letter-spacing:-1px;margin:12px 0;color:var(--brass-dk)}
+.result-card .big{font-family:var(--serif);font-size:2.8rem;font-weight:700;line-height:1;letter-spacing:-1px;margin:14px 0;color:var(--brass-dk)}
 .result-card.pos .big{color:var(--sage-dk)}
 .result-card.neg .big{color:var(--clay)}
 .result-card .desc{color:var(--ink-soft);font-size:0.84rem;line-height:1.6}
@@ -258,7 +265,7 @@ body::before{
 .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;max-width:960px;margin:0 auto}
 .price-card{background:var(--bg-card);border:1px solid var(--line);padding:40px 32px;text-align:center;border-radius:12px;position:relative;transition:all 0.35s var(--ease);will-change:transform}
 .price-card:hover{box-shadow:var(--shadow-lift);transform:translateY(-4px);border-color:var(--brass)}
-.price-card.featured{border-color:var(--brass);border-width:1px;box-shadow:var(--shadow-md)}
+.price-card.featured{border-color:var(--brass);border-width:1px;box-shadow:var(--shadow-md),0 0 30px rgba(184,146,58,0.1)}
 .price-card.featured::before{content:"MÁS POPULAR";position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--brass);color:#fff;padding:4px 20px;font-family:var(--mono);font-size:0.62rem;font-weight:700;letter-spacing:2px;border-radius:100px}
 .price-card h3{font-family:var(--serif);font-size:1.25rem;margin-bottom:6px;color:var(--ink)}
 .price-card .price{font-family:var(--serif);font-size:2.8rem;font-weight:700;margin:20px 0;color:var(--ink);line-height:1}
@@ -268,14 +275,14 @@ body::before{
 .price-card ul li::before{content:"✓";color:var(--sage);font-weight:700;font-size:0.75rem}
 
 /* ============== FOOTER ============== */
-footer{background:var(--bg-soft);border-top:1px solid var(--line);padding:60px 6vw 40px}
+footer{background:var(--bg-dark);border-top:1px solid var(--line-dark);padding:60px 6vw 40px}
 .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:36px;margin-bottom:36px;max-width:1100px;margin-left:auto;margin-right:auto}
-.footer-col h4{font-family:var(--mono);font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--brass-dk);margin-bottom:16px}
-.footer-col a{display:block;color:var(--ink-soft);text-decoration:none;padding:5px 0;font-size:0.84rem;transition:color 0.25s}
-.footer-col a:hover{color:var(--brass-dk)}
-.footer-bottom{border-top:1px solid var(--line);padding-top:24px;text-align:center;max-width:1100px;margin:0 auto}
-.footer-bottom p{color:var(--ink-mute);font-size:0.78rem;margin-bottom:6px}
-.footer-disclaimer{margin-top:14px;padding:12px 22px;border:1px solid rgba(196,102,74,0.2);background:rgba(196,102,74,0.04);border-radius:100px;color:var(--clay);font-size:0.76rem;max-width:680px;margin-left:auto;margin-right:auto}
+.footer-col h4{font-family:var(--mono);font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;color:var(--brass-lt);margin-bottom:16px}
+.footer-col a{display:block;color:var(--ink-light-soft);text-decoration:none;padding:5px 0;font-size:0.84rem;transition:color 0.25s}
+.footer-col a:hover{color:var(--brass-lt)}
+.footer-bottom{border-top:1px solid var(--line-dark);padding-top:24px;text-align:center;max-width:1100px;margin:0 auto}
+.footer-bottom p{color:var(--ink-light-soft);font-size:0.78rem;margin-bottom:6px}
+.footer-disclaimer{margin-top:14px;padding:12px 22px;border:1px solid rgba(196,102,74,0.3);background:rgba(196,102,74,0.08);border-radius:100px;color:var(--clay-lt);font-size:0.76rem;max-width:680px;margin-left:auto;margin-right:auto}
 
 /* ============== REVEAL ============== */
 .reveal{opacity:0;transform:translateY(35px);transition:opacity 0.7s var(--ease),transform 0.7s var(--ease)}
@@ -367,20 +374,20 @@ footer{background:var(--bg-soft);border-top:1px solid var(--line);padding:60px 6
 </section>
 
 <!-- RESULTS -->
-<section class="section" id="results" style="background:var(--bg-soft);max-width:100%;margin:0">
+<section class="section" id="results" style="background:var(--bg-dark);max-width:100%;margin:0">
   <div style="max-width:1200px;margin:0 auto">
     <div class="section-center reveal">
-      <div class="section-tag">Hallazgos Clave</div>
-      <h2 class="section-title">Resultados del análisis riguroso</h2>
-      <p class="section-desc">Permutation tests con corrección Bonferroni. Solo reportamos lo estadísticamente significativo.</p>
+      <div class="section-tag" style="background:rgba(255,255,255,0.05);border-color:var(--line-dark);color:var(--brass-lt)">Hallazgos Clave</div>
+      <h2 class="section-title" style="color:var(--ink-light)">Resultados del análisis riguroso</h2>
+      <p class="section-desc" style="color:var(--ink-light-soft)">Permutation tests con corrección Bonferroni. Solo reportamos lo estadísticamente significativo.</p>
     </div>
     <div class="results-grid">
-      <div class="result-card pos reveal" data-tilt><h3>🔗 Markov Chain · EuroMillions</h3><div class="big">+63.2%</div><p class="desc">Mejora vs azar. p-value = 0.0000 (altamente significativo tras Bonferroni). Cohen's d = 3.148 (large effect).</p><div class="verdict pos">✅ ÚNICO MOTOR SIGNIFICATIVO</div></div>
-      <div class="result-card neg reveal delay-1" data-tilt><h3>📊 Expected Value</h3><div class="big">−79%</div><p class="desc">EV por dólar en EuroMillions con jackpot mínimo. Break-even: $294M (imposible).</p><div class="verdict neg">❌ EV NEGATIVO EN TODAS</div></div>
-      <div class="result-card neg reveal delay-2" data-tilt><h3>💰 Kelly Criterion</h3><div class="big">≈0</div><p class="desc">Kelly fraction para todas las loterías. Probabilidad demasiado baja. Monte Carlo: 100% bancarrota.</p><div class="verdict neg">❌ NO APOSTAR</div></div>
-      <div class="result-card warn reveal delay-3" data-tilt><h3>🎰 UK49s — Más predecible</h3><div class="big">+50%</div><p class="desc">5,863 sorteos. Ensemble logra +50% mejora. Pero pool 6/49 hace jackpot 1:685M.</p><div class="verdict warn">⚠️ PREDECIBLE PERO INALCANZABLE</div></div>
-      <div class="result-card warn reveal" data-tilt><h3>🚨 Detección de trampa</h3><div class="big">35%</div><p class="desc">De sorteos del Pozo Millonario tienen patrones sospechosos. EuroMillions: 4 números no aleatorios.</p><div class="verdict warn">⚠️ SESGO MECÁNICO DETECTADO</div></div>
-      <div class="result-card pos reveal delay-1" data-tilt><h3>🌐 MCP Server productor</h3><div class="big">6</div><p class="desc">Tools expuestas: list_lotteries, describe_lottery, predict, backtest. Compatible con Claude Desktop.</p><div class="verdict pos">✅ INTEGRABLE CON AI AGENTS</div></div>
+      <div class="result-card pos reveal" data-tilt style="background:var(--bg-dark-soft);border-color:var(--line-dark)"><h3 style="color:var(--ink-light)">🔗 Markov Chain · EuroMillions</h3><div class="big">+63.2%</div><p class="desc" style="color:var(--ink-light-soft)">Mejora vs azar. p-value = 0.0000 (altamente significativo tras Bonferroni). Cohen's d = 3.148 (large effect).</p><div class="verdict pos">✅ ÚNICO MOTOR SIGNIFICATIVO</div></div>
+      <div class="result-card neg reveal delay-1" data-tilt style="background:var(--bg-dark-soft);border-color:var(--line-dark)"><h3 style="color:var(--ink-light)">📊 Expected Value</h3><div class="big">−79%</div><p class="desc" style="color:var(--ink-light-soft)">EV por dólar en EuroMillions con jackpot mínimo. Break-even: $294M (imposible).</p><div class="verdict neg">❌ EV NEGATIVO EN TODAS</div></div>
+      <div class="result-card neg reveal delay-2" data-tilt style="background:var(--bg-dark-soft);border-color:var(--line-dark)"><h3 style="color:var(--ink-light)">💰 Kelly Criterion</h3><div class="big">≈0</div><p class="desc" style="color:var(--ink-light-soft)">Kelly fraction para todas las loterías. Probabilidad demasiado baja. Monte Carlo: 100% bancarrota.</p><div class="verdict neg">❌ NO APOSTAR</div></div>
+      <div class="result-card warn reveal delay-3" data-tilt style="background:var(--bg-dark-soft);border-color:var(--line-dark)"><h3 style="color:var(--ink-light)">🎰 UK49s — Más predecible</h3><div class="big">+50%</div><p class="desc" style="color:var(--ink-light-soft)">5,863 sorteos. Ensemble logra +50% mejora. Pero pool 6/49 hace jackpot 1:685M.</p><div class="verdict warn">⚠️ PREDECIBLE PERO INALCANZABLE</div></div>
+      <div class="result-card warn reveal" data-tilt style="background:var(--bg-dark-soft);border-color:var(--line-dark)"><h3 style="color:var(--ink-light)">🚨 Detección de trampa</h3><div class="big">35%</div><p class="desc" style="color:var(--ink-light-soft)">De sorteos del Pozo Millonario tienen patrones sospechosos. EuroMillions: 4 números no aleatorios.</p><div class="verdict warn">⚠️ SESGO MECÁNICO DETECTADO</div></div>
+      <div class="result-card pos reveal delay-1" data-tilt style="background:var(--bg-dark-soft);border-color:var(--line-dark)"><h3 style="color:var(--ink-light)">🌐 MCP Server productor</h3><div class="big">6</div><p class="desc" style="color:var(--ink-light-soft)">Tools expuestas: list_lotteries, describe_lottery, predict, backtest. Compatible con Claude Desktop.</p><div class="verdict pos">✅ INTEGRABLE CON AI AGENTS</div></div>
     </div>
   </div>
 </section>
@@ -430,14 +437,14 @@ footer{background:var(--bg-soft);border-top:1px solid var(--line);padding:60px 6
 </section>
 
 <!-- TABLE -->
-<section class="section" style="background:var(--bg-soft);max-width:100%;margin:0">
+<section class="section" style="background:var(--bg-dark);max-width:100%;margin:0">
   <div style="max-width:1200px;margin:0 auto">
     <div class="section-center reveal">
-      <div class="section-tag">Cobertura Global</div>
-      <h2 class="section-title">49 loterías de todo el mundo</h2>
-      <p class="section-desc">Desde Europa hasta Asia. Datos en vivo vía quicklotto.io MCP + histórico profundo.</p>
+      <div class="section-tag" style="background:rgba(255,255,255,0.05);border-color:var(--line-dark);color:var(--brass-lt)">Cobertura Global</div>
+      <h2 class="section-title" style="color:var(--ink-light)">49 loterías de todo el mundo</h2>
+      <p class="section-desc" style="color:var(--ink-light-soft)">Desde Europa hasta Asia. Datos en vivo vía quicklotto.io MCP + histórico profundo.</p>
     </div>
-    <div class="table-wrap reveal">
+    <div class="table-wrap reveal" style="background:var(--bg-card);border-color:var(--line-dark)">
       <table class="lottery-table">
         <thead><tr><th>Lotería</th><th>País</th><th>Formato</th><th>Sorteos</th><th>Odds</th><th>Mejor motor</th></tr></thead>
         <tbody>
@@ -488,17 +495,17 @@ footer{background:var(--bg-soft);border-top:1px solid var(--line);padding:60px 6
 </section>
 
 <!-- PRICING -->
-<section class="section" id="pricing" style="background:var(--bg-soft);max-width:100%;margin:0">
+<section class="section" id="pricing" style="background:var(--bg-dark);max-width:100%;margin:0">
   <div style="max-width:1200px;margin:0 auto">
     <div class="section-center reveal">
-      <div class="section-tag">Licencias</div>
-      <h2 class="section-title">Planes para cada necesidad</h2>
-      <p class="section-desc">Desde uso personal hasta enterprise con soporte dedicado.</p>
+      <div class="section-tag" style="background:rgba(255,255,255,0.05);border-color:var(--line-dark);color:var(--brass-lt)">Licencias</div>
+      <h2 class="section-title" style="color:var(--ink-light)">Planes para cada necesidad</h2>
+      <p class="section-desc" style="color:var(--ink-light-soft)">Desde uso personal hasta enterprise con soporte dedicado.</p>
     </div>
     <div class="pricing-grid">
-      <div class="price-card reveal" data-tilt><h3>Open Source</h3><div class="price">$0<span> /forever</span></div><ul><li>Código completo en GitHub</li><li>49 loterías soportadas</li><li>10 motores de predicción</li><li>Web UI + CLI + MCP Server</li><li>Licencia MIT</li><li>Comunidad de soporte</li></ul><a href="https://github.com/eddyflores100-lang/lottery-predictor" class="btn btn-outline" style="width:100%;justify-content:center">Descargar ↗</a></div>
-      <div class="price-card featured reveal delay-1" data-tilt-strong><h3>Professional</h3><div class="price">$49<span> /mes</span></div><ul><li>Todo lo de Open Source</li><li>API hosted (sin instalar)</li><li>Actualización diaria automática</li><li>Alertas de pozos acumulados</li><li>Backtesting ilimitado</li><li>Soporte email 24h</li></ul><a href="#" class="btn btn-primary" style="width:100%;justify-content:center">Empezar →</a></div>
-      <div class="price-card reveal delay-2" data-tilt><h3>Enterprise</h3><div class="price">$499<span> /mes</span></div><ul><li>Todo lo de Professional</li><li>On-premise deployment</li><li>MCP Server dedicado</li><li>Custom lotteries</li><li>White-label (tu marca)</li><li>Soporte prioritario + SLA</li></ul><a href="#" class="btn btn-outline" style="width:100%;justify-content:center">Contactar ↗</a></div>
+      <div class="price-card reveal" data-tilt style="background:var(--bg-dark-soft);border-color:var(--line-dark)"><h3 style="color:var(--ink-light)">Open Source</h3><div class="price" style="color:var(--brass-lt)">$0<span> /forever</span></div><ul><li style="color:var(--ink-light-soft)">Código completo en GitHub</li><li style="color:var(--ink-light-soft)">49 loterías soportadas</li><li style="color:var(--ink-light-soft)">10 motores de predicción</li><li style="color:var(--ink-light-soft)">Web UI + CLI + MCP Server</li><li style="color:var(--ink-light-soft)">Licencia MIT</li><li style="color:var(--ink-light-soft)">Comunidad de soporte</li></ul><a href="https://github.com/eddyflores100-lang/lottery-predictor" class="btn btn-outline" style="width:100%;justify-content:center;border-color:var(--line-dark);color:var(--ink-light)">Descargar ↗</a></div>
+      <div class="price-card featured reveal delay-1" data-tilt-strong style="background:var(--bg-dark-soft);border-color:var(--brass)"><h3 style="color:var(--ink-light)">Professional</h3><div class="price" style="color:var(--brass-lt)">$49<span> /mes</span></div><ul><li style="color:var(--ink-light-soft)">Todo lo de Open Source</li><li style="color:var(--ink-light-soft)">API hosted (sin instalar)</li><li style="color:var(--ink-light-soft)">Actualización diaria automática</li><li style="color:var(--ink-light-soft)">Alertas de pozos acumulados</li><li style="color:var(--ink-light-soft)">Backtesting ilimitado</li><li style="color:var(--ink-light-soft)">Soporte email 24h</li></ul><a href="#" class="btn btn-primary" style="width:100%;justify-content:center">Empezar →</a></div>
+      <div class="price-card reveal delay-2" data-tilt style="background:var(--bg-dark-soft);border-color:var(--line-dark)"><h3 style="color:var(--ink-light)">Enterprise</h3><div class="price" style="color:var(--brass-lt)">$499<span> /mes</span></div><ul><li style="color:var(--ink-light-soft)">Todo lo de Professional</li><li style="color:var(--ink-light-soft)">On-premise deployment</li><li style="color:var(--ink-light-soft)">MCP Server dedicado</li><li style="color:var(--ink-light-soft)">Custom lotteries</li><li style="color:var(--ink-light-soft)">White-label (tu marca)</li><li style="color:var(--ink-light-soft)">Soporte prioritario + SLA</li></ul><a href="#" class="btn btn-outline" style="width:100%;justify-content:center;border-color:var(--line-dark);color:var(--ink-light)">Contactar ↗</a></div>
     </div>
   </div>
 </section>
