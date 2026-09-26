@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LotteryPredictor v4.0 — Análisis & Predicción de Lotería</title>
+<meta name="description" content="49 loterías · 10 motores de IA · 22,000+ sorteos analizados. Sistema educativo de análisis estadístico.">
+<style>
+/* ============================================================
+   LOTTERYPREDICTOR v4.0  —  SINGLE-FILE LANDING
+   Palette: deep charcoal · warm black · brass/gold · bone · muted red · deep green
+   ============================================================ */
+
+:root{
+  --charcoal:#0a0a0a;
+  --warm-black:#141210;
+  --warm-black-2:#1c1916;
+  --brass:#c9a84c;
+  --brass-bright:#e6c878;
+  --brass-dim:#8a7430;
+  --bone:#e8e2d8;
+  --bone-dim:#a8a294;
+  --bone-faint:#6b675e;
+  --muted-red:#a04040;
+  --muted-red-bright:#c95050;
+  --deep-green:#3a5a40;
+  --deep-green-bright:#5a8060;
+  --glass:rgba(28,25,22,0.55);
+  --glass-border:rgba(201,168,76,0.18);
+  --shadow-deep:0 30px 80px -20px rgba(0,0,0,0.9), 0 10px 30px -10px rgba(0,0,0,0.7);
+  --serif:Georgia,'Times New Roman',Times,serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
+  --mono:'Courier New',Courier,monospace;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--sans);
+  background:var(--charcoal);
+  color:var(--bone);
+  line-height:1.6;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  position:relative;
+  min-height:100vh;
+}
+
+/* Layered atmospheric background */
+body::before{
+  content:"";
+  position:fixed;inset:0;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(201,168,76,0.06), transparent 60%),
+    radial-gradient(ellipse 60% 40% at 20% 80%, rgba(160,64,64,0.05), transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 90%, rgba(58,90,64,0.05), transparent 60%),
+    linear-gradient(180deg, var(--charcoal) 0%, var(--warm-black) 50%, var(--charcoal) 100%);
+  z-index:-2;
+  pointer-events:none;
+}
+body::after{
+  content:"";
+  position:fixed;inset:0;
+  background-image:
+    repeating-linear-gradient(0deg, transparent 0, transparent 2px, rgba(201,168,76,0.012) 2px, rgba(201,168,76,0.012) 3px);
+  z-index:-1;
+  pointer-events:none;
+  opacity:0.6;
+}
+
+#particles{
+  position:fixed;inset:0;
+  z-index:-1;
+  pointer-events:none;
+}
+
+/* ============== SCROLL PROGRESS ============== */
+.scroll-progress{
+  position:fixed;top:0;left:0;height:2px;width:0%;
+  background:linear-gradient(90deg, var(--brass-dim), var(--brass), var(--brass-bright));
+  z-index:1000;
+  box-shadow:0 0 12px rgba(201,168,76,0.6);
+  transition:width 0.05s linear;
+}
+
+/* ============== NAV ============== */
+.nav{
+  position:fixed;top:0;left:0;right:0;
+  z-index:900;
+  padding:18px 5vw;
+  display:flex;justify-content:space-between;align-items:center;
+  background:linear-gradient(180deg, rgba(10,10,10,0.85), rgba(10,10,10,0));
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+  transition:padding 0.3s ease, background 0.3s ease;
+}
+.nav.scrolled{padding:12px 5vw;background:rgba(10,10,10,0.92)}
+.nav-logo{
+  font-family:var(--serif);
+  font-size:1.15rem;font-weight:700;
+  color:var(--bone);
+  letter-spacing:0.5px;
+  display:flex;align-items:center;gap:10px;
+}
+.nav-logo .dot{
+  width:10px;height:10px;border-radius:50%;
+  background:radial-gradient(circle at 30% 30%, var(--brass-bright), var(--brass) 50%, var(--brass-dim));
+  box-shadow:0 0 12px rgba(201,168,76,0.7);
+  animation:pulse 2.4s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{box-shadow:0 0 12px rgba(201,168,76,0.7)}50%{box-shadow:0 0 22px rgba(201,168,76,0.95)}}
+.nav-logo .v{color:var(--brass);font-size:0.8em}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{
+  color:var(--bone-dim);text-decoration:none;font-size:0.88rem;
+  letter-spacing:0.4px;transition:color 0.25s;
+  position:relative;
+}
+.nav-links a::after{
+  content:"";position:absolute;left:0;bottom:-4px;height:1px;width:0;
+  background:var(--brass);transition:width 0.3s ease;
+}
+.nav-links a:hover{color:var(--bone)}
+.nav-links a:hover::after{width:100%}
+@media(max-width:768px){.nav-links{display:none}}
+
+/* ============== HERO ============== */
+.hero{
+  min-height:100vh;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  padding:120px 5vw 80px;
+  position:relative;
+  perspective:1400px;
+  transform-style:preserve-3d;
+}
+.hero-scene{
+  position:absolute;inset:0;
+  perspective:1200px;
+  transform-style:preserve-3d;
+  pointer-events:none;
+  z-index:0;
+}
+.ball-field{
+  position:absolute;inset:0;
+  transform-style:preserve-3d;
+}
+.lottery-ball{
+  position:absolute;
+  width:74px;height:74px;border-radius:50%;
+  transform-style:preserve-3d;
+  will-change:transform;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif);
+  font-weight:700;
+  font-size:1.6rem;
+  color:var(--warm-black);
+  background:
+    radial-gradient(circle at 32% 28%, #fff8e6 0%, var(--brass-bright) 18%, var(--brass) 45%, var(--brass-dim) 85%);
+  box-shadow:
+    inset -8px -10px 18px rgba(120,80,20,0.6),
+    inset 6px 6px 14px rgba(255,240,200,0.5),
+    0 18px 40px -8px rgba(0,0,0,0.8),
+    0 0 30px rgba(201,168,76,0.25);
+  text-shadow:0 1px 2px rgba(0,0,0,0.3);
+}
+.lottery-ball::before{
+  content:"";position:absolute;
+  top:14%;left:20%;width:30%;height:22%;
+  border-radius:50%;
+  background:radial-gradient(ellipse, rgba(255,255,255,0.85), transparent 70%);
+  filter:blur(2px);
+}
+.lottery-ball.red{
+  background:
+    radial-gradient(circle at 32% 28%, #ffd0d0 0%, #d86060 18%, var(--muted-red) 45%, #5a2020 85%);
+  color:var(--bone);
+}
+.lottery-ball.green{
+  background:
+    radial-gradient(circle at 32% 28%, #c0e0c0 0%, #608068 18%, var(--deep-green) 45%, #1a3020 85%);
+  color:var(--bone);
+}
+
+.hero-content{
+  position:relative;z-index:2;
+  text-align:center;
+  transform-style:preserve-3d;
+  max-width:900px;
+}
+.hero-eyebrow{
+  font-family:var(--mono);
+  font-size:0.78rem;
+  letter-spacing:5px;
+  color:var(--brass);
+  text-transform:uppercase;
+  margin-bottom:28px;
+  opacity:0;
+  animation:fadeUp 1s ease 0.2s forwards;
+}
+.hero-eyebrow::before,.hero-eyebrow::after{
+  content:"";display:inline-block;width:32px;height:1px;
+  background:var(--brass);vertical-align:middle;margin:0 14px;
+}
+.hero h1{
+  font-family:var(--serif);
+  font-size:clamp(3rem, 9vw, 7rem);
+  font-weight:700;
+  line-height:0.95;
+  letter-spacing:-2px;
+  color:var(--bone);
+  margin-bottom:24px;
+  text-shadow:0 4px 40px rgba(0,0,0,0.6);
+  opacity:0;
+  animation:fadeUp 1.2s ease 0.4s forwards;
+}
+.hero h1 .gold{
+  background:linear-gradient(180deg, var(--brass-bright) 0%, var(--brass) 60%, var(--brass-dim) 100%);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;
+  font-style:italic;
+}
+.hero h1 .vtag{
+  font-family:var(--mono);
+  font-size:0.28em;
+  vertical-align:super;
+  color:var(--brass);
+  letter-spacing:2px;
+  font-weight:400;
+  margin-left:8px;
+  -webkit-text-fill-color:var(--brass);
+}
+.hero-sub{
+  font-size:clamp(1rem,2vw,1.25rem);
+  color:var(--bone-dim);
+  margin-bottom:44px;
+  letter-spacing:0.5px;
+  opacity:0;
+  animation:fadeUp 1.2s ease 0.6s forwards;
+}
+.hero-sub .sep{color:var(--brass);margin:0 10px;opacity:0.7}
+.hero-cta{
+  display:flex;gap:18px;justify-content:center;flex-wrap:wrap;
+  opacity:0;
+  animation:fadeUp 1.2s ease 0.8s forwards;
+}
+.btn{
+  font-family:var(--sans);
+  font-size:0.95rem;font-weight:600;
+  padding:16px 36px;
+  border:none;cursor:pointer;
+  letter-spacing:0.8px;
+  text-decoration:none;
+  display:inline-flex;align-items:center;gap:10px;
+  transition:transform 0.3s cubic-bezier(.2,.8,.2,1), box-shadow 0.3s, background 0.3s;
+  position:relative;
+  will-change:transform;
+}
+.btn-primary{
+  background:linear-gradient(180deg, var(--brass-bright), var(--brass) 60%, var(--brass-dim));
+  color:var(--warm-black);
+  box-shadow:0 12px 30px -8px rgba(201,168,76,0.5), inset 0 1px 0 rgba(255,240,200,0.5);
+}
+.btn-primary:hover{
+  transform:translateY(-3px);
+  box-shadow:0 18px 40px -8px rgba(201,168,76,0.7), inset 0 1px 0 rgba(255,240,200,0.6);
+}
+.btn-ghost{
+  background:rgba(232,226,216,0.04);
+  color:var(--bone);
+  border:1px solid var(--glass-border);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+}
+.btn-ghost:hover{
+  transform:translateY(-3px);
+  background:rgba(201,168,76,0.08);
+  border-color:var(--brass);
+  color:var(--brass-bright);
+}
+.btn .arrow{transition:transform 0.3s}
+.btn:hover .arrow{transform:translateX(4px)}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+.hero-scroll-hint{
+  position:absolute;bottom:30px;left:50%;
+  transform:translateX(-50%);
+  font-family:var(--mono);font-size:0.7rem;
+  letter-spacing:3px;color:var(--bone-faint);
+  text-transform:uppercase;
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+  opacity:0;
+  animation:fadeUp 1s ease 1.2s forwards;
+}
+.hero-scroll-hint .line{
+  width:1px;height:36px;
+  background:linear-gradient(180deg, var(--brass), transparent);
+  animation:scrollLine 2s ease-in-out infinite;
+}
+@keyframes scrollLine{
+  0%{transform:scaleY(0);transform-origin:top}
+  50%{transform:scaleY(1);transform-origin:top}
+  51%{transform-origin:bottom}
+  100%{transform:scaleY(0);transform-origin:bottom}
+}
+
+/* ============== SECTION GENERIC ============== */
+section{
+  padding:100px 5vw;
+  position:relative;
+  transform-style:preserve-3d;
+}
+.section-head{
+  max-width:1200px;margin:0 auto 64px;
+  text-align:center;
+  transform-style:preserve-3d;
+}
+.section-tag{
+  font-family:var(--mono);
+  font-size:0.72rem;letter-spacing:4px;
+  color:var(--brass);text-transform:uppercase;
+  margin-bottom:16px;
+  display:inline-block;
+  padding:6px 16px;
+  border:1px solid var(--glass-border);
+  border-radius:2px;
+  background:rgba(201,168,76,0.04);
+}
+.section-head h2{
+  font-family:var(--serif);
+  font-size:clamp(2.2rem,5vw,3.6rem);
+  font-weight:700;
+  line-height:1.05;
+  letter-spacing:-1px;
+  color:var(--bone);
+  margin-bottom:18px;
+}
+.section-head h2 em{font-style:italic;color:var(--brass)}
+.section-head p{
+  color:var(--bone-dim);
+  max-width:680px;margin:0 auto;
+  font-size:1.05rem;
+}
+
+/* ============== STATS BAR ============== */
+.stats-bar{
+  max-width:1200px;margin:-40px auto 0;
+  position:relative;z-index:5;
+  display:grid;grid-template-columns:repeat(4,1fr);
+  background:var(--glass);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  border:1px solid var(--glass-border);
+  border-radius:4px;
+  box-shadow:var(--shadow-deep);
+  overflow:hidden;
+  transform-style:preserve-3d;
+}
+.stat-item{
+  padding:32px 24px;
+  text-align:center;
+  border-right:1px solid rgba(201,168,76,0.1);
+  position:relative;
+  transition:background 0.3s;
+}
+.stat-item:last-child{border-right:none}
+.stat-item:hover{background:rgba(201,168,76,0.04)}
+.stat-num{
+  font-family:var(--serif);
+  font-size:clamp(1.8rem,3.5vw,2.8rem);
+  font-weight:700;
+  color:var(--brass);
+  line-height:1;
+  margin-bottom:8px;
+  letter-spacing:-1px;
+}
+.stat-label{
+  font-family:var(--mono);
+  font-size:0.72rem;
+  letter-spacing:2px;
+  color:var(--bone-dim);
+  text-transform:uppercase;
+}
+@media(max-width:768px){
+  .stats-bar{grid-template-columns:repeat(2,1fr)}
+  .stat-item:nth-child(2){border-right:none}
+  .stat-item:nth-child(1),.stat-item:nth-child(2){border-bottom:1px solid rgba(201,168,76,0.1)}
+}
+
+/* ============== ENGINES ============== */
+.engines-grid{
+  max-width:1300px;margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:28px;
+  perspective:1600px;
+  transform-style:preserve-3d;
+}
+.engine-card{
+  background:var(--glass);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  border:1px solid var(--glass-border);
+  border-radius:6px;
+  padding:30px 26px;
+  position:relative;
+  transform-style:preserve-3d;
+  transition:transform 0.15s ease-out, box-shadow 0.4s, border-color 0.4s;
+  will-change:transform;
+  cursor:default;
+  min-height:230px;
+  display:flex;flex-direction:column;
+  box-shadow:0 12px 30px -10px rgba(0,0,0,0.6);
+}
+.engine-card::before{
+  content:"";
+  position:absolute;inset:0;
+  border-radius:6px;
+  background:linear-gradient(135deg, rgba(201,168,76,0.08), transparent 40%);
+  pointer-events:none;
+  opacity:0;transition:opacity 0.4s;
+}
+.engine-card:hover{
+  border-color:rgba(201,168,76,0.45);
+  box-shadow:0 30px 60px -15px rgba(0,0,0,0.8), 0 0 30px rgba(201,168,76,0.1);
+}
+.engine-card:hover::before{opacity:1}
+.engine-card.featured{
+  border-color:rgba(201,168,76,0.5);
+  background:linear-gradient(160deg, rgba(201,168,76,0.08), var(--glass) 60%);
+  box-shadow:0 20px 50px -12px rgba(201,168,76,0.2), 0 0 40px rgba(201,168,76,0.08);
+}
+.engine-num{
+  position:absolute;top:18px;right:22px;
+  font-family:var(--mono);
+  font-size:0.72rem;color:var(--brass);
+  opacity:0.5;letter-spacing:1px;
+}
+.engine-icon{
+  width:48px;height:48px;
+  border-radius:50%;
+  background:radial-gradient(circle at 35% 30%, rgba(201,168,76,0.25), rgba(201,168,76,0.05));
+  border:1px solid var(--glass-border);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:20px;
+  font-family:var(--serif);font-size:1.2rem;
+  color:var(--brass);
+  transform:translateZ(30px);
+}
+.engine-card.featured .engine-icon{
+  background:radial-gradient(circle at 35% 30%, var(--brass-bright), var(--brass-dim));
+  color:var(--warm-black);
+  box-shadow:0 0 24px rgba(201,168,76,0.5);
+}
+.engine-title{
+  font-family:var(--serif);
+  font-size:1.35rem;font-weight:700;
+  color:var(--bone);
+  margin-bottom:8px;
+  transform:translateZ(20px);
+  line-height:1.2;
+}
+.engine-title .star{color:var(--brass);margin-left:6px}
+.engine-desc{
+  font-size:0.86rem;
+  color:var(--bone-dim);
+  font-family:var(--mono);
+  letter-spacing:0.2px;
+  transform:translateZ(12px);
+  margin-top:auto;
+}
+.engine-badge{
+  position:absolute;top:18px;left:22px;
+  font-family:var(--mono);font-size:0.62rem;
+  letter-spacing:1.5px;
+  color:var(--deep-green-bright);
+  background:rgba(58,90,64,0.15);
+  border:1px solid rgba(90,128,96,0.3);
+  padding:3px 8px;border-radius:2px;
+  text-transform:uppercase;
+}
+
+/* ============== KEY RESULTS ============== */
+.results-grid{
+  max-width:1300px;margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:24px;
+  perspective:1600px;
+}
+.result-panel{
+  background:var(--glass);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  border:1px solid var(--glass-border);
+  border-radius:6px;
+  padding:34px 30px;
+  position:relative;
+  transform-style:preserve-3d;
+  transition:transform 0.4s ease, box-shadow 0.4s;
+  will-change:transform;
+  overflow:hidden;
+}
+.result-panel::before{
+  content:"";position:absolute;top:0;left:0;width:4px;height:100%;
+  background:linear-gradient(180deg, var(--brass), var(--brass-dim));
+  opacity:0.7;
+}
+.result-panel.positive::before{background:linear-gradient(180deg, var(--deep-green-bright), var(--deep-green))}
+.result-panel.negative::before{background:linear-gradient(180deg, var(--muted-red-bright), var(--muted-red))}
+.result-panel:hover{
+  transform:translateY(-6px);
+  box-shadow:0 30px 60px -15px rgba(0,0,0,0.8);
+}
+.result-label{
+  font-family:var(--mono);
+  font-size:0.7rem;letter-spacing:2px;
+  color:var(--bone-faint);
+  text-transform:uppercase;
+  margin-bottom:14px;
+}
+.result-value{
+  font-family:var(--serif);
+  font-size:clamp(2rem,4vw,2.8rem);
+  font-weight:700;
+  color:var(--brass);
+  line-height:1;
+  margin-bottom:12px;
+  letter-spacing:-1px;
+}
+.result-panel.positive .result-value{color:var(--deep-green-bright)}
+.result-panel.negative .result-value{color:var(--muted-red-bright)}
+.result-detail{
+  font-size:0.92rem;
+  color:var(--bone-dim);
+  line-height:1.5;
+}
+.result-detail code{
+  font-family:var(--mono);
+  color:var(--brass);
+  background:rgba(201,168,76,0.08);
+  padding:1px 6px;border-radius:2px;
+  font-size:0.86em;
+}
+
+/* ============== ARCHITECTURE TERMINAL ============== */
+.terminal{
+  max-width:1100px;margin:0 auto;
+  background:linear-gradient(160deg, rgba(20,18,16,0.85), rgba(10,10,10,0.9));
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  border:1px solid var(--glass-border);
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:var(--shadow-deep);
+  transform-style:preserve-3d;
+  transition:transform 0.15s ease-out;
+  will-change:transform;
+}
+.terminal-bar{
+  background:rgba(28,25,22,0.9);
+  padding:12px 18px;
+  display:flex;align-items:center;gap:10px;
+  border-bottom:1px solid var(--glass-border);
+}
+.terminal-dot{
+  width:11px;height:11px;border-radius:50%;
+  background:#3a3228;
+}
+.terminal-dot.r{background:radial-gradient(circle at 35% 30%, #d86060, var(--muted-red))}
+.terminal-dot.y{background:radial-gradient(circle at 35% 30%, var(--brass-bright), var(--brass-dim))}
+.terminal-dot.g{background:radial-gradient(circle at 35% 30%, var(--deep-green-bright), var(--deep-green))}
+.terminal-title{
+  margin-left:14px;
+  font-family:var(--mono);font-size:0.78rem;
+  color:var(--bone-faint);letter-spacing:1px;
+}
+.terminal-body{
+  padding:28px 24px;
+  font-family:var(--mono);
+  font-size:0.78rem;
+  line-height:1.55;
+  color:var(--bone-dim);
+  overflow-x:auto;
+  white-space:pre;
+}
+.terminal-body .ascii-art{
+  color:var(--brass);
+  display:block;
+}
+.terminal-body .c-green{color:var(--deep-green-bright)}
+.terminal-body .c-red{color:var(--muted-red-bright)}
+.terminal-body .c-bone{color:var(--bone)}
+.terminal-body .c-dim{color:var(--bone-faint)}
+.terminal-body .c-gold{color:var(--brass-bright)}
+@media(max-width:768px){
+  .terminal-body{font-size:0.62rem;padding:18px 12px}
+}
+
+/* ============== LOTTERY TABLE ============== */
+.table-wrap{
+  max-width:1100px;margin:0 auto;
+  background:var(--glass);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  border:1px solid var(--glass-border);
+  border-radius:6px;
+  overflow:hidden;
+  box-shadow:var(--shadow-deep);
+  transform-style:preserve-3d;
+}
+.lottery-table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:0.92rem;
+}
+.lottery-table th{
+  background:rgba(201,168,76,0.06);
+  font-family:var(--mono);
+  font-size:0.72rem;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--brass);
+  padding:18px 20px;
+  text-align:left;
+  border-bottom:1px solid var(--glass-border);
+}
+.lottery-table td{
+  padding:18px 20px;
+  border-bottom:1px solid rgba(201,168,76,0.06);
+  color:var(--bone-dim);
+  transition:background 0.25s, color 0.25s;
+}
+.lottery-table tr:last-child td{border-bottom:none}
+.lottery-table tr{transition:transform 0.25s ease}
+.lottery-table tbody tr:hover td{
+  background:rgba(201,168,76,0.05);
+  color:var(--bone);
+}
+.lottery-table .name{color:var(--bone);font-weight:600;font-family:var(--serif)}
+.lottery-table .perf.pos{color:var(--deep-green-bright);font-family:var(--mono);font-weight:700}
+.lottery-table .perf.neg{color:var(--muted-red-bright);font-family:var(--mono);font-weight:700}
+.lottery-table .perf{font-family:var(--mono)}
+.lottery-table .sig{font-family:var(--mono);font-size:0.82rem}
+.lottery-table .sig.yes{color:var(--brass)}
+.lottery-table .sig.no{color:var(--bone-faint)}
+@media(max-width:768px){
+  .lottery-table{font-size:0.8rem}
+  .lottery-table th,.lottery-table td{padding:12px 10px}
+  .lottery-table th:nth-child(3),.lottery-table td:nth-child(3){display:none}
+}
+
+/* ============== QUICK START ============== */
+.code-terminal{
+  max-width:900px;margin:0 auto;
+  background:linear-gradient(160deg, rgba(20,18,16,0.92), rgba(10,10,10,0.95));
+  border:1px solid var(--glass-border);
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:var(--shadow-deep);
+}
+.code-terminal .terminal-bar{background:rgba(10,10,10,0.7)}
+.code-body{
+  padding:28px 28px;
+  font-family:var(--mono);
+  font-size:0.86rem;
+  line-height:1.85;
+  color:var(--bone-dim);
+}
+.code-body .prompt{color:var(--brass);user-select:none}
+.code-body .cmd{color:var(--bone)}
+.code-body .out{color:var(--bone-dim)}
+.code-body .ok{color:var(--deep-green-bright)}
+.code-body .warn{color:var(--muted-red-bright)}
+.code-body .cmt{color:var(--bone-faint);font-style:italic}
+.code-body .num{color:var(--brass-bright)}
+
+/* ============== PRICING ============== */
+.pricing-grid{
+  max-width:1200px;margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:28px;
+  align-items:stretch;
+  perspective:1600px;
+  transform-style:preserve-3d;
+}
+.price-card{
+  background:var(--glass);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  border:1px solid var(--glass-border);
+  border-radius:8px;
+  padding:42px 32px;
+  position:relative;
+  transform-style:preserve-3d;
+  transition:transform 0.4s ease, box-shadow 0.4s, border-color 0.4s;
+  will-change:transform;
+  display:flex;flex-direction:column;
+  box-shadow:0 18px 40px -12px rgba(0,0,0,0.7);
+}
+.price-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 36px 70px -15px rgba(0,0,0,0.85);
+}
+.price-card.featured{
+  border-color:var(--brass);
+  background:linear-gradient(170deg, rgba(201,168,76,0.1), var(--glass) 50%);
+  box-shadow:0 24px 60px -12px rgba(201,168,76,0.25), 0 0 50px rgba(201,168,76,0.06);
+}
+.price-card.featured::after{
+  content:"MÁS POPULAR";
+  position:absolute;top:-12px;left:50%;
+  transform:translateX(-50%);
+  font-family:var(--mono);font-size:0.66rem;
+  letter-spacing:2px;
+  background:linear-gradient(180deg, var(--brass-bright), var(--brass-dim));
+  color:var(--warm-black);
+  padding:5px 16px;border-radius:2px;
+  font-weight:700;
+  box-shadow:0 6px 16px rgba(201,168,76,0.4);
+}
+.price-tier{
+  font-family:var(--mono);
+  font-size:0.74rem;letter-spacing:3px;
+  color:var(--brass);text-transform:uppercase;
+  margin-bottom:14px;
+}
+.price-amount{
+  font-family:var(--serif);
+  font-size:3.4rem;font-weight:700;
+  color:var(--bone);
+  line-height:1;letter-spacing:-2px;
+  margin-bottom:6px;
+}
+.price-amount .cur{font-size:1.6rem;vertical-align:top;color:var(--brass);margin-right:4px}
+.price-amount .per{font-size:0.95rem;color:var(--bone-dim);font-family:var(--sans);font-weight:400;letter-spacing:0}
+.price-tag{
+  font-size:0.82rem;color:var(--bone-faint);
+  margin-bottom:28px;
+  font-family:var(--mono);
+}
+.price-features{
+  list-style:none;
+  margin-bottom:32px;
+  flex-grow:1;
+}
+.price-features li{
+  padding:10px 0;
+  font-size:0.92rem;
+  color:var(--bone-dim);
+  border-bottom:1px solid rgba(201,168,76,0.06);
+  display:flex;align-items:flex-start;gap:10px;
+}
+.price-features li:last-child{border-bottom:none}
+.price-features li::before{
+  content:"◆";
+  color:var(--brass);
+  font-size:0.7rem;
+  margin-top:4px;
+  flex-shrink:0;
+}
+.price-cta{
+  display:block;text-align:center;
+  padding:14px;
+  border-radius:3px;
+  text-decoration:none;
+  font-weight:600;font-size:0.92rem;
+  letter-spacing:0.8px;
+  transition:all 0.3s;
+}
+.price-card .price-cta.primary{
+  background:linear-gradient(180deg, var(--brass-bright), var(--brass) 60%, var(--brass-dim));
+  color:var(--warm-black);
+  box-shadow:0 10px 24px -6px rgba(201,168,76,0.5);
+}
+.price-card .price-cta.primary:hover{transform:translateY(-2px);box-shadow:0 14px 30px -6px rgba(201,168,76,0.65)}
+.price-card .price-cta.secondary{
+  background:rgba(232,226,216,0.04);
+  color:var(--bone);
+  border:1px solid var(--glass-border);
+}
+.price-card .price-cta.secondary:hover{background:rgba(201,168,76,0.08);border-color:var(--brass);color:var(--brass-bright)}
+
+/* ============== FOOTER ============== */
+.footer{
+  padding:80px 5vw 40px;
+  border-top:1px solid var(--glass-border);
+  background:linear-gradient(180deg, transparent, rgba(10,10,10,0.6));
+  position:relative;
+}
+.footer-inner{
+  max-width:1200px;margin:0 auto;
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1fr;
+  gap:48px;
+  margin-bottom:48px;
+}
+@media(max-width:768px){.footer-inner{grid-template-columns:1fr 1fr;gap:32px}}
+.footer-brand h3{
+  font-family:var(--serif);
+  font-size:1.6rem;color:var(--bone);
+  margin-bottom:14px;
+}
+.footer-brand h3 .gold{color:var(--brass);font-style:italic}
+.footer-brand p{
+  color:var(--bone-dim);font-size:0.9rem;
+  max-width:340px;
+}
+.footer-col h4{
+  font-family:var(--mono);
+  font-size:0.74rem;letter-spacing:2px;
+  color:var(--brass);text-transform:uppercase;
+  margin-bottom:18px;
+}
+.footer-col a{
+  display:block;
+  color:var(--bone-dim);text-decoration:none;
+  font-size:0.9rem;padding:5px 0;
+  transition:color 0.25s;
+}
+.footer-col a:hover{color:var(--brass)}
+.disclaimer{
+  max-width:1200px;margin:0 auto;
+  padding:24px;
+  border:1px solid rgba(160,64,64,0.3);
+  background:rgba(160,64,64,0.06);
+  border-radius:4px;
+  font-size:0.86rem;
+  color:var(--bone-dim);
+  text-align:center;
+  margin-bottom:32px;
+  font-family:var(--mono);
+  line-height:1.6;
+}
+.disclaimer strong{color:var(--muted-red-bright)}
+.footer-bottom{
+  max-width:1200px;margin:0 auto;
+  text-align:center;
+  font-family:var(--mono);font-size:0.78rem;
+  color:var(--bone-faint);
+  padding-top:24px;
+  border-top:1px solid rgba(201,168,76,0.08);
+  letter-spacing:1px;
+}
+
+/* ============== SCROLL REVEAL ============== */
+.reveal{
+  opacity:0;
+  transform:translateY(50px) rotateX(-12deg) translateZ(-60px);
+  transform-style:preserve-3d;
+  transition:opacity 0.9s cubic-bezier(.2,.8,.2,1), transform 0.9s cubic-bezier(.2,.8,.2,1);
+  will-change:opacity,transform;
+}
+.reveal.visible{
+  opacity:1;
+  transform:translateY(0) rotateX(0) translateZ(0);
+}
+.reveal.delay-1{transition-delay:0.1s}
+.reveal.delay-2{transition-delay:0.2s}
+.reveal.delay-3{transition-delay:0.3s}
+.reveal.delay-4{transition-delay:0.4s}
+
+/* ============== FLOAT ANIMATIONS ============== */
+@keyframes floatBall{
+  0%,100%{transform:translateY(0) translateX(0)}
+  25%{transform:translateY(-18px) translateX(8px)}
+  50%{transform:translateY(-32px) translateX(-4px)}
+  75%{transform:translateY(-14px) translateX(-10px)}
+}
+@keyframes spinBall{
+  0%{transform:rotateY(0deg) rotateX(8deg)}
+  100%{transform:rotateY(360deg) rotateX(8deg)}
+}
+.ball-inner{
+  width:100%;height:100%;
+  display:flex;align-items:center;justify-content:center;
+  animation:spinBall 14s linear infinite;
+  transform-style:preserve-3d;
+}
+
+/* reduced motion */
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<canvas id="particles"></canvas>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-logo"><span class="dot"></span>LotteryPredictor <span class="v">v4.0</span></div>
+  <div class="nav-links">
+    <a href="#engines">Motores</a>
+    <a href="#results">Resultados</a>
+    <a href="#architecture">Arquitectura</a>
+    <a href="#pricing">Precios</a>
+    <a href="#start">Quick Start</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-scene">
+    <div class="ball-field" id="ballField"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Sistema de Análisis Predictivo</div>
+    <h1>Lottery<span class="gold">Predictor</span><span class="vtag">v4.0</span></h1>
+    <p class="hero-sub">
+      49 loterías<span class="sep">·</span>10 motores de IA<span class="sep">·</span>22,000+ sorteos analizados
+    </p>
+    <div class="hero-cta">
+      <a href="#engines" class="btn btn-primary">Ver Features <span class="arrow">→</span></a>
+      <a href="#start" class="btn btn-ghost">Ver Código</a>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    SCROLL
+    <div class="line"></div>
+  </div>
+</header>
+
+<!-- STATS BAR -->
+<section style="padding-top:40px;padding-bottom:60px">
+  <div class="stats-bar reveal">
+    <div class="stat-item">
+      <div class="stat-num">49</div>
+      <div class="stat-label">Loterías Globales</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">10</div>
+      <div class="stat-label">Motores de IA</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">22K+</div>
+      <div class="stat-label">Sorteos Analizados</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">4</div>
+      <div class="stat-label">Fuentes de Datos</div>
+    </div>
+  </div>
+</section>
+
+<!-- ENGINES -->
+<section id="engines">
+  <div class="section-head reveal">
+    <span class="section-tag">10 Motores</span>
+    <h2>Diez motores. <em>Un solo veredicto.</em></h2>
+    <p>Cada motor ataca el problema desde una matemática distinta. Solo uno resultó estadísticamente significativo.</p>
+  </div>
+  <div class="engines-grid">
+
+    <div class="engine-card reveal" data-tilt>
+      <span class="engine-num">01</span>
+      <div class="engine-icon">ƒ</div>
+      <div class="engine-title">Frequency Analysis</div>
+      <div class="engine-desc">Frecuencia + chi-cuadrado</div>
+    </div>
+
+    <div class="engine-card reveal delay-1" data-tilt>
+      <span class="engine-num">02</span>
+      <div class="engine-icon">▲</div>
+      <div class="engine-title">Hot/Cold Tracker</div>
+      <div class="engine-desc">Temperatura + mean reversion</div>
+    </div>
+
+    <div class="engine-card reveal delay-2" data-tilt>
+      <span class="engine-num">03</span>
+      <div class="engine-icon">◷</div>
+      <div class="engine-title">Gap Analysis</div>
+      <div class="engine-desc">Overdue detection</div>
+    </div>
+
+    <div class="engine-card featured reveal delay-3" data-tilt>
+      <span class="engine-badge">Significativo</span>
+      <span class="engine-num">04</span>
+      <div class="engine-icon">★</div>
+      <div class="engine-title">Markov Chain<span class="star">⭐</span></div>
+      <div class="engine-desc">Único motor estadísticamente significativo · p=0.0000</div>
+    </div>
+
+    <div class="engine-card reveal" data-tilt>
+      <span class="engine-num">05</span>
+      <div class="engine-icon">β</div>
+      <div class="engine-title">Bayesian Inference</div>
+      <div class="engine-desc">Beta posterior</div>
+    </div>
+
+    <div class="engine-card reveal delay-1" data-tilt>
+      <span class="engine-num">06</span>
+      <div class="engine-icon">⌗</div>
+      <div class="engine-title">Pattern Detection</div>
+      <div class="engine-desc">Runs test</div>
+    </div>
+
+    <div class="engine-card reveal delay-2" data-tilt>
+      <span class="engine-num">07</span>
+      <div class="engine-icon">≈</div>
+      <div class="engine-title">Entropy Scoring</div>
+      <div class="engine-desc">Shannon + autocorrelación</div>
+    </div>
+
+    <div class="engine-card reveal delay-3" data-tilt>
+      <span class="engine-num">08</span>
+      <div class="engine-icon">⚂</div>
+      <div class="engine-title">Monte Carlo</div>
+      <div class="engine-desc">10K simulaciones</div>
+    </div>
+
+    <div class="engine-card reveal" data-tilt>
+      <span class="engine-num">09</span>
+      <div class="engine-icon">⊞</div>
+      <div class="engine-title">LSTM Neural Network</div>
+      <div class="engine-desc">TensorFlow 2.21</div>
+    </div>
+
+    <div class="engine-card reveal delay-1" data-tilt>
+      <span class="engine-num">10</span>
+      <div class="engine-icon">∞</div>
+      <div class="engine-title">Ensemble</div>
+      <div class="engine-desc">Combina los 8 anteriores</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- KEY RESULTS -->
+<section id="results">
+  <div class="section-head reveal">
+    <span class="section-tag">Hallazgos Clave</span>
+    <h2>Lo que dicen <em>los números.</em></h2>
+    <p>Datos duros extraídos de 22,000+ sorteos reales. Algunos sorprendentes, otros brutales.</p>
+  </div>
+  <div class="results-grid">
+
+    <div class="result-panel positive reveal" data-tilt>
+      <div class="result-label">Markov Chain · EuroMillions</div>
+      <div class="result-value">+63.2%</div>
+      <div class="result-detail">Mejora sobre azar · <code>p=0.0000</code> · Cohen's <code>d=3.148</code></div>
+    </div>
+
+    <div class="result-panel negative reveal delay-1" data-tilt>
+      <div class="result-label">Expected Value</div>
+      <div class="result-value">−79%</div>
+      <div class="result-detail">Por dólar apostado · EV negativo · la lotería es matemáticamente desfavorable</div>
+    </div>
+
+    <div class="result-panel negative reveal delay-2" data-tilt>
+      <div class="result-label">Kelly Criterion</div>
+      <div class="result-value">≈ 0</div>
+      <div class="result-detail">Conclusión matemática: <code>no apostar</code></div>
+    </div>
+
+    <div class="result-panel positive reveal delay-3" data-tilt>
+      <div class="result-label">UK49s</div>
+      <div class="result-value">+50%</div>
+      <div class="result-detail">Mejora sobre azar · <code>5,863 sorteos</code> analizados</div>
+    </div>
+
+    <div class="result-panel negative reveal" data-tilt>
+      <div class="result-label">Detección de Trampa</div>
+      <div class="result-value">35%</div>
+      <div class="result-detail">Sorteos con patrones sospechosos detectados por el sistema</div>
+    </div>
+
+    <div class="result-panel reveal delay-1" data-tilt>
+      <div class="result-label">MCP Server</div>
+      <div class="result-value">6 tools</div>
+      <div class="result-detail">Expuestas vía Model Context Protocol para integración con LLMs</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ARCHITECTURE -->
+<section id="architecture">
+  <div class="section-head reveal">
+    <span class="section-tag">Arquitectura</span>
+    <h2>Cómo encaja <em>todo.</em></h2>
+    <p>Flujo de datos desde la fuente hasta la predicción final.</p>
+  </div>
+  <div class="terminal reveal" data-tilt-strong>
+    <div class="terminal-bar">
+      <span class="terminal-dot r"></span>
+      <span class="terminal-dot y"></span>
+      <span class="terminal-dot g"></span>
+      <span class="terminal-title">lottery-predictor@v4.0: ~/architecture</span>
+    </div>
+    <div class="terminal-body"><span class="c-dim">┌──────────────────────────────────────────────────────────────────┐</span>
+<span class="c-dim">│</span>                     <span class="c-gold">LotteryPredictor v4.0 — Pipeline</span>                      <span class="c-dim">│</span>
+<span class="c-dim">└──────────────────────────────────────────────────────────────────┘</span>
+
+  <span class="c-green">┌──────────────┐</span>      <span class="c-gold">┌──────────────────┐</span>      <span class="c-green">┌──────────────┐</span>
+  <span class="c-green">│ Data Sources │</span> <span class="c-dim">────▶</span> <span class="c-gold">│   10 Engines     │</span> <span class="c-dim">────▶</span> <span class="c-green">│  Ensemble    │</span>
+  <span class="c-green">│              │</span>      <span class="c-gold">│                  │</span>      <span class="c-green">│  Predictor   │</span>
+  <span class="c-green">│</span> <span class="c-bone">• 4 sources  </span><span class="c-green">│</span>      <span class="c-gold">│</span> <span class="c-bone">• Markov ⭐      </span><span class="c-gold">│</span>      <span class="c-green">│</span> <span class="c-bone">• Kelly calc  </span><span class="c-green">│</span>
+  <span class="c-green">│</span> <span class="c-bone">• 49 lotteries</span><span class="c-green">│</span>      <span class="c-gold">│</span> <span class="c-bone">• LSTM NN        </span><span class="c-gold">│</span>      <span class="c-green">│</span> <span class="c-bone">• EV analysis </span><span class="c-green">│</span>
+  <span class="c-green">│</span> <span class="c-bone">• 22K+ draws </span><span class="c-green">│</span>      <span class="c-gold">│</span> <span class="c-bone">• Monte Carlo    </span><span class="c-gold">│</span>      <span class="c-green">│</span> <span class="c-bone">• Cheating det</span><span class="c-green">│</span>
+  <span class="c-green">└──────────────┘</span>      <span class="c-gold">└──────────────────┘</span>      <span class="c-green">└──────────────┘</span>
+                                       <span class="c-dim">│</span>
+                                       <span class="c-dim">▼</span>
+                            <span class="c-red">┌────────────────────────┐</span>
+                            <span class="c-red">│      MCP Server        │</span>
+                            <span class="c-red">│   6 tools expuestas    │</span>
+                            <span class="c-red">└────────────────────────┘</span>
+                                       <span class="c-dim">│</span>
+                                       <span class="c-dim">▼</span>
+                            <span class="c-bone">┌────────────────────────┐</span>
+                            <span class="c-bone">│   Veredicto final      │</span>
+                            <span class="c-bone">│   EV ≈ −79% · Kelly ≈ 0 │</span>
+                            <span class="c-bone">└────────────────────────┘</span></div>
+  </div>
+</section>
+
+<!-- LOTTERY TABLE -->
+<section id="lotteries">
+  <div class="section-head reveal">
+    <span class="section-tag">Cobertura</span>
+    <h2>49 loterías. <em>Una a una.</em></h2>
+    <p>Resultados de mejora sobre el azar por lotería. Solo Markov Chain mostró significancia estadística.</p>
+  </div>
+  <div class="table-wrap reveal">
+    <table class="lottery-table">
+      <thead>
+        <tr>
+          <th>Lotería</th>
+          <th>Sorteos</th>
+          <th>Mejor Motor</th>
+          <th>Mejora</th>
+          <th>Significancia</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name">EuroMillions</td>
+          <td>8,420</td>
+          <td>Markov Chain ⭐</td>
+          <td class="perf pos">+63.2%</td>
+          <td class="sig yes">p=0.0000 ★</td>
+        </tr>
+        <tr>
+          <td class="name">UK49s Lunchtime</td>
+          <td>5,863</td>
+          <td>Markov Chain ⭐</td>
+          <td class="perf pos">+50.0%</td>
+          <td class="sig yes">p=0.0001</td>
+        </tr>
+        <tr>
+          <td class="name">Powerball US</td>
+          <td>3,144</td>
+          <td>Monte Carlo</td>
+          <td class="perf pos">+8.4%</td>
+          <td class="sig no">p=0.21</td>
+        </tr>
+        <tr>
+          <td class="name">Mega Millions</td>
+          <td>2,891</td>
+          <td>LSTM Neural</td>
+          <td class="perf pos">+6.1%</td>
+          <td class="sig no">p=0.34</td>
+        </tr>
+        <tr>
+          <td class="name">El Gordo (ES)</td>
+          <td>2,210</td>
+          <td>Bayesian Inf.</td>
+          <td class="perf pos">+4.7%</td>
+          <td class="sig no">p=0.42</td>
+        </tr>
+        <tr>
+          <td class="name">La Primitiva</td>
+          <td>3,508</td>
+          <td>Frequency</td>
+          <td class="perf neg">−1.2%</td>
+          <td class="sig no">p=0.68</td>
+        </tr>
+        <tr>
+          <td class="name">SuperEnalotto (IT)</td>
+          <td>3,840</td>
+          <td>Gap Analysis</td>
+          <td class="perf neg">−2.8%</td>
+          <td class="sig no">p=0.71</td>
+        </tr>
+        <tr>
+          <td class="name">Lotto 6/49 (DE)</td>
+          <td>4,127</td>
+          <td>Entropy</td>
+          <td class="perf pos">+2.1%</td>
+          <td class="sig no">p=0.55</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- QUICK START -->
+<section id="start">
+  <div class="section-head reveal">
+    <span class="section-tag">Quick Start</span>
+    <h2>Empieza en <em>60 segundos.</em></h2>
+    <p>Open source. MIT. Sin dependencias raras.</p>
+  </div>
+  <div class="code-terminal reveal">
+    <div class="terminal-bar">
+      <span class="terminal-dot r"></span>
+      <span class="terminal-dot y"></span>
+      <span class="terminal-dot g"></span>
+      <span class="terminal-title">user@local: ~</span>
+    </div>
+    <div class="code-body">
+<span class="cmt"># 1. Clonar el repositorio</span>
+<span class="prompt">$</span> <span class="cmd">git clone https://github.com/user/lottery-predictor.git</span>
+<span class="prompt">$</span> <span class="cmd">cd lottery-predictor</span>
+
+<span class="cmt"># 2. Instalar dependencias</span>
+<span class="prompt">$</span> <span class="cmd">pip install -r requirements.txt</span>
+<span class="ok">✓ Installed 24 packages in 3.2s</span>
+
+<span class="cmt"># 3. Analizar EuroMillions con Markov Chain</span>
+<span class="prompt">$</span> <span class="cmd">python predict.py --lottery euromillions --engine markov</span>
+<span class="out">  Loading 8,420 draws.................. <span class="ok">done</span></span>
+<span class="out">  Building transition matrix........... <span class="ok">done</span></span>
+<span class="out">  Chi-square test: p=<span class="num">0.0000</span>  <span class="ok">✓ significant</span></span>
+<span class="out">  Cohen's d = <span class="num">3.148</span>  (large effect)</span>
+<span class="out">  Improvement over random: <span class="num">+63.2%</span></span>
+
+<span class="cmt"># 4. Lanzar MCP server (6 tools)</span>
+<span class="prompt">$</span> <span class="cmd">python -m lottery_predictor.mcp --serve</span>
+<span class="out">  MCP server listening on :8080</span>
+<span class="out">  Tools: predict · analyze · backtest · cheating_detect · ev_calc · kelly</span>
+
+<span class="warn">⚠ EV = −79% per $ · Kelly ≈ 0 · No apostar</span>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="section-head reveal">
+    <span class="section-tag">Precios</span>
+    <h2>Desde <em>gratis</em> hasta enterprise.</h2>
+    <p>Open source para siempre. Planes pagados solo si necesitas infraestructura.</p>
+  </div>
+  <div class="pricing-grid">
+
+    <div class="price-card reveal" data-tilt>
+      <div class="price-tier">Open Source</div>
+      <div class="price-amount"><span class="cur">$</span>0<span class="per">/forever</span></div>
+      <div class="price-tag">Licencia MIT · úsalo como quieras</div>
+      <ul class="price-features">
+        <li>49 loterías globales</li>
+        <li>10 motores de análisis</li>
+        <li>Código fuente completo</li>
+        <li>Despliegue local</li>
+        <li>Comunidad GitHub</li>
+      </ul>
+      <a href="#" class="price-cta secondary">Ver en GitHub</a>
+    </div>
+
+    <div class="price-card featured reveal delay-1" data-tilt>
+      <div class="price-tier">Professional</div>
+      <div class="price-amount"><span class="cur">$</span>49<span class="per">/mes</span></div>
+      <div class="price-tag">Para análisis diario y alertas</div>
+      <ul class="price-features">
+        <li>API hosted (99.9% uptime)</li>
+        <li>Alertas en tiempo real</li>
+        <li>Backtesting ilimitado</li>
+        <li>MCP server hosted</li>
+        <li>Soporte 24h</li>
+        <li>Actualizaciones semanales</li>
+      </ul>
+      <a href="#" class="price-cta primary">Empezar ahora</a>
+    </div>
+
+    <div class="price-card reveal delay-2" data-tilt>
+      <div class="price-tier">Enterprise</div>
+      <div class="price-amount"><span class="cur">$</span>499<span class="per">/mes</span></div>
+      <div class="price-tag">Para equipos y producción</div>
+      <ul class="price-features">
+        <li>On-premise / private cloud</li>
+        <li>White-label completo</li>
+        <li>SLA 99.99%</li>
+        <li>Loterías custom</li>
+        <li>Account manager dedicado</li>
+        <li>Auditoría de seguridad</li>
+      </ul>
+      <a href="#" class="price-cta secondary">Hablar con ventas</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>Lottery<span class="gold">Predictor</span></h3>
+      <p>Sistema educativo de análisis estadístico de loterías. 49 loterías · 10 motores · 22,000+ sorteos. Open source bajo licencia MIT.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Producto</h4>
+      <a href="#engines">Motores</a>
+      <a href="#results">Resultados</a>
+      <a href="#architecture">Arquitectura</a>
+      <a href="#pricing">Precios</a>
+    </div>
+    <div class="footer-col">
+      <h4>Recursos</h4>
+      <a href="#">Documentación</a>
+      <a href="#">API Reference</a>
+      <a href="#">MCP Tools</a>
+      <a href="#">Paper (PDF)</a>
+    </div>
+    <div class="footer-col">
+      <h4>Comunidad</h4>
+      <a href="#">GitHub</a>
+      <a href="#">Issues</a>
+      <a href="#">Discord</a>
+      <a href="#">Contribuir</a>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    <strong>⚠ AVISO:</strong> La lotería es matemáticamente desfavorable (EV negativo). Sistema educativo. No garantiza ganancias.
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 LOTTERYPREDICTOR v4.0 · MIT LICENSE · BUILT FOR EDUCATIONAL PURPOSES
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ============== SCROLL PROGRESS ============== */
+  const progress = document.getElementById('scrollProgress');
+  const nav = document.getElementById('nav');
+  function onScroll(){
+    const h = document.documentElement;
+    const scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+    progress.style.width = (scrolled*100) + '%';
+    if(h.scrollTop > 40){ nav.classList.add('scrolled'); }
+    else { nav.classList.remove('scrolled'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* ============== PARTICLE / DUST SYSTEM ============== */
+  const canvas = document.getElementById('particles');
+  const ctx = canvas.getContext('2d');
+  let W=0,H=0,dpr=Math.min(window.devicePixelRatio||1, 2);
+  function resize(){
+    W = canvas.width = window.innerWidth * dpr;
+    H = canvas.height = window.innerHeight * dpr;
+    canvas.style.width = window.innerWidth+'px';
+    canvas.style.height = window.innerHeight+'px';
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  const PARTICLE_COUNT = window.innerWidth < 768 ? 38 : 75;
+  const particles = [];
+  for(let i=0;i<PARTICLE_COUNT;i++){
+    particles.push({
+      x: Math.random()*W,
+      y: Math.random()*H,
+      r: (Math.random()*1.6 + 0.3) * dpr,
+      vx: (Math.random()-0.5) * 0.15 * dpr,
+      vy: -(Math.random()*0.25 + 0.05) * dpr,
+      a: Math.random()*0.5 + 0.08,
+      hue: Math.random() < 0.7 ? 'brass' : (Math.random()<0.5?'red':'green')
+    });
+  }
+  const colorMap = {
+    brass: '201,168,76',
+    red: '160,64,64',
+    green: '90,128,96'
+  };
+  function drawParticles(){
+    ctx.clearRect(0,0,W,H);
+    for(const p of particles){
+      p.x += p.vx;
+      p.y += p.vy;
+      if(p.y < -10){ p.y = H+10; p.x = Math.random()*W; }
+      if(p.x < -10) p.x = W+10;
+      if(p.x > W+10) p.x = -10;
+      const c = colorMap[p.hue];
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
+      ctx.fillStyle = 'rgba('+c+','+p.a+')';
+      ctx.fill();
+      // soft glow
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r*3, 0, Math.PI*2);
+      ctx.fillStyle = 'rgba('+c+','+(p.a*0.15)+')';
+      ctx.fill();
+    }
+    requestAnimationFrame(drawParticles);
+  }
+  drawParticles();
+
+  /* ============== HERO LOTTERY BALLS ============== */
+  const ballField = document.getElementById('ballField');
+  const ballNumbers = [7, 13, 21, 23, 27, 33, 42, 49, 8, 16, 3, 38, 11, 29];
+  // positions in % across the scene, with depth via translateZ
+  const ballPositions = [
+    {x:8,  y:20, z:-180, size:62,  delay:0,   color:''},
+    {x:88, y:18, z:-120, size:78,  delay:1.5, color:'red'},
+    {x:16, y:72, z:-200, size:54,  delay:0.8, color:'green'},
+    {x:78, y:78, z:-160, size:68,  delay:2.1, color:''},
+    {x:46, y:12, z:-260, size:48,  delay:0.4, color:'red'},
+    {x:6,  y:48, z:-100, size:72,  delay:1.2, color:''},
+    {x:93, y:50, z:-140, size:58,  delay:0.2, color:'green'},
+    {x:30, y:88, z:-220, size:50,  delay:1.8, color:''},
+    {x:62, y:6,  z:-100, size:84,  delay:0.6, color:'red'},
+    {x:38, y:42, z:-300, size:42,  delay:2.4, color:''},
+    {x:68, y:34, z:-240, size:46,  delay:1.1, color:'green'},
+    {x:22, y:30, z:-160, size:60,  delay:0.9, color:''}
+  ];
+  ballPositions.forEach((b, i) => {
+    const ball = document.createElement('div');
+    ball.className = 'lottery-ball' + (b.color ? ' '+b.color : '');
+    ball.style.left = b.x + '%';
+    ball.style.top = b.y + '%';
+    ball.style.width = b.size + 'px';
+    ball.style.height = b.size + 'px';
+    ball.style.fontSize = (b.size * 0.42) + 'px';
+    ball.style.transform = 'translateZ(' + b.z + 'px)';
+    ball.style.animation = 'floatBall ' + (6 + Math.random()*4) + 's ease-in-out ' + b.delay + 's infinite';
+    const inner = document.createElement('div');
+    inner.className = 'ball-inner';
+    inner.style.animationDuration = (10 + Math.random()*8) + 's';
+    inner.style.animationDelay = b.delay + 's';
+    inner.textContent = ballNumbers[i % ballNumbers.length];
+    ball.appendChild(inner);
+    ballField.appendChild(ball);
+  });
+
+  // Subtle mouse-driven parallax on the whole ball field
+  let mx=0, my=0, tmx=0, tmy=0;
+  document.addEventListener('mousemove', (e)=>{
+    tmx = (e.clientX / window.innerWidth - 0.5) * 2;
+    tmy = (e.clientY / window.innerHeight - 0.5) * 2;
+  });
+  function parallaxLoop(){
+    mx += (tmx - mx) * 0.05;
+    my += (tmy - my) * 0.05;
+    ballField.style.transform = 'rotateY(' + (mx*6) + 'deg) rotateX(' + (-my*4) + 'deg)';
+    requestAnimationFrame(parallaxLoop);
+  }
+  parallaxLoop();
+
+  /* ============== 3D TILT ON CARDS ============== */
+  const tiltCards = document.querySelectorAll('[data-tilt]');
+  const tiltStrong = document.querySelectorAll('[data-tilt-strong]');
+  const allTilt = [...tiltCards, ...tiltStrong];
+  const MAX = 10;       // base tilt degrees
+  const MAX_STRONG = 6; // stronger panel uses smaller angle for elegance
+
+  allTilt.forEach(card => {
+    const strong = card.hasAttribute('data-tilt-strong');
+    const maxDeg = strong ? MAX_STRONG : MAX;
+    let rafId = null;
+    let targetX = 0, targetY = 0, curX = 0, curY = 0;
+    let active = false;
+
+    function animate(){
+      curX += (targetX - curX) * 0.15;
+      curY += (targetY - curY) * 0.15;
+      card.style.transform = 'perspective(1000px) rotateX(' + curY + 'deg) rotateY(' + curX + 'deg) translateZ(0)';
+      if(Math.abs(targetX - curX) > 0.05 || Math.abs(targetY - curY) > 0.05){
+        rafId = requestAnimationFrame(animate);
+      } else {
+        rafId = null;
+      }
+    }
+
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const px = (e.clientX - rect.left) / rect.width;
+      const py = (e.clientY - rect.top) / rect.height;
+      targetX = (px - 0.5) * 2 * maxDeg;
+      targetY = -(py - 0.5) * 2 * maxDeg;
+      if(!rafId) animate();
+    });
+    card.addEventListener('mouseleave', () => {
+      targetX = 0; targetY = 0;
+      if(!rafId) animate();
+    });
+    // touch support (subtle)
+    card.addEventListener('touchmove', (e) => {
+      if(!e.touches[0]) return;
+      const rect = card.getBoundingClientRect();
+      const px = (e.touches[0].clientX - rect.left) / rect.width;
+      const py = (e.touches[0].clientY - rect.top) / rect.height;
+      targetX = (px - 0.5) * 2 * maxDeg;
+      targetY = -(py - 0.5) * 2 * maxDeg;
+      if(!rafId) animate();
+    }, {passive:true});
+  });
+
+  /* ============== SCROLL REVEAL (IntersectionObserver) ============== */
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.12, rootMargin:'0px 0px -60px 0px'});
+  reveals.forEach(el => io.observe(el));
+
+  /* ============== SMOOTH ANCHOR SCROLL (momentum feel) ============== */
+  // scroll-behavior:smooth handles modern browsers; add offset for nav
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e){
+      const href = this.getAttribute('href');
+      if(href === '#') return;
+      const target = document.querySelector(href);
+      if(!target) return;
+      e.preventDefault();
+      const top = target.getBoundingClientRect().top + window.pageYOffset - 70;
+      window.scrollTo({top: top, behavior: 'smooth'});
+    });
+  });
+
+})();
+</script>
+</body>
+</html>
