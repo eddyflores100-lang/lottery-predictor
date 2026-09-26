@@ -18,8 +18,8 @@ def cmd_lotteries():
     from lotteries import LOTTERY_REGISTRY, NEW_LOTTERIES, make_lottery
     from lotteries.generic import get_all_lottery_keys
     try:
-        from lotteries.quicklotto_registry import merge_with_existing
-        all_configs = merge_with_existing()
+        from lotteries.quicklotto_registry import merge_with_existing, merge_with_existing_v2
+        all_configs = merge_with_existing_v2()
     except Exception:
         all_configs = dict(NEW_LOTTERIES)
     
@@ -104,8 +104,8 @@ def cmd_engines():
 def cmd_describe(lottery_name):
     from lotteries import get_lottery, NEW_LOTTERIES
     try:
-        from lotteries.quicklotto_registry import merge_with_existing
-        all_configs = merge_with_existing()
+        from lotteries.quicklotto_registry import merge_with_existing, merge_with_existing_v2
+        all_configs = merge_with_existing_v2()
     except Exception:
         all_configs = dict(NEW_LOTTERIES)
     DEFAULT_DATA_PATHS = {
@@ -148,8 +148,8 @@ def cmd_predict(lottery_name, engine_name):
     from lotteries import get_lottery, NEW_LOTTERIES
     from engines import ENGINE_REGISTRY
     try:
-        from lotteries.quicklotto_registry import merge_with_existing
-        all_configs = merge_with_existing()
+        from lotteries.quicklotto_registry import merge_with_existing, merge_with_existing_v2
+        all_configs = merge_with_existing_v2()
     except Exception:
         all_configs = dict(NEW_LOTTERIES)
     DEFAULT_DATA_PATHS = {

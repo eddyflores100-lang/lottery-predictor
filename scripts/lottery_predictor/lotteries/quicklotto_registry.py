@@ -192,3 +192,75 @@ if __name__ == '__main__':
     for key, cfg in configs.items():
         if key.startswith('ql_'):
             print(f"  {key:<28} - {cfg['name']:<30} {cfg['main_picks']}/{cfg['main_pool_size']} ({cfg['country']})")
+
+
+# ============================================================
+# ADDITIONAL LOTTERIES FROM OTHER GITHUB SOURCES
+# ============================================================
+EXTRA_LOTTERIES = {
+    'cn_ssq': {
+        'name': '双色球 SSQ (China)', 'country': 'China',
+        'main_pool_size': 33, 'main_picks': 6,
+        'bonus_pool_size': 16, 'bonus_picks': 1,
+        'draws_per_week': 3, 'currency': 'CNY', 'min_jackpot': 5_000_000,
+        'data_file': '/home/z/my-project/data/cn_ssq_standard.json',
+    },
+    'cn_dlt': {
+        'name': '大乐透 DLT (China)', 'country': 'China',
+        'main_pool_size': 35, 'main_picks': 5,
+        'bonus_pool_size': 12, 'bonus_picks': 2,
+        'draws_per_week': 3, 'currency': 'CNY', 'min_jackpot': 10_000_000,
+        'data_file': '/home/z/my-project/data/cn_dlt_standard.json',
+    },
+    'cn_qxc': {
+        'name': '七星彩 QXC (China)', 'country': 'China',
+        'main_pool_size': 10, 'main_picks': 7,
+        'bonus_pool_size': 0, 'bonus_picks': 0,
+        'draws_per_week': 3, 'currency': 'CNY', 'min_jackpot': 5_000_000,
+        'data_file': '/home/z/my-project/data/cn_qxc_standard.json',
+    },
+    'cn_qlc': {
+        'name': '七乐彩 QLC (China)', 'country': 'China',
+        'main_pool_size': 30, 'main_picks': 7,
+        'bonus_pool_size': 30, 'bonus_picks': 1,
+        'draws_per_week': 3, 'currency': 'CNY', 'min_jackpot': 1_000_000,
+        'data_file': '/home/z/my-project/data/cn_qlc_standard.json',
+    },
+    'cn_fc3d': {
+        'name': '福彩3D FC3D (China)', 'country': 'China',
+        'main_pool_size': 10, 'main_picks': 3,
+        'bonus_pool_size': 0, 'bonus_picks': 0,
+        'draws_per_week': 7, 'currency': 'CNY', 'min_jackpot': 1_040,
+        'data_file': '/home/z/my-project/data/cn_fc3d_standard.json',
+    },
+    'cn_pl3': {
+        'name': '排列3 PL3 (China)', 'country': 'China',
+        'main_pool_size': 10, 'main_picks': 3,
+        'bonus_pool_size': 0, 'bonus_picks': 0,
+        'draws_per_week': 7, 'currency': 'CNY', 'min_jackpot': 1_040,
+        'data_file': '/home/z/my-project/data/cn_pl3_standard.json',
+    },
+    'cn_pl5': {
+        'name': '排列5 PL5 (China)', 'country': 'China',
+        'main_pool_size': 10, 'main_picks': 5,
+        'bonus_pool_size': 0, 'bonus_picks': 0,
+        'draws_per_week': 7, 'currency': 'CNY', 'min_jackpot': 10_000,
+        'data_file': '/home/z/my-project/data/cn_pl5_standard.json',
+    },
+    'eurojackpot': {
+        'name': 'EuroJackpot', 'country': 'Europe',
+        'main_pool_size': 50, 'main_picks': 5,
+        'bonus_pool_size': 10, 'bonus_picks': 2,
+        'draws_per_week': 2, 'currency': 'EUR', 'min_jackpot': 10_000_000,
+        'data_file': '/home/z/my-project/data/eurojackpot.json',
+    },
+}
+
+
+def merge_with_existing_v2():
+    """Merge quicklotto + extra lotteries with existing NEW_LOTTERIES."""
+    all_configs = merge_with_existing()
+    for key, config in EXTRA_LOTTERIES.items():
+        if key not in all_configs:
+            all_configs[key] = config
+    return all_configs

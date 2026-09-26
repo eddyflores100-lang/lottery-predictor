@@ -227,8 +227,8 @@ def make_lottery(key):
     """Create a generic lottery instance by key."""
     # Check quicklotto registry first (extended catalog)
     try:
-        from .quicklotto_registry import merge_with_existing
-        all_configs = merge_with_existing()
+        from .quicklotto_registry import merge_with_existing, merge_with_existing_v2
+        all_configs = merge_with_existing_v2()
     except Exception:
         all_configs = NEW_LOTTERIES
     
@@ -260,8 +260,8 @@ def make_lottery(key):
 def get_all_lottery_keys():
     """Get all available lottery keys (existing + quicklotto)."""
     try:
-        from .quicklotto_registry import merge_with_existing
-        all_configs = merge_with_existing()
+        from .quicklotto_registry import merge_with_existing, merge_with_existing_v2
+        all_configs = merge_with_existing_v2()
         return list(all_configs.keys())
     except Exception:
         return list(NEW_LOTTERIES.keys())

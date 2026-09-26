@@ -181,8 +181,8 @@ def get_lottery(name: str) -> Lottery:
         return make_lottery(name)
     # Try quicklotto registry (extended, with exact name preserving hyphens)
     try:
-        from .quicklotto_registry import merge_with_existing
-        all_configs = merge_with_existing()
+        from .quicklotto_registry import merge_with_existing, merge_with_existing_v2, merge_with_existing_v2, EXTRA_LOTTERIES
+        all_configs = merge_with_existing_v2()
         if name in all_configs:
             return make_lottery(name)
     except Exception:
@@ -195,8 +195,8 @@ def get_lottery(name: str) -> Lottery:
         if name_underscore in NEW_LOTTERIES:
             return make_lottery(name_underscore)
         try:
-            from .quicklotto_registry import merge_with_existing
-            all_configs = merge_with_existing()
+            from .quicklotto_registry import merge_with_existing, merge_with_existing_v2, merge_with_existing_v2, EXTRA_LOTTERIES
+            all_configs = merge_with_existing_v2()
             if name_underscore in all_configs:
                 return make_lottery(name_underscore)
         except Exception:

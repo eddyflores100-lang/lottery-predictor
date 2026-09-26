@@ -1,0 +1,71 @@
+{
+  "random_baseline": {
+    "engine": "random_baseline",
+    "total_tested": 50,
+    "avg_hits": 0.46,
+    "max_hits": 2,
+    "hits_distribution": {
+      "0": 31,
+      "1": 15,
+      "2": 4
+    }
+  },
+  "comparison": [
+    {
+      "engine": "hot_cold",
+      "avg_hits": 0.56,
+      "max_hits": 3,
+      "avg_time_ms": 0.24,
+      "tested": 50
+    },
+    {
+      "engine": "gap_analysis",
+      "avg_hits": 0.48,
+      "max_hits": 3,
+      "avg_time_ms": 0.15,
+      "tested": 50
+    },
+    {
+      "engine": "pattern_detection",
+      "avg_hits": 0.4,
+      "max_hits": 2,
+      "avg_time_ms": 1.2,
+      "tested": 50
+    },
+    {
+      "engine": "markov_chain",
+      "avg_hits": 0.38,
+      "max_hits": 1,
+      "avg_time_ms": 0.89,
+      "tested": 50
+    },
+    {
+      "engine": "frequency",
+      "avg_hits": 0.36,
+      "max_hits": 2,
+      "avg_time_ms": 0.14,
+      "tested": 50
+    },
+    {
+      "engine": "bayesian",
+      "avg_hits": 0.36,
+      "max_hits": 2,
+      "avg_time_ms": 0.22,
+      "tested": 50
+    },
+    {
+      "engine": "entropy",
+      "avg_hits": 0.36,
+      "max_hits": 2,
+      "avg_time_ms": 2.56,
+      "tested": 50
+    },
+    {
+      "engine": "ensemble",
+      "avg_hits": 0.32,
+      "max_hits": 2,
+      "avg_time_ms": 625.98,
+      "tested": 50
+    }
+  ]
+}
