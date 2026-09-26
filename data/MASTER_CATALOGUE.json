@@ -1,0 +1,982 @@
+{
+  "metadata": {
+    "version": "5.0",
+    "generated": "2026-09-26",
+    "total_lotteries": 63,
+    "total_draws": 62637,
+    "sources": [
+      "quicklotto.io MCP (39 lotteries, free)",
+      "bettip.co.za API (10 lotteries, free)",
+      "daowa89/lottery-archive (GitHub, 3 lotteries)",
+      "dev-baris/lottery-archive (GitHub, EuroJackpot)",
+      "Zhang-0122/Multi-Lottery (GitHub, 7 Chinese lotteries)",
+      "zaiqltd/bettip-draws-api (GitHub, Gosloto)",
+      "pozomillonario.info (scraping, Pozo Millonario)",
+      "contenidos.loteria.com.ec (scraping, Ecuador lotteries)"
+    ]
+  },
+  "tier_1_international": {
+    "us_powerball": {
+      "name": "US Powerball",
+      "country": "USA",
+      "format": "5/69+1/26",
+      "odds": 292201338,
+      "currency": "USD",
+      "min_jackpot": 20000000,
+      "buy_online": true,
+      "platforms": [
+        "thelotter.com",
+        "lottoland",
+        "multilotto"
+      ],
+      "draws_per_week": 3,
+      "data_file": "us_powerball.json",
+      "draws": 13
+    },
+    "mega_millions": {
+      "name": "Mega Millions",
+      "country": "USA",
+      "format": "5/70+1/25",
+      "odds": 302575350,
+      "currency": "USD",
+      "min_jackpot": 20000000,
+      "buy_online": true,
+      "platforms": [
+        "thelotter.com",
+        "lottoland"
+      ],
+      "draws_per_week": 2,
+      "data_file": "mega_millions.json",
+      "draws": 8
+    },
+    "euromillions": {
+      "name": "EuroMillions",
+      "country": "Europe",
+      "format": "5/50+2/12",
+      "odds": 139838160,
+      "currency": "EUR",
+      "min_jackpot": 17000000,
+      "buy_online": true,
+      "platforms": [
+        "thelotter.com",
+        "lottoland",
+        "multilotto"
+      ],
+      "draws_per_week": 2,
+      "data_file": "euromillions.json",
+      "draws": 1977
+    },
+    "eurojackpot": {
+      "name": "EuroJackpot",
+      "country": "Europe",
+      "format": "5/50+2/10",
+      "odds": 139838160,
+      "currency": "EUR",
+      "min_jackpot": 10000000,
+      "buy_online": true,
+      "platforms": [
+        "thelotter.com",
+        "lottoland"
+      ],
+      "draws_per_week": 2,
+      "data_file": "eurojackpot.json",
+      "draws": 993
+    },
+    "superenalotto": {
+      "name": "SuperEnalotto",
+      "country": "Italy",
+      "format": "6/90",
+      "odds": 622614630,
+      "currency": "EUR",
+      "min_jackpot": 25000000,
+      "buy_online": true,
+      "platforms": [
+        "thelotter.com",
+        "lottoland"
+      ],
+      "draws_per_week": 3,
+      "data_file": "ql_superenalotto.json",
+      "draws": 20
+    },
+    "la_primitiva": {
+      "name": "La Primitiva",
+      "country": "Spain",
+      "format": "6/49+1/9",
+      "odds": 13983816,
+      "currency": "EUR",
+      "min_jackpot": 8000000,
+      "buy_online": true,
+      "platforms": [
+        "thelotter.com",
+        "lottoland"
+      ],
+      "draws_per_week": 2,
+      "data_file": "la_primitiva.json",
+      "draws": 5049
+    },
+    "el_gordo": {
+      "name": "El Gordo",
+      "country": "Spain",
+      "format": "5/54+1/9",
+      "odds": 31625100,
+      "currency": "EUR",
+      "min_jackpot": 5000000,
+      "buy_online": true,
+      "platforms": [
+        "thelotter.com"
+      ],
+      "draws_per_week": 1,
+      "data_file": null,
+      "draws": 0
+    },
+    "french_lotto": {
+      "name": "French Lotto",
+      "country": "France",
+      "format": "5/49+1/10",
+      "odds": 19068840,
+      "currency": "EUR",
+      "min_jackpot": 2000000,
+      "buy_online": true,
+      "platforms": [
+        "thelotter.com"
+      ],
+      "draws_per_week": 3,
+      "data_file": "france_lotto.json",
+      "draws": 13
+    },
+    "uk_lotto": {
+      "name": "UK Lotto",
+      "country": "UK",
+      "format": "6/59",
+      "odds": 45057474,
+      "currency": "GBP",
+      "min_jackpot": 2000000,
+      "buy_online": true,
+      "platforms": [
+        "thelotter.com",
+        "lottoland"
+      ],
+      "draws_per_week": 2,
+      "data_file": "uk_lotto.json",
+      "draws": 56
+    },
+    "irish_lotto": {
+      "name": "Irish Lotto",
+      "country": "Ireland",
+      "format": "6/47",
+      "odds": 10737573,
+      "currency": "EUR",
+      "min_jackpot": 2000000,
+      "buy_online": true,
+      "platforms": [
+        "thelotter.com",
+        "lottoland"
+      ],
+      "draws_per_week": 2,
+      "data_file": "irish_lotto.json",
+      "draws": 34
+    },
+    "german_lotto": {
+      "name": "German Lotto 6aus49",
+      "country": "Germany",
+      "format": "6/49+1/9",
+      "odds": 139838160,
+      "currency": "EUR",
+      "min_jackpot": 1000000,
+      "buy_online": true,
+      "platforms": [
+        "thelotter.com",
+        "lottoland"
+      ],
+      "draws_per_week": 2,
+      "data_file": "la_primitiva.json",
+      "draws": 5049
+    },
+    "austrian_lotto": {
+      "name": "Austrian Lotto 6aus45",
+      "country": "Austria",
+      "format": "6/45",
+      "odds": 8145060,
+      "currency": "EUR",
+      "min_jackpot": 1500000,
+      "buy_online": true,
+      "platforms": [
+        "thelotter.com"
+      ],
+      "draws_per_week": 2,
+      "data_file": "lotto_austrian.json",
+      "draws": 3684
+    },
+    "thunderball": {
+      "name": "UK Thunderball",
+      "country": "UK",
+      "format": "5/39+1/14",
+      "odds": 8060598,
+      "currency": "GBP",
+      "min_jackpot": 500000,
+      "buy_online": true,
+      "platforms": [
+        "thelotter.com"
+      ],
+      "draws_per_week": 4,
+      "data_file": "thunderball.json",
+      "draws": 16
+    },
+    "set_for_life": {
+      "name": "Set For Life",
+      "country": "UK",
+      "format": "5/47+1/10",
+      "odds": 15339390,
+      "currency": "GBP",
+      "min_jackpot": 390000,
+      "buy_online": true,
+      "platforms": [
+        "thelotter.com"
+      ],
+      "draws_per_week": 2,
+      "data_file": null,
+      "draws": 0
+    },
+    "cash4life": {
+      "name": "Cash4Life",
+      "country": "USA",
+      "format": "5/60+1/4",
+      "odds": 21846048,
+      "currency": "USD",
+      "min_jackpot": 365000,
+      "buy_online": true,
+      "platforms": [
+        "thelotter.com"
+      ],
+      "draws_per_week": 2,
+      "data_file": null,
+      "draws": 0
+    },
+    "sa_lotto": {
+      "name": "SA Lotto",
+      "country": "South Africa",
+      "format": "6/52",
+      "odds": 20358520,
+      "currency": "ZAR",
+      "min_jackpot": 5000000,
+      "buy_online": true,
+      "platforms": [
+        "thelotter.com",
+        "lottoland"
+      ],
+      "draws_per_week": 2,
+      "data_file": "sa_lotto_6_52.json",
+      "draws": 1221
+    },
+    "sa_powerball": {
+      "name": "SA PowerBall",
+      "country": "South Africa",
+      "format": "5/50+1/20",
+      "odds": 42375200,
+      "currency": "ZAR",
+      "min_jackpot": 30000000,
+      "buy_online": true,
+      "platforms": [
+        "thelotter.com",
+        "lottoland"
+      ],
+      "draws_per_week": 2,
+      "data_file": "sa_powerball.json",
+      "draws": 1221
+    },
+    "greek_lotto": {
+      "name": "Greek Lotto",
+      "country": "Greece",
+      "format": "6/49",
+      "odds": 13983816,
+      "currency": "EUR",
+      "min_jackpot": 100000,
+      "buy_online": true,
+      "platforms": [
+        "thelotter.com"
+      ],
+      "draws_per_week": 2,
+      "data_file": "greek_lotto.json",
+      "draws": 9
+    },
+    "greece_powerball": {
+      "name": "Greece Powerball (TZOKER)",
+      "country": "Greece",
+      "format": "5/45+1/20",
+      "odds": 24435180,
+      "currency": "EUR",
+      "min_jackpot": 100000,
+      "buy_online": true,
+      "platforms": [
+        "thelotter.com"
+      ],
+      "draws_per_week": 2,
+      "data_file": "greece_powerball.json",
+      "draws": 13
+    },
+    "ql_eurodreams": {
+      "name": "EuroDreams",
+      "country": "Europe",
+      "format": "6/40+1/5",
+      "odds": 0,
+      "currency": "EUR",
+      "min_jackpot": 0,
+      "buy_online": true,
+      "platforms": [
+        "thelotter.com"
+      ],
+      "draws_per_week": 2,
+      "data_file": "quicklotto/eurodreams.json",
+      "draws": 20
+    },
+    "ql_lotto_america": {
+      "name": "Lotto America",
+      "country": "USA",
+      "format": "5/52+1/10",
+      "odds": 0,
+      "currency": "USD",
+      "min_jackpot": 0,
+      "buy_online": true,
+      "platforms": [
+        "thelotter.com"
+      ],
+      "draws_per_week": 2,
+      "data_file": "quicklotto/lotto-america.json",
+      "draws": 20
+    },
+    "ql_canada_lotto_649": {
+      "name": "Lotto 6/49 (Canada)",
+      "country": "Canada",
+      "format": "6/49",
+      "odds": 0,
+      "currency": "CAD",
+      "min_jackpot": 0,
+      "buy_online": true,
+      "platforms": [
+        "thelotter.com"
+      ],
+      "draws_per_week": 2,
+      "data_file": "quicklotto/canada-lotto-649.json",
+      "draws": 20
+    },
+    "ql_irish_daily_million": {
+      "name": "Irish Daily Million",
+      "country": "Ireland",
+      "format": "6/39",
+      "odds": 0,
+      "currency": "EUR",
+      "min_jackpot": 0,
+      "buy_online": true,
+      "platforms": [
+        "thelotter.com"
+      ],
+      "draws_per_week": 7,
+      "data_file": "quicklotto/irish-daily-million.json",
+      "draws": 20
+    },
+    "ql_keno_10": {
+      "name": "German Keno",
+      "country": "Germany",
+      "format": "10/70",
+      "odds": 0,
+      "currency": "EUR",
+      "min_jackpot": 0,
+      "buy_online": true,
+      "platforms": [
+        "thelotter.com"
+      ],
+      "draws_per_week": 7,
+      "data_file": "quicklotto/keno-10.json",
+      "draws": 20
+    },
+    "ql_south_africa_lotto_ql": {
+      "name": "SA Lotto (quicklotto)",
+      "country": "South Africa",
+      "format": "6/52",
+      "odds": 0,
+      "currency": "ZAR",
+      "min_jackpot": 0,
+      "buy_online": true,
+      "platforms": [
+        "thelotter.com"
+      ],
+      "draws_per_week": 2,
+      "data_file": "quicklotto/south-africa-lotto-ql.json",
+      "draws": 20
+    }
+  },
+  "tier_2_local": {
+    "pozo_millonario": {
+      "name": "Pozo Millonario",
+      "country": "Ecuador",
+      "format": "11/25",
+      "odds": 4457400,
+      "currency": "USD",
+      "min_jackpot": 500000,
+      "buy_online": false,
+      "platforms": [
+        "Puntos de la Suerte (Ecuador only)"
+      ],
+      "draws_per_week": 2,
+      "data_file": "pozo_data.json",
+      "draws": 308
+    },
+    "ec_loteria": {
+      "name": "La Lotería (Ecuador)",
+      "country": "Ecuador",
+      "format": "5/10",
+      "odds": 100000,
+      "currency": "USD",
+      "min_jackpot": 50000,
+      "buy_online": false,
+      "platforms": [
+        "Puntos de la Suerte (Ecuador only)"
+      ],
+      "draws_per_week": 7,
+      "data_file": "ec_la_loteria.json",
+      "draws": 102
+    },
+    "ec_lotto": {
+      "name": "Lotto (Ecuador)",
+      "country": "Ecuador",
+      "format": "6/10",
+      "odds": 1000000,
+      "currency": "USD",
+      "min_jackpot": 100000,
+      "buy_online": false,
+      "platforms": [
+        "Ecuador only"
+      ],
+      "draws_per_week": 3,
+      "data_file": "ec_lotto.json",
+      "draws": 104
+    },
+    "ec_pega": {
+      "name": "Pega (Ecuador)",
+      "country": "Ecuador",
+      "format": "3/10",
+      "odds": 1000,
+      "currency": "USD",
+      "min_jackpot": 500,
+      "buy_online": false,
+      "platforms": [
+        "Ecuador only"
+      ],
+      "draws_per_week": 7,
+      "data_file": "ec_pega.json",
+      "draws": 77
+    },
+    "uk49s": {
+      "name": "UK49s",
+      "country": "UK",
+      "format": "6/49+1/49",
+      "odds": 13983816,
+      "currency": "GBP",
+      "min_jackpot": 125000,
+      "buy_online": false,
+      "platforms": [
+        "UK betting shops only"
+      ],
+      "draws_per_week": 14,
+      "data_file": "uk49s.json",
+      "draws": 5867
+    },
+    "cn_ssq": {
+      "name": "双色球 SSQ",
+      "country": "China",
+      "format": "6/33+1/16",
+      "odds": 17721088,
+      "currency": "CNY",
+      "min_jackpot": 5000000,
+      "buy_online": false,
+      "platforms": [
+        "China only"
+      ],
+      "draws_per_week": 3,
+      "data_file": "cn_ssq_standard.json",
+      "draws": 3508
+    },
+    "cn_dlt": {
+      "name": "大乐透 DLT",
+      "country": "China",
+      "format": "5/35+2/12",
+      "odds": 21425712,
+      "currency": "CNY",
+      "min_jackpot": 10000000,
+      "buy_online": false,
+      "platforms": [
+        "China only"
+      ],
+      "draws_per_week": 3,
+      "data_file": "cn_dlt_standard.json",
+      "draws": 2903
+    },
+    "cn_qxc": {
+      "name": "七星彩 QXC",
+      "country": "China",
+      "format": "7 digits",
+      "odds": 10000000,
+      "currency": "CNY",
+      "min_jackpot": 5000000,
+      "buy_online": false,
+      "platforms": [
+        "China only"
+      ],
+      "draws_per_week": 3,
+      "data_file": "cn_qxc_standard.json",
+      "draws": 3062
+    },
+    "cn_qlc": {
+      "name": "七乐彩 QLC",
+      "country": "China",
+      "format": "7/30+1",
+      "odds": 2035800,
+      "currency": "CNY",
+      "min_jackpot": 1000000,
+      "buy_online": false,
+      "platforms": [
+        "China only"
+      ],
+      "draws_per_week": 3,
+      "data_file": "cn_qlc_standard.json",
+      "draws": 2045
+    },
+    "cn_fc3d": {
+      "name": "福彩3D FC3D",
+      "country": "China",
+      "format": "3 digits",
+      "odds": 1000,
+      "currency": "CNY",
+      "min_jackpot": 1040,
+      "buy_online": false,
+      "platforms": [
+        "China only"
+      ],
+      "draws_per_week": 7,
+      "data_file": "cn_fc3d_standard.json",
+      "draws": 4705
+    },
+    "cn_pl3": {
+      "name": "排列3 PL3",
+      "country": "China",
+      "format": "3 digits",
+      "odds": 1000,
+      "currency": "CNY",
+      "min_jackpot": 1040,
+      "buy_online": false,
+      "platforms": [
+        "China only"
+      ],
+      "draws_per_week": 7,
+      "data_file": "cn_pl3_standard.json",
+      "draws": 7675
+    },
+    "cn_pl5": {
+      "name": "排列5 PL5",
+      "country": "China",
+      "format": "5 digits",
+      "odds": 100000,
+      "currency": "CNY",
+      "min_jackpot": 10000,
+      "buy_online": false,
+      "platforms": [
+        "China only"
+      ],
+      "draws_per_week": 7,
+      "data_file": "cn_pl5_standard.json",
+      "draws": 7675
+    },
+    "sa_daily_lotto": {
+      "name": "SA Daily Lotto",
+      "country": "South Africa",
+      "format": "5/36",
+      "odds": 376992,
+      "currency": "ZAR",
+      "min_jackpot": 100000,
+      "buy_online": false,
+      "platforms": [
+        "SA only"
+      ],
+      "draws_per_week": 7,
+      "data_file": "sa_daily_lotto.json",
+      "draws": 2749
+    },
+    "megasena": {
+      "name": "Mega-Sena",
+      "country": "Brazil",
+      "format": "6/60",
+      "odds": 50063860,
+      "currency": "BRL",
+      "min_jackpot": 3000000,
+      "buy_online": false,
+      "platforms": [
+        "Caixa (Brazil only)"
+      ],
+      "draws_per_week": 2,
+      "data_file": "ql_mega-sena.json",
+      "draws": 20
+    },
+    "lotofacil": {
+      "name": "Lotofácil",
+      "country": "Brazil",
+      "format": "15/25",
+      "odds": 3268760,
+      "currency": "BRL",
+      "min_jackpot": 500000,
+      "buy_online": false,
+      "platforms": [
+        "Caixa (Brazil only)"
+      ],
+      "draws_per_week": 6,
+      "data_file": "ql_lotofacil.json",
+      "draws": 20
+    },
+    "quina": {
+      "name": "Quina",
+      "country": "Brazil",
+      "format": "5/80",
+      "odds": 24040016,
+      "currency": "BRL",
+      "min_jackpot": 500000,
+      "buy_online": false,
+      "platforms": [
+        "Caixa (Brazil only)"
+      ],
+      "draws_per_week": 6,
+      "data_file": "ql_brazil-quina.json",
+      "draws": 20
+    },
+    "gosloto": {
+      "name": "Gosloto (Russia)",
+      "country": "Russia",
+      "format": "varies",
+      "odds": 0,
+      "currency": "RUB",
+      "min_jackpot": 10000000,
+      "buy_online": false,
+      "platforms": [
+        "Russia only"
+      ],
+      "draws_per_week": 7,
+      "data_file": "raw_sources/gosloto.csv",
+      "draws": 2041
+    },
+    "ql_mais_milionaria": {
+      "name": "+Milionária",
+      "country": "Brazil",
+      "format": "6/50+2/6",
+      "odds": 0,
+      "currency": "BRL",
+      "min_jackpot": 0,
+      "buy_online": false,
+      "platforms": [
+        "quicklotto.io (data only)"
+      ],
+      "draws_per_week": 2,
+      "data_file": "quicklotto/mais-milionaria.json",
+      "draws": 20
+    },
+    "ql_dia_de_sorte": {
+      "name": "Dia de Sorte",
+      "country": "Brazil",
+      "format": "7/31+1/12",
+      "odds": 0,
+      "currency": "BRL",
+      "min_jackpot": 0,
+      "buy_online": false,
+      "platforms": [
+        "quicklotto.io (data only)"
+      ],
+      "draws_per_week": 2,
+      "data_file": "quicklotto/dia-de-sorte.json",
+      "draws": 20
+    },
+    "ql_dupla_sena": {
+      "name": "Dupla Sena",
+      "country": "Brazil",
+      "format": "6/50",
+      "odds": 0,
+      "currency": "BRL",
+      "min_jackpot": 0,
+      "buy_online": false,
+      "platforms": [
+        "quicklotto.io (data only)"
+      ],
+      "draws_per_week": 2,
+      "data_file": "quicklotto/dupla-sena.json",
+      "draws": 20
+    },
+    "ql_shubh_lotto": {
+      "name": "Shubh Lotto (India)",
+      "country": "India",
+      "format": "5/10",
+      "odds": 0,
+      "currency": "INR",
+      "min_jackpot": 0,
+      "buy_online": false,
+      "platforms": [
+        "quicklotto.io (data only)"
+      ],
+      "draws_per_week": 7,
+      "data_file": "quicklotto/shubh-lotto.json",
+      "draws": 20
+    },
+    "ql_gullak_gold": {
+      "name": "Gullak Gold (India)",
+      "country": "India",
+      "format": "15/25",
+      "odds": 0,
+      "currency": "INR",
+      "min_jackpot": 0,
+      "buy_online": false,
+      "platforms": [
+        "quicklotto.io (data only)"
+      ],
+      "draws_per_week": 7,
+      "data_file": "quicklotto/gullak-gold.json",
+      "draws": 20
+    },
+    "ql_kaskada": {
+      "name": "Kaskada (Poland)",
+      "country": "Poland",
+      "format": "6/24",
+      "odds": 0,
+      "currency": "PLN",
+      "min_jackpot": 0,
+      "buy_online": false,
+      "platforms": [
+        "quicklotto.io (data only)"
+      ],
+      "draws_per_week": 7,
+      "data_file": "quicklotto/kaskada.json",
+      "draws": 20
+    },
+    "ql_mini_lotto": {
+      "name": "Mini Lotto (Poland)",
+      "country": "Poland",
+      "format": "5/42",
+      "odds": 0,
+      "currency": "PLN",
+      "min_jackpot": 0,
+      "buy_online": false,
+      "platforms": [
+        "quicklotto.io (data only)"
+      ],
+      "draws_per_week": 4,
+      "data_file": "quicklotto/mini-lotto.json",
+      "draws": 20
+    },
+    "ql_polish_lotto_ql": {
+      "name": "Polish Lotto (Poland)",
+      "country": "Poland",
+      "format": "6/49",
+      "odds": 0,
+      "currency": "PLN",
+      "min_jackpot": 0,
+      "buy_online": false,
+      "platforms": [
+        "quicklotto.io (data only)"
+      ],
+      "draws_per_week": 2,
+      "data_file": "quicklotto/polish-lotto-ql.json",
+      "draws": 20
+    },
+    "ql_rapid_riches": {
+      "name": "Rapid Riches",
+      "country": "Various",
+      "format": "5/36",
+      "odds": 0,
+      "currency": "USD",
+      "min_jackpot": 0,
+      "buy_online": false,
+      "platforms": [
+        "quicklotto.io (data only)"
+      ],
+      "draws_per_week": 7,
+      "data_file": "quicklotto/rapid-riches.json",
+      "draws": 20
+    },
+    "ql_ekstra_pensja": {
+      "name": "Ekstra Pensja (Poland)",
+      "country": "Poland",
+      "format": "5/35+1/5",
+      "odds": 0,
+      "currency": "PLN",
+      "min_jackpot": 0,
+      "buy_online": false,
+      "platforms": [
+        "quicklotto.io (data only)"
+      ],
+      "draws_per_week": 2,
+      "data_file": "quicklotto/ekstra-pensja.json",
+      "draws": 20
+    },
+    "ql_ekstra_premia": {
+      "name": "Ekstra Premia (Poland)",
+      "country": "Poland",
+      "format": "5/35+1/5",
+      "odds": 0,
+      "currency": "PLN",
+      "min_jackpot": 0,
+      "buy_online": false,
+      "platforms": [
+        "quicklotto.io (data only)"
+      ],
+      "draws_per_week": 2,
+      "data_file": "quicklotto/ekstra-premia.json",
+      "draws": 20
+    },
+    "ql_lotto_plus": {
+      "name": "Lotto Plus (Poland)",
+      "country": "Poland",
+      "format": "6/49",
+      "odds": 0,
+      "currency": "PLN",
+      "min_jackpot": 0,
+      "buy_online": false,
+      "platforms": [
+        "quicklotto.io (data only)"
+      ],
+      "draws_per_week": 2,
+      "data_file": "quicklotto/lotto-plus.json",
+      "draws": 20
+    },
+    "ql_szybkie_600": {
+      "name": "Szybkie 600 (Poland)",
+      "country": "Poland",
+      "format": "6/32",
+      "odds": 0,
+      "currency": "PLN",
+      "min_jackpot": 0,
+      "buy_online": false,
+      "platforms": [
+        "quicklotto.io (data only)"
+      ],
+      "draws_per_week": 7,
+      "data_file": "quicklotto/szybkie-600.json",
+      "draws": 20
+    }
+  },
+  "tier_3_case_study": {
+    "thai_lottery": {
+      "name": "Thai Government Lottery",
+      "country": "Thailand",
+      "format": "6-digit",
+      "odds": 1000000,
+      "currency": "THB",
+      "min_jackpot": 6000000,
+      "buy_online": false,
+      "platforms": [
+        "Thailand only (government)"
+      ],
+      "draws_per_week": 0.5,
+      "data_file": null,
+      "draws": 0
+    },
+    "kerala_lottery": {
+      "name": "Kerala State Lottery",
+      "country": "India",
+      "format": "6-digit+series",
+      "odds": 1000000,
+      "currency": "INR",
+      "min_jackpot": 5000000,
+      "buy_online": false,
+      "platforms": [
+        "Kerala only (government)"
+      ],
+      "draws_per_week": 7,
+      "data_file": null,
+      "draws": 0
+    },
+    "la_millonaria": {
+      "name": "La Millonaria (discontinued)",
+      "country": "Ecuador",
+      "format": "entero+serie",
+      "odds": 0,
+      "currency": "USD",
+      "min_jackpot": 0,
+      "buy_online": false,
+      "platforms": [
+        "Discontinued"
+      ],
+      "draws_per_week": 0,
+      "data_file": null,
+      "draws": 0
+    },
+    "singapore_toto": {
+      "name": "Singapore TOTO",
+      "country": "Singapore",
+      "format": "6/49",
+      "odds": 13983816,
+      "currency": "SGD",
+      "min_jackpot": 1000000,
+      "buy_online": false,
+      "platforms": [
+        "Singapore only"
+      ],
+      "draws_per_week": 2,
+      "data_file": null,
+      "draws": 0
+    },
+    "taiwan_power": {
+      "name": "Taiwan Power Lottery (威力彩)",
+      "country": "Taiwan",
+      "format": "6/38+1/8",
+      "odds": 38140680,
+      "currency": "TWD",
+      "min_jackpot": 30000000,
+      "buy_online": false,
+      "platforms": [
+        "Taiwan only"
+      ],
+      "draws_per_week": 1,
+      "data_file": null,
+      "draws": 0
+    },
+    "taiwan_lotto649": {
+      "name": "Taiwan Lotto 6/49 (大樂透)",
+      "country": "Taiwan",
+      "format": "6/49",
+      "odds": 13983816,
+      "currency": "TWD",
+      "min_jackpot": 50000000,
+      "buy_online": false,
+      "platforms": [
+        "Taiwan only"
+      ],
+      "draws_per_week": 2,
+      "data_file": null,
+      "draws": 0
+    },
+    "polish_lotto": {
+      "name": "Polish Lotto",
+      "country": "Poland",
+      "format": "6/49",
+      "odds": 13983816,
+      "currency": "PLN",
+      "min_jackpot": 2000000,
+      "buy_online": false,
+      "platforms": [
+        "Poland only"
+      ],
+      "draws_per_week": 4,
+      "data_file": null,
+      "draws": 0
+    },
+    "argentina_quiniela": {
+      "name": "Quiniela (Argentina)",
+      "country": "Argentina",
+      "format": "4-digit",
+      "odds": 10000,
+      "currency": "ARS",
+      "min_jackpot": 0,
+      "buy_online": false,
+      "platforms": [
+        "Argentina only"
+      ],
+      "draws_per_week": 14,
+      "data_file": null,
+      "draws": 0
+    }
+  }
+}
