@@ -21,10 +21,10 @@ data/*.json
 data/*.csv
 !data/.gitkeep
 
-# Environment
+# Environment — NEVER commit secrets
 .env
-.env.local
-.env.*.local
+.env.*
+!.env.example
 
 # IDE
 .vscode/

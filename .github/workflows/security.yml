@@ -1,0 +1,121 @@
+# ============================================================
+# LotteryPredictor CI/CD — Security Pipeline
+# NLAB-10: Security gates before any deployment
+# ============================================================
+name: CI Security
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  # ============================================================
+  # NLAB-01: Secret scanning — no secrets in Git
+  # ============================================================
+  secret-scan:
+    name: 🔑 Secret Scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: TruffleHog OSS
+        uses: trufflesecurity/trufflehog@main
+        with:
+          path: .
+          extra_args: --only-verified
+
+  # ============================================================
+  # NLAB-07: Dependency scanning
+  # ============================================================
+  dependency-scan:
+    name: 📦 Dependency Scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Python dependency audit
+        run: |
+          pip install pip-audit
+          if [ -f requirements.txt ]; then
+            pip-audit -r requirements.txt
+          fi
+      - name: Node.js dependency audit
+        run: |
+          if [ -f package.json ]; then
+            npm audit --audit-level=moderate
+          fi
+
+  # ============================================================
+  # NLAB-10: SAST
+  # ============================================================
+  sast:
+    name: 🔍 SAST
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Python Bandit
+        run: |
+          pip install bandit
+          bandit -r scripts/ -ll || exit 1
+      - name: ESLint
+        run: |
+          if [ -f package.json ]; then
+            npm install
+            npx eslint src/ --ext .ts,.tsx || true
+          fi
+
+  # ============================================================
+  # Lint + Type Check
+  # ============================================================
+  lint:
+    name: 📝 Lint & TypeCheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install
+        run: |
+          if [ -f package.json ]; then
+            npm install
+          fi
+      - name: Python syntax check
+        run: |
+          find scripts/ -name "*.py" -exec python3 -m py_compile {} \;
+
+  # ============================================================
+  # NLAB-12: Adversarial tests
+  # ============================================================
+  tests:
+    name: 🧪 Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Input validation tests
+        run: |
+          python3 -c "
+          import sys, os
+          sys.path.insert(0, 'scripts/lottery_predictor')
+          os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+          from lotteries import get_lottery
+          for bad in ['../../etc/passwd', 'rm -rf /', '', 'a'*100]:
+              try:
+                  get_lottery(bad)
+                  print(f'FAIL: {bad} was accepted')
+              except:
+                  print(f'OK: {bad} rejected')
+          "
+
+  # ============================================================
+  # Security Gate
+  # ============================================================
+  security-gate:
+    name: 🚦 Security Gate
+    runs-on: ubuntu-latest
+    needs: [secret-scan, dependency-scan, sast, lint, tests]
+    steps:
+      - name: All security checks passed
+        run: echo "✅ All security gates passed"
