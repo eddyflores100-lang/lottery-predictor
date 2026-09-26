@@ -8,7 +8,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7309-del-miercoles-12-de-noviembre-del-2025/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7309-del-miercoles-12-de-noviembre-del-2025/",
+      "img_description": "The image is of a lottery ticket for the Spanish lottery Loter\u00eda Nacional Mi\u00e9rcoles"
     }
   },
   {
@@ -20,13 +21,20 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7344-del-miercoles-04-de-febrero-del-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7344-del-miercoles-04-de-febrero-del-2026/",
+      "img_description": "A close of the Mega Millions Lottery ticket in a\u7da2\u8272 background resting on a black rectangle with white print on the lottery ticket"
     }
   },
   {
     "draw_number": 7345,
     "date": "2026-02-06",
-    "main_numbers": [],
+    "main_numbers": [
+      7,
+      2,
+      2,
+      0,
+      0
+    ],
     "bonus_numbers": [],
     "jackpot_won": false,
     "jackpot_amount": null,
@@ -44,7 +52,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7346-del-lunes-09-de-febrero-del-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7346-del-lunes-09-de-febrero-del-2026/",
+      "img_description": "The image appears to show a lottery ticket or a notice about a lottery event in Spanish"
     }
   },
   {
@@ -56,7 +65,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7347-del-miercoles-11-de-febrero-del-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7347-del-miercoles-11-de-febrero-del-2026/",
+      "img_description": "A lottery ticket outdoor display"
     }
   },
   {
@@ -68,7 +78,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7348-del-viernes-13-de-febrero-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7348-del-viernes-13-de-febrero-de-2026/",
+      "img_description": "Lottery ticket in spanish from prieten Inferias"
     }
   },
   {
@@ -80,7 +91,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7349-del-lunes-16-de-febrero-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7349-del-lunes-16-de-febrero-de-2026/",
+      "img_description": "Loteria National Prize Ad Yellow Poster with Luegos National on the Poster"
     }
   },
   {
@@ -92,7 +104,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7350-del-miercoles-18-de-febrero-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7350-del-miercoles-18-de-febrero-de-2026/",
+      "img_description": "Page for ordering a $500 ticket for the MIERCOLES lottery"
     }
   },
   {
@@ -104,7 +117,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7351-del-viernes-20-de-febrero-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7351-del-viernes-20-de-febrero-de-2026/",
+      "img_description": "PCP jos PC'"
     }
   },
   {
@@ -116,7 +130,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7352-del-lunes-23-de-febrero-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7352-del-lunes-23-de-febrero-de-2026/",
+      "img_description": "An orange and green advertisement of lotteries with several columns numbered with numbers"
     }
   },
   {
@@ -128,7 +143,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7353-del-miercoles-25-de-febrero-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7353-del-miercoles-25-de-febrero-de-2026/",
+      "img_description": "A colorful page contains detailed information about a lottery ticket from  loteria nacional 500"
     }
   },
   {
@@ -140,7 +156,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7354-del-viernes-27-de-febrero-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7354-del-viernes-27-de-febrero-de-2026/",
+      "img_description": "A promotional lottery poster for a scalaurodalaka contest, available until February 18, with a prize of $200,000"
     }
   },
   {
@@ -152,7 +169,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7355-del-lunes-2-de-marzo-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7355-del-lunes-2-de-marzo-de-2026/",
+      "img_description": "Loteria National lunes 26 marzo 2018: resultados_fecha_lotnippil"
     }
   },
   {
@@ -164,7 +182,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7356-del-miercoles-4-de-marzo-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7356-del-miercoles-4-de-marzo-de-2026/",
+      "img_description": "yellow poster titled loteria nacional"
     }
   },
   {
@@ -176,7 +195,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7357-del-viernes-6-de-marzo-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7357-del-viernes-6-de-marzo-de-2026/",
+      "img_description": "a poster of lottery tickets in the form of the game with number and price"
     }
   },
   {
@@ -188,7 +208,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7358-del-lunes-9-de-marzo-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7358-del-lunes-9-de-marzo-de-2026/",
+      "img_description": "the image looks like a lottery ticket here"
     }
   },
   {
@@ -200,7 +221,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7359-del-miercoles-11-de-marzo-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7359-del-miercoles-11-de-marzo-de-2026/",
+      "img_description": "Spanish number boards for a lottery with the number 7359"
     }
   },
   {
@@ -212,7 +234,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7360-del-viernes-13-de-marzo-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7360-del-viernes-13-de-marzo-de-2026/",
+      "img_description": "an advertisement paper"
     }
   },
   {
@@ -224,7 +247,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7361-del-lunes-16-de-marzo-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7361-del-lunes-16-de-marzo-de-2026/",
+      "img_description": "Loter\u00eda Nacional is the name of this promotional advertisement"
     }
   },
   {
@@ -236,7 +260,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7362-del-miercoles-18-de-marzo-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7362-del-miercoles-18-de-marzo-de-2026/",
+      "img_description": "The image is of a Luckydraw poster, which seems to be designed to have a winning number extracted from a printed slip filled out by the recipient"
     }
   },
   {
@@ -248,7 +273,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7363-del-viernes-20-de-marzo-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7363-del-viernes-20-de-marzo-de-2026/",
+      "img_description": "A red colored poster featuring one prize of $200,000 for three winners based on a lottery game"
     }
   },
   {
@@ -260,7 +286,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7364-del-lunes-23-de-marzo-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7364-del-lunes-23-de-marzo-de-2026/",
+      "img_description": "Lottery Ticket having a list of numbers and features like jackpot"
     }
   },
   {
@@ -272,7 +299,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7365-del-miercoles-25-de-marzo-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7365-del-miercoles-25-de-marzo-de-2026/",
+      "img_description": "this is a lottery poster with many sweepstakes on economy form being promadied by the lotteria nacional legends"
     }
   },
   {
@@ -284,7 +312,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7366-del-viernes-27-de-marzo-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7366-del-viernes-27-de-marzo-de-2026/",
+      "img_description": "Search results page for image containing numbers, widgets, graphs, charts, logos, and brands"
     }
   },
   {
@@ -296,7 +325,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7367-del-lunes-30-de-marzo-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7367-del-lunes-30-de-marzo-de-2026/",
+      "img_description": "a poster with prices of $1, $5, $10, $50, and $100"
     }
   },
   {
@@ -308,7 +338,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7368-del-miercoles-1-de-abril-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7368-del-miercoles-1-de-abril-de-2026/",
+      "img_description": "A ticket for the Los Angeles Grand lottery"
     }
   },
   {
@@ -320,7 +351,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7369-del-viernes-3-de-abril-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7369-del-viernes-3-de-abril-de-2026/",
+      "img_description": "Here is a description of a lottery ticket:"
     }
   },
   {
@@ -332,7 +364,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7370-del-lunes-6-de-abril-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7370-del-lunes-6-de-abril-de-2026/",
+      "img_description": "A page of sudoku game near the top center of it"
     }
   },
   {
@@ -344,7 +377,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7371-del-miercoles-8-de-abril-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7371-del-miercoles-8-de-abril-de-2026/",
+      "img_description": "A Lotto game sheet with a green background and box of numbers Juni on it"
     }
   },
   {
@@ -356,7 +390,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7372-del-viernes-10-de-abril-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7372-del-viernes-10-de-abril-de-2026/",
+      "img_description": "A lottery ticket from Chile has various winning numbers on it"
     }
   },
   {
@@ -368,7 +403,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7373-del-lunes-13-de-abril-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7373-del-lunes-13-de-abril-de-2026/",
+      "img_description": "A green printed page that has different numbers on it"
     }
   },
   {
@@ -380,7 +416,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7374-del-miercoles-15-de-abril-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7374-del-miercoles-15-de-abril-de-2026/",
+      "img_description": "Page showing lottery tickets squares on it"
     }
   },
   {
@@ -392,7 +429,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7375-del-viernes-17-de-abril-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7375-del-viernes-17-de-abril-de-2026/",
+      "img_description": "A poster for the National Lottery of Spain Thursday shows the middle number is on the right side as the dates"
     }
   },
   {
@@ -404,7 +442,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7376-del-lunes-20-de-abril-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7376-del-lunes-20-de-abril-de-2026/",
+      "img_description": "A blue and purple lottery ticket for Loteria Nacional and Lunes with the drawing number 7376 and prize of 2 million dollars"
     }
   },
   {
@@ -416,7 +455,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7377-del-miercoles-22-de-abril-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7377-del-miercoles-22-de-abril-de-2026/",
+      "img_description": "A\u5f69\u7968containing numbers 7377, 22, are visible in this image"
     }
   },
   {
@@ -428,7 +468,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7378-del-viernes-24-de-abril-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7378-del-viernes-24-de-abril-de-2026/",
+      "img_description": "Ticket of Latino Nacional Primo, which won $200,000"
     }
   },
   {
@@ -440,7 +481,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7379-del-lunes-27-de-abril-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7379-del-lunes-27-de-abril-de-2026/",
+      "img_description": "An advertisement for the national lottery game with a football team logo, priced at $1, and includes pricing information like $10 for six numbers or $5 for four"
     }
   },
   {
@@ -452,7 +494,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7380-del-miercoles-29-de-abril-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7380-del-miercoles-29-de-abril-de-2026/",
+      "img_description": "A lottery ticket promotes a jackpot of $50,000 with the option to buy in increments of 29"
     }
   },
   {
@@ -464,7 +507,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7381-del-viernes-1-de-abril-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7381-del-viernes-1-de-abril-de-2026/",
+      "img_description": "An advertisement including lottery numbers for L ticket"
     }
   },
   {
@@ -476,7 +520,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7381-del-viernes-1-de-mayo-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7381-del-viernes-1-de-mayo-de-2026/",
+      "img_description": "An advertisement including lottery numbers for L ticket"
     }
   },
   {
@@ -488,7 +533,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7382-del-lunes-4-de-mayo-de-2026-2/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7382-del-lunes-4-de-mayo-de-2026-2/",
+      "img_description": "A picture of a Lotto winning certificate with some numbers on it for years 2015 and 2016"
     }
   },
   {
@@ -500,7 +546,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7382-del-lunes-4-de-mayo-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7382-del-lunes-4-de-mayo-de-2026/",
+      "img_description": "A picture of a Lotto winning certificate with some numbers on it for years 2015 and 2016"
     }
   },
   {
@@ -512,7 +559,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7383-del-miercoles-6-de-mayo-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7383-del-miercoles-6-de-mayo-de-2026/",
+      "img_description": "A sticker for the Mexican lottery is shown"
     }
   },
   {
@@ -524,7 +572,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7383-del-miercoles-6-de-mayo-de-2026-2/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7383-del-miercoles-6-de-mayo-de-2026-2/",
+      "img_description": "A sticker for the Mexican lottery is shown"
     }
   },
   {
@@ -536,7 +585,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7384-del-domingo-10-de-mayo-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7384-del-domingo-10-de-mayo-de-2026/",
+      "img_description": "A lottery ticket showing a winning prize of $1,000,000 is displayed"
     }
   },
   {
@@ -548,7 +598,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7384-del-viernes-8-de-mayo-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7384-del-viernes-8-de-mayo-de-2026/",
+      "img_description": "A lottery ticket showing a winning prize of $1,000,000 is displayed"
     }
   },
   {
@@ -560,7 +611,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7385-del-lunes-11-de-mayo-de-2026-2/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7385-del-lunes-11-de-mayo-de-2026-2/",
+      "img_description": "Monthly lottery poster with $200000 bonus draw"
     }
   },
   {
@@ -572,7 +624,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7385-del-lunes-11-de-mayo-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7385-del-lunes-11-de-mayo-de-2026/",
+      "img_description": "Monthly lottery poster with $200000 bonus draw"
     }
   },
   {
@@ -584,7 +637,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7386-del-miercoles-13-de-mayo-de-2026-2/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7386-del-miercoles-13-de-mayo-de-2026-2/",
+      "img_description": "Lottery ticket in Poland with a pink and red color scheme"
     }
   },
   {
@@ -596,7 +650,8 @@
     "jackpot_amount": null,
     "raw_data": {
       "source": "contenidos.loteria.com.ec",
-      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7386-del-miercoles-13-de-mayo-de-2026/"
+      "url": "https://contenidos.loteria.com.ec/resultados-de-la-loteria-sorteo-7386-del-miercoles-13-de-mayo-de-2026/",
+      "img_description": "Lottery ticket in Poland with a pink and red color scheme"
     }
   },
   {
