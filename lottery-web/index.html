@@ -4,1536 +4,944 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LotteryPredictor v4.0 — Análisis & Predicción de Lotería</title>
-<meta name="description" content="49 loterías · 10 motores de IA · 22,000+ sorteos analizados. Sistema educativo de análisis estadístico.">
+<meta name="description" content="49 loterías · 10 motores · 22,000+ sorteos analizados. Sistema educativo de análisis estadístico.">
 <style>
 /* ============================================================
-   LOTTERYPREDICTOR v4.0  —  SINGLE-FILE LANDING
-   Palette: deep charcoal · warm black · brass/gold · bone · muted red · deep green
+   LOTTERYPREDICTOR v4.0 — REDESIGN
+   Palette: charcoal · warm-black · brass · bone · muted-red · deep-green
+   No AI colors. Luxury casino meets data terminal.
    ============================================================ */
 
 :root{
-  --charcoal:#0a0a0a;
-  --warm-black:#141210;
-  --warm-black-2:#1c1916;
+  --c0:#070706;
+  --c1:#0e0c0a;
+  --c2:#16130f;
+  --c3:#1e1a15;
+  --c4:#2a241d;
   --brass:#c9a84c;
-  --brass-bright:#e6c878;
-  --brass-dim:#8a7430;
+  --brass-lt:#e6c878;
+  --brass-dk:#8a7430;
+  --brass-glow:rgba(201,168,76,0.15);
   --bone:#e8e2d8;
-  --bone-dim:#a8a294;
-  --bone-faint:#6b675e;
-  --muted-red:#a04040;
-  --muted-red-bright:#c95050;
-  --deep-green:#3a5a40;
-  --deep-green-bright:#5a8060;
-  --glass:rgba(28,25,22,0.55);
-  --glass-border:rgba(201,168,76,0.18);
-  --shadow-deep:0 30px 80px -20px rgba(0,0,0,0.9), 0 10px 30px -10px rgba(0,0,0,0.7);
-  --serif:Georgia,'Times New Roman',Times,serif;
+  --bone-dm:#a8a294;
+  --bone-ft:#6b675e;
+  --red:#a04040;
+  --red-lt:#c95050;
+  --green:#3a5a40;
+  --green-lt:#5a8060;
+  --glass:rgba(22,19,15,0.6);
+  --glass-bd:rgba(201,168,76,0.15);
+  --sh:0 20px 60px -15px rgba(0,0,0,0.85),0 6px 20px -8px rgba(0,0,0,0.6);
+  --sh-lift:0 40px 80px -20px rgba(0,0,0,0.9),0 15px 40px -10px rgba(0,0,0,0.7);
+  --serif:Georgia,'Times New Roman',serif;
   --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
-  --mono:'Courier New',Courier,monospace;
+  --mono:'SF Mono','Courier New',monospace;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --ease-bounce:cubic-bezier(.34,1.56,.64,1);
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth}
 body{
   font-family:var(--sans);
-  background:var(--charcoal);
+  background:var(--c0);
   color:var(--bone);
   line-height:1.6;
   overflow-x:hidden;
   -webkit-font-smoothing:antialiased;
-  position:relative;
-  min-height:100vh;
 }
 
-/* Layered atmospheric background */
+/* Atmospheric layers */
 body::before{
-  content:"";
-  position:fixed;inset:0;
+  content:"";position:fixed;inset:0;z-index:-3;
   background:
-    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(201,168,76,0.06), transparent 60%),
-    radial-gradient(ellipse 60% 40% at 20% 80%, rgba(160,64,64,0.05), transparent 60%),
-    radial-gradient(ellipse 60% 40% at 80% 90%, rgba(58,90,64,0.05), transparent 60%),
-    linear-gradient(180deg, var(--charcoal) 0%, var(--warm-black) 50%, var(--charcoal) 100%);
-  z-index:-2;
-  pointer-events:none;
+    radial-gradient(ellipse 90% 60% at 50% -10%,rgba(201,168,76,0.07),transparent 55%),
+    radial-gradient(ellipse 50% 40% at 15% 85%,rgba(160,64,64,0.04),transparent 55%),
+    radial-gradient(ellipse 50% 40% at 85% 80%,rgba(58,90,64,0.04),transparent 55%),
+    linear-gradient(180deg,var(--c0) 0%,var(--c1) 40%,var(--c0) 100%);
 }
 body::after{
-  content:"";
-  position:fixed;inset:0;
-  background-image:
-    repeating-linear-gradient(0deg, transparent 0, transparent 2px, rgba(201,168,76,0.012) 2px, rgba(201,168,76,0.012) 3px);
-  z-index:-1;
-  pointer-events:none;
-  opacity:0.6;
+  content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
+  background-image:repeating-linear-gradient(0deg,transparent 0,transparent 2px,rgba(201,168,76,0.008) 2px,rgba(201,168,76,0.008) 3px);
+  opacity:0.5;
 }
 
-#particles{
-  position:fixed;inset:0;
-  z-index:-1;
-  pointer-events:none;
-}
+#particles{position:fixed;inset:0;z-index:-1;pointer-events:none}
 
-/* ============== SCROLL PROGRESS ============== */
+/* Scroll progress — dual bar */
 .scroll-progress{
-  position:fixed;top:0;left:0;height:2px;width:0%;
-  background:linear-gradient(90deg, var(--brass-dim), var(--brass), var(--brass-bright));
-  z-index:1000;
-  box-shadow:0 0 12px rgba(201,168,76,0.6);
-  transition:width 0.05s linear;
+  position:fixed;top:0;left:0;right:0;height:3px;z-index:1000;
+  background:rgba(201,168,76,0.08);
+}
+.scroll-progress .bar{
+  height:100%;width:0%;
+  background:linear-gradient(90deg,var(--brass-dk),var(--brass),var(--brass-lt));
+  box-shadow:0 0 16px rgba(201,168,76,0.6);
+  transition:width 0.08s linear;
 }
 
 /* ============== NAV ============== */
 .nav{
-  position:fixed;top:0;left:0;right:0;
-  z-index:900;
-  padding:18px 5vw;
-  display:flex;justify-content:space-between;align-items:center;
-  background:linear-gradient(180deg, rgba(10,10,10,0.85), rgba(10,10,10,0));
-  backdrop-filter:blur(8px);
-  -webkit-backdrop-filter:blur(8px);
-  transition:padding 0.3s ease, background 0.3s ease;
+  position:fixed;top:0;left:0;right:0;z-index:900;
+  padding:20px 6vw;display:flex;justify-content:space-between;align-items:center;
+  background:linear-gradient(180deg,rgba(7,7,6,0.9),transparent);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  transition:all 0.4s var(--ease);
 }
-.nav.scrolled{padding:12px 5vw;background:rgba(10,10,10,0.92)}
-.nav-logo{
-  font-family:var(--serif);
-  font-size:1.15rem;font-weight:700;
-  color:var(--bone);
-  letter-spacing:0.5px;
-  display:flex;align-items:center;gap:10px;
+.nav.scrolled{padding:12px 6vw;background:rgba(7,7,6,0.92);border-bottom:1px solid var(--glass-bd)}
+.nav-logo{font-family:var(--serif);font-size:1.1rem;font-weight:700;color:var(--bone);display:flex;align-items:center;gap:12px;letter-spacing:0.3px}
+.nav-logo .orb{
+  width:12px;height:12px;border-radius:50%;
+  background:radial-gradient(circle at 30% 30%,var(--brass-lt),var(--brass) 50%,var(--brass-dk));
+  box-shadow:0 0 14px rgba(201,168,76,0.6);
+  animation:orbPulse 3s ease-in-out infinite;
 }
-.nav-logo .dot{
-  width:10px;height:10px;border-radius:50%;
-  background:radial-gradient(circle at 30% 30%, var(--brass-bright), var(--brass) 50%, var(--brass-dim));
-  box-shadow:0 0 12px rgba(201,168,76,0.7);
-  animation:pulse 2.4s ease-in-out infinite;
-}
-@keyframes pulse{0%,100%{box-shadow:0 0 12px rgba(201,168,76,0.7)}50%{box-shadow:0 0 22px rgba(201,168,76,0.95)}}
-.nav-logo .v{color:var(--brass);font-size:0.8em}
-.nav-links{display:flex;gap:28px;align-items:center}
-.nav-links a{
-  color:var(--bone-dim);text-decoration:none;font-size:0.88rem;
-  letter-spacing:0.4px;transition:color 0.25s;
-  position:relative;
-}
-.nav-links a::after{
-  content:"";position:absolute;left:0;bottom:-4px;height:1px;width:0;
-  background:var(--brass);transition:width 0.3s ease;
-}
+@keyframes orbPulse{0%,100%{box-shadow:0 0 14px rgba(201,168,76,0.5);transform:scale(1)}50%{box-shadow:0 0 24px rgba(201,168,76,0.9);transform:scale(1.1)}}
+.nav-logo .v{color:var(--brass);font-size:0.75em;font-family:var(--mono);margin-left:2px}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{color:var(--bone-dm);text-decoration:none;font-size:0.85rem;letter-spacing:0.5px;transition:color 0.3s;position:relative}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;height:1px;width:0;background:var(--brass);transition:width 0.35s var(--ease)}
 .nav-links a:hover{color:var(--bone)}
 .nav-links a:hover::after{width:100%}
+.nav-cta{font-family:var(--mono);font-size:0.78rem;padding:8px 18px;border:1px solid var(--glass-bd);border-radius:6px;color:var(--brass);text-decoration:none;transition:all 0.3s;background:rgba(201,168,76,0.04)}
+.nav-cta:hover{background:rgba(201,168,76,0.12);border-color:var(--brass);transform:translateY(-1px)}
 @media(max-width:768px){.nav-links{display:none}}
 
 /* ============== HERO ============== */
 .hero{
-  min-height:100vh;
-  display:flex;flex-direction:column;justify-content:center;align-items:center;
-  padding:120px 5vw 80px;
-  position:relative;
-  perspective:1400px;
-  transform-style:preserve-3d;
+  min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+  padding:120px 6vw 80px;position:relative;perspective:1600px;transform-style:preserve-3d;
 }
-.hero-scene{
-  position:absolute;inset:0;
-  perspective:1200px;
-  transform-style:preserve-3d;
-  pointer-events:none;
-  z-index:0;
-}
-.ball-field{
-  position:absolute;inset:0;
-  transform-style:preserve-3d;
-}
+.hero-scene{position:absolute;inset:0;perspective:1400px;transform-style:preserve-3d;pointer-events:none;z-index:0}
+.ball-field{position:absolute;inset:0;transform-style:preserve-3d}
+
 .lottery-ball{
-  position:absolute;
-  width:74px;height:74px;border-radius:50%;
-  transform-style:preserve-3d;
-  will-change:transform;
+  position:absolute;width:64px;height:64px;border-radius:50%;
+  transform-style:preserve-3d;will-change:transform;
   display:flex;align-items:center;justify-content:center;
-  font-family:var(--serif);
-  font-weight:700;
-  font-size:1.6rem;
-  color:var(--warm-black);
-  background:
-    radial-gradient(circle at 32% 28%, #fff8e6 0%, var(--brass-bright) 18%, var(--brass) 45%, var(--brass-dim) 85%);
+  font-family:var(--serif);font-weight:700;font-size:1.3rem;color:var(--c1);
+  background:radial-gradient(circle at 30% 25%,#fff5d8 0%,var(--brass-lt) 20%,var(--brass) 50%,var(--brass-dk) 90%);
   box-shadow:
-    inset -8px -10px 18px rgba(120,80,20,0.6),
-    inset 6px 6px 14px rgba(255,240,200,0.5),
-    0 18px 40px -8px rgba(0,0,0,0.8),
-    0 0 30px rgba(201,168,76,0.25);
-  text-shadow:0 1px 2px rgba(0,0,0,0.3);
+    inset -7px -9px 16px rgba(100,70,15,0.5),
+    inset 5px 5px 12px rgba(255,240,200,0.4),
+    0 15px 35px -6px rgba(0,0,0,0.75),
+    0 0 25px rgba(201,168,76,0.2);
+  text-shadow:0 1px 2px rgba(0,0,0,0.2);
 }
 .lottery-ball::before{
-  content:"";position:absolute;
-  top:14%;left:20%;width:30%;height:22%;
-  border-radius:50%;
-  background:radial-gradient(ellipse, rgba(255,255,255,0.85), transparent 70%);
-  filter:blur(2px);
+  content:"";position:absolute;top:12%;left:18%;width:32%;height:24%;
+  border-radius:50%;background:radial-gradient(ellipse,rgba(255,255,255,0.8),transparent 70%);filter:blur(2px);
 }
-.lottery-ball.red{
-  background:
-    radial-gradient(circle at 32% 28%, #ffd0d0 0%, #d86060 18%, var(--muted-red) 45%, #5a2020 85%);
-  color:var(--bone);
-}
-.lottery-ball.green{
-  background:
-    radial-gradient(circle at 32% 28%, #c0e0c0 0%, #608068 18%, var(--deep-green) 45%, #1a3020 85%);
-  color:var(--bone);
-}
+.lottery-ball.red{background:radial-gradient(circle at 30% 25%,#ffd0d0 0%,#d86060 20%,var(--red) 50%,#5a2020 90%);color:var(--bone)}
+.lottery-ball.green{background:radial-gradient(circle at 30% 25%,#c0e0c0 0%,#608068 20%,var(--green) 50%,#1a3020 90%);color:var(--bone)}
+.lottery-ball.sm{width:44px;height:44px;font-size:0.95rem}
 
-.hero-content{
-  position:relative;z-index:2;
-  text-align:center;
-  transform-style:preserve-3d;
-  max-width:900px;
-}
+.hero-content{position:relative;z-index:2;text-align:center;transform-style:preserve-3d;max-width:860px}
 .hero-eyebrow{
-  font-family:var(--mono);
-  font-size:0.78rem;
-  letter-spacing:5px;
-  color:var(--brass);
-  text-transform:uppercase;
-  margin-bottom:28px;
-  opacity:0;
-  animation:fadeUp 1s ease 0.2s forwards;
+  font-family:var(--mono);font-size:0.72rem;letter-spacing:6px;color:var(--brass);
+  text-transform:uppercase;margin-bottom:32px;
+  opacity:0;animation:revealUp 1s var(--ease) 0.3s forwards;
+  display:flex;align-items:center;justify-content:center;gap:16px;
 }
-.hero-eyebrow::before,.hero-eyebrow::after{
-  content:"";display:inline-block;width:32px;height:1px;
-  background:var(--brass);vertical-align:middle;margin:0 14px;
-}
+.hero-eyebrow .line{display:inline-block;width:40px;height:1px;background:linear-gradient(90deg,transparent,var(--brass),transparent)}
 .hero h1{
-  font-family:var(--serif);
-  font-size:clamp(3rem, 9vw, 7rem);
-  font-weight:700;
-  line-height:0.95;
-  letter-spacing:-2px;
-  color:var(--bone);
-  margin-bottom:24px;
-  text-shadow:0 4px 40px rgba(0,0,0,0.6);
-  opacity:0;
-  animation:fadeUp 1.2s ease 0.4s forwards;
+  font-family:var(--serif);font-size:clamp(3.5rem,10vw,8rem);font-weight:700;
+  line-height:0.92;letter-spacing:-3px;color:var(--bone);margin-bottom:28px;
+  text-shadow:0 6px 50px rgba(0,0,0,0.5);
+  opacity:0;animation:revealUp 1.2s var(--ease) 0.5s forwards;
 }
 .hero h1 .gold{
-  background:linear-gradient(180deg, var(--brass-bright) 0%, var(--brass) 60%, var(--brass-dim) 100%);
-  -webkit-background-clip:text;background-clip:text;
-  -webkit-text-fill-color:transparent;
+  background:linear-gradient(180deg,var(--brass-lt) 0%,var(--brass) 55%,var(--brass-dk) 100%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
   font-style:italic;
 }
 .hero h1 .vtag{
-  font-family:var(--mono);
-  font-size:0.28em;
-  vertical-align:super;
-  color:var(--brass);
-  letter-spacing:2px;
-  font-weight:400;
-  margin-left:8px;
-  -webkit-text-fill-color:var(--brass);
+  font-family:var(--mono);font-size:0.22em;vertical-align:super;color:var(--brass);
+  letter-spacing:3px;font-weight:400;margin-left:10px;-webkit-text-fill-color:var(--brass);
 }
 .hero-sub{
-  font-size:clamp(1rem,2vw,1.25rem);
-  color:var(--bone-dim);
-  margin-bottom:44px;
-  letter-spacing:0.5px;
-  opacity:0;
-  animation:fadeUp 1.2s ease 0.6s forwards;
+  font-size:clamp(1rem,2.2vw,1.3rem);color:var(--bone-dm);margin-bottom:48px;
+  letter-spacing:0.3px;opacity:0;animation:revealUp 1.2s var(--ease) 0.7s forwards;
 }
-.hero-sub .sep{color:var(--brass);margin:0 10px;opacity:0.7}
-.hero-cta{
-  display:flex;gap:18px;justify-content:center;flex-wrap:wrap;
-  opacity:0;
-  animation:fadeUp 1.2s ease 0.8s forwards;
-}
+.hero-sub .sep{color:var(--brass);margin:0 12px;opacity:0.6}
+.hero-sub .num{color:var(--bone);font-weight:600}
+.hero-cta{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;opacity:0;animation:revealUp 1.2s var(--ease) 0.9s forwards}
+
 .btn{
-  font-family:var(--sans);
-  font-size:0.95rem;font-weight:600;
-  padding:16px 36px;
-  border:none;cursor:pointer;
-  letter-spacing:0.8px;
-  text-decoration:none;
-  display:inline-flex;align-items:center;gap:10px;
-  transition:transform 0.3s cubic-bezier(.2,.8,.2,1), box-shadow 0.3s, background 0.3s;
-  position:relative;
-  will-change:transform;
+  font-family:var(--sans);font-size:0.92rem;font-weight:600;
+  padding:16px 38px;border:none;cursor:pointer;letter-spacing:0.8px;
+  text-decoration:none;display:inline-flex;align-items:center;gap:10px;
+  transition:transform 0.35s var(--ease),box-shadow 0.35s var(--ease),background 0.3s;
+  position:relative;will-change:transform;border-radius:0;
 }
 .btn-primary{
-  background:linear-gradient(180deg, var(--brass-bright), var(--brass) 60%, var(--brass-dim));
-  color:var(--warm-black);
-  box-shadow:0 12px 30px -8px rgba(201,168,76,0.5), inset 0 1px 0 rgba(255,240,200,0.5);
+  background:linear-gradient(180deg,var(--brass-lt),var(--brass) 55%,var(--brass-dk));
+  color:var(--c1);
+  box-shadow:0 12px 35px -8px rgba(201,168,76,0.45),inset 0 1px 0 rgba(255,240,200,0.4);
+  clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%);
 }
-.btn-primary:hover{
-  transform:translateY(-3px);
-  box-shadow:0 18px 40px -8px rgba(201,168,76,0.7), inset 0 1px 0 rgba(255,240,200,0.6);
-}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 20px 50px -8px rgba(201,168,76,0.6),inset 0 1px 0 rgba(255,240,200,0.5)}
 .btn-ghost{
-  background:rgba(232,226,216,0.04);
-  color:var(--bone);
-  border:1px solid var(--glass-border);
-  backdrop-filter:blur(10px);
-  -webkit-backdrop-filter:blur(10px);
+  background:rgba(232,226,216,0.03);color:var(--bone);
+  border:1px solid var(--glass-bd);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%);
 }
-.btn-ghost:hover{
-  transform:translateY(-3px);
-  background:rgba(201,168,76,0.08);
-  border-color:var(--brass);
-  color:var(--brass-bright);
-}
+.btn-ghost:hover{transform:translateY(-3px);background:rgba(201,168,76,0.08);border-color:var(--brass);color:var(--brass-lt)}
 .btn .arrow{transition:transform 0.3s}
-.btn:hover .arrow{transform:translateX(4px)}
+.btn:hover .arrow{transform:translateX(5px)}
 
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(30px)}
-  to{opacity:1;transform:translateY(0)}
-}
+@keyframes revealUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
 
 .hero-scroll-hint{
-  position:absolute;bottom:30px;left:50%;
-  transform:translateX(-50%);
-  font-family:var(--mono);font-size:0.7rem;
-  letter-spacing:3px;color:var(--bone-faint);
-  text-transform:uppercase;
-  display:flex;flex-direction:column;align-items:center;gap:10px;
-  opacity:0;
-  animation:fadeUp 1s ease 1.2s forwards;
+  position:absolute;bottom:32px;left:50%;transform:translateX(-50%);
+  font-family:var(--mono);font-size:0.65rem;letter-spacing:4px;color:var(--bone-ft);
+  text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:12px;
+  opacity:0;animation:revealUp 1s var(--ease) 1.3s forwards;
 }
 .hero-scroll-hint .line{
-  width:1px;height:36px;
-  background:linear-gradient(180deg, var(--brass), transparent);
+  width:1px;height:40px;
+  background:linear-gradient(180deg,var(--brass),transparent);
   animation:scrollLine 2s ease-in-out infinite;
 }
-@keyframes scrollLine{
-  0%{transform:scaleY(0);transform-origin:top}
-  50%{transform:scaleY(1);transform-origin:top}
-  51%{transform-origin:bottom}
-  100%{transform:scaleY(0);transform-origin:bottom}
-}
+@keyframes scrollLine{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 
-/* ============== SECTION GENERIC ============== */
-section{
-  padding:100px 5vw;
-  position:relative;
-  transform-style:preserve-3d;
-}
-.section-head{
-  max-width:1200px;margin:0 auto 64px;
-  text-align:center;
-  transform-style:preserve-3d;
-}
+/* ============== SECTION COMMONS ============== */
+.section{padding:120px 6vw;position:relative}
+.section-header{text-align:center;margin-bottom:72px;max-width:680px;margin-left:auto;margin-right:auto}
 .section-tag{
-  font-family:var(--mono);
-  font-size:0.72rem;letter-spacing:4px;
-  color:var(--brass);text-transform:uppercase;
-  margin-bottom:16px;
-  display:inline-block;
-  padding:6px 16px;
-  border:1px solid var(--glass-border);
-  border-radius:2px;
+  font-family:var(--mono);font-size:0.72rem;letter-spacing:5px;color:var(--brass);
+  text-transform:uppercase;margin-bottom:18px;display:inline-block;
+  padding:6px 20px;border:1px solid var(--glass-bd);border-radius:100px;
   background:rgba(201,168,76,0.04);
 }
-.section-head h2{
-  font-family:var(--serif);
-  font-size:clamp(2.2rem,5vw,3.6rem);
-  font-weight:700;
-  line-height:1.05;
-  letter-spacing:-1px;
-  color:var(--bone);
-  margin-bottom:18px;
-}
-.section-head h2 em{font-style:italic;color:var(--brass)}
-.section-head p{
-  color:var(--bone-dim);
-  max-width:680px;margin:0 auto;
-  font-size:1.05rem;
-}
+.section-title{font-family:var(--serif);font-size:clamp(2rem,4.5vw,3.5rem);font-weight:700;line-height:1.1;letter-spacing:-1px;margin-bottom:18px;color:var(--bone)}
+.section-desc{color:var(--bone-dm);font-size:1.05rem;letter-spacing:0.2px}
 
 /* ============== STATS BAR ============== */
 .stats-bar{
-  max-width:1200px;margin:-40px auto 0;
-  position:relative;z-index:5;
-  display:grid;grid-template-columns:repeat(4,1fr);
-  background:var(--glass);
-  backdrop-filter:blur(20px);
-  -webkit-backdrop-filter:blur(20px);
-  border:1px solid var(--glass-border);
-  border-radius:4px;
-  box-shadow:var(--shadow-deep);
-  overflow:hidden;
-  transform-style:preserve-3d;
+  display:grid;grid-template-columns:repeat(5,1fr);gap:1px;
+  background:var(--glass-bd);border-top:1px solid var(--glass-bd);border-bottom:1px solid var(--glass-bd);
 }
-.stat-item{
-  padding:32px 24px;
-  text-align:center;
-  border-right:1px solid rgba(201,168,76,0.1);
-  position:relative;
-  transition:background 0.3s;
-}
-.stat-item:last-child{border-right:none}
-.stat-item:hover{background:rgba(201,168,76,0.04)}
-.stat-num{
-  font-family:var(--serif);
-  font-size:clamp(1.8rem,3.5vw,2.8rem);
-  font-weight:700;
-  color:var(--brass);
-  line-height:1;
-  margin-bottom:8px;
-  letter-spacing:-1px;
-}
-.stat-label{
-  font-family:var(--mono);
-  font-size:0.72rem;
-  letter-spacing:2px;
-  color:var(--bone-dim);
-  text-transform:uppercase;
-}
-@media(max-width:768px){
-  .stats-bar{grid-template-columns:repeat(2,1fr)}
-  .stat-item:nth-child(2){border-right:none}
-  .stat-item:nth-child(1),.stat-item:nth-child(2){border-bottom:1px solid rgba(201,168,76,0.1)}
-}
+.stat{background:var(--c1);padding:44px 24px;text-align:center;position:relative;overflow:hidden;transition:background 0.3s}
+.stat::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--brass),transparent);opacity:0;transition:opacity 0.3s}
+.stat:hover{background:var(--c2)}
+.stat:hover::before{opacity:1}
+.stat .num{font-family:var(--serif);font-size:2.6rem;font-weight:700;color:var(--brass);line-height:1;letter-spacing:-1px}
+.stat .label{font-family:var(--mono);font-size:0.72rem;color:var(--bone-ft);text-transform:uppercase;letter-spacing:2px;margin-top:10px}
+@media(max-width:768px){.stats-bar{grid-template-columns:repeat(2,1fr)}}
 
-/* ============== ENGINES ============== */
-.engines-grid{
-  max-width:1300px;margin:0 auto;
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
-  gap:28px;
-  perspective:1600px;
-  transform-style:preserve-3d;
-}
+/* ============== ENGINES GRID ============== */
+.engines-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;max-width:1200px;margin:0 auto}
 .engine-card{
-  background:var(--glass);
-  backdrop-filter:blur(16px);
-  -webkit-backdrop-filter:blur(16px);
-  border:1px solid var(--glass-border);
-  border-radius:6px;
-  padding:30px 26px;
-  position:relative;
-  transform-style:preserve-3d;
-  transition:transform 0.15s ease-out, box-shadow 0.4s, border-color 0.4s;
-  will-change:transform;
-  cursor:default;
-  min-height:230px;
-  display:flex;flex-direction:column;
-  box-shadow:0 12px 30px -10px rgba(0,0,0,0.6);
+  background:var(--glass);border:1px solid var(--glass-bd);
+  padding:30px 26px;position:relative;overflow:hidden;
+  transition:transform 0.4s var(--ease),box-shadow 0.4s var(--ease),border-color 0.3s;
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  transform-style:preserve-3d;will-change:transform;
+  clip-path:polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,14px 100%,0 calc(100% - 14px));
 }
 .engine-card::before{
-  content:"";
-  position:absolute;inset:0;
-  border-radius:6px;
-  background:linear-gradient(135deg, rgba(201,168,76,0.08), transparent 40%);
-  pointer-events:none;
+  content:"";position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,transparent,var(--brass),transparent);
   opacity:0;transition:opacity 0.4s;
 }
-.engine-card:hover{
-  border-color:rgba(201,168,76,0.45);
-  box-shadow:0 30px 60px -15px rgba(0,0,0,0.8), 0 0 30px rgba(201,168,76,0.1);
-}
+.engine-card:hover{border-color:rgba(201,168,76,0.4);box-shadow:var(--sh-lift)}
 .engine-card:hover::before{opacity:1}
-.engine-card.featured{
-  border-color:rgba(201,168,76,0.5);
-  background:linear-gradient(160deg, rgba(201,168,76,0.08), var(--glass) 60%);
-  box-shadow:0 20px 50px -12px rgba(201,168,76,0.2), 0 0 40px rgba(201,168,76,0.08);
-}
-.engine-num{
-  position:absolute;top:18px;right:22px;
-  font-family:var(--mono);
-  font-size:0.72rem;color:var(--brass);
-  opacity:0.5;letter-spacing:1px;
-}
-.engine-icon{
-  width:48px;height:48px;
-  border-radius:50%;
-  background:radial-gradient(circle at 35% 30%, rgba(201,168,76,0.25), rgba(201,168,76,0.05));
-  border:1px solid var(--glass-border);
-  display:flex;align-items:center;justify-content:center;
-  margin-bottom:20px;
-  font-family:var(--serif);font-size:1.2rem;
-  color:var(--brass);
-  transform:translateZ(30px);
-}
-.engine-card.featured .engine-icon{
-  background:radial-gradient(circle at 35% 30%, var(--brass-bright), var(--brass-dim));
-  color:var(--warm-black);
-  box-shadow:0 0 24px rgba(201,168,76,0.5);
-}
-.engine-title{
-  font-family:var(--serif);
-  font-size:1.35rem;font-weight:700;
-  color:var(--bone);
-  margin-bottom:8px;
-  transform:translateZ(20px);
-  line-height:1.2;
-}
-.engine-title .star{color:var(--brass);margin-left:6px}
-.engine-desc{
-  font-size:0.86rem;
-  color:var(--bone-dim);
-  font-family:var(--mono);
-  letter-spacing:0.2px;
-  transform:translateZ(12px);
-  margin-top:auto;
-}
-.engine-badge{
-  position:absolute;top:18px;left:22px;
-  font-family:var(--mono);font-size:0.62rem;
-  letter-spacing:1.5px;
-  color:var(--deep-green-bright);
-  background:rgba(58,90,64,0.15);
-  border:1px solid rgba(90,128,96,0.3);
-  padding:3px 8px;border-radius:2px;
-  text-transform:uppercase;
-}
-
-/* ============== KEY RESULTS ============== */
-.results-grid{
-  max-width:1300px;margin:0 auto;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:24px;
-  perspective:1600px;
-}
-.result-panel{
-  background:var(--glass);
-  backdrop-filter:blur(16px);
-  -webkit-backdrop-filter:blur(16px);
-  border:1px solid var(--glass-border);
-  border-radius:6px;
-  padding:34px 30px;
-  position:relative;
-  transform-style:preserve-3d;
-  transition:transform 0.4s ease, box-shadow 0.4s;
-  will-change:transform;
-  overflow:hidden;
-}
-.result-panel::before{
-  content:"";position:absolute;top:0;left:0;width:4px;height:100%;
-  background:linear-gradient(180deg, var(--brass), var(--brass-dim));
-  opacity:0.7;
-}
-.result-panel.positive::before{background:linear-gradient(180deg, var(--deep-green-bright), var(--deep-green))}
-.result-panel.negative::before{background:linear-gradient(180deg, var(--muted-red-bright), var(--muted-red))}
-.result-panel:hover{
-  transform:translateY(-6px);
-  box-shadow:0 30px 60px -15px rgba(0,0,0,0.8);
-}
-.result-label{
-  font-family:var(--mono);
-  font-size:0.7rem;letter-spacing:2px;
-  color:var(--bone-faint);
-  text-transform:uppercase;
-  margin-bottom:14px;
-}
-.result-value{
-  font-family:var(--serif);
-  font-size:clamp(2rem,4vw,2.8rem);
-  font-weight:700;
-  color:var(--brass);
-  line-height:1;
-  margin-bottom:12px;
-  letter-spacing:-1px;
-}
-.result-panel.positive .result-value{color:var(--deep-green-bright)}
-.result-panel.negative .result-value{color:var(--muted-red-bright)}
-.result-detail{
-  font-size:0.92rem;
-  color:var(--bone-dim);
-  line-height:1.5;
-}
-.result-detail code{
-  font-family:var(--mono);
-  color:var(--brass);
-  background:rgba(201,168,76,0.08);
-  padding:1px 6px;border-radius:2px;
-  font-size:0.86em;
-}
-
-/* ============== ARCHITECTURE TERMINAL ============== */
-.terminal{
-  max-width:1100px;margin:0 auto;
-  background:linear-gradient(160deg, rgba(20,18,16,0.85), rgba(10,10,10,0.9));
-  backdrop-filter:blur(20px);
-  -webkit-backdrop-filter:blur(20px);
-  border:1px solid var(--glass-border);
-  border-radius:8px;
-  overflow:hidden;
-  box-shadow:var(--shadow-deep);
-  transform-style:preserve-3d;
-  transition:transform 0.15s ease-out;
-  will-change:transform;
-}
-.terminal-bar{
-  background:rgba(28,25,22,0.9);
-  padding:12px 18px;
-  display:flex;align-items:center;gap:10px;
-  border-bottom:1px solid var(--glass-border);
-}
-.terminal-dot{
-  width:11px;height:11px;border-radius:50%;
-  background:#3a3228;
-}
-.terminal-dot.r{background:radial-gradient(circle at 35% 30%, #d86060, var(--muted-red))}
-.terminal-dot.y{background:radial-gradient(circle at 35% 30%, var(--brass-bright), var(--brass-dim))}
-.terminal-dot.g{background:radial-gradient(circle at 35% 30%, var(--deep-green-bright), var(--deep-green))}
-.terminal-title{
-  margin-left:14px;
-  font-family:var(--mono);font-size:0.78rem;
-  color:var(--bone-faint);letter-spacing:1px;
-}
-.terminal-body{
-  padding:28px 24px;
-  font-family:var(--mono);
-  font-size:0.78rem;
-  line-height:1.55;
-  color:var(--bone-dim);
-  overflow-x:auto;
-  white-space:pre;
-}
-.terminal-body .ascii-art{
-  color:var(--brass);
-  display:block;
-}
-.terminal-body .c-green{color:var(--deep-green-bright)}
-.terminal-body .c-red{color:var(--muted-red-bright)}
-.terminal-body .c-bone{color:var(--bone)}
-.terminal-body .c-dim{color:var(--bone-faint)}
-.terminal-body .c-gold{color:var(--brass-bright)}
-@media(max-width:768px){
-  .terminal-body{font-size:0.62rem;padding:18px 12px}
-}
-
-/* ============== LOTTERY TABLE ============== */
-.table-wrap{
-  max-width:1100px;margin:0 auto;
-  background:var(--glass);
-  backdrop-filter:blur(16px);
-  -webkit-backdrop-filter:blur(16px);
-  border:1px solid var(--glass-border);
-  border-radius:6px;
-  overflow:hidden;
-  box-shadow:var(--shadow-deep);
-  transform-style:preserve-3d;
-}
-.lottery-table{
-  width:100%;
-  border-collapse:collapse;
-  font-size:0.92rem;
-}
-.lottery-table th{
-  background:rgba(201,168,76,0.06);
-  font-family:var(--mono);
-  font-size:0.72rem;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  color:var(--brass);
-  padding:18px 20px;
-  text-align:left;
-  border-bottom:1px solid var(--glass-border);
-}
-.lottery-table td{
-  padding:18px 20px;
-  border-bottom:1px solid rgba(201,168,76,0.06);
-  color:var(--bone-dim);
-  transition:background 0.25s, color 0.25s;
-}
-.lottery-table tr:last-child td{border-bottom:none}
-.lottery-table tr{transition:transform 0.25s ease}
-.lottery-table tbody tr:hover td{
-  background:rgba(201,168,76,0.05);
-  color:var(--bone);
-}
-.lottery-table .name{color:var(--bone);font-weight:600;font-family:var(--serif)}
-.lottery-table .perf.pos{color:var(--deep-green-bright);font-family:var(--mono);font-weight:700}
-.lottery-table .perf.neg{color:var(--muted-red-bright);font-family:var(--mono);font-weight:700}
-.lottery-table .perf{font-family:var(--mono)}
-.lottery-table .sig{font-family:var(--mono);font-size:0.82rem}
-.lottery-table .sig.yes{color:var(--brass)}
-.lottery-table .sig.no{color:var(--bone-faint)}
-@media(max-width:768px){
-  .lottery-table{font-size:0.8rem}
-  .lottery-table th,.lottery-table td{padding:12px 10px}
-  .lottery-table th:nth-child(3),.lottery-table td:nth-child(3){display:none}
-}
-
-/* ============== QUICK START ============== */
-.code-terminal{
-  max-width:900px;margin:0 auto;
-  background:linear-gradient(160deg, rgba(20,18,16,0.92), rgba(10,10,10,0.95));
-  border:1px solid var(--glass-border);
-  border-radius:8px;
-  overflow:hidden;
-  box-shadow:var(--shadow-deep);
-}
-.code-terminal .terminal-bar{background:rgba(10,10,10,0.7)}
-.code-body{
-  padding:28px 28px;
-  font-family:var(--mono);
-  font-size:0.86rem;
-  line-height:1.85;
-  color:var(--bone-dim);
-}
-.code-body .prompt{color:var(--brass);user-select:none}
-.code-body .cmd{color:var(--bone)}
-.code-body .out{color:var(--bone-dim)}
-.code-body .ok{color:var(--deep-green-bright)}
-.code-body .warn{color:var(--muted-red-bright)}
-.code-body .cmt{color:var(--bone-faint);font-style:italic}
-.code-body .num{color:var(--brass-bright)}
-
-/* ============== PRICING ============== */
-.pricing-grid{
-  max-width:1200px;margin:0 auto;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:28px;
-  align-items:stretch;
-  perspective:1600px;
-  transform-style:preserve-3d;
-}
-.price-card{
-  background:var(--glass);
-  backdrop-filter:blur(16px);
-  -webkit-backdrop-filter:blur(16px);
-  border:1px solid var(--glass-border);
-  border-radius:8px;
-  padding:42px 32px;
-  position:relative;
-  transform-style:preserve-3d;
-  transition:transform 0.4s ease, box-shadow 0.4s, border-color 0.4s;
-  will-change:transform;
-  display:flex;flex-direction:column;
-  box-shadow:0 18px 40px -12px rgba(0,0,0,0.7);
-}
-.price-card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 36px 70px -15px rgba(0,0,0,0.85);
-}
-.price-card.featured{
-  border-color:var(--brass);
-  background:linear-gradient(170deg, rgba(201,168,76,0.1), var(--glass) 50%);
-  box-shadow:0 24px 60px -12px rgba(201,168,76,0.25), 0 0 50px rgba(201,168,76,0.06);
-}
-.price-card.featured::after{
-  content:"MÁS POPULAR";
-  position:absolute;top:-12px;left:50%;
-  transform:translateX(-50%);
-  font-family:var(--mono);font-size:0.66rem;
-  letter-spacing:2px;
-  background:linear-gradient(180deg, var(--brass-bright), var(--brass-dim));
-  color:var(--warm-black);
-  padding:5px 16px;border-radius:2px;
-  font-weight:700;
-  box-shadow:0 6px 16px rgba(201,168,76,0.4);
-}
-.price-tier{
-  font-family:var(--mono);
-  font-size:0.74rem;letter-spacing:3px;
-  color:var(--brass);text-transform:uppercase;
-  margin-bottom:14px;
-}
-.price-amount{
-  font-family:var(--serif);
-  font-size:3.4rem;font-weight:700;
-  color:var(--bone);
-  line-height:1;letter-spacing:-2px;
-  margin-bottom:6px;
-}
-.price-amount .cur{font-size:1.6rem;vertical-align:top;color:var(--brass);margin-right:4px}
-.price-amount .per{font-size:0.95rem;color:var(--bone-dim);font-family:var(--sans);font-weight:400;letter-spacing:0}
-.price-tag{
-  font-size:0.82rem;color:var(--bone-faint);
-  margin-bottom:28px;
-  font-family:var(--mono);
-}
-.price-features{
-  list-style:none;
-  margin-bottom:32px;
-  flex-grow:1;
-}
-.price-features li{
-  padding:10px 0;
-  font-size:0.92rem;
-  color:var(--bone-dim);
-  border-bottom:1px solid rgba(201,168,76,0.06);
-  display:flex;align-items:flex-start;gap:10px;
-}
-.price-features li:last-child{border-bottom:none}
-.price-features li::before{
-  content:"◆";
-  color:var(--brass);
-  font-size:0.7rem;
-  margin-top:4px;
-  flex-shrink:0;
-}
-.price-cta{
-  display:block;text-align:center;
-  padding:14px;
-  border-radius:3px;
-  text-decoration:none;
-  font-weight:600;font-size:0.92rem;
-  letter-spacing:0.8px;
-  transition:all 0.3s;
-}
-.price-card .price-cta.primary{
-  background:linear-gradient(180deg, var(--brass-bright), var(--brass) 60%, var(--brass-dim));
-  color:var(--warm-black);
-  box-shadow:0 10px 24px -6px rgba(201,168,76,0.5);
-}
-.price-card .price-cta.primary:hover{transform:translateY(-2px);box-shadow:0 14px 30px -6px rgba(201,168,76,0.65)}
-.price-card .price-cta.secondary{
-  background:rgba(232,226,216,0.04);
-  color:var(--bone);
-  border:1px solid var(--glass-border);
-}
-.price-card .price-cta.secondary:hover{background:rgba(201,168,76,0.08);border-color:var(--brass);color:var(--brass-bright)}
-
-/* ============== FOOTER ============== */
-.footer{
-  padding:80px 5vw 40px;
-  border-top:1px solid var(--glass-border);
-  background:linear-gradient(180deg, transparent, rgba(10,10,10,0.6));
-  position:relative;
-}
-.footer-inner{
-  max-width:1200px;margin:0 auto;
-  display:grid;
-  grid-template-columns:1.5fr 1fr 1fr 1fr;
-  gap:48px;
-  margin-bottom:48px;
-}
-@media(max-width:768px){.footer-inner{grid-template-columns:1fr 1fr;gap:32px}}
-.footer-brand h3{
-  font-family:var(--serif);
-  font-size:1.6rem;color:var(--bone);
-  margin-bottom:14px;
-}
-.footer-brand h3 .gold{color:var(--brass);font-style:italic}
-.footer-brand p{
-  color:var(--bone-dim);font-size:0.9rem;
-  max-width:340px;
-}
-.footer-col h4{
-  font-family:var(--mono);
-  font-size:0.74rem;letter-spacing:2px;
-  color:var(--brass);text-transform:uppercase;
-  margin-bottom:18px;
-}
-.footer-col a{
-  display:block;
-  color:var(--bone-dim);text-decoration:none;
-  font-size:0.9rem;padding:5px 0;
-  transition:color 0.25s;
-}
-.footer-col a:hover{color:var(--brass)}
-.disclaimer{
-  max-width:1200px;margin:0 auto;
-  padding:24px;
-  border:1px solid rgba(160,64,64,0.3);
-  background:rgba(160,64,64,0.06);
-  border-radius:4px;
-  font-size:0.86rem;
-  color:var(--bone-dim);
-  text-align:center;
-  margin-bottom:32px;
-  font-family:var(--mono);
-  line-height:1.6;
-}
-.disclaimer strong{color:var(--muted-red-bright)}
-.footer-bottom{
-  max-width:1200px;margin:0 auto;
-  text-align:center;
-  font-family:var(--mono);font-size:0.78rem;
-  color:var(--bone-faint);
-  padding-top:24px;
-  border-top:1px solid rgba(201,168,76,0.08);
+.engine-card.featured{border-color:var(--brass);border-width:1px}
+.engine-card.featured::before{opacity:1;background:linear-gradient(90deg,transparent,var(--brass-lt),var(--brass),var(--brass-lt),transparent)}
+.engine-card .num-badge{
+  position:absolute;top:16px;right:16px;
+  font-family:var(--mono);font-size:0.7rem;color:var(--bone-ft);
   letter-spacing:1px;
 }
-
-/* ============== SCROLL REVEAL ============== */
-.reveal{
-  opacity:0;
-  transform:translateY(50px) rotateX(-12deg) translateZ(-60px);
-  transform-style:preserve-3d;
-  transition:opacity 0.9s cubic-bezier(.2,.8,.2,1), transform 0.9s cubic-bezier(.2,.8,.2,1);
-  will-change:opacity,transform;
+.engine-card .icon{
+  width:48px;height:48px;display:flex;align-items:center;justify-content:center;
+  font-size:1.6rem;margin-bottom:18px;
+  background:rgba(201,168,76,0.06);border:1px solid var(--glass-bd);
+  border-radius:10px;
 }
-.reveal.visible{
-  opacity:1;
-  transform:translateY(0) rotateX(0) translateZ(0);
+.engine-card.featured .icon{background:rgba(201,168,76,0.12);border-color:var(--brass)}
+.engine-card h3{font-size:1.05rem;font-weight:700;margin-bottom:8px;color:var(--bone);letter-spacing:0.2px}
+.engine-card p{color:var(--bone-dm);font-size:0.85rem;line-height:1.55}
+.engine-card .meta{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
+.engine-card .meta span{
+  font-family:var(--mono);font-size:0.68rem;
+  padding:4px 10px;border-radius:4px;
+  background:var(--c3);color:var(--bone-dm);letter-spacing:0.5px;
 }
-.reveal.delay-1{transition-delay:0.1s}
-.reveal.delay-2{transition-delay:0.2s}
-.reveal.delay-3{transition-delay:0.3s}
-.reveal.delay-4{transition-delay:0.4s}
-
-/* ============== FLOAT ANIMATIONS ============== */
-@keyframes floatBall{
-  0%,100%{transform:translateY(0) translateX(0)}
-  25%{transform:translateY(-18px) translateX(8px)}
-  50%{transform:translateY(-32px) translateX(-4px)}
-  75%{transform:translateY(-14px) translateX(-10px)}
-}
-@keyframes spinBall{
-  0%{transform:rotateY(0deg) rotateX(8deg)}
-  100%{transform:rotateY(360deg) rotateX(8deg)}
-}
-.ball-inner{
-  width:100%;height:100%;
-  display:flex;align-items:center;justify-content:center;
-  animation:spinBall 14s linear infinite;
-  transform-style:preserve-3d;
+.engine-card .meta span.hl{background:rgba(201,168,76,0.12);color:var(--brass-lt)}
+.engine-card .star-badge{
+  position:absolute;top:14px;left:14px;
+  font-family:var(--mono);font-size:0.6rem;letter-spacing:1px;
+  color:var(--brass);background:rgba(201,168,76,0.1);
+  padding:3px 10px;border-radius:3px;border:1px solid var(--brass-dk);
 }
 
-/* reduced motion */
+/* ============== RESULTS ============== */
+.results-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:20px;max-width:1200px;margin:0 auto}
+.result-card{
+  background:var(--glass);border:1px solid var(--glass-bd);padding:32px;
+  position:relative;overflow:hidden;
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  transition:transform 0.4s var(--ease),box-shadow 0.4s var(--ease);
+  transform-style:preserve-3d;will-change:transform;
+}
+.result-card::before{content:"";position:absolute;top:0;left:0;bottom:0;width:3px;background:var(--brass);opacity:0.6}
+.result-card.neg::before{background:var(--red)}
+.result-card.pos::before{background:var(--green)}
+.result-card.warn::before{background:var(--brass)}
+.result-card:hover{box-shadow:var(--sh-lift)}
+.result-card h3{font-size:1rem;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:10px;color:var(--bone)}
+.result-card .big{
+  font-family:var(--serif);font-size:2.8rem;font-weight:700;line-height:1;letter-spacing:-1px;
+  margin:14px 0;color:var(--brass);
+}
+.result-card.neg .big{color:var(--red-lt)}
+.result-card.pos .big{color:var(--green-lt)}
+.result-card .desc{color:var(--bone-dm);font-size:0.85rem;line-height:1.6}
+.result-card .verdict{
+  margin-top:18px;padding:10px 14px;border-radius:6px;
+  font-family:var(--mono);font-size:0.72rem;letter-spacing:0.5px;font-weight:600;
+}
+.verdict.pos{background:rgba(58,90,64,0.15);color:var(--green-lt);border:1px solid rgba(58,90,64,0.3)}
+.verdict.neg{background:rgba(160,64,64,0.15);color:var(--red-lt);border:1px solid rgba(160,64,64,0.3)}
+.verdict.warn{background:rgba(201,168,76,0.12);color:var(--brass-lt);border:1px solid rgba(201,168,76,0.25)}
+
+/* ============== ARCHITECTURE SVG ============== */
+.arch-wrap{
+  max-width:1000px;margin:0 auto;
+  background:var(--glass);border:1px solid var(--glass-bd);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  padding:48px;position:relative;overflow:hidden;
+}
+.arch-wrap::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--brass),transparent);
+}
+.arch-svg{width:100%;height:auto;display:block}
+.arch-svg .node{fill:var(--c3);stroke:var(--glass-bd);stroke-width:1;transition:fill 0.3s,stroke 0.3s}
+.arch-svg .node:hover{fill:var(--c4);stroke:var(--brass)}
+.arch-svg .node-accent{fill:rgba(201,168,76,0.08);stroke:var(--brass-dk)}
+.arch-svg .node-result{fill:rgba(58,90,64,0.08);stroke:var(--green)}
+.arch-svg .node-bad{fill:rgba(160,64,64,0.08);stroke:var(--red)}
+.arch-svg text{fill:var(--bone-dm);font-family:var(--mono);font-size:10px;letter-spacing:0.5px}
+.arch-svg text.title{fill:var(--brass);font-weight:600;font-size:11px}
+.arch-svg text.label{fill:var(--bone)}
+.arch-svg .conn{stroke:var(--brass-dk);stroke-width:1;fill:none;opacity:0.4;stroke-dasharray:4 4}
+.arch-svg .conn-active{stroke:var(--brass);opacity:0.6;stroke-dasharray:none}
+
+/* ============== TABLE ============== */
+.table-wrap{max-width:1100px;margin:0 auto;overflow-x:auto;background:var(--glass);border:1px solid var(--glass-bd);backdrop-filter:blur(14px)}
+.lottery-table{width:100%;border-collapse:collapse}
+.lottery-table th{
+  background:var(--c3);padding:18px 20px;text-align:left;
+  font-family:var(--mono);font-size:0.7rem;text-transform:uppercase;letter-spacing:2px;
+  color:var(--bone-ft);border-bottom:1px solid var(--glass-bd);
+}
+.lottery-table td{padding:16px 20px;border-bottom:1px solid rgba(201,168,76,0.06);font-size:0.88rem;transition:background 0.2s}
+.lottery-table tr:hover td{background:rgba(201,168,76,0.03)}
+.lottery-table .num{font-family:var(--mono);color:var(--brass)}
+.lottery-table .ok{color:var(--green-lt)}
+.lottery-table .no{color:var(--red-lt)}
+
+/* ============== TERMINAL ============== */
+.terminal{
+  max-width:900px;margin:0 auto;
+  background:var(--c1);border:1px solid var(--glass-bd);
+  border-radius:8px;overflow:hidden;
+  box-shadow:var(--sh);
+}
+.terminal-bar{
+  display:flex;align-items:center;gap:8px;
+  padding:12px 18px;background:var(--c2);border-bottom:1px solid var(--glass-bd);
+}
+.terminal-bar .dot{width:11px;height:11px;border-radius:50%}
+.terminal-bar .dot.r{background:#c95050}
+.terminal-bar .dot.y{background:#c9a84c}
+.terminal-bar .dot.g{background:#5a8060}
+.terminal-bar .title{margin-left:12px;font-family:var(--mono);font-size:0.75rem;color:var(--bone-ft)}
+.terminal-body{padding:24px 28px;font-family:var(--mono);font-size:0.82rem;line-height:1.7;color:var(--bone-dm)}
+.terminal-body .cmd{color:var(--brass-lt)}
+.terminal-body .cmd::before{content:"$ ";color:var(--green-lt)}
+.terminal-body .out{color:var(--bone-dm)}
+.terminal-body .ok{color:var(--green-lt)}
+.terminal-body .warn{color:var(--brass)}
+.terminal-body .cmt{color:var(--bone-ft)}
+
+/* ============== PRICING ============== */
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;max-width:1000px;margin:0 auto}
+.price-card{
+  background:var(--glass);border:1px solid var(--glass-bd);padding:44px 36px;text-align:center;
+  position:relative;transition:transform 0.4s var(--ease),border-color 0.3s;
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  transform-style:preserve-3d;will-change:transform;
+  clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,16px 100%,0 calc(100% - 16px));
+}
+.price-card:hover{border-color:var(--brass)}
+.price-card.featured{border-color:var(--brass);border-width:1px}
+.price-card.featured::before{
+  content:"MÁS POPULAR";position:absolute;top:-1px;left:50%;transform:translateX(-50%);
+  background:linear-gradient(180deg,var(--brass-lt),var(--brass));color:var(--c1);
+  padding:5px 24px;font-family:var(--mono);font-size:0.65rem;font-weight:700;letter-spacing:2px;
+}
+.price-card h3{font-family:var(--serif);font-size:1.3rem;margin-bottom:8px;color:var(--bone)}
+.price-card .price{font-family:var(--serif);font-size:3rem;font-weight:700;margin:24px 0;color:var(--brass);line-height:1}
+.price-card .price span{font-size:1rem;color:var(--bone-ft);font-family:var(--sans)}
+.price-card ul{list-style:none;margin:28px 0;text-align:left}
+.price-card ul li{padding:8px 0;color:var(--bone-dm);font-size:0.87rem;display:flex;align-items:center;gap:10px}
+.price-card ul li::before{content:"✓";color:var(--brass);font-weight:700;font-size:0.8rem}
+
+/* ============== FOOTER ============== */
+footer{background:var(--c1);border-top:1px solid var(--glass-bd);padding:64px 6vw 40px}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:40px;margin-bottom:40px;max-width:1100px;margin-left:auto;margin-right:auto}
+.footer-col h4{font-family:var(--mono);font-size:0.75rem;letter-spacing:2px;text-transform:uppercase;color:var(--brass);margin-bottom:18px}
+.footer-col a{display:block;color:var(--bone-dm);text-decoration:none;padding:6px 0;font-size:0.85rem;transition:color 0.25s}
+.footer-col a:hover{color:var(--brass-lt)}
+.footer-bottom{border-top:1px solid var(--glass-bd);padding-top:28px;text-align:center;max-width:1100px;margin:0 auto}
+.footer-bottom p{color:var(--bone-ft);font-size:0.8rem;margin-bottom:6px}
+.footer-disclaimer{
+  margin-top:16px;padding:14px 24px;
+  border:1px solid rgba(160,64,64,0.25);background:rgba(160,64,64,0.06);
+  border-radius:6px;color:var(--red-lt);font-size:0.78rem;letter-spacing:0.3px;
+  max-width:700px;margin-left:auto;margin-right:auto;
+}
+
+/* ============== REVEAL ANIMATIONS ============== */
+.reveal{opacity:0;transform:translateY(50px);transition:opacity 0.8s var(--ease),transform 0.8s var(--ease)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-3d{opacity:0;transform:translateY(40px) rotateX(8deg) translateZ(-30px);transition:opacity 0.9s var(--ease),transform 0.9s var(--ease)}
+.reveal-3d.visible{opacity:1;transform:translateY(0) rotateX(0) translateZ(0)}
+.delay-1{transition-delay:0.1s}
+.delay-2{transition-delay:0.2s}
+.delay-3{transition-delay:0.3s}
+.delay-4{transition-delay:0.4s}
+.delay-5{transition-delay:0.5s}
+
+/* ============== FLOATING ANIMATION ============== */
+@keyframes float1{0%,100%{transform:translateY(0) translateX(0) rotateZ(0deg)}33%{transform:translateY(-18px) translateX(12px) rotateZ(5deg)}66%{transform:translateY(10px) translateX(-8px) rotateZ(-3deg)}}
+@keyframes float2{0%,100%{transform:translateY(0) translateX(0) rotateZ(0deg)}50%{transform:translateY(-22px) translateX(-14px) rotateZ(-7deg)}}
+@keyframes float3{0%,100%{transform:translateY(0) translateX(0) rotateZ(0deg)}25%{transform:translateY(14px) translateX(10px) rotateZ(4deg)}75%{transform:translateY(-16px) translateX(-12px) rotateZ(-5deg)}}
+@keyframes spin3d{from{transform:rotateY(0deg)}to{transform:rotateY(360deg)}}
+
+/* ============== RESPONSIVE ============== */
+@media(max-width:768px){
+  .section{padding:80px 5vw}
+  .stats-bar{grid-template-columns:repeat(2,1fr)}
+  .engines-grid{grid-template-columns:1fr}
+  .results-grid{grid-template-columns:1fr}
+  .pricing-grid{grid-template-columns:1fr}
+  .hero h1{font-size:3rem;letter-spacing:-1px}
+  .arch-wrap{padding:24px 16px}
+  .terminal-body{font-size:0.72rem;padding:18px}
+  .lottery-table th:nth-child(5),.lottery-table td:nth-child(5){display:none}
+}
 @media(prefers-reduced-motion:reduce){
-  *{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important}
-  .reveal{opacity:1;transform:none}
+  *{animation:none!important;transition:none!important}
+  .reveal,.reveal-3d{opacity:1;transform:none}
 }
 </style>
 </head>
 <body>
 
 <canvas id="particles"></canvas>
-<div class="scroll-progress" id="scrollProgress"></div>
+<div class="scroll-progress"><div class="bar" id="scrollBar"></div></div>
 
 <!-- NAV -->
 <nav class="nav" id="nav">
-  <div class="nav-logo"><span class="dot"></span>LotteryPredictor <span class="v">v4.0</span></div>
+  <div class="nav-logo"><span class="orb"></span>Lottery<span class="v">v4.0</span></div>
   <div class="nav-links">
     <a href="#engines">Motores</a>
     <a href="#results">Resultados</a>
-    <a href="#architecture">Arquitectura</a>
-    <a href="#pricing">Precios</a>
-    <a href="#start">Quick Start</a>
+    <a href="#arch">Arquitectura</a>
+    <a href="#start">Empezar</a>
+    <a href="#pricing">Planes</a>
   </div>
+  <a href="https://github.com/eddyflores100-lang/lottery-predictor" class="nav-cta">GitHub ↗</a>
 </nav>
 
 <!-- HERO -->
-<header class="hero">
-  <div class="hero-scene">
-    <div class="ball-field" id="ballField"></div>
-  </div>
+<div class="hero">
+  <div class="hero-scene"><div class="ball-field" id="ballField"></div></div>
   <div class="hero-content">
-    <div class="hero-eyebrow">Sistema de Análisis Predictivo</div>
+    <div class="hero-eyebrow"><span class="line"></span>Análisis Estadístico Avanzado<span class="line"></span></div>
     <h1>Lottery<span class="gold">Predictor</span><span class="vtag">v4.0</span></h1>
-    <p class="hero-sub">
-      49 loterías<span class="sep">·</span>10 motores de IA<span class="sep">·</span>22,000+ sorteos analizados
-    </p>
+    <p class="hero-sub"><span class="num">49</span> loterías<span class="sep">·</span><span class="num">10</span> motores<span class="sep">·</span><span class="num">22K+</span> sorteos<span class="sep">·</span>MCP Server</p>
     <div class="hero-cta">
-      <a href="#engines" class="btn btn-primary">Ver Features <span class="arrow">→</span></a>
-      <a href="#start" class="btn btn-ghost">Ver Código</a>
+      <a href="#engines" class="btn btn-primary">Explorar Motores <span class="arrow">→</span></a>
+      <a href="https://github.com/eddyflores100-lang/lottery-predictor" class="btn btn-ghost">Ver Código <span class="arrow">↗</span></a>
     </div>
   </div>
-  <div class="hero-scroll-hint">
-    SCROLL
-    <div class="line"></div>
-  </div>
-</header>
+  <div class="hero-scroll-hint">SCROLL<span class="line"></span></div>
+</div>
 
-<!-- STATS BAR -->
-<section style="padding-top:40px;padding-bottom:60px">
-  <div class="stats-bar reveal">
-    <div class="stat-item">
-      <div class="stat-num">49</div>
-      <div class="stat-label">Loterías Globales</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">10</div>
-      <div class="stat-label">Motores de IA</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">22K+</div>
-      <div class="stat-label">Sorteos Analizados</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">4</div>
-      <div class="stat-label">Fuentes de Datos</div>
-    </div>
-  </div>
-</section>
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat"><div class="num">49</div><div class="label">Loterías</div></div>
+  <div class="stat"><div class="num">10</div><div class="label">Motores IA</div></div>
+  <div class="stat"><div class="num">22K+</div><div class="label">Sorteos</div></div>
+  <div class="stat"><div class="num">4</div><div class="label">Fuentes</div></div>
+  <div class="stat"><div class="num">6</div><div class="label">MCP Tools</div></div>
+</div>
 
 <!-- ENGINES -->
-<section id="engines">
-  <div class="section-head reveal">
-    <span class="section-tag">10 Motores</span>
-    <h2>Diez motores. <em>Un solo veredicto.</em></h2>
-    <p>Cada motor ataca el problema desde una matemática distinta. Solo uno resultó estadísticamente significativo.</p>
+<section class="section" id="engines">
+  <div class="section-header reveal">
+    <div class="section-tag">Motores de Predicción</div>
+    <h2 class="section-title">10 motores independientes</h2>
+    <p class="section-desc">Desde estadística clásica hasta deep learning con LSTM. Cada motor analiza desde una perspectiva diferente.</p>
   </div>
   <div class="engines-grid">
-
-    <div class="engine-card reveal" data-tilt>
-      <span class="engine-num">01</span>
-      <div class="engine-icon">ƒ</div>
-      <div class="engine-title">Frequency Analysis</div>
-      <div class="engine-desc">Frecuencia + chi-cuadrado</div>
-    </div>
-
-    <div class="engine-card reveal delay-1" data-tilt>
-      <span class="engine-num">02</span>
-      <div class="engine-icon">▲</div>
-      <div class="engine-title">Hot/Cold Tracker</div>
-      <div class="engine-desc">Temperatura + mean reversion</div>
-    </div>
-
-    <div class="engine-card reveal delay-2" data-tilt>
-      <span class="engine-num">03</span>
-      <div class="engine-icon">◷</div>
-      <div class="engine-title">Gap Analysis</div>
-      <div class="engine-desc">Overdue detection</div>
-    </div>
-
-    <div class="engine-card featured reveal delay-3" data-tilt>
-      <span class="engine-badge">Significativo</span>
-      <span class="engine-num">04</span>
-      <div class="engine-icon">★</div>
-      <div class="engine-title">Markov Chain<span class="star">⭐</span></div>
-      <div class="engine-desc">Único motor estadísticamente significativo · p=0.0000</div>
-    </div>
-
-    <div class="engine-card reveal" data-tilt>
-      <span class="engine-num">05</span>
-      <div class="engine-icon">β</div>
-      <div class="engine-title">Bayesian Inference</div>
-      <div class="engine-desc">Beta posterior</div>
-    </div>
-
-    <div class="engine-card reveal delay-1" data-tilt>
-      <span class="engine-num">06</span>
-      <div class="engine-icon">⌗</div>
-      <div class="engine-title">Pattern Detection</div>
-      <div class="engine-desc">Runs test</div>
-    </div>
-
-    <div class="engine-card reveal delay-2" data-tilt>
-      <span class="engine-num">07</span>
-      <div class="engine-icon">≈</div>
-      <div class="engine-title">Entropy Scoring</div>
-      <div class="engine-desc">Shannon + autocorrelación</div>
-    </div>
-
-    <div class="engine-card reveal delay-3" data-tilt>
-      <span class="engine-num">08</span>
-      <div class="engine-icon">⚂</div>
-      <div class="engine-title">Monte Carlo</div>
-      <div class="engine-desc">10K simulaciones</div>
-    </div>
-
-    <div class="engine-card reveal" data-tilt>
-      <span class="engine-num">09</span>
-      <div class="engine-icon">⊞</div>
-      <div class="engine-title">LSTM Neural Network</div>
-      <div class="engine-desc">TensorFlow 2.21</div>
-    </div>
-
-    <div class="engine-card reveal delay-1" data-tilt>
-      <span class="engine-num">10</span>
-      <div class="engine-icon">∞</div>
-      <div class="engine-title">Ensemble</div>
-      <div class="engine-desc">Combina los 8 anteriores</div>
-    </div>
-
+    <div class="engine-card reveal-3d" data-tilt><div class="num-badge">01</div><div class="icon">📊</div><h3>Frequency Analysis</h3><p>Frecuencia histórica con Z-scores y test chi-cuadrado de uniformidad.</p><div class="meta"><span>+4.0%</span><span>0.2ms</span></div></div>
+    <div class="engine-card reveal-3d delay-1" data-tilt><div class="num-badge">02</div><div class="icon">🔥</div><h3>Hot/Cold Tracker</h3><p>Temperatura de números con probabilidad de mean reversion.</p><div class="meta"><span>+15.6%</span><span>0.2ms</span></div></div>
+    <div class="engine-card reveal-3d delay-2" data-tilt><div class="num-badge">03</div><div class="icon">⏰</div><h3>Gap Analysis</h3><p>Detección de números overdue basada en distribución geométrica.</p><div class="meta"><span class="hl">+30.0%</span><span>0.1ms</span></div></div>
+    <div class="engine-card featured reveal-3d delay-3" data-tilt-strong><div class="star-badge">★ SIGNIFICATIVO</div><div class="num-badge">04</div><div class="icon">🔗</div><h3>Markov Chain</h3><p>Transiciones de 1° y 2° orden. Único motor estadísticamente significativo.</p><div class="meta"><span class="hl">+63.2%</span><span>p=0.0000</span></div></div>
+    <div class="engine-card reveal-3d" data-tilt><div class="num-badge">05</div><div class="icon">🎲</div><h3>Bayesian Inference</h3><p>Beta posterior con credible intervals y James-Stein shrinkage.</p><div class="meta"><span>+14.1%</span><span>0.2ms</span></div></div>
+    <div class="engine-card reveal-3d delay-1" data-tilt><div class="num-badge">06</div><div class="icon">🔍</div><h3>Pattern Detection</h3><p>Pares consecutivos, sumas, par/impar, runs test de Wald-Wolfowitz.</p><div class="meta"><span class="hl">+28.6%</span><span>1ms</span></div></div>
+    <div class="engine-card reveal-3d delay-2" data-tilt><div class="num-badge">07</div><div class="icon">📡</div><h3>Entropy Scoring</h3><p>Entropía de Shannon + autocorrelación + randomness quality score.</p><div class="meta"><span>+15.5%</span><span>2ms</span></div></div>
+    <div class="engine-card reveal-3d delay-3" data-tilt><div class="num-badge">08</div><div class="icon">🎯</div><h3>Monte Carlo</h3><p>10,000 simulaciones con PRNG mulberry32. Percentiles P10/P50/P90.</p><div class="meta"><span>+11.1%</span><span>600ms</span></div></div>
+    <div class="engine-card reveal-3d" data-tilt><div class="num-badge">09</div><div class="icon">🧠</div><h3>LSTM Neural Net</h3><p>Deep learning con TensorFlow 2.21. Bidirectional LSTM con Dropout.</p><div class="meta"><span>+26.3%</span><span>16s</span></div></div>
+    <div class="engine-card reveal-3d delay-1" data-tilt><div class="num-badge">10</div><div class="icon">⚙️</div><h3>Ensemble</h3><p>Combina los 8 motores anteriores con pesos ponderados. El más robusto.</p><div class="meta"><span class="hl">+50.0%</span><span>700ms</span></div></div>
   </div>
 </section>
 
-<!-- KEY RESULTS -->
-<section id="results">
-  <div class="section-head reveal">
-    <span class="section-tag">Hallazgos Clave</span>
-    <h2>Lo que dicen <em>los números.</em></h2>
-    <p>Datos duros extraídos de 22,000+ sorteos reales. Algunos sorprendentes, otros brutales.</p>
+<!-- RESULTS -->
+<section class="section" id="results" style="background:var(--c1)">
+  <div class="section-header reveal">
+    <div class="section-tag">Hallazgos Clave</div>
+    <h2 class="section-title">Resultados del análisis riguroso</h2>
+    <p class="section-desc">Permutation tests con corrección Bonferroni. Solo reportamos lo estadísticamente significativo.</p>
   </div>
   <div class="results-grid">
-
-    <div class="result-panel positive reveal" data-tilt>
-      <div class="result-label">Markov Chain · EuroMillions</div>
-      <div class="result-value">+63.2%</div>
-      <div class="result-detail">Mejora sobre azar · <code>p=0.0000</code> · Cohen's <code>d=3.148</code></div>
-    </div>
-
-    <div class="result-panel negative reveal delay-1" data-tilt>
-      <div class="result-label">Expected Value</div>
-      <div class="result-value">−79%</div>
-      <div class="result-detail">Por dólar apostado · EV negativo · la lotería es matemáticamente desfavorable</div>
-    </div>
-
-    <div class="result-panel negative reveal delay-2" data-tilt>
-      <div class="result-label">Kelly Criterion</div>
-      <div class="result-value">≈ 0</div>
-      <div class="result-detail">Conclusión matemática: <code>no apostar</code></div>
-    </div>
-
-    <div class="result-panel positive reveal delay-3" data-tilt>
-      <div class="result-label">UK49s</div>
-      <div class="result-value">+50%</div>
-      <div class="result-detail">Mejora sobre azar · <code>5,863 sorteos</code> analizados</div>
-    </div>
-
-    <div class="result-panel negative reveal" data-tilt>
-      <div class="result-label">Detección de Trampa</div>
-      <div class="result-value">35%</div>
-      <div class="result-detail">Sorteos con patrones sospechosos detectados por el sistema</div>
-    </div>
-
-    <div class="result-panel reveal delay-1" data-tilt>
-      <div class="result-label">MCP Server</div>
-      <div class="result-value">6 tools</div>
-      <div class="result-detail">Expuestas vía Model Context Protocol para integración con LLMs</div>
-    </div>
-
+    <div class="result-card pos reveal-3d" data-tilt><h3>🔗 Markov Chain · EuroMillions</h3><div class="big">+63.2%</div><p class="desc">Mejora vs azar. p-value = 0.0000 (altamente significativo tras Bonferroni). Cohen's d = 3.148 (large effect).</p><div class="verdict pos">✅ ÚNICO MOTOR SIGNIFICATIVO</div></div>
+    <div class="result-card neg reveal-3d delay-1" data-tilt><h3>📊 Expected Value</h3><div class="big">−79%</div><p class="desc">EV por dólar en EuroMillions con jackpot mínimo. Break-even: $294M (imposible).</p><div class="verdict neg">❌ EV NEGATIVO EN TODAS</div></div>
+    <div class="result-card neg reveal-3d delay-2" data-tilt><h3>💰 Kelly Criterion</h3><div class="big">≈0</div><p class="desc">Kelly fraction para todas las loterías. Probabilidad demasiado baja. Monte Carlo: 100% bancarrota.</p><div class="verdict neg">❌ NO APOSTAR</div></div>
+    <div class="result-card warn reveal-3d delay-3" data-tilt><h3>🎰 UK49s — Más predecible</h3><div class="big">+50%</div><p class="desc">5,863 sorteos. Ensemble logra +50% mejora. Pero pool 6/49 hace jackpot 1:685M.</p><div class="verdict warn">⚠️ PREDECIBLE PERO INALCANZABLE</div></div>
+    <div class="result-card warn reveal-3d" data-tilt><h3>🚨 Detección de trampa</h3><div class="big">35%</div><p class="desc">De sorteos del Pozo Millonario tienen patrones sospechosos. EuroMillions: 4 números no aleatorios.</p><div class="verdict warn">⚠️ SESGO MECÁNICO DETECTADO</div></div>
+    <div class="result-card pos reveal-3d delay-1" data-tilt><h3>🌐 MCP Server productor</h3><div class="big">6</div><p class="desc">Tools expuestas: list_lotteries, describe_lottery, predict, backtest. Compatible con Claude Desktop.</p><div class="verdict pos">✅ INTEGRABLE CON AI AGENTS</div></div>
   </div>
 </section>
 
-<!-- ARCHITECTURE -->
-<section id="architecture">
-  <div class="section-head reveal">
-    <span class="section-tag">Arquitectura</span>
-    <h2>Cómo encaja <em>todo.</em></h2>
-    <p>Flujo de datos desde la fuente hasta la predicción final.</p>
+<!-- ARCHITECTURE SVG -->
+<section class="section" id="arch">
+  <div class="section-header reveal">
+    <div class="section-tag">Arquitectura</div>
+    <h2 class="section-title">Pipeline completo</h2>
+    <p class="section-desc">Desde 4 fuentes de datos hasta 10 motores, ensemble, y output layer.</p>
   </div>
-  <div class="terminal reveal" data-tilt-strong>
-    <div class="terminal-bar">
-      <span class="terminal-dot r"></span>
-      <span class="terminal-dot y"></span>
-      <span class="terminal-dot g"></span>
-      <span class="terminal-title">lottery-predictor@v4.0: ~/architecture</span>
-    </div>
-    <div class="terminal-body"><span class="c-dim">┌──────────────────────────────────────────────────────────────────┐</span>
-<span class="c-dim">│</span>                     <span class="c-gold">LotteryPredictor v4.0 — Pipeline</span>                      <span class="c-dim">│</span>
-<span class="c-dim">└──────────────────────────────────────────────────────────────────┘</span>
+  <div class="arch-wrap reveal">
+    <svg class="arch-svg" viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg">
+      <!-- Data Sources -->
+      <text x="450" y="24" text-anchor="middle" class="title">DATA SOURCES</text>
+      <rect x="40" y="36" width="180" height="44" rx="4" class="node node-accent"/>
+      <text x="130" y="56" text-anchor="middle" class="label">quicklotto.io MCP</text>
+      <text x="130" y="70" text-anchor="middle">39 lotteries</text>
+      <rect x="260" y="36" width="180" height="44" rx="4" class="node node-accent"/>
+      <text x="350" y="56" text-anchor="middle" class="label">bettip.co.za API</text>
+      <text x="350" y="70" text-anchor="middle">10 lotteries</text>
+      <rect x="480" y="36" width="180" height="44" rx="4" class="node node-accent"/>
+      <text x="570" y="56" text-anchor="middle" class="label">daowa89/GitHub</text>
+      <text x="570" y="70" text-anchor="middle">3 lotteries</text>
+      <rect x="700" y="36" width="160" height="44" rx="4" class="node node-accent"/>
+      <text x="780" y="56" text-anchor="middle" class="label">pozomillonario</text>
+      <text x="780" y="70" text-anchor="middle">scraping</text>
 
-  <span class="c-green">┌──────────────┐</span>      <span class="c-gold">┌──────────────────┐</span>      <span class="c-green">┌──────────────┐</span>
-  <span class="c-green">│ Data Sources │</span> <span class="c-dim">────▶</span> <span class="c-gold">│   10 Engines     │</span> <span class="c-dim">────▶</span> <span class="c-green">│  Ensemble    │</span>
-  <span class="c-green">│              │</span>      <span class="c-gold">│                  │</span>      <span class="c-green">│  Predictor   │</span>
-  <span class="c-green">│</span> <span class="c-bone">• 4 sources  </span><span class="c-green">│</span>      <span class="c-gold">│</span> <span class="c-bone">• Markov ⭐      </span><span class="c-gold">│</span>      <span class="c-green">│</span> <span class="c-bone">• Kelly calc  </span><span class="c-green">│</span>
-  <span class="c-green">│</span> <span class="c-bone">• 49 lotteries</span><span class="c-green">│</span>      <span class="c-gold">│</span> <span class="c-bone">• LSTM NN        </span><span class="c-gold">│</span>      <span class="c-green">│</span> <span class="c-bone">• EV analysis </span><span class="c-green">│</span>
-  <span class="c-green">│</span> <span class="c-bone">• 22K+ draws </span><span class="c-green">│</span>      <span class="c-gold">│</span> <span class="c-bone">• Monte Carlo    </span><span class="c-gold">│</span>      <span class="c-green">│</span> <span class="c-bone">• Cheating det</span><span class="c-green">│</span>
-  <span class="c-green">└──────────────┘</span>      <span class="c-gold">└──────────────────┘</span>      <span class="c-green">└──────────────┘</span>
-                                       <span class="c-dim">│</span>
-                                       <span class="c-dim">▼</span>
-                            <span class="c-red">┌────────────────────────┐</span>
-                            <span class="c-red">│      MCP Server        │</span>
-                            <span class="c-red">│   6 tools expuestas    │</span>
-                            <span class="c-red">└────────────────────────┘</span>
-                                       <span class="c-dim">│</span>
-                                       <span class="c-dim">▼</span>
-                            <span class="c-bone">┌────────────────────────┐</span>
-                            <span class="c-bone">│   Veredicto final      │</span>
-                            <span class="c-bone">│   EV ≈ −79% · Kelly ≈ 0 │</span>
-                            <span class="c-bone">└────────────────────────┘</span></div>
+      <!-- Connections to registry -->
+      <path d="M130 80 L130 110 L450 110 L450 130" class="conn"/>
+      <path d="M350 80 L350 110 L450 110" class="conn"/>
+      <path d="M570 80 L570 110 L450 110" class="conn"/>
+      <path d="M780 80 L780 110 L450 110" class="conn"/>
+
+      <!-- Registry -->
+      <rect x="280" y="130" width="340" height="40" rx="4" class="node"/>
+      <text x="450" y="148" text-anchor="middle" class="title">LOTTERY REGISTRY · 49 LOTTERIES</text>
+      <text x="450" y="162" text-anchor="middle">Pozo Millonario · EuroMillions · UK49s · SA Lotto · +35 más</text>
+
+      <!-- Connection to engines -->
+      <path d="M450 170 L450 195" class="conn conn-active"/>
+
+      <!-- Engines layer -->
+      <text x="450" y="210" text-anchor="middle" class="title">PREDICTION ENGINES (10)</text>
+
+      <!-- Engine boxes row 1 -->
+      <g>
+        <rect x="30" y="222" width="120" height="36" rx="3" class="node"/>
+        <text x="90" y="238" text-anchor="middle" class="label">Frequency</text>
+        <text x="90" y="250" text-anchor="middle">+4.0%</text>
+      </g>
+      <g>
+        <rect x="162" y="222" width="120" height="36" rx="3" class="node"/>
+        <text x="222" y="238" text-anchor="middle" class="label">Hot/Cold</text>
+        <text x="222" y="250" text-anchor="middle">+15.6%</text>
+      </g>
+      <g>
+        <rect x="294" y="222" width="120" height="36" rx="3" class="node"/>
+        <text x="354" y="238" text-anchor="middle" class="label">Gap Analysis</text>
+        <text x="354" y="250" text-anchor="middle">+30.0%</text>
+      </g>
+      <g>
+        <rect x="426" y="222" width="120" height="36" rx="3" class="node node-result"/>
+        <text x="486" y="238" text-anchor="middle" class="label">Markov Chain ★</text>
+        <text x="486" y="250" text-anchor="middle">+63.2%</text>
+      </g>
+      <g>
+        <rect x="558" y="222" width="120" height="36" rx="3" class="node"/>
+        <text x="618" y="238" text-anchor="middle" class="label">Bayesian</text>
+        <text x="618" y="250" text-anchor="middle">+14.1%</text>
+      </g>
+      <g>
+        <rect x="690" y="222" width="120" height="36" rx="3" class="node"/>
+        <text x="750" y="238" text-anchor="middle" class="label">Patterns</text>
+        <text x="750" y="250" text-anchor="middle">+28.6%</text>
+      </g>
+
+      <!-- Engine boxes row 2 -->
+      <g>
+        <rect x="30" y="270" width="120" height="36" rx="3" class="node"/>
+        <text x="90" y="286" text-anchor="middle" class="label">Entropy</text>
+        <text x="90" y="298" text-anchor="middle">+15.5%</text>
+      </g>
+      <g>
+        <rect x="162" y="270" width="120" height="36" rx="3" class="node"/>
+        <text x="222" y="286" text-anchor="middle" class="label">Monte Carlo</text>
+        <text x="222" y="298" text-anchor="middle">10K sims</text>
+      </g>
+      <g>
+        <rect x="294" y="270" width="120" height="36" rx="3" class="node"/>
+        <text x="354" y="286" text-anchor="middle" class="label">LSTM</text>
+        <text x="354" y="298" text-anchor="middle">TensorFlow</text>
+      </g>
+      <g>
+        <rect x="426" y="270" width="120" height="36" rx="3" class="node node-accent"/>
+        <text x="486" y="286" text-anchor="middle" class="label">Ensemble</text>
+        <text x="486" y="298" text-anchor="middle">Combines 8</text>
+      </g>
+      <g>
+        <rect x="558" y="270" width="120" height="36" rx="3" class="node"/>
+        <text x="618" y="286" text-anchor="middle" class="label">Kelly Criterion</text>
+        <text x="618" y="298" text-anchor="middle">Bankroll</text>
+      </g>
+      <g>
+        <rect x="690" y="270" width="120" height="36" rx="3" class="node"/>
+        <text x="750" y="286" text-anchor="middle" class="label">EV Calculator</text>
+        <text x="750" y="298" text-anchor="middle">Break-even</text>
+      </g>
+
+      <!-- Connections to output -->
+      <path d="M486 306 L486 340" class="conn conn-active"/>
+      <text x="500" y="328" class="title">→</text>
+
+      <!-- Backtest -->
+      <rect x="280" y="340" width="340" height="40" rx="4" class="node"/>
+      <text x="450" y="358" text-anchor="middle" class="title">BACKTESTING RIGUROSO</text>
+      <text x="450" y="372" text-anchor="middle">Permutation tests · Bonferroni · Cohen's d · p-values</text>
+
+      <path d="M450 380 L450 410" class="conn conn-active"/>
+
+      <!-- Output -->
+      <text x="450" y="425" text-anchor="middle" class="title">OUTPUT LAYER</text>
+
+      <g>
+        <rect x="30" y="438" width="160" height="40" rx="4" class="node node-result"/>
+        <text x="110" y="456" text-anchor="middle" class="label">Web UI</text>
+        <text x="110" y="468" text-anchor="middle">Next.js 16</text>
+      </g>
+      <g>
+        <rect x="210" y="438" width="160" height="40" rx="4" class="node node-result"/>
+        <text x="290" y="456" text-anchor="middle" class="label">MCP Server</text>
+        <text x="290" y="468" text-anchor="middle">Port 8787</text>
+      </g>
+      <g>
+        <rect x="390" y="438" width="160" height="40" rx="4" class="node node-result"/>
+        <text x="470" y="456" text-anchor="middle" class="label">CLI</text>
+        <text x="470" y="468" text-anchor="middle">Python</text>
+      </g>
+      <g>
+        <rect x="570" y="438" width="160" height="40" rx="4" class="node node-result"/>
+        <text x="650" y="456" text-anchor="middle" class="label">Excel + Charts</text>
+        <text x="650" y="468" text-anchor="middle">9 reports</text>
+      </g>
+      <g>
+        <rect x="750" y="438" width="120" height="40" rx="4" class="node node-bad"/>
+        <text x="810" y="456" text-anchor="middle" class="label">Veredicto</text>
+        <text x="810" y="468" text-anchor="middle">EV negativo</text>
+      </g>
+
+      <!-- Connections from backtest to outputs -->
+      <path d="M450 410 L110 410 L110 438" class="conn"/>
+      <path d="M450 410 L290 410 L290 438" class="conn"/>
+      <path d="M450 410 L470 410 L470 438" class="conn conn-active"/>
+      <path d="M450 410 L650 410 L650 438" class="conn"/>
+      <path d="M450 410 L810 410 L810 438" class="conn"/>
+    </svg>
   </div>
 </section>
 
 <!-- LOTTERY TABLE -->
-<section id="lotteries">
-  <div class="section-head reveal">
-    <span class="section-tag">Cobertura</span>
-    <h2>49 loterías. <em>Una a una.</em></h2>
-    <p>Resultados de mejora sobre el azar por lotería. Solo Markov Chain mostró significancia estadística.</p>
+<section class="section" style="background:var(--c1)">
+  <div class="section-header reveal">
+    <div class="section-tag">Cobertura Global</div>
+    <h2 class="section-title">49 loterías de todo el mundo</h2>
+    <p class="section-desc">Desde Europa hasta Asia. Datos en vivo vía quicklotto.io MCP + histórico profundo.</p>
   </div>
   <div class="table-wrap reveal">
     <table class="lottery-table">
-      <thead>
-        <tr>
-          <th>Lotería</th>
-          <th>Sorteos</th>
-          <th>Mejor Motor</th>
-          <th>Mejora</th>
-          <th>Significancia</th>
-        </tr>
-      </thead>
+      <thead><tr><th>Lotería</th><th>País</th><th>Formato</th><th>Sorteos</th><th>Odds</th><th>Mejor motor</th></tr></thead>
       <tbody>
-        <tr>
-          <td class="name">EuroMillions</td>
-          <td>8,420</td>
-          <td>Markov Chain ⭐</td>
-          <td class="perf pos">+63.2%</td>
-          <td class="sig yes">p=0.0000 ★</td>
-        </tr>
-        <tr>
-          <td class="name">UK49s Lunchtime</td>
-          <td>5,863</td>
-          <td>Markov Chain ⭐</td>
-          <td class="perf pos">+50.0%</td>
-          <td class="sig yes">p=0.0001</td>
-        </tr>
-        <tr>
-          <td class="name">Powerball US</td>
-          <td>3,144</td>
-          <td>Monte Carlo</td>
-          <td class="perf pos">+8.4%</td>
-          <td class="sig no">p=0.21</td>
-        </tr>
-        <tr>
-          <td class="name">Mega Millions</td>
-          <td>2,891</td>
-          <td>LSTM Neural</td>
-          <td class="perf pos">+6.1%</td>
-          <td class="sig no">p=0.34</td>
-        </tr>
-        <tr>
-          <td class="name">El Gordo (ES)</td>
-          <td>2,210</td>
-          <td>Bayesian Inf.</td>
-          <td class="perf pos">+4.7%</td>
-          <td class="sig no">p=0.42</td>
-        </tr>
-        <tr>
-          <td class="name">La Primitiva</td>
-          <td>3,508</td>
-          <td>Frequency</td>
-          <td class="perf neg">−1.2%</td>
-          <td class="sig no">p=0.68</td>
-        </tr>
-        <tr>
-          <td class="name">SuperEnalotto (IT)</td>
-          <td>3,840</td>
-          <td>Gap Analysis</td>
-          <td class="perf neg">−2.8%</td>
-          <td class="sig no">p=0.71</td>
-        </tr>
-        <tr>
-          <td class="name">Lotto 6/49 (DE)</td>
-          <td>4,127</td>
-          <td>Entropy</td>
-          <td class="perf pos">+2.1%</td>
-          <td class="sig no">p=0.55</td>
-        </tr>
+        <tr><td>UK49s Lunchtime</td><td>UK</td><td class="num">6/49</td><td class="num">5,867</td><td class="num">1:685M</td><td class="ok">Ensemble +50%</td></tr>
+        <tr><td>La Primitiva</td><td>España/DE</td><td class="num">6/49</td><td class="num">5,049</td><td class="num">1:14M</td><td class="ok">Gap +30%</td></tr>
+        <tr><td>Lotto 6aus45</td><td>Austria</td><td class="num">6/45</td><td class="num">3,684</td><td class="num">1:8M</td><td>Markov +4%</td></tr>
+        <tr><td>SA Daily Lotto</td><td>Sudáfrica</td><td class="num">5/36</td><td class="num">2,749</td><td class="num">1:377K</td><td class="ok">Gap +16%</td></tr>
+        <tr><td>EuroMillions</td><td>Europa</td><td class="num">5/50+2/12</td><td class="num">1,977</td><td class="num">1:140M</td><td class="ok">Markov +63% ★</td></tr>
+        <tr><td>SA Lotto</td><td>Sudáfrica</td><td class="num">6/52</td><td class="num">1,221</td><td class="num">1:1B</td><td class="ok">Pattern +29%</td></tr>
+        <tr><td>SA PowerBall</td><td>Sudáfrica</td><td class="num">5/50+1/20</td><td class="num">1,221</td><td class="num">1:42M</td><td>Markov +11%</td></tr>
+        <tr><td>Pozo Millonario</td><td>Ecuador</td><td class="num">11/25</td><td class="num">308</td><td class="num">1:4.5M</td><td>Entropy +4%</td></tr>
+        <tr><td>SuperEnalotto</td><td>Italia</td><td class="num">6/90</td><td class="num">20</td><td class="num">1:56B</td><td>—</td></tr>
+        <tr><td>Mega-Sena</td><td>Brasil</td><td class="num">6/60</td><td class="num">20</td><td class="num">1:50M</td><td>—</td></tr>
+        <tr><td colspan="6" style="text-align:center;color:var(--bone-ft);font-family:var(--mono);font-size:0.8rem;padding:20px">+ 39 loterías más vía quicklotto.io MCP</td></tr>
       </tbody>
     </table>
   </div>
 </section>
 
 <!-- QUICK START -->
-<section id="start">
-  <div class="section-head reveal">
-    <span class="section-tag">Quick Start</span>
-    <h2>Empieza en <em>60 segundos.</em></h2>
-    <p>Open source. MIT. Sin dependencias raras.</p>
+<section class="section" id="start">
+  <div class="section-header reveal">
+    <div class="section-tag">Quick Start</div>
+    <h2 class="section-title">3 pasos para empezar</h2>
   </div>
-  <div class="code-terminal reveal">
-    <div class="terminal-bar">
-      <span class="terminal-dot r"></span>
-      <span class="terminal-dot y"></span>
-      <span class="terminal-dot g"></span>
-      <span class="terminal-title">user@local: ~</span>
-    </div>
-    <div class="code-body">
-<span class="cmt"># 1. Clonar el repositorio</span>
-<span class="prompt">$</span> <span class="cmd">git clone https://github.com/user/lottery-predictor.git</span>
-<span class="prompt">$</span> <span class="cmd">cd lottery-predictor</span>
-
-<span class="cmt"># 2. Instalar dependencias</span>
-<span class="prompt">$</span> <span class="cmd">pip install -r requirements.txt</span>
-<span class="ok">✓ Installed 24 packages in 3.2s</span>
-
-<span class="cmt"># 3. Analizar EuroMillions con Markov Chain</span>
-<span class="prompt">$</span> <span class="cmd">python predict.py --lottery euromillions --engine markov</span>
-<span class="out">  Loading 8,420 draws.................. <span class="ok">done</span></span>
-<span class="out">  Building transition matrix........... <span class="ok">done</span></span>
-<span class="out">  Chi-square test: p=<span class="num">0.0000</span>  <span class="ok">✓ significant</span></span>
-<span class="out">  Cohen's d = <span class="num">3.148</span>  (large effect)</span>
-<span class="out">  Improvement over random: <span class="num">+63.2%</span></span>
-
-<span class="cmt"># 4. Lanzar MCP server (6 tools)</span>
-<span class="prompt">$</span> <span class="cmd">python -m lottery_predictor.mcp --serve</span>
-<span class="out">  MCP server listening on :8080</span>
-<span class="out">  Tools: predict · analyze · backtest · cheating_detect · ev_calc · kelly</span>
-
-<span class="warn">⚠ EV = −79% per $ · Kelly ≈ 0 · No apostar</span>
+  <div class="terminal reveal">
+    <div class="terminal-bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="title">lottery-predictor — bash</span></div>
+    <div class="terminal-body">
+      <span class="cmt"># 1 · Clonar el repositorio</span><br>
+      <span class="cmd">git clone https://github.com/eddyflores100-lang/lottery-predictor.git</span><br>
+      <span class="cmd">cd lottery-predictor</span><br><br>
+      <span class="cmt"># 2 · Instalar dependencias</span><br>
+      <span class="cmd">pip install tensorflow aiohttp beautifulsoup4 openpyxl matplotlib</span><br><br>
+      <span class="cmt"># 3 · Ejecutar predicción</span><br>
+      <span class="cmd">cd scripts/lottery_predictor</span><br>
+      <span class="cmd">python3 main.py --lottery euromillions --engine markov_chain --predict</span><br>
+      <span class="out">  </span><span class="ok">✓</span> <span class="out">Loaded 1,977 draws</span><br>
+      <span class="out">  </span><span class="ok">✓</span> <span class="out">Engine: markov_chain</span><br>
+      <span class="out">  </span><span class="warn">🎯 PREDICCIÓN: 50 21 42 29 23</span><br>
+      <span class="out">  </span><span class="out">Último sorteo #1977 (2026-09-22): 13 14 16 44 50</span><br><br>
+      <span class="cmt"># Iniciar Web UI</span><br>
+      <span class="cmd">bun run dev</span> <span class="cmt"># → localhost:3000</span><br><br>
+      <span class="cmt"># Iniciar MCP Server</span><br>
+      <span class="cmd">python3 mcp_server.py</span> <span class="cmt"># → localhost:8787/mcp</span>
     </div>
   </div>
 </section>
 
 <!-- PRICING -->
-<section id="pricing">
-  <div class="section-head reveal">
-    <span class="section-tag">Precios</span>
-    <h2>Desde <em>gratis</em> hasta enterprise.</h2>
-    <p>Open source para siempre. Planes pagados solo si necesitas infraestructura.</p>
+<section class="section" id="pricing" style="background:var(--c1)">
+  <div class="section-header reveal">
+    <div class="section-tag">Licencias</div>
+    <h2 class="section-title">Planes para cada necesidad</h2>
+    <p class="section-desc">Desde uso personal hasta enterprise con soporte dedicado.</p>
   </div>
   <div class="pricing-grid">
-
-    <div class="price-card reveal" data-tilt>
-      <div class="price-tier">Open Source</div>
-      <div class="price-amount"><span class="cur">$</span>0<span class="per">/forever</span></div>
-      <div class="price-tag">Licencia MIT · úsalo como quieras</div>
-      <ul class="price-features">
-        <li>49 loterías globales</li>
-        <li>10 motores de análisis</li>
-        <li>Código fuente completo</li>
-        <li>Despliegue local</li>
-        <li>Comunidad GitHub</li>
-      </ul>
-      <a href="#" class="price-cta secondary">Ver en GitHub</a>
-    </div>
-
-    <div class="price-card featured reveal delay-1" data-tilt>
-      <div class="price-tier">Professional</div>
-      <div class="price-amount"><span class="cur">$</span>49<span class="per">/mes</span></div>
-      <div class="price-tag">Para análisis diario y alertas</div>
-      <ul class="price-features">
-        <li>API hosted (99.9% uptime)</li>
-        <li>Alertas en tiempo real</li>
-        <li>Backtesting ilimitado</li>
-        <li>MCP server hosted</li>
-        <li>Soporte 24h</li>
-        <li>Actualizaciones semanales</li>
-      </ul>
-      <a href="#" class="price-cta primary">Empezar ahora</a>
-    </div>
-
-    <div class="price-card reveal delay-2" data-tilt>
-      <div class="price-tier">Enterprise</div>
-      <div class="price-amount"><span class="cur">$</span>499<span class="per">/mes</span></div>
-      <div class="price-tag">Para equipos y producción</div>
-      <ul class="price-features">
-        <li>On-premise / private cloud</li>
-        <li>White-label completo</li>
-        <li>SLA 99.99%</li>
-        <li>Loterías custom</li>
-        <li>Account manager dedicado</li>
-        <li>Auditoría de seguridad</li>
-      </ul>
-      <a href="#" class="price-cta secondary">Hablar con ventas</a>
-    </div>
-
+    <div class="price-card reveal-3d" data-tilt><h3>Open Source</h3><div class="price">$0<span> /forever</span></div><ul><li>Código completo en GitHub</li><li>49 loterías soportadas</li><li>10 motores de predicción</li><li>Web UI + CLI + MCP Server</li><li>Licencia MIT</li><li>Comunidad de soporte</li></ul><a href="https://github.com/eddyflores100-lang/lottery-predictor" class="btn btn-ghost" style="width:100%;justify-content:center">Descargar ↗</a></div>
+    <div class="price-card featured reveal-3d delay-1" data-tilt-strong><h3>Professional</h3><div class="price">$49<span> /mes</span></div><ul><li>Todo lo de Open Source</li><li>API hosted (sin instalar)</li><li>Actualización diaria automática</li><li>Alertas de pozos acumulados</li><li>Backtesting ilimitado</li><li>Soporte email 24h</li></ul><a href="#" class="btn btn-primary" style="width:100%;justify-content:center">Empezar →</a></div>
+    <div class="price-card reveal-3d delay-2" data-tilt><h3>Enterprise</h3><div class="price">$499<span> /mes</span></div><ul><li>Todo lo de Professional</li><li>On-premise deployment</li><li>MCP Server dedicado</li><li>Custom lotteries</li><li>White-label (tu marca)</li><li>Soporte prioritario + SLA</li></ul><a href="#" class="btn btn-ghost" style="width:100%;justify-content:center">Contactar ↗</a></div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <h3>Lottery<span class="gold">Predictor</span></h3>
-      <p>Sistema educativo de análisis estadístico de loterías. 49 loterías · 10 motores · 22,000+ sorteos. Open source bajo licencia MIT.</p>
-    </div>
-    <div class="footer-col">
-      <h4>Producto</h4>
-      <a href="#engines">Motores</a>
-      <a href="#results">Resultados</a>
-      <a href="#architecture">Arquitectura</a>
-      <a href="#pricing">Precios</a>
-    </div>
-    <div class="footer-col">
-      <h4>Recursos</h4>
-      <a href="#">Documentación</a>
-      <a href="#">API Reference</a>
-      <a href="#">MCP Tools</a>
-      <a href="#">Paper (PDF)</a>
-    </div>
-    <div class="footer-col">
-      <h4>Comunidad</h4>
-      <a href="#">GitHub</a>
-      <a href="#">Issues</a>
-      <a href="#">Discord</a>
-      <a href="#">Contribuir</a>
-    </div>
+<footer>
+  <div class="footer-grid">
+    <div class="footer-col"><h4>Producto</h4><a href="#engines">Features</a><a href="#">Loterías</a><a href="#">Motores</a><a href="#">MCP Server</a></div>
+    <div class="footer-col"><h4>Recursos</h4><a href="https://github.com/eddyflores100-lang/lottery-predictor">GitHub</a><a href="#">Documentación</a><a href="#">API Reference</a><a href="#">Changelog</a></div>
+    <div class="footer-col"><h4>Análisis</h4><a href="#results">Backtesting</a><a href="#">EV Calculator</a><a href="#">Kelly Criterion</a><a href="#">Detección trampa</a></div>
+    <div class="footer-col"><h4>Legal</h4><a href="#">Licencia MIT</a><a href="#">Términos</a><a href="#">Privacidad</a><a href="#">Disclaimer</a></div>
   </div>
-
-  <div class="disclaimer">
-    <strong>⚠ AVISO:</strong> La lotería es matemáticamente desfavorable (EV negativo). Sistema educativo. No garantiza ganancias.
-  </div>
-
   <div class="footer-bottom">
-    © 2025 LOTTERYPREDICTOR v4.0 · MIT LICENSE · BUILT FOR EDUCATIONAL PURPOSES
+    <p>© 2026 LotteryPredictor v4.0 · MIT License · Python + TensorFlow + Next.js</p>
+    <div class="footer-disclaimer">⚠️ La lotería es matemáticamente desfavorable (EV negativo). Este sistema es educativo. No garantiza ganancias. Juega con responsabilidad.</div>
   </div>
 </footer>
 
 <script>
+// ============================================================
+// PARTICLES — warm dust drifting upward
+// ============================================================
 (function(){
-  "use strict";
+  const cv=document.getElementById('particles');
+  const ctx=cv.getContext('2d');
+  let w,h,particles=[],dpr=Math.min(window.devicePixelRatio||1,2);
 
-  /* ============== SCROLL PROGRESS ============== */
-  const progress = document.getElementById('scrollProgress');
-  const nav = document.getElementById('nav');
-  function onScroll(){
-    const h = document.documentElement;
-    const scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
-    progress.style.width = (scrolled*100) + '%';
-    if(h.scrollTop > 40){ nav.classList.add('scrolled'); }
-    else { nav.classList.remove('scrolled'); }
-  }
-  window.addEventListener('scroll', onScroll, {passive:true});
-  onScroll();
-
-  /* ============== PARTICLE / DUST SYSTEM ============== */
-  const canvas = document.getElementById('particles');
-  const ctx = canvas.getContext('2d');
-  let W=0,H=0,dpr=Math.min(window.devicePixelRatio||1, 2);
   function resize(){
-    W = canvas.width = window.innerWidth * dpr;
-    H = canvas.height = window.innerHeight * dpr;
-    canvas.style.width = window.innerWidth+'px';
-    canvas.style.height = window.innerHeight+'px';
+    w=cv.width=window.innerWidth*dpr;
+    h=cv.height=window.innerHeight*dpr;
+    cv.style.width=window.innerWidth+'px';
+    cv.style.height=window.innerHeight+'px';
+    ctx.scale(dpr,dpr);
   }
   resize();
-  window.addEventListener('resize', resize);
+  window.addEventListener('resize',()=>{resize();initParticles()});
 
-  const PARTICLE_COUNT = window.innerWidth < 768 ? 38 : 75;
-  const particles = [];
-  for(let i=0;i<PARTICLE_COUNT;i++){
-    particles.push({
-      x: Math.random()*W,
-      y: Math.random()*H,
-      r: (Math.random()*1.6 + 0.3) * dpr,
-      vx: (Math.random()-0.5) * 0.15 * dpr,
-      vy: -(Math.random()*0.25 + 0.05) * dpr,
-      a: Math.random()*0.5 + 0.08,
-      hue: Math.random() < 0.7 ? 'brass' : (Math.random()<0.5?'red':'green')
-    });
+  function initParticles(){
+    const count=window.innerWidth<768?40:80;
+    particles=[];
+    const colors=['rgba(201,168,76,','rgba(160,64,64,','rgba(58,90,64,'];
+    for(let i=0;i<count;i++){
+      particles.push({
+        x:Math.random()*window.innerWidth,
+        y:Math.random()*window.innerHeight,
+        vx:(Math.random()-0.5)*0.15,
+        vy:-Math.random()*0.3-0.05,
+        r:Math.random()*1.8+0.4,
+        a:Math.random()*0.4+0.08,
+        c:colors[Math.floor(Math.random()*colors.length)],
+        phase:Math.random()*Math.PI*2,
+      });
+    }
   }
-  const colorMap = {
-    brass: '201,168,76',
-    red: '160,64,64',
-    green: '90,128,96'
-  };
-  function drawParticles(){
-    ctx.clearRect(0,0,W,H);
+  initParticles();
+
+  function animate(){
+    ctx.clearRect(0,0,w,h);
     for(const p of particles){
-      p.x += p.vx;
-      p.y += p.vy;
-      if(p.y < -10){ p.y = H+10; p.x = Math.random()*W; }
-      if(p.x < -10) p.x = W+10;
-      if(p.x > W+10) p.x = -10;
-      const c = colorMap[p.hue];
+      p.x+=p.vx+Math.sin(p.phase)*0.1;
+      p.y+=p.vy;
+      p.phase+=0.01;
+      if(p.y<-10){p.y=window.innerHeight+10;p.x=Math.random()*window.innerWidth}
+      if(p.x<-10)p.x=window.innerWidth+10;
+      if(p.x>window.innerWidth+10)p.x=-10;
       ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
-      ctx.fillStyle = 'rgba('+c+','+p.a+')';
+      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle=p.c+p.a+')';
       ctx.fill();
-      // soft glow
+      // glow
       ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r*3, 0, Math.PI*2);
-      ctx.fillStyle = 'rgba('+c+','+(p.a*0.15)+')';
+      ctx.arc(p.x,p.y,p.r*3,0,Math.PI*2);
+      ctx.fillStyle=p.c+(p.a*0.15)+')';
       ctx.fill();
     }
-    requestAnimationFrame(drawParticles);
+    requestAnimationFrame(animate);
   }
-  drawParticles();
+  animate();
+})();
 
-  /* ============== HERO LOTTERY BALLS ============== */
-  const ballField = document.getElementById('ballField');
-  const ballNumbers = [7, 13, 21, 23, 27, 33, 42, 49, 8, 16, 3, 38, 11, 29];
-  // positions in % across the scene, with depth via translateZ
-  const ballPositions = [
-    {x:8,  y:20, z:-180, size:62,  delay:0,   color:''},
-    {x:88, y:18, z:-120, size:78,  delay:1.5, color:'red'},
-    {x:16, y:72, z:-200, size:54,  delay:0.8, color:'green'},
-    {x:78, y:78, z:-160, size:68,  delay:2.1, color:''},
-    {x:46, y:12, z:-260, size:48,  delay:0.4, color:'red'},
-    {x:6,  y:48, z:-100, size:72,  delay:1.2, color:''},
-    {x:93, y:50, z:-140, size:58,  delay:0.2, color:'green'},
-    {x:30, y:88, z:-220, size:50,  delay:1.8, color:''},
-    {x:62, y:6,  z:-100, size:84,  delay:0.6, color:'red'},
-    {x:38, y:42, z:-300, size:42,  delay:2.4, color:''},
-    {x:68, y:34, z:-240, size:46,  delay:1.1, color:'green'},
-    {x:22, y:30, z:-160, size:60,  delay:0.9, color:''}
+// ============================================================
+// SCROLL PROGRESS BAR
+// ============================================================
+(function(){
+  const bar=document.getElementById('scrollBar');
+  window.addEventListener('scroll',()=>{
+    const pct=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight))*100;
+    bar.style.width=pct+'%';
+  },{passive:true});
+})();
+
+// ============================================================
+// NAV CONDENSE ON SCROLL
+// ============================================================
+(function(){
+  const nav=document.getElementById('nav');
+  window.addEventListener('scroll',()=>{
+    if(window.scrollY>60)nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  },{passive:true});
+})();
+
+// ============================================================
+// LOTTERY BALLS — floating 3D spheres in hero
+// ============================================================
+(function(){
+  const field=document.getElementById('ballField');
+  if(!field)return;
+  const ballData=[
+    {n:'07',c:'',x:8,y:15,s:1,d:1},
+    {n:'14',c:'red',x:82,y:22,s:0.85,d:2},
+    {n:'23',c:'',x:15,y:65,s:0.9,d:3},
+    {n:'36',c:'green',x:88,y:70,s:1,d:1},
+    {n:'42',c:'',x:50,y:8,s:0.7,d:2},
+    {n:'18',c:'red',x:72,y:45,s:0.65,d:3},
+    {n:'09',c:'',x:25,y:35,s:0.6,d:1},
+    {n:'50',c:'green',x:65,y:82,s:0.75,d:2},
+    {n:'03',c:'',x:40,y:80,s:0.55,d:3},
+    {n:'27',c:'red',x:92,y:50,s:0.5,d:1},
   ];
-  ballPositions.forEach((b, i) => {
-    const ball = document.createElement('div');
-    ball.className = 'lottery-ball' + (b.color ? ' '+b.color : '');
-    ball.style.left = b.x + '%';
-    ball.style.top = b.y + '%';
-    ball.style.width = b.size + 'px';
-    ball.style.height = b.size + 'px';
-    ball.style.fontSize = (b.size * 0.42) + 'px';
-    ball.style.transform = 'translateZ(' + b.z + 'px)';
-    ball.style.animation = 'floatBall ' + (6 + Math.random()*4) + 's ease-in-out ' + b.delay + 's infinite';
-    const inner = document.createElement('div');
-    inner.className = 'ball-inner';
-    inner.style.animationDuration = (10 + Math.random()*8) + 's';
-    inner.style.animationDelay = b.delay + 's';
-    inner.textContent = ballNumbers[i % ballNumbers.length];
-    ball.appendChild(inner);
-    ballField.appendChild(ball);
+  const balls=ballData.map(b=>{
+    const el=document.createElement('div');
+    el.className='lottery-ball'+(b.c?' '+b.c:'')+(b.s<0.7?' sm':'');
+    el.textContent=b.n;
+    el.style.left=b.x+'%';
+    el.style.top=b.y+'%';
+    el.style.animation=`float${b.d} ${8+b.s*4}s ease-in-out infinite`;
+    el.style.animationDelay=(Math.random()*3)+'s';
+    field.appendChild(el);
+    return{el,b};
   });
 
-  // Subtle mouse-driven parallax on the whole ball field
-  let mx=0, my=0, tmx=0, tmy=0;
-  document.addEventListener('mousemove', (e)=>{
-    tmx = (e.clientX / window.innerWidth - 0.5) * 2;
-    tmy = (e.clientY / window.innerHeight - 0.5) * 2;
+  // Mouse parallax on ball field
+  let mx=0,my=0,cx=0,cy=0;
+  document.querySelector('.hero').addEventListener('mousemove',e=>{
+    const rect=e.currentTarget.getBoundingClientRect();
+    mx=((e.clientX-rect.left)/rect.width-0.5)*30;
+    my=((e.clientY-rect.top)/rect.height-0.5)*30;
   });
-  function parallaxLoop(){
-    mx += (tmx - mx) * 0.05;
-    my += (tmy - my) * 0.05;
-    ballField.style.transform = 'rotateY(' + (mx*6) + 'deg) rotateX(' + (-my*4) + 'deg)';
-    requestAnimationFrame(parallaxLoop);
+  document.querySelector('.hero').addEventListener('mouseleave',()=>{mx=0;my=0});
+
+  function updateBalls(){
+    cx+=(mx-cx)*0.05;
+    cy+=(my-cy)*0.05;
+    field.style.transform=`rotateY(${cx*0.5}deg) rotateX(${-cy*0.5}deg) translateZ(0)`;
+    requestAnimationFrame(updateBalls);
   }
-  parallaxLoop();
+  updateBalls();
+})();
 
-  /* ============== 3D TILT ON CARDS ============== */
-  const tiltCards = document.querySelectorAll('[data-tilt]');
-  const tiltStrong = document.querySelectorAll('[data-tilt-strong]');
-  const allTilt = [...tiltCards, ...tiltStrong];
-  const MAX = 10;       // base tilt degrees
-  const MAX_STRONG = 6; // stronger panel uses smaller angle for elegance
+// ============================================================
+// 3D TILT — cards respond to mouse position
+// ============================================================
+(function(){
+  const tiltCards=document.querySelectorAll('[data-tilt], [data-tilt-strong]');
+  const strongFactor=1.8;
 
-  allTilt.forEach(card => {
-    const strong = card.hasAttribute('data-tilt-strong');
-    const maxDeg = strong ? MAX_STRONG : MAX;
-    let rafId = null;
-    let targetX = 0, targetY = 0, curX = 0, curY = 0;
-    let active = false;
+  tiltCards.forEach(card=>{
+    let rx=0,ry=0,trx=0,try_=0;
+    let active=false;
+
+    card.addEventListener('mouseenter',()=>{active=true});
+    card.addEventListener('mousemove',e=>{
+      if(!active)return;
+      const rect=card.getBoundingClientRect();
+      const px=(e.clientX-rect.left)/rect.width-0.5;
+      const py=(e.clientY-rect.top)/rect.height-0.5;
+      const factor=card.hasAttribute('data-tilt-strong')?strongFactor:1;
+      try_=px*12*factor;
+      trx=-py*10*factor;
+    });
+    card.addEventListener('mouseleave',()=>{
+      active=false;
+      trx=0;try_=0;
+    });
 
     function animate(){
-      curX += (targetX - curX) * 0.15;
-      curY += (targetY - curY) * 0.15;
-      card.style.transform = 'perspective(1000px) rotateX(' + curY + 'deg) rotateY(' + curX + 'deg) translateZ(0)';
-      if(Math.abs(targetX - curX) > 0.05 || Math.abs(targetY - curY) > 0.05){
-        rafId = requestAnimationFrame(animate);
-      } else {
-        rafId = null;
-      }
+      rx+=(trx-rx)*0.12;
+      ry+=(try_-ry)*0.12;
+      card.style.transform=`perspective(800px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(0)`;
+      requestAnimationFrame(animate);
     }
-
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const px = (e.clientX - rect.left) / rect.width;
-      const py = (e.clientY - rect.top) / rect.height;
-      targetX = (px - 0.5) * 2 * maxDeg;
-      targetY = -(py - 0.5) * 2 * maxDeg;
-      if(!rafId) animate();
-    });
-    card.addEventListener('mouseleave', () => {
-      targetX = 0; targetY = 0;
-      if(!rafId) animate();
-    });
-    // touch support (subtle)
-    card.addEventListener('touchmove', (e) => {
-      if(!e.touches[0]) return;
-      const rect = card.getBoundingClientRect();
-      const px = (e.touches[0].clientX - rect.left) / rect.width;
-      const py = (e.touches[0].clientY - rect.top) / rect.height;
-      targetX = (px - 0.5) * 2 * maxDeg;
-      targetY = -(py - 0.5) * 2 * maxDeg;
-      if(!rafId) animate();
-    }, {passive:true});
+    animate();
   });
+})();
 
-  /* ============== SCROLL REVEAL (IntersectionObserver) ============== */
-  const reveals = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+// ============================================================
+// SCROLL REVEAL — IntersectionObserver
+// ============================================================
+(function(){
+  const els=document.querySelectorAll('.reveal, .reveal-3d');
+  const obs=new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
       if(entry.isIntersecting){
         entry.target.classList.add('visible');
-        io.unobserve(entry.target);
+        obs.unobserve(entry.target);
       }
     });
-  }, {threshold:0.12, rootMargin:'0px 0px -60px 0px'});
-  reveals.forEach(el => io.observe(el));
-
-  /* ============== SMOOTH ANCHOR SCROLL (momentum feel) ============== */
-  // scroll-behavior:smooth handles modern browsers; add offset for nav
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', function(e){
-      const href = this.getAttribute('href');
-      if(href === '#') return;
-      const target = document.querySelector(href);
-      if(!target) return;
-      e.preventDefault();
-      const top = target.getBoundingClientRect().top + window.pageYOffset - 70;
-      window.scrollTo({top: top, behavior: 'smooth'});
-    });
-  });
-
+  },{threshold:0.12,rootMargin:'0px 0px -60px 0px'});
+  els.forEach(el=>obs.observe(el));
 })();
 </script>
 </body>
