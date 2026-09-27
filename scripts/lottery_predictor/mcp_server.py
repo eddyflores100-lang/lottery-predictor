@@ -300,7 +300,7 @@ async def main():
     
     runner = web.AppRunner(app)
     await runner.setup()
-    site = web.TCPSite(runner, '0.0.0.0', port)
+    site = web.TCPSite(runner, '0.0.0.0', port)  # nosec B104 — intentional: MCP server accepts LAN/container connections
     await site.start()
     
     # Keep running
