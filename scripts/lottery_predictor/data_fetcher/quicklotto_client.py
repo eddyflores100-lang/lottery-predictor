@@ -39,7 +39,7 @@ def _call_mcp(tool_name: str, arguments: dict = None, id_: int = 1) -> dict:
         headers=HEADERS,
         method='POST',
     )
-    with urllib.request.urlopen(req, timeout=30) as r:
+    with urllib.request.urlopen(req, timeout=30) as r:  # nosec B310 — reviewed urlopen (https quicklotto API)
         return json.loads(r.read())
 
 
