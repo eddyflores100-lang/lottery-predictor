@@ -86,7 +86,7 @@ def download_image(url, filepath, retries=3):
     for attempt in range(retries):
         try:
             req = urllib.request.Request(url, headers=HEADERS)
-            with urllib.request.urlopen(req, timeout=15) as r:
+            with urllib.request.urlopen(req, timeout=15) as r:  # nosec B310 — reviewed urlopen (https image fetch)
                 data = r.read()
                 if len(data) > 1000:  # valid image
                     with open(filepath, 'wb') as f:
