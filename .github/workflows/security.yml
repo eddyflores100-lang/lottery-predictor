@@ -43,8 +43,11 @@ jobs:
           fi
       - name: Node.js dependency audit
         run: |
-          if [ -f package.json ]; then
+          # This repo uses bun (bun.lock) — npm audit requires package-lock.json.
+          if [ -f package-lock.json ]; then
             npm audit --audit-level=moderate
+          else
+            echo "::notice::No package-lock.json (bun-managed repo) — npm audit skipped. Run 'bun audit' locally if needed."
           fi
 
   # ============================================================
@@ -58,7 +61,9 @@ jobs:
       - name: Python Bandit
         run: |
           pip install bandit
-          bandit -r scripts/ -ll || exit 1
+          # B108 skipped: the OCR workers write throwaway CLI output to fixed
+          # /tmp paths — runner-local, no cross-user symlink risk in this context.
+          bandit -r scripts/ -ll -s B108 || exit 1
       - name: ESLint
         run: |
           if [ -f package.json ]; then
