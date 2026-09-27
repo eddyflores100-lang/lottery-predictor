@@ -22,7 +22,7 @@ HEADERS = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KH
 def fetch_json(url):
     req = urllib.request.Request(url, headers=HEADERS)
     try:
-        with urllib.request.urlopen(req, timeout=30) as r:
+        with urllib.request.urlopen(req, timeout=30) as r:  # nosec B310 — URL from module https constants
             return json.loads(r.read())
     except Exception as e:
         print(f"  ✗ Error fetching {url}: {e}")
